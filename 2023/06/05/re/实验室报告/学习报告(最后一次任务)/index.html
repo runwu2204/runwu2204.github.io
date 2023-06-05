@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>学习报告(最后一次任务) | ABC</title><meta name="author" content="runwu2204"><meta name="copyright" content="runwu2204"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="RE1.PYC先启动该文件看下运行结果  不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码 pyc文件主要是无法通过f5反汇编查找代码逻辑  尝试通过shift+f12查询字符串，结果如下  一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般） 通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习报告(最后一次任务)">
+<meta property="og:url" content="http://example.com/2023/06/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/index.html">
+<meta property="og:site_name" content="ABC">
+<meta property="og:description" content="RE1.PYC先启动该文件看下运行结果  不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码 pyc文件主要是无法通过f5反汇编查找代码逻辑  尝试通过shift+f12查询字符串，结果如下  一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般） 通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-06-05T13:42:21.770Z">
+<meta property="article:modified_time" content="2023-06-05T13:46:15.915Z">
+<meta property="article:author" content="runwu2204">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/06/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '学习报告(最后一次任务)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-05 21:46:15'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="ABC" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="ABC"><span class="site-name">ABC</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">学习报告(最后一次任务)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-06-05T13:42:21.770Z" title="Created 2023-06-05 21:42:21">2023-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-06-05T13:46:15.915Z" title="Updated 2023-06-05 21:46:15">2023-06-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="学习报告(最后一次任务)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="RE1-PYC"><a href="#RE1-PYC" class="headerlink" title="RE1.PYC"></a>RE1.PYC</h1><p>先启动该文件看下运行结果</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221203235231628.png" alt=" "></p>
+<p>不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码</p>
+<p>pyc文件主要是无法通过f5反汇编查找代码逻辑</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221203235426178.png" alt="image-20221203235426178"></p>
+<p>尝试通过shift+f12查询字符串，结果如下</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221203234728213.png" alt="image-20221203234728213"></p>
+<p>一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般）</p>
+<p>通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此类格式应该是经过了加密）</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221203235623344.png" alt="image-20221203235623344"></p>
+<p>下方也有说明，表现是通过base64加密的，将其拖入base64中解密</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221203235745853.png" alt="image-20221203235745853"></p>
+<p>得到了最后的flag：D0g3{Do_You_Want_To_Hammer_Me}</p>
+<h1 id="RE2"><a href="#RE2" class="headerlink" title="RE2"></a>RE2</h1><p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221204003416911.png" alt="image-20221204003416911"></p>
+<p>通过反汇编找到对应函数极少（一般是通过了加壳）</p>
+<p>再通过寻找字符串，发现确实是通过了upx加壳,且是3.96版本，用普通的脱壳尝试如下</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221204004546195.png" alt="image-20221204004546195"></p>
+<p>发现报错无法脱壳</p>
+<p>疯狂百度，发现是经过了特征码修改</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221205152424562.png" alt="image-20221205152424562"></p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221205152739287.png" alt="image-20221205152739287"></p>
+<p>尝试通过winhex修改该文件,失败了。</p>
+<p>通过开挂发现需要dump</p>
+<p>不太成功dump出源文件后（需进行反反编译操作将真正的EOP找到，然后再将源文件dump下来，此处我不知道为什么无法获取对原文加密的函数）</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212212627494.png" alt="image-20221212212627494"></p>
+<p>正常情况应该如图</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213109598.png" alt="image-20221212213109598"></p>
+<p>此处以正常情况距离</p>
+<p>先通过shift+f12搜索显示的字符串</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213343179.png" alt="image-20221212213343179"></p>
+<p>双击选中</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213424909.png" alt="image-20221212213424909"></p>
+<p>再通过x查询交叉引用</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213452131.png" alt="image-20221212213452131"></p>
+<p>成功找到对应函数</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213524142.png" alt="image-20221212213524142"></p>
+<p>再通过f5反汇编就可以大致看懂了</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221212213555159.png" alt="image-20221212213555159"></p>
+<p>根据wp所说此处采用了多重加密（包含仿射加密）</p>
+<p>根据此处可以获得仿射加密的字典</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strcpy</span>(v29, <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwzyz0123456789&#123;&#125;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>还有被加密的的字符</p>
+<p>unsigned char是因为默认字符有负数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">char</span> a[]=&#123;</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0A</span>,<span class="number">0xF3</span>,<span class="number">0x1C</span>,<span class="number">0x1C</span>,<span class="number">0x04</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0x02</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,</span><br><span class="line">		<span class="number">0x20</span>,<span class="number">0x32</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x08</span>,<span class="number">0xF3</span>,<span class="number">0x04</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0x2A</span>,<span class="number">0x12</span>,</span><br><span class="line">		<span class="number">0x2A</span>,<span class="number">0xF5</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0x34</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF5</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x12</span>,<span class="number">0xF3</span>,<span class="number">0x02</span>,<span class="number">0xF2</span>,<span class="number">0x12</span>,<span class="number">0x12</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF3</span>,<span class="number">0x0A</span>,</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根据仿射加密规则c(密文)&#x3D;(a*m(待加密字符)+b)(mod n)</p>
+<p>解密则需要获得密钥a与字典长度n的最大公因数gcd（a,n）</p>
+<p>d(解密)&#x3D;(a-gcd(a,n)(c-b))(mod n)</p>
+<p>其通过异或加密和数字分解加密将实际值掩盖了，首先应该通过</p>
+<p>先异或回去再将质数乘回来</p>
+<p>如下</p>
+<p>此处分别异或的为0xf0和0x0f</p>
+<p><img src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20221213151537448.png" alt="image-20221213151537448"></p>
+<p> 将分解出的质数拿出来放入数组中得</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> divi_step[] =</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x03</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x03</span>,<span class="number">0x05</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x05</span>,<span class="number">0x02</span>,</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根据wp</p>
+<p>具体处理则为</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> a[]=&#123;</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0A</span>,<span class="number">0xF3</span>,<span class="number">0x1C</span>,<span class="number">0x1C</span>,<span class="number">0x04</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0x02</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,</span><br><span class="line">		<span class="number">0x20</span>,<span class="number">0x32</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x08</span>,<span class="number">0xF3</span>,<span class="number">0x04</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0x2A</span>,<span class="number">0x12</span>,</span><br><span class="line">		<span class="number">0x2A</span>,<span class="number">0xF5</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0x34</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF5</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x12</span>,<span class="number">0xF3</span>,<span class="number">0x02</span>,<span class="number">0xF2</span>,<span class="number">0x12</span>,<span class="number">0x12</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF3</span>,<span class="number">0x0A</span>,</span><br><span class="line">	&#125;;<span class="comment">//获取的密文</span></span><br><span class="line">	<span class="comment">//0 1 4</span></span><br><span class="line">	<span class="type">int</span> divi_step[] =</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x03</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x03</span>,<span class="number">0x05</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x05</span>,<span class="number">0x02</span>,</span><br><span class="line">	&#125;;<span class="comment">//一般F0 最后一位0F</span></span><br><span class="line">	<span class="type">char</span> table[] = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwzyz0123456789&#123;&#125;&quot;</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> wp[<span class="number">64</span>];</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> btmp=<span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,pre_base=<span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//素数分解逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		btmp=<span class="number">1</span>;		</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;divi_step[i];j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(j==divi_step[i]<span class="number">-1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				btmp=(a[pre_base+j]^<span class="number">0x0F</span>)*btmp;<span class="comment">//</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				btmp=(a[pre_base+j]^<span class="number">0xF0</span>)*btmp;<span class="comment">//将原来异或的文字异或回去</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		wp[i]=btmp;</span><br><span class="line">		pre_base+=divi_step[i];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//异或逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">31</span>;i&gt;=<span class="number">0</span>;i--)<span class="comment">// 1 2 3</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">31</span>)</span><br><span class="line">			wp[i]=wp[i]^wp[<span class="number">0</span>];<span class="comment">//通过异或的可逆性恢复原来的字符</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			wp[i]=wp[i]^wp[i+<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//仿射密码学逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		wp[i] = (<span class="type">unsigned</span> <span class="type">char</span>)((wp[i] - <span class="number">47</span>) * <span class="number">45</span>) % <span class="number">64</span>;<span class="comment">//强制转化为unsigned char 防止出现负数</span></span><br><span class="line">        <span class="comment">//这个符号的处理很重要的</span></span><br><span class="line">		wp[i] = table[wp[i]];</span><br><span class="line">	&#125;</span><br><span class="line">	wp[<span class="number">32</span>]=<span class="number">0</span>;<span class="comment">//给字符串一个结尾</span></span><br><span class="line">	<span class="built_in">puts</span>((<span class="type">char</span>*)wp);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    最终代码运行结果不是wp的答案那种而是D8g7{TherefIsfAfLongfWa6fTofGof}</p>
+<p>wp中答案则是</p>
+<p>D0g3{There_Is_A_Long_Way_To_Go_}</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">runwu2204</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/06/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">http://example.com/2023/06/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/06/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%80%E5%88%B0%E4%BA%8C%E5%91%A8%EF%BC%89/" title="学习报告（一到二周）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">学习报告（一到二周）</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/05/re/Re/" title="Re"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Re</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">runwu2204</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RE1-PYC"><span class="toc-number">1.</span> <span class="toc-text">RE1.PYC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RE2"><span class="toc-number">2.</span> <span class="toc-text">RE2</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/05/%E5%A5%BD%E7%9C%8B%E7%9A%84%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%B0%8F%E5%A7%90%E5%A7%90/" title="好看的维吾尔族小姐姐">好看的维吾尔族小姐姐</a><time datetime="2023-06-05T13:42:21.776Z" title="Created 2023-06-05 21:42:21">2023-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/05/%E5%89%8D%E7%AB%AF/qianduan/" title="qianduan">qianduan</a><time datetime="2023-06-05T13:42:21.775Z" title="Created 2023-06-05 21:42:21">2023-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/05/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E8%AE%AE/" title="前后端协议">前后端协议</a><time datetime="2023-06-05T13:42:21.773Z" title="Created 2023-06-05 21:42:21">2023-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/05/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/" title="PHP伪协议">PHP伪协议</a><time datetime="2023-06-05T13:42:21.773Z" title="Created 2023-06-05 21:42:21">2023-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/05/re/%E8%8A%B1%E6%8C%87%E4%BB%A4/" title="花指令">花指令</a><time datetime="2023-06-05T13:42:21.772Z" title="Created 2023-06-05 21:42:21">2023-06-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By runwu2204</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
