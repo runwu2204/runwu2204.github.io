@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/06/07/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>http://example.com/2023/06/07/Web/%E5%89%8D%E7%AB%AF/qianduan/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/Web/%E5%89%8D%E7%AB%AF/qianduan/</loc>
+    <loc>http://example.com/2023/06/07/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/pythonz3/3.elf/</loc>
-    
-    <lastmod>2023-06-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2023/06/07/re/pythonz3/4.elf/</loc>
     
     <lastmod>2023-06-07</lastmod>
@@ -128,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/pythonz3/1.elf/</loc>
+    <loc>http://example.com/2023/06/07/re/pythonz3/3.elf/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -138,6 +129,15 @@
   
   <url>
     <loc>http://example.com/2023/06/07/re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</loc>
+    
+    <lastmod>2023-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/06/07/re/pythonz3/1.elf/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -377,14 +377,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/re/%E5%AE%89%E5%8D%93/</loc>
+    <loc>http://example.com/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/</loc>
+    <loc>http://example.com/categories/re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
