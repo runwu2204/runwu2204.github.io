@@ -65,6 +65,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%20baby_re/</loc>
+    
+    <lastmod>2023-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84bang1/</loc>
     
     <lastmod>2023-06-07</lastmod>
@@ -92,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/pythonz3/pythonz3/</loc>
+    <loc>http://example.com/2023/06/07/re/pythonz3/5.elf/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -101,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/pythonz3/5.elf/</loc>
+    <loc>http://example.com/2023/06/07/re/pythonz3/pythonz3/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -200,7 +209,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/gray/</loc>
+    <loc>http://example.com/2023/06/07/re/maze/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -209,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/06/07/re/maze/</loc>
+    <loc>http://example.com/2023/06/07/re/gray/</loc>
     
     <lastmod>2023-06-07</lastmod>
     
@@ -335,13 +344,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/</loc>
-    <lastmod>2023-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Pwn/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -356,7 +358,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://example.com/categories/Web/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -377,6 +379,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/re/%E5%AE%89%E5%8D%93/</loc>
+    <lastmod>2023-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -384,7 +393,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/re/%E5%AE%89%E5%8D%93/</loc>
+    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
