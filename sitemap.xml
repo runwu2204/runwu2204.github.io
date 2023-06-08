@@ -383,14 +383,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://example.com/categories/re/pe/</loc>
     <lastmod>2023-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/re/pe/</loc>
+    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
