@@ -37,9 +37,9 @@ http://example.com/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%
 http://example.com/2022/12/28/re/pythonz3/1.elf/
 http://example.com/2022/12/25/re/pe/pe1/
 http://example.com/
+http://example.com/categories/Web/
 http://example.com/categories/Misc/
 http://example.com/categories/Pwn/
-http://example.com/categories/Web/
 http://example.com/categories/re/
 http://example.com/categories/re/pe/
 http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/
