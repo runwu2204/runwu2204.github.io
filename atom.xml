@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-22T09:35:33.000Z</updated>
+  <updated>2023-06-22T09:40:56.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="http://example.com/2023/06/22/Misc/SCTF2023%20checkin/"/>
     <id>http://example.com/2023/06/22/Misc/SCTF2023%20checkin/</id>
     <published>2023-06-22T09:31:16.000Z</published>
-    <updated>2023-06-22T09:35:33.000Z</updated>
+    <updated>2023-06-22T09:40:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>点击通过资源管理器打开</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230132717.png" alt="屏幕截图(9)"></p><p>点击全部解压缩</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230133029.png" alt="image-20230623013317976"></p><p>会出现一个重名的文件，直接跳过</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230133086.png" alt="image-20230623013345054"></p><p>直接跳过，查看那个文件就会有flag了，具体原因猜测是原zip中放了个压缩后的压缩包，无法被正常识别</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230134086.png" alt="image-20230623013445052"></p>]]></content>
+    <content type="html"><![CDATA[<p>点击通过资源管理器打开</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230140213.png" alt="image-20230623014043149"></p><p>点击全部解压缩</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230133029.png" alt="image-20230623013317976"></p><p>会出现一个重名的文件，直接跳过</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230133086.png" alt="image-20230623013345054"></p><p>直接跳过，查看那个文件就会有flag了，具体原因猜测是原zip中放了个压缩后的压缩包，无法被正常识别</p><p><img src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230134086.png" alt="image-20230623013445052"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;点击通过资源管理器打开&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230132717.png&quot; alt=&quot;屏幕截图(9)&quot;&gt;&lt;/p&gt;
-&lt;p&gt;点击全部解压缩&lt;/p&gt;
-&lt;p&gt;&lt;i</summary>
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230140213.png&quot; alt=&quot;image-20230623014043149&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点</summary>
       
     
     
