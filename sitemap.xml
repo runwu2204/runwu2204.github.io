@@ -407,14 +407,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Pwn/</loc>
+    <loc>http://example.com/categories/Web/</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/</loc>
+    <loc>http://example.com/categories/Pwn/</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
