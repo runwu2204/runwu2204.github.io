@@ -1,3 +1,4 @@
+http://example.com/2023/06/22/Misc/SCTF2023%20checkin/
 http://example.com/2023/06/22/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/
 http://example.com/2023/04/17/Web/php/
 http://example.com/2023/06/21/re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/
@@ -50,7 +51,7 @@ http://example.com/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/
 http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/
 http://example.com/categories/re/pe/
 http://example.com/categories/re/pythonz3/
-http://example.com/categories/re/%E5%AE%89%E5%8D%93/
 http://example.com/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/
+http://example.com/categories/re/%E5%AE%89%E5%8D%93/
 http://example.com/categories/Misc/ctfshow/
 http://example.com/categories/Misc/ctfshow/%E5%A5%87%E6%80%AA%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85/
