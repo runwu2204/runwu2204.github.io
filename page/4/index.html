@@ -1,259 +1,1029 @@
-<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>runwu2204</title><meta name="author" content="runwu2204"><meta name="copyright" content="runwu2204"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="The Redefine Team">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/page/4/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta property="og:type" content="website">
 <meta property="og:title" content="runwu2204">
 <meta property="og:url" content="http://example.com/page/4/index.html">
 <meta property="og:site_name" content="runwu2204">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'runwu2204',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-06-23 19:31:31'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+        Theme Redefine
+    </title>
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="runwu2204"><span class="site-name">runwu2204</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">runwu2204</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/06/re/pythonz3/4.elf/" title="4.elf">4.elf</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-06T06:54:33.000Z" title="Created 2023-01-06 14:54:33">2023-01-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/pythonz3/">pythonz3</a></span></div><div class="content">装好了ubuntu
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                <h1>
+                Theme Redefine
+                </h1>
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="active" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+                <div class="home-sidebar-container fade-in-down-animation">
+    <div class="sticky-container">
+        
+            
+            <div class="sidebar-content" >
+                <div class="avatar">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="author">
+                    <div class="name">The Redefine Team</div>
+                    
+                        <div class="label">Lv4</div>
+                    
+                </div>
+                <div class="statistics">
+                    <a class="item" href="/tags">
+                        <div class="number">0</div>
+                        <div class="label">标签</div>
+                    </a>
+                    <a class="item" href="/categories">
+                        <div class="number">12</div>
+                        <div class="label">分类</div>
+                    </a>
+                    <a class="item" href="/archives">
+                        <div class="number">43</div>
+                        <div class="label">文章</div>
+                    </a>
+                </div>
+            </div>
+        
+
+    </div>
+</div>
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/07/re/pythonz3/5.elf/">
+                        5.elf
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        5.elf教会了我需要注意数据的类型与数据的长度，不然也容易犯错误
+关键在于看懂那几个强制类型转化，和运算符的顺序
+其main函数为
+1234567891011121314151617181920212223242526272829303132333...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Jan 07 2023 07:10:18 GMT+0800">
+                
+                    2023-01-07
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/07/re/pythonz3/5.elf/">阅读全文<span class="seo-reader-text">5.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/06/re/pythonz3/4.elf/">
+                        4.elf
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        装好了ubuntu
 它的glibc版本够用
 通过动态调试找到了其存储数据的正确顺序
 
 先依次输入数组中存起来备用
-123456789101112if ( v3 == v9 )  &#123;    for ( i = 0; i &lt;= 16; ++i )    &#123;      if ( (unsigned __int8)s[i] &gt; 0x60u &amp;&amp; (unsigned __int8)s[i] &lt;= 0x7Au )        s[i] = (s[i] ^ 0x47) + 1;      if ( (unsigned __int8)s[i] &gt; 0x40u &amp;&amp; (unsigned __int8)s[i] &lt;= 0x5Au )        s[i] = (s[i] ^ 0x4B) - 1;      v6[2 * i] = (unsigned __int8)s[i] &gt;&gt; 4;      v6[2 * i + 1] = s[i] &amp; 0xF;    &#125;  &#125;
+123456789101112if ( v3 == v9 )  &#123;    for ( i = 0; i &lt;= 16; +...
+                    
+                </div>
 
-根据其加密方式 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%80%E5%88%B0%E4%BA%8C%E5%91%A8%EF%BC%89/" title="学习报告（一到二周）">学习报告（一到二周）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-05T01:05:21.000Z" title="Created 2023-01-05 09:05:21">2023-01-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a></span></div><div class="content">学习报告（一到二周）语言学习汇编语言已基本了解其使用语法，及其功能（函数调用，返回父函数）
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Jan 06 2023 14:54:33 GMT+0800">
+                
+                    2023-01-06
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/06/re/pythonz3/4.elf/">阅读全文<span class="seo-reader-text">4.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%80%E5%88%B0%E4%BA%8C%E5%91%A8%EF%BC%89/">
+                        学习报告（一到二周）
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        学习报告（一到二周）语言学习汇编语言已基本了解其使用语法，及其功能（函数调用，返回父函数）
 mov，jmp，push，pop（基本语句）
 call（调用子函数），ret（返回父函数），leave（将栈中的指向子函数地址去除，恢复父函数指令）
-stack用法存储函数在内存中的位置，存储变量，存储命令等
-C语言基本理解指针用法（用于指向变量地址），可用于子函数中调用外部变量,也可用于间接修改和间接引用对应地址的值
-工具使用ida静态分析通过解ctf题逐步理解
-基本可以看懂其伪代码表示意思
-基本会搜索相应输出结果以找到目标程序
-评测作业1，交换数值(1)指针
-1234567891011121314151617181920#include&lt;stdio.h&gt;int change (int* a, int* b)&#123;	int m;	m = *a;	*a = *b;	*b = m;	return 0;&#125;int main()&#123;	int a, b;	scanf(&quot;%d&quot;, &amp;a);	scanf(&quot;%d&quot;, &amp; ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%89%E5%88%B0%E5%9B%9B%E5%91%A8%EF%BC%89/" title="学习报告（三到四周）">学习报告（三到四周）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-05T01:05:20.000Z" title="Created 2023-01-05 09:05:20">2023-01-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a></span></div><div class="content">学习报告（三到四周）base16可通过位运算（高效率）进行加密
+stac...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 09:05:21 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%80%E5%88%B0%E4%BA%8C%E5%91%A8%EF%BC%89/">阅读全文<span class="seo-reader-text">学习报告（一到二周）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%89%E5%88%B0%E5%9B%9B%E5%91%A8%EF%BC%89/">
+                        学习报告（三到四周）
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        学习报告（三到四周）base16可通过位运算（高效率）进行加密
 基本已经知道其加密模式
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980#include&lt;stdio.h&gt;char table[] = &#123; &quot;0123456789ABCDEF&quot; &#125;;//字典unsigned char r( char m)//一个字符将被加密为两个字符可分为左右&#123;    unsigned char a;    a=m&lt;&lt;4;    return a &gt;&gt; 4;&#125;unsigned char l(char n)&#123;    unsigned char a;    a = n;    return (a&gt;&gt; 4);&#125;unsigned char ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/05/re/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%B0%83%E8%AF%95/" title="汇编语言调试">汇编语言调试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-05T01:05:19.000Z" title="Created 2023-01-05 09:05:19">2023-01-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a></span></div><div class="content">寄存器在动态调试中需知道各寄存器意义及作用
+123456789101112131415161718192021222324252627282930313233343536373839404142434445...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 09:05:20 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%EF%BC%88%E4%B8%89%E5%88%B0%E5%9B%9B%E5%91%A8%EF%BC%89/">阅读全文<span class="seo-reader-text">学习报告（三到四周）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/re/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%B0%83%E8%AF%95/">
+                        汇编语言调试
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        寄存器在动态调试中需知道各寄存器意义及作用
 寄存器分为两类，通用寄存器和特殊寄存器。
 通用寄存器
-EAX（寄存器寄存器-累加器）：最常用于算术，逻辑和数据传输指令、乘法和除法运算使用此寄存器。对于Windows API函数，函数的返回值通常将存储在EAX寄存器中。
-EBX（基址寄存器）：EBX寄存器可以直接访问存储器数据，它也是一个通用寄存器。
-ECX（计数寄存器）：ECX是一个共享寄存器，可以用作各种命令的计数器。它还可能包含内存中的数据未对齐。使用计数器的命令是顺序，循环和LOOP &#x2F; LOOPD指令。
+EAX（寄存器寄存器-累加器）：最常用于算术，逻辑和数据传输指令、乘法和除法运算使用此寄存器。对于Windows API函数，函数的返回值通常将存储在E...
+                    
+                </div>
 
-12345678//LOOP/LOOPD//格式如下LOOP 标号（）//可以实现函数的循环，//具体如下ECX=ECX-1(ECX)&lt;&gt;0//就转移至所跟的标号处执行，相当于又把EIP移到标号处ECX=0//就将EIP移向下一个指令(跟指令正常执行一样)
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 09:05:19 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
 
+    <a href="/2023/01/05/re/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%B0%83%E8%AF%95/">阅读全文<span class="seo-reader-text">汇编语言调试</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
 
-具体模式如下网址
-[实模式、保护模式、三种地址、分段、分页 - 克拉默与矩阵 - 博客园 (cnblogs.com)](https://www.cnblogs.com/kelamoyujuzhen/p ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/05/re/Re/" title="Re">Re</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-05T01:05:18.000Z" title="Created 2023-01-05 09:05:18">2023-01-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a></span></div><div class="content">汇编语言cpu中储存需要用到的数值地址之类的名叫寄存器(AX,BX,CX诸如此类)。
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/re/Re/">
+                        Re
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        汇编语言cpu中储存需要用到的数值地址之类的名叫寄存器(AX,BX,CX诸如此类)。
 cpu执行命令是按次序进行的通过cs，ip共同决定cs（段地址），ip（偏移地址）
-cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2（由下条命令长度决定）
-然后执行下次命令。如下图（由左至右CS:IP,指令在十六进制下的表现,指令含义）
+cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2...
+                    
+                </div>
 
-工具Dosbox常用命令
-r命令-展示当前各寄存器值（AX,BX之类）以及当前指向的指令地址（CS,IP）栈地址（SS,SP）
-u命令-展示当前指令地址后几行的指令及地址
-a命令-修改指定地址所存储的指令（重点是指令）
-t命令-执行当前CSIP指向的指令并显示当前哥寄存器值和当前指令地址
-d命令-若不输入如d xxxx:xxxx的地址则显示当前指令地址的内存中存储的数据（地址，数据16进制，数据以ASCII码表现状态）
-e命令-修改内存中数据（16进制）（如下图实现在内存中写入hello world）
-123e 073f:0100073f:0100 00.48 00.65 00.6c 00.6c 00.6f 00.20 00.57 0 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/" title="学习报告(最后一次任务)">学习报告(最后一次任务)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-05T01:05:18.000Z" title="Created 2023-01-05 09:05:18">2023-01-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a></span></div><div class="content">RE1.PYC先启动该文件看下运行结果
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 09:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/re/Re/">阅读全文<span class="seo-reader-text">Re</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">
+                        学习报告(最后一次任务)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        RE1.PYC先启动该文件看下运行结果
 
 不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码
 pyc文件主要是无法通过f5反汇编查找代码逻辑
 
-尝试通过shift+f12查询字符串，结果如下
+尝试通过shift+f12查询字符串，结...
+                    
+                </div>
 
-一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般）
-通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此类格式应该是经过了加密）
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 09:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
 
-下方也有说明，表现是通过base64加密的，将其拖入base64中解密
+    <a href="/2023/01/05/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">阅读全文<span class="seo-reader-text">学习报告(最后一次任务)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
 
-得到了最后的flag：D0g3{Do_You_Want_To_Hammer_Me}
-RE2
-通过反汇编找到对应函数极少（一般是通过了加壳）
-再通过寻找字符串，发现确实是通过了upx加壳,且是3.96版本，用普通的脱壳尝试如下
+            </li>
+        
+            <li class="home-article-item">
 
-发现报错无法脱壳
-疯狂百度，发现是经过了特征码修改
+                
 
+                
 
-尝试通过winhex修改该文件,失败了。
-通过开挂发现需要dump
-不太成功dump出源文件后（需进行反反编译操作将真正的EOP找到，然后再将源文件dump下来，此处我不知道为什么无法获取对原文加密的函数）
+                <h3 class="home-article-title">
+                    <a href="/2023/01/04/re/pythonz3/3.elf/">
+                        3.elf
+                    </a>
+                </h3>
 
-正常 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/04/re/pythonz3/3.elf/" title="3.elf">3.elf</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-04T06:29:00.000Z" title="Created 2023-01-04 14:29:00">2023-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/pythonz3/">pythonz3</a></span></div><div class="content">尝试对3.elf进行动态调试
+                <div class="home-article-content markdown-body">
+                    
+                        尝试对3.elf进行动态调试
 
 寄，我的glibc库版本低了
 
 但根据2.elf的经验，其存储顺序应该是按上到下的顺序存储的，从低位到高位存储的
 同时这个每两位就代表了一个字符刚好就有42个字符符合校验的字符个数
 所以z3破解代码为
-123456789101112131415161718192021222324252627282930313233343536373839404142434445from z3 import *    DataCmp=[		0x66,0x4E,0XA9,0XFD,0X3C,0X55,0X90,0X24,0X57,0XF6,0X5D,0XB1,0X01,0X20,0X81,0XFD,0X36,0XA9,0X1F,0XA1,0X0E,0X0D,0X80,0X8F,0XCE,0X77,0XE8,0X23,0X9E,0X27,0X60,0X2F,0XA5,0XCF,0X1B,0XBD,0X32,0XDB,0XFF,0X28,0XA4,0X5D]flag = [BitVec(&#x27;flag[%2d]&#x27; % i, 8) for i in range(4 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/04/re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" title="2.elf z3暴力破解">2.elf z3暴力破解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-04T06:06:58.000Z" title="Created 2023-01-04 14:06:58">2023-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/pythonz3/">pythonz3</a></span></div><div class="content">通过进行动态调试发现确实
+12345678...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Jan 04 2023 14:29:00 GMT+0800">
+                
+                    2023-01-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/04/re/pythonz3/3.elf/">阅读全文<span class="seo-reader-text">3.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/04/re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/">
+                        2.elf z3暴力破解
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        通过进行动态调试发现确实
 ![image-20230104221103045](E:\note\re\pythonz3\2.elf z3暴力破解.assets\image-20230104221103045.png)
 此处是进行校验的字符串
-但是开始我所理解的顺序不是从左到右而是从低位到高位如图
-![image-20230104221209637](E:\note\re\pythonz3\2.elf z3暴力破解.assets\image-20230104221209637.png)
-0x04,0x46,0x81,0x63……正是v4从低位到高位的顺序排列的，我又犯了些低级错误。。。。。
-所以此处通过z3
-1234567891011121314151617181920212223242526from z3 import *a=[0x4,0x46,0x81,0x63,0x14,0x53,0x17,0x6d,0x6a,0x67,0x76,0x16,0x34,0x14,0x34]flag = [BitVec(&#x27;flag[%2d]&#x27; % i, 8) for i in ran ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/" title="1.elf z3暴力破解·改">1.elf z3暴力破解·改</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-01-04T06:02:40.000Z" title="Created 2023-01-04 14:02:40">2023-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/pythonz3/">pythonz3</a></span></div><div class="content">可通过如下代码
+但是开始...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Jan 04 2023 14:06:58 GMT+0800">
+                
+                    2023-01-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/04/re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/">阅读全文<span class="seo-reader-text">2.elf z3暴力破解</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">
+                        1.elf z3暴力破解·改
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        可通过如下代码
 123&quot;前面需要输入条件&quot;f=Solver()print(f.model)
 
-可以查找自己所输入的条件通过对z3的检验发现自己出现了个python的低级常识性错误for循环时range输出的可遍历对象实际是小于该对象的如range(10)其应该是&lt;10所以经过对遍历对象的修改真正的z3代码应该如下
-12345678910111213141516171819202122232425262728293031from z3 import *    DataCmp=[		161, 186, 110, 70, 128, 244, 217, 170, 180, 54, 90,   204, 140, 30, 149, 33, 143, 67, 225, 19, 138, 168, 106,   66, 174, 251, 247, 165, 157, 11, 75, 222, 186, 0, 135,   35, 144, 70, 211, 223]flag = [BitVec(&#x27;flag[%2d]&#x27; % i, 8) for i in  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/12/28/re/pythonz3/1.elf/" title="1.elf">1.elf</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-12-27T21:27:17.000Z" title="Created 2022-12-28 05:27:17">2022-12-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/re/">re</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/re/pythonz3/">pythonz3</a></span></div><div class="content">其加密的过程是
-123456789101112v1 = -85;  v2 = 0;  for ( i = 0; i &lt;= 39; ++i )  &#123;    for ( j = 0; j &lt;= 50; ++j )    &#123;      v1 ^= j ^ v2 ^ 0x5F;      s[i] ^= s[(i + 1) % 40];      s[i] ^= v1;      ++v2;    &#125;  &#125;
+可以查找自己所输入的条件通过对z3的检验发现自己出现了个python的低级常识性错误for循环时range输出的可遍历对象实际是小于该对...
+                    
+                </div>
 
-可以直接找到它加密后的字符串
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Jan 04 2023 14:02:40 GMT+0800">
+                
+                    2023-01-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/re/">re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
 
-可以直接根据加密算法逆推答案
-123456789101112131415161718192021222324252627282930313233#include&lt;stdio.h&gt;int main()&#123;    char s[] = &#123; 161, 186, 110, 70, 128, 244, 217, 170, 180, 54, 90,   204, 140, 30, 149, 33, 143, 67, 225, 19, 138, 168, 106,   66, 174, 2 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">runwu2204</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/23/re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/" title="羊城杯 2021Ez_android">羊城杯 2021Ez_android</a><time datetime="2023-06-23T03:04:51.000Z" title="Created 2023-06-23 11:04:51">2023-06-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/23/re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/" title="GKCTF 2021App-debug">GKCTF 2021App-debug</a><time datetime="2023-06-23T01:20:26.000Z" title="Created 2023-06-23 09:20:26">2023-06-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/22/Misc/SCTF2023%20checkin/" title="SCTF2023 checkin">SCTF2023 checkin</a><time datetime="2023-06-22T09:31:16.000Z" title="Created 2023-06-22 17:31:16">2023-06-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/22/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/" title="鹤城杯 2021designEachStep">鹤城杯 2021designEachStep</a><time datetime="2023-06-22T06:46:05.000Z" title="Created 2023-06-22 14:46:05">2023-06-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/21/re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/" title="柏鹭杯2021baby_python">柏鹭杯2021baby_python</a><time datetime="2023-06-21T07:48:28.000Z" title="Created 2023-06-21 15:48:28">2023-06-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            <a class="card-more-btn" href="/categories/" title="More">
-    <i class="fas fa-angle-right"></i></a>
+    <a href="/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">阅读全文<span class="seo-reader-text">1.elf z3暴力破解·改</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
+</div>
+
+    </div>
+</div>
+
+                
+
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Misc/"><span class="card-category-list-name">Misc</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Misc/ctfshow/"><span class="card-category-list-name">ctfshow</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Misc/ctfshow/%E5%A5%87%E6%80%AA%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85/"><span class="card-category-list-name">奇怪的压缩包</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Pwn/"><span class="card-category-list-name">Pwn</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web/"><span class="card-category-list-name">Web</span><span class="card-category-list-count">3</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/re/"><span class="card-category-list-name">re</span><span class="card-category-list-count">32</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/re/pe/"><span class="card-category-list-name">pe</span><span class="card-category-list-count">1</span></a></li></ul></li>
-            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">14</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">January 2023</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">December 2022</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">42</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-23T11:31:31.108Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By runwu2204</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+                <br>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+        </div>
+        
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
