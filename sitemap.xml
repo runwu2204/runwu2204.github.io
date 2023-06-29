@@ -454,13 +454,6 @@
 
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
-    <lastmod>2023-06-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Crypto/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -469,6 +462,13 @@
   
   <url>
     <loc>http://example.com/categories/Pwn/</loc>
+    <lastmod>2023-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -490,13 +490,6 @@
   
   <url>
     <loc>http://example.com/categories/CTF-WP/</loc>
-    <lastmod>2023-06-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -538,7 +531,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Re/</loc>
+    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -546,6 +539,13 @@
   
   <url>
     <loc>http://example.com/categories/Re/pythonz3/</loc>
+    <lastmod>2023-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/CTF-WP/Re/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
