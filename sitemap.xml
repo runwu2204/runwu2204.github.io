@@ -468,14 +468,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
+    <loc>http://example.com/categories/Web/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/</loc>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
