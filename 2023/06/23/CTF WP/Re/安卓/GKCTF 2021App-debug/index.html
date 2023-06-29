@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="runwu2204">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/06/23/ctf wp/re/安卓/gkctf 2021app-debug/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="参考wp[(41条消息) BUUCTF GKCTF 2021]app-debug_皮皮蟹！的博客-CSDN博客  就一个activity 123456789101112&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;&lt;manifest xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.andr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GKCTF 2021App-debug">
+<meta property="og:url" content="http://example.com/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/index.html">
+<meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="参考wp[(41条消息) BUUCTF GKCTF 2021]app-debug_皮皮蟹！的博客-CSDN博客  就一个activity 123456789101112&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;&lt;manifest xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.andr">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231819094.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231822092.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231838820.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231839145.png">
+<meta property="article:published_time" content="2023-06-23T01:20:26.000Z">
+<meta property="article:modified_time" content="2023-06-23T02:44:55.000Z">
+<meta property="article:author" content="runwu2204">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231819094.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            GKCTF 2021App-debug -
+        
+        Runwu2204
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Runwu2204
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">GKCTF 2021App-debug</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">runwu2204</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-06-23 09:20:26</span>
+        <span class="mobile">2023-06-23 09:20</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-06-23 10:44:55</span>
+            <span class="mobile">2023-06-23 10:44</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/">安卓</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <p>参考wp[(41条消息) BUUCTF <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_53349587/article/details/122394778" >GKCTF 2021]app-debug_皮皮蟹！的博客-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>就一个activity</p>
+<div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span> <span class="attr">android:versionCode</span>=<span class="string">&quot;1&quot;</span> <span class="attr">android:versionName</span>=<span class="string">&quot;1.0&quot;</span> <span class="attr">android:compileSdkVersion</span>=<span class="string">&quot;29&quot;</span> <span class="attr">android:compileSdkVersionCodename</span>=<span class="string">&quot;10&quot;</span> <span class="attr">package</span>=<span class="string">&quot;com.example.myapplication&quot;</span> <span class="attr">platformBuildVersionCode</span>=<span class="string">&quot;29&quot;</span> <span class="attr">platformBuildVersionName</span>=<span class="string">&quot;10&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">&quot;21&quot;</span> <span class="attr">android:targetSdkVersion</span>=<span class="string">&quot;29&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span> <span class="attr">android:theme</span>=<span class="string">&quot;@style/AppTheme&quot;</span> <span class="attr">android:label</span>=<span class="string">&quot;@string/app_name&quot;</span> <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span> <span class="attr">android:debuggable</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span> <span class="attr">android:appComponentFactory</span>=<span class="string">&quot;androidx.core.app.CoreComponentFactory&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;com.example.myapplication.MainActivity&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>主函数就是调用了JNI</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.EditText;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes2.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Button mBtnLogin;</span><br><span class="line">    <span class="keyword">private</span> EditText mEtflag;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">native</span> <span class="type">boolean</span> <span class="title function_">check</span><span class="params">(String str)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;native-lib&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(C0273R.layout.activity_main);</span><br><span class="line">        <span class="built_in">this</span>.mBtnLogin = (Button) findViewById(C0273R.C0275id.btn_login);</span><br><span class="line">        <span class="built_in">this</span>.mEtflag = (EditText) findViewById(C0273R.C0275id.bEn_edittext);</span><br><span class="line">        <span class="built_in">this</span>.mBtnLogin.setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.example.myapplication.MainActivity.1</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View v)</span> &#123;</span><br><span class="line">                <span class="type">MainActivity</span> <span class="variable">mainActivity</span> <span class="operator">=</span> MainActivity.<span class="built_in">this</span>;</span><br><span class="line">                <span class="keyword">if</span> (mainActivity.check(mainActivity.mEtflag.getText().toString())) &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>, <span class="string">&quot;You Are Right!flag is flag&#123;md5(input)&#125;&quot;</span>, <span class="number">0</span>).show();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>, <span class="string">&quot;Sorry your flag is wrong!&quot;</span>, <span class="number">0</span>).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>JNI函数</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> __fastcall <span class="title function_">Java_com_example_myapplication_MainActivity_check</span><span class="params">(__int64 a1, __int64 a2, __int64 a3)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [xsp+24h] [xbp-4Ch]</span></span><br><span class="line">  <span class="type">bool</span> v5; <span class="comment">// [xsp+4Ch] [xbp-24h]</span></span><br><span class="line">  <span class="type">char</span> v6[<span class="number">24</span>]; <span class="comment">// [xsp+50h] [xbp-20h] BYREF</span></span><br><span class="line">  __int64 v7; <span class="comment">// [xsp+68h] [xbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v7 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(<span class="number">3</span>, <span class="number">3</span>, <span class="number">13</span>, <span class="number">0</span>, <span class="number">2</span>)) + <span class="number">40</span>);</span><br><span class="line">  sub_3FE20(a1, a3, (__int64)v6);<span class="comment">//复制字符串</span></span><br><span class="line">  <span class="keyword">if</span> ( sub_40040((__int64)v6) == <span class="number">8</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">6</span>; ++i )</span><br><span class="line">      byte_C80E0[i] = *(_BYTE *)sub_40064((__int64)v6, i);</span><br><span class="line">    v5 = sub_3ED8C((<span class="type">unsigned</span> <span class="type">int</span> *)byte_C80E0);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    v5 = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  sub_3FC04((__int64)v6);</span><br><span class="line">  _ReadStatusReg(ARM64_SYSREG(<span class="number">3</span>, <span class="number">3</span>, <span class="number">13</span>, <span class="number">0</span>, <span class="number">2</span>));</span><br><span class="line">  <span class="keyword">return</span> v5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>为啥反编译不一样</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231819094.png"
+                      alt="image-20230623181955999"
+                ></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">bool __fastcall <span class="title function_">sub_3ED8C</span><span class="params">(unsigned <span class="type">int</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  unsigned <span class="type">int</span> i; <span class="comment">// [xsp+20h] [xbp-20h]</span></span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// [xsp+24h] [xbp-1Ch]</span></span><br><span class="line">  unsigned <span class="type">int</span> v4; <span class="comment">// [xsp+28h] [xbp-18h]</span></span><br><span class="line">  unsigned <span class="type">int</span> v5; <span class="comment">// [xsp+2Ch] [xbp-14h]</span></span><br><span class="line"></span><br><span class="line">  v5 = *a1;</span><br><span class="line">  v4 = a1[<span class="number">1</span>];</span><br><span class="line">  v3 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">0x20</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v3 += dword_C8010;</span><br><span class="line">    v5 += (<span class="number">16</span> * v4 + dword_C8000) ^ (v4 + v3) ^ ((v4 &gt;&gt; <span class="number">5</span>) + dword_C8004);</span><br><span class="line">    v4 += (<span class="number">16</span> * v5 + dword_C8008) ^ (v5 + v3) ^ ((v5 &gt;&gt; <span class="number">5</span>) + dword_C800C);</span><br><span class="line">  &#125;</span><br><span class="line">  *a1 = v5;</span><br><span class="line">  a1[<span class="number">1</span>] = v4;</span><br><span class="line">  <span class="keyword">return</span> *a1 == <span class="number">0xF5A98FF3</span> &amp;&amp; a1[<span class="number">1</span>] == <span class="number">0xA21873A3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>通过交叉引用发现有对key的修改key为{9,7,8,6}</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231822092.png"
+                      alt="image-20230623182220976"
+                ></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">sub_3EF18</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  dword_C8004 = <span class="number">7</span>;</span><br><span class="line">  dword_C8008 = <span class="number">8</span>;</span><br><span class="line">  dword_C800C = <span class="number">6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>有个自启动的函数对值进行修改，自启动的一般都在.init_array表内</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.init_array:<span class="number">00000000000</span>C0F98 ; Segment type: Pure data</span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98                 AREA .init_array, DATA, ALIGN=<span class="number">3</span></span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98                 ; ORG <span class="number">0xC0F98</span></span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98 off_C0F98       DCQ sub_3EF3C           ; DATA XREF: LOAD:<span class="number">0000000000000088</span>↑o</span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98                                         ; LOAD:<span class="number">00000000000001</span>D8↑o</span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98 ; .init_array   ends</span><br><span class="line">.init_array:<span class="number">00000000000</span>C0F98</span><br></pre></td></tr></table></figure></div>
+
+<p>直接用之前写的tea算法</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">teajiami</span> <span class="params">(<span class="type">uint32_t</span>* v, <span class="type">uint32_t</span>* k)</span> <span class="comment">//此处uint32长度就为usigned int占32bit共4个字节</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint32_t</span> sum = <span class="number">0</span>;  <span class="comment">// 注意sum也是32位无符号整型</span></span><br><span class="line">    <span class="type">uint32_t</span> v0 = v[<span class="number">0</span>], v1 = v[<span class="number">1</span>];</span><br><span class="line">    <span class="type">uint32_t</span> delta = <span class="number">0x458BCD42</span>;</span><br><span class="line">    <span class="type">uint32_t</span> k0 = k[<span class="number">0</span>], k1 = k[<span class="number">1</span>], k2 = k[<span class="number">2</span>], k3 = k[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) <span class="comment">//进行32轮迭代，次数越多越难破解，但同时效率也会降低</span></span><br><span class="line">    &#123;</span><br><span class="line">        sum += delta;</span><br><span class="line">        v0 += ((v1&lt;&lt;<span class="number">4</span>) + k0) ^ (v1 + sum) ^ ((v1&gt;&gt;<span class="number">5</span>) + k1);</span><br><span class="line">        v1 += ((v0&lt;&lt;<span class="number">4</span>) + k2) ^ (v0 + sum) ^ ((v0&gt;&gt;<span class="number">5</span>) + k3);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    v[<span class="number">0</span>]=v0; </span><br><span class="line">    v[<span class="number">1</span>]=v1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">teajiemi</span> <span class="params">(<span class="type">uint32_t</span>* v, <span class="type">uint32_t</span>* k)</span> <span class="comment">//解密也是进行相同的异或操作，通过异或同一个数恢复原数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint32_t</span> v0 = v[<span class="number">0</span>], v1 = v[<span class="number">1</span>];</span><br><span class="line">    <span class="type">uint32_t</span> delta = <span class="number">0x458BCD42</span>;</span><br><span class="line">    <span class="type">uint32_t</span> sum = delta * <span class="number">32</span>;</span><br><span class="line">    <span class="type">uint32_t</span> k0 = k[<span class="number">0</span>], k1 = k[<span class="number">1</span>], k2 = k[<span class="number">2</span>], k3 = k[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) &#123;</span><br><span class="line">        v1 -= ((v0&lt;&lt;<span class="number">4</span>) + k2) ^ (v0 + sum) ^ ((v0&gt;&gt;<span class="number">5</span>) + k3);</span><br><span class="line">        v0 -= ((v1&lt;&lt;<span class="number">4</span>) + k0) ^ (v1 + sum) ^ ((v1&gt;&gt;<span class="number">5</span>) + k1);</span><br><span class="line">        sum -= delta;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    v[<span class="number">0</span>]=v0; </span><br><span class="line">    v[<span class="number">1</span>]=v1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 两个32位无符号整数，即待加密的64bit明文数据</span></span><br><span class="line">    <span class="type">uint32_t</span> v[<span class="number">2</span>] = &#123;<span class="number">0xF5A98FF3</span>, <span class="number">0xA21873A3</span>&#125;;</span><br><span class="line">    <span class="comment">// 四个32位无符号整数，即128bit的key</span></span><br><span class="line">    <span class="type">uint32_t</span> k[<span class="number">4</span>]= &#123;<span class="number">0x9</span>, <span class="number">0x7</span>, <span class="number">0x8</span>, <span class="number">0x6</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// printf(&quot;Data is : %x %x\n&quot;, v[0], v[1]);</span></span><br><span class="line">    <span class="comment">// teajiami(v, k);</span></span><br><span class="line">    <span class="comment">// printf(&quot;Encrypted data is : %x %x\n&quot;, v[0], v[1]);</span></span><br><span class="line">    teajiemi(v, k);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Decrypted data is : %x %x\n&quot;</span>, v[<span class="number">0</span>], v[<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">puts</span>((<span class="type">char</span>*)v);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231838820.png"
+                      alt="image-20230623183849786"
+                ></p>
+<p>直接用md5</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306231839145.png"
+                      alt="image-20230623183945049"
+                ></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> GKCTF 2021App-debug</li>
+        <li><strong>Author:</strong> runwu2204</li>
+        <li><strong>Created at:</strong> 2023-06-23 09:20:26</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-06-23 10:44:55
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/06/23/CTF WP/Re/安卓/GKCTF 2021App-debug/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">羊城杯 2021Ez_android</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/22/CTF%20WP/Misc/SCTF2023%20checkin/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">SCTF2023 checkin</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">GKCTF 2021App-debug</div>
+        
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">runwu2204</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+        </div>
+        
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

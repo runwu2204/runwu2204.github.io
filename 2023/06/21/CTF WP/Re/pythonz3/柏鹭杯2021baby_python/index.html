@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="runwu2204">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/06/21/ctf wp/re/pythonz3/柏鹭杯2021baby_python/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="标准的pythonexe逆向， 唯一需要注意的是需要逆向的pyc文件在pyz文件包内  下面是源码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798">
+<meta property="og:type" content="article">
+<meta property="og:title" content="柏鹭杯2021baby_python">
+<meta property="og:url" content="http://example.com/2023/06/21/CTF%20WP/Re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/index.html">
+<meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="标准的pythonexe逆向， 唯一需要注意的是需要逆向的pyc文件在pyz文件包内  下面是源码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306212353722.png">
+<meta property="article:published_time" content="2023-06-21T07:48:28.000Z">
+<meta property="article:modified_time" content="2023-06-21T07:53:20.000Z">
+<meta property="article:author" content="runwu2204">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306212353722.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            柏鹭杯2021baby_python -
+        
+        Runwu2204
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Runwu2204
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">柏鹭杯2021baby_python</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">runwu2204</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-06-21 15:48:28</span>
+        <span class="mobile">2023-06-21 15:48</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-06-21 15:53:20</span>
+            <span class="mobile">2023-06-21 15:53</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <p>标准的pythonexe逆向，</p>
+<p>唯一需要注意的是需要逆向的pyc文件在pyz文件包内</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306212353722.png"
+                      alt="image-20230621235313652"
+                ></p>
+<p>下面是源码</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Source Generated with Decompyle++</span></span><br><span class="line"><span class="comment"># File: baby_core.pyc (Python 3.7)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">md5</span>(<span class="params">s = <span class="literal">None</span></span>):</span><br><span class="line">    m = hashlib.md5()</span><br><span class="line">    m.update(s)</span><br><span class="line">    <span class="keyword">return</span> m.hexdigest().lower()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    secret = <span class="built_in">input</span>(<span class="string">&#x27;secret: &#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(secret) != <span class="number">48</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="literal">None</span>.isnumeric():</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    values = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">48</span>, <span class="number">3</span>):</span><br><span class="line">        values.append(<span class="built_in">int</span>(secret[i:i + <span class="number">3</span>]))</span><br><span class="line">    </span><br><span class="line">    co = [</span><br><span class="line">        [</span><br><span class="line">            <span class="number">158</span>,</span><br><span class="line">            <span class="number">195</span>,</span><br><span class="line">            <span class="number">205</span>,</span><br><span class="line">            <span class="number">229</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">238</span>,</span><br><span class="line">            <span class="number">211</span>,</span><br><span class="line">            <span class="number">198</span>,</span><br><span class="line">            <span class="number">190</span>,</span><br><span class="line">            <span class="number">226</span>,</span><br><span class="line">            <span class="number">135</span>,</span><br><span class="line">            <span class="number">119</span>,</span><br><span class="line">            <span class="number">145</span>,</span><br><span class="line">            <span class="number">205</span>,</span><br><span class="line">            <span class="number">113</span>,</span><br><span class="line">            <span class="number">122</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">234</span>,</span><br><span class="line">            <span class="number">256</span>,</span><br><span class="line">            <span class="number">185</span>,</span><br><span class="line">            <span class="number">253</span>,</span><br><span class="line">            <span class="number">244</span>,</span><br><span class="line">            <span class="number">134</span>,</span><br><span class="line">            <span class="number">102</span>,</span><br><span class="line">            <span class="number">117</span>,</span><br><span class="line">            <span class="number">190</span>,</span><br><span class="line">            <span class="number">106</span>,</span><br><span class="line">            <span class="number">131</span>,</span><br><span class="line">            <span class="number">205</span>,</span><br><span class="line">            <span class="number">198</span>,</span><br><span class="line">            <span class="number">234</span>,</span><br><span class="line">            <span class="number">162</span>,</span><br><span class="line">            <span class="number">218</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">164</span>,</span><br><span class="line">            <span class="number">164</span>,</span><br><span class="line">            <span class="number">209</span>,</span><br><span class="line">            <span class="number">200</span>,</span><br><span class="line">            <span class="number">168</span>,</span><br><span class="line">            <span class="number">226</span>,</span><br><span class="line">            <span class="number">189</span>,</span><br><span class="line">            <span class="number">151</span>,</span><br><span class="line">            <span class="number">253</span>,</span><br><span class="line">            <span class="number">241</span>,</span><br><span class="line">            <span class="number">232</span>,</span><br><span class="line">            <span class="number">151</span>,</span><br><span class="line">            <span class="number">193</span>,</span><br><span class="line">            <span class="number">119</span>,</span><br><span class="line">            <span class="number">226</span>,</span><br><span class="line">            <span class="number">193</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">117</span>,</span><br><span class="line">            <span class="number">151</span>,</span><br><span class="line">            <span class="number">103</span>,</span><br><span class="line">            <span class="number">249</span>,</span><br><span class="line">            <span class="number">148</span>,</span><br><span class="line">            <span class="number">103</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">218</span>,</span><br><span class="line">            <span class="number">222</span>,</span><br><span class="line">            <span class="number">104</span>,</span><br><span class="line">            <span class="number">228</span>,</span><br><span class="line">            <span class="number">100</span>,</span><br><span class="line">            <span class="number">206</span>,</span><br><span class="line">            <span class="number">218</span>,</span><br><span class="line">            <span class="number">177</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">217</span>,</span><br><span class="line">            <span class="number">202</span>,</span><br><span class="line">            <span class="number">126</span>,</span><br><span class="line">            <span class="number">214</span>,</span><br><span class="line">            <span class="number">195</span>,</span><br><span class="line">            <span class="number">125</span>,</span><br><span class="line">            <span class="number">144</span>,</span><br><span class="line">            <span class="number">105</span>,</span><br><span class="line">            <span class="number">152</span>,</span><br><span class="line">            <span class="number">118</span>,</span><br><span class="line">            <span class="number">167</span>,</span><br><span class="line">            <span class="number">137</span>,</span><br><span class="line">            <span class="number">171</span>,</span><br><span class="line">            <span class="number">173</span>,</span><br><span class="line">            <span class="number">206</span>,</span><br><span class="line">            <span class="number">240</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">160</span>,</span><br><span class="line">            <span class="number">134</span>,</span><br><span class="line">            <span class="number">131</span>,</span><br><span class="line">            <span class="number">135</span>,</span><br><span class="line">            <span class="number">186</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">146</span>,</span><br><span class="line">            <span class="number">129</span>,</span><br><span class="line">            <span class="number">125</span>,</span><br><span class="line">            <span class="number">139</span>,</span><br><span class="line">            <span class="number">174</span>,</span><br><span class="line">            <span class="number">205</span>,</span><br><span class="line">            <span class="number">177</span>,</span><br><span class="line">            <span class="number">240</span>,</span><br><span class="line">            <span class="number">194</span>,</span><br><span class="line">            <span class="number">181</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">183</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">127</span>,</span><br><span class="line">            <span class="number">136</span>,</span><br><span class="line">            <span class="number">136</span>,</span><br><span class="line">            <span class="number">209</span>,</span><br><span class="line">            <span class="number">199</span>,</span><br><span class="line">            <span class="number">191</span>,</span><br><span class="line">            <span class="number">150</span>,</span><br><span class="line">            <span class="number">218</span>,</span><br><span class="line">            <span class="number">160</span>,</span><br><span class="line">            <span class="number">111</span>,</span><br><span class="line">            <span class="number">191</span>,</span><br><span class="line">            <span class="number">226</span>,</span><br><span class="line">            <span class="number">154</span>,</span><br><span class="line">            <span class="number">191</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">247</span>,</span><br><span class="line">            <span class="number">188</span>,</span><br><span class="line">            <span class="number">210</span>,</span><br><span class="line">            <span class="number">219</span>,</span><br><span class="line">            <span class="number">179</span>,</span><br><span class="line">            <span class="number">204</span>,</span><br><span class="line">            <span class="number">155</span>,</span><br><span class="line">            <span class="number">220</span>,</span><br><span class="line">            <span class="number">215</span>,</span><br><span class="line">            <span class="number">127</span>,</span><br><span class="line">            <span class="number">225</span>,</span><br><span class="line">            <span class="number">214</span>,</span><br><span class="line">            <span class="number">195</span>,</span><br><span class="line">            <span class="number">162</span>,</span><br><span class="line">            <span class="number">214</span>,</span><br><span class="line">            <span class="number">239</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">108</span>,</span><br><span class="line">            <span class="number">112</span>,</span><br><span class="line">            <span class="number">104</span>,</span><br><span class="line">            <span class="number">133</span>,</span><br><span class="line">            <span class="number">178</span>,</span><br><span class="line">            <span class="number">138</span>,</span><br><span class="line">            <span class="number">110</span>,</span><br><span class="line">            <span class="number">176</span>,</span><br><span class="line">            <span class="number">232</span>,</span><br><span class="line">            <span class="number">124</span>,</span><br><span class="line">            <span class="number">193</span>,</span><br><span class="line">            <span class="number">239</span>,</span><br><span class="line">            <span class="number">131</span>,</span><br><span class="line">            <span class="number">138</span>,</span><br><span class="line">            <span class="number">161</span>,</span><br><span class="line">            <span class="number">218</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">140</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">142</span>,</span><br><span class="line">            <span class="number">181</span>,</span><br><span class="line">            <span class="number">179</span>,</span><br><span class="line">            <span class="number">173</span>,</span><br><span class="line">            <span class="number">203</span>,</span><br><span class="line">            <span class="number">208</span>,</span><br><span class="line">            <span class="number">184</span>,</span><br><span class="line">            <span class="number">129</span>,</span><br><span class="line">            <span class="number">129</span>,</span><br><span class="line">            <span class="number">119</span>,</span><br><span class="line">            <span class="number">122</span>,</span><br><span class="line">            <span class="number">152</span>,</span><br><span class="line">            <span class="number">186</span>,</span><br><span class="line">            <span class="number">124</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">105</span>,</span><br><span class="line">            <span class="number">205</span>,</span><br><span class="line">            <span class="number">124</span>,</span><br><span class="line">            <span class="number">142</span>,</span><br><span class="line">            <span class="number">175</span>,</span><br><span class="line">            <span class="number">184</span>,</span><br><span class="line">            <span class="number">234</span>,</span><br><span class="line">            <span class="number">119</span>,</span><br><span class="line">            <span class="number">195</span>,</span><br><span class="line">            <span class="number">218</span>,</span><br><span class="line">            <span class="number">141</span>,</span><br><span class="line">            <span class="number">122</span>,</span><br><span class="line">            <span class="number">202</span>,</span><br><span class="line">            <span class="number">202</span>,</span><br><span class="line">            <span class="number">190</span>,</span><br><span class="line">            <span class="number">178</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">183</span>,</span><br><span class="line">            <span class="number">178</span>,</span><br><span class="line">            <span class="number">256</span>,</span><br><span class="line">            <span class="number">124</span>,</span><br><span class="line">            <span class="number">241</span>,</span><br><span class="line">            <span class="number">132</span>,</span><br><span class="line">            <span class="number">163</span>,</span><br><span class="line">            <span class="number">209</span>,</span><br><span class="line">            <span class="number">204</span>,</span><br><span class="line">            <span class="number">104</span>,</span><br><span class="line">            <span class="number">175</span>,</span><br><span class="line">            <span class="number">211</span>,</span><br><span class="line">            <span class="number">196</span>,</span><br><span class="line">            <span class="number">136</span>,</span><br><span class="line">            <span class="number">158</span>,</span><br><span class="line">            <span class="number">210</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">224</span>,</span><br><span class="line">            <span class="number">144</span>,</span><br><span class="line">            <span class="number">189</span>,</span><br><span class="line">            <span class="number">106</span>,</span><br><span class="line">            <span class="number">177</span>,</span><br><span class="line">            <span class="number">251</span>,</span><br><span class="line">            <span class="number">206</span>,</span><br><span class="line">            <span class="number">163</span>,</span><br><span class="line">            <span class="number">167</span>,</span><br><span class="line">            <span class="number">144</span>,</span><br><span class="line">            <span class="number">208</span>,</span><br><span class="line">            <span class="number">254</span>,</span><br><span class="line">            <span class="number">117</span>,</span><br><span class="line">            <span class="number">253</span>,</span><br><span class="line">            <span class="number">100</span>,</span><br><span class="line">            <span class="number">106</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">251</span>,</span><br><span class="line">            <span class="number">251</span>,</span><br><span class="line">            <span class="number">136</span>,</span><br><span class="line">            <span class="number">170</span>,</span><br><span class="line">            <span class="number">145</span>,</span><br><span class="line">            <span class="number">177</span>,</span><br><span class="line">            <span class="number">175</span>,</span><br><span class="line">            <span class="number">124</span>,</span><br><span class="line">            <span class="number">193</span>,</span><br><span class="line">            <span class="number">188</span>,</span><br><span class="line">            <span class="number">193</span>,</span><br><span class="line">            <span class="number">198</span>,</span><br><span class="line">            <span class="number">208</span>,</span><br><span class="line">            <span class="number">171</span>,</span><br><span class="line">            <span class="number">151</span>,</span><br><span class="line">            <span class="number">230</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">143</span>,</span><br><span class="line">            <span class="number">200</span>,</span><br><span class="line">            <span class="number">143</span>,</span><br><span class="line">            <span class="number">150</span>,</span><br><span class="line">            <span class="number">243</span>,</span><br><span class="line">            <span class="number">148</span>,</span><br><span class="line">            <span class="number">136</span>,</span><br><span class="line">            <span class="number">213</span>,</span><br><span class="line">            <span class="number">161</span>,</span><br><span class="line">            <span class="number">224</span>,</span><br><span class="line">            <span class="number">170</span>,</span><br><span class="line">            <span class="number">208</span>,</span><br><span class="line">            <span class="number">185</span>,</span><br><span class="line">            <span class="number">117</span>,</span><br><span class="line">            <span class="number">189</span>,</span><br><span class="line">            <span class="number">242</span>],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">234</span>,</span><br><span class="line">            <span class="number">188</span>,</span><br><span class="line">            <span class="number">226</span>,</span><br><span class="line">            <span class="number">194</span>,</span><br><span class="line">            <span class="number">248</span>,</span><br><span class="line">            <span class="number">168</span>,</span><br><span class="line">            <span class="number">250</span>,</span><br><span class="line">            <span class="number">244</span>,</span><br><span class="line">            <span class="number">166</span>,</span><br><span class="line">            <span class="number">106</span>,</span><br><span class="line">            <span class="number">113</span>,</span><br><span class="line">            <span class="number">218</span>,</span><br><span class="line">            <span class="number">209</span>,</span><br><span class="line">            <span class="number">220</span>,</span><br><span class="line">            <span class="number">158</span>,</span><br><span class="line">            <span class="number">228</span>]]</span><br><span class="line">    r = [</span><br><span class="line">        <span class="number">472214</span>,</span><br><span class="line">        <span class="number">480121</span>,</span><br><span class="line">        <span class="number">506256</span>,</span><br><span class="line">        <span class="number">449505</span>,</span><br><span class="line">        <span class="number">433390</span>,</span><br><span class="line">        <span class="number">435414</span>,</span><br><span class="line">        <span class="number">453899</span>,</span><br><span class="line">        <span class="number">536361</span>,</span><br><span class="line">        <span class="number">423332</span>,</span><br><span class="line">        <span class="number">427624</span>,</span><br><span class="line">        <span class="number">440268</span>,</span><br><span class="line">        <span class="number">488759</span>,</span><br><span class="line">        <span class="number">469049</span>,</span><br><span class="line">        <span class="number">484574</span>,</span><br><span class="line">        <span class="number">480266</span>,</span><br><span class="line">        <span class="number">522818</span>]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">        v = <span class="number">0</span></span><br><span class="line">        str1=<span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">            v += co[i][j] * values[j]</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">if</span> v != r[i]:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;flag&#123;ISEC-%s&#125;&#x27;</span> % md5(secret.encode()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span>*</span><br><span class="line">flag=[Int(<span class="string">f&#x27;flag[<span class="subst">&#123;i&#125;</span>]&#x27;</span>)<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>)]</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>z3脚本</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Source Generated with Decompyle++</span></span><br><span class="line"><span class="comment"># File: baby_core.pyc (Python 3.7)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">md5</span>(<span class="params">s = <span class="literal">None</span></span>):</span><br><span class="line">    m = hashlib.md5()</span><br><span class="line">    m.update(s)</span><br><span class="line">    <span class="keyword">return</span> m.hexdigest().lower()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">co = [</span><br><span class="line">    [</span><br><span class="line">        <span class="number">158</span>,</span><br><span class="line">        <span class="number">195</span>,</span><br><span class="line">        <span class="number">205</span>,</span><br><span class="line">        <span class="number">229</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">238</span>,</span><br><span class="line">        <span class="number">211</span>,</span><br><span class="line">        <span class="number">198</span>,</span><br><span class="line">        <span class="number">190</span>,</span><br><span class="line">        <span class="number">226</span>,</span><br><span class="line">        <span class="number">135</span>,</span><br><span class="line">        <span class="number">119</span>,</span><br><span class="line">        <span class="number">145</span>,</span><br><span class="line">        <span class="number">205</span>,</span><br><span class="line">        <span class="number">113</span>,</span><br><span class="line">        <span class="number">122</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">234</span>,</span><br><span class="line">        <span class="number">256</span>,</span><br><span class="line">        <span class="number">185</span>,</span><br><span class="line">        <span class="number">253</span>,</span><br><span class="line">        <span class="number">244</span>,</span><br><span class="line">        <span class="number">134</span>,</span><br><span class="line">        <span class="number">102</span>,</span><br><span class="line">        <span class="number">117</span>,</span><br><span class="line">        <span class="number">190</span>,</span><br><span class="line">        <span class="number">106</span>,</span><br><span class="line">        <span class="number">131</span>,</span><br><span class="line">        <span class="number">205</span>,</span><br><span class="line">        <span class="number">198</span>,</span><br><span class="line">        <span class="number">234</span>,</span><br><span class="line">        <span class="number">162</span>,</span><br><span class="line">        <span class="number">218</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">164</span>,</span><br><span class="line">        <span class="number">164</span>,</span><br><span class="line">        <span class="number">209</span>,</span><br><span class="line">        <span class="number">200</span>,</span><br><span class="line">        <span class="number">168</span>,</span><br><span class="line">        <span class="number">226</span>,</span><br><span class="line">        <span class="number">189</span>,</span><br><span class="line">        <span class="number">151</span>,</span><br><span class="line">        <span class="number">253</span>,</span><br><span class="line">        <span class="number">241</span>,</span><br><span class="line">        <span class="number">232</span>,</span><br><span class="line">        <span class="number">151</span>,</span><br><span class="line">        <span class="number">193</span>,</span><br><span class="line">        <span class="number">119</span>,</span><br><span class="line">        <span class="number">226</span>,</span><br><span class="line">        <span class="number">193</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">117</span>,</span><br><span class="line">        <span class="number">151</span>,</span><br><span class="line">        <span class="number">103</span>,</span><br><span class="line">        <span class="number">249</span>,</span><br><span class="line">        <span class="number">148</span>,</span><br><span class="line">        <span class="number">103</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">218</span>,</span><br><span class="line">        <span class="number">222</span>,</span><br><span class="line">        <span class="number">104</span>,</span><br><span class="line">        <span class="number">228</span>,</span><br><span class="line">        <span class="number">100</span>,</span><br><span class="line">        <span class="number">206</span>,</span><br><span class="line">        <span class="number">218</span>,</span><br><span class="line">        <span class="number">177</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">217</span>,</span><br><span class="line">        <span class="number">202</span>,</span><br><span class="line">        <span class="number">126</span>,</span><br><span class="line">        <span class="number">214</span>,</span><br><span class="line">        <span class="number">195</span>,</span><br><span class="line">        <span class="number">125</span>,</span><br><span class="line">        <span class="number">144</span>,</span><br><span class="line">        <span class="number">105</span>,</span><br><span class="line">        <span class="number">152</span>,</span><br><span class="line">        <span class="number">118</span>,</span><br><span class="line">        <span class="number">167</span>,</span><br><span class="line">        <span class="number">137</span>,</span><br><span class="line">        <span class="number">171</span>,</span><br><span class="line">        <span class="number">173</span>,</span><br><span class="line">        <span class="number">206</span>,</span><br><span class="line">        <span class="number">240</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">160</span>,</span><br><span class="line">        <span class="number">134</span>,</span><br><span class="line">        <span class="number">131</span>,</span><br><span class="line">        <span class="number">135</span>,</span><br><span class="line">        <span class="number">186</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">146</span>,</span><br><span class="line">        <span class="number">129</span>,</span><br><span class="line">        <span class="number">125</span>,</span><br><span class="line">        <span class="number">139</span>,</span><br><span class="line">        <span class="number">174</span>,</span><br><span class="line">        <span class="number">205</span>,</span><br><span class="line">        <span class="number">177</span>,</span><br><span class="line">        <span class="number">240</span>,</span><br><span class="line">        <span class="number">194</span>,</span><br><span class="line">        <span class="number">181</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">183</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">127</span>,</span><br><span class="line">        <span class="number">136</span>,</span><br><span class="line">        <span class="number">136</span>,</span><br><span class="line">        <span class="number">209</span>,</span><br><span class="line">        <span class="number">199</span>,</span><br><span class="line">        <span class="number">191</span>,</span><br><span class="line">        <span class="number">150</span>,</span><br><span class="line">        <span class="number">218</span>,</span><br><span class="line">        <span class="number">160</span>,</span><br><span class="line">        <span class="number">111</span>,</span><br><span class="line">        <span class="number">191</span>,</span><br><span class="line">        <span class="number">226</span>,</span><br><span class="line">        <span class="number">154</span>,</span><br><span class="line">        <span class="number">191</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">247</span>,</span><br><span class="line">        <span class="number">188</span>,</span><br><span class="line">        <span class="number">210</span>,</span><br><span class="line">        <span class="number">219</span>,</span><br><span class="line">        <span class="number">179</span>,</span><br><span class="line">        <span class="number">204</span>,</span><br><span class="line">        <span class="number">155</span>,</span><br><span class="line">        <span class="number">220</span>,</span><br><span class="line">        <span class="number">215</span>,</span><br><span class="line">        <span class="number">127</span>,</span><br><span class="line">        <span class="number">225</span>,</span><br><span class="line">        <span class="number">214</span>,</span><br><span class="line">        <span class="number">195</span>,</span><br><span class="line">        <span class="number">162</span>,</span><br><span class="line">        <span class="number">214</span>,</span><br><span class="line">        <span class="number">239</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">108</span>,</span><br><span class="line">        <span class="number">112</span>,</span><br><span class="line">        <span class="number">104</span>,</span><br><span class="line">        <span class="number">133</span>,</span><br><span class="line">        <span class="number">178</span>,</span><br><span class="line">        <span class="number">138</span>,</span><br><span class="line">        <span class="number">110</span>,</span><br><span class="line">        <span class="number">176</span>,</span><br><span class="line">        <span class="number">232</span>,</span><br><span class="line">        <span class="number">124</span>,</span><br><span class="line">        <span class="number">193</span>,</span><br><span class="line">        <span class="number">239</span>,</span><br><span class="line">        <span class="number">131</span>,</span><br><span class="line">        <span class="number">138</span>,</span><br><span class="line">        <span class="number">161</span>,</span><br><span class="line">        <span class="number">218</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">140</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">142</span>,</span><br><span class="line">        <span class="number">181</span>,</span><br><span class="line">        <span class="number">179</span>,</span><br><span class="line">        <span class="number">173</span>,</span><br><span class="line">        <span class="number">203</span>,</span><br><span class="line">        <span class="number">208</span>,</span><br><span class="line">        <span class="number">184</span>,</span><br><span class="line">        <span class="number">129</span>,</span><br><span class="line">        <span class="number">129</span>,</span><br><span class="line">        <span class="number">119</span>,</span><br><span class="line">        <span class="number">122</span>,</span><br><span class="line">        <span class="number">152</span>,</span><br><span class="line">        <span class="number">186</span>,</span><br><span class="line">        <span class="number">124</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">105</span>,</span><br><span class="line">        <span class="number">205</span>,</span><br><span class="line">        <span class="number">124</span>,</span><br><span class="line">        <span class="number">142</span>,</span><br><span class="line">        <span class="number">175</span>,</span><br><span class="line">        <span class="number">184</span>,</span><br><span class="line">        <span class="number">234</span>,</span><br><span class="line">        <span class="number">119</span>,</span><br><span class="line">        <span class="number">195</span>,</span><br><span class="line">        <span class="number">218</span>,</span><br><span class="line">        <span class="number">141</span>,</span><br><span class="line">        <span class="number">122</span>,</span><br><span class="line">        <span class="number">202</span>,</span><br><span class="line">        <span class="number">202</span>,</span><br><span class="line">        <span class="number">190</span>,</span><br><span class="line">        <span class="number">178</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">183</span>,</span><br><span class="line">        <span class="number">178</span>,</span><br><span class="line">        <span class="number">256</span>,</span><br><span class="line">        <span class="number">124</span>,</span><br><span class="line">        <span class="number">241</span>,</span><br><span class="line">        <span class="number">132</span>,</span><br><span class="line">        <span class="number">163</span>,</span><br><span class="line">        <span class="number">209</span>,</span><br><span class="line">        <span class="number">204</span>,</span><br><span class="line">        <span class="number">104</span>,</span><br><span class="line">        <span class="number">175</span>,</span><br><span class="line">        <span class="number">211</span>,</span><br><span class="line">        <span class="number">196</span>,</span><br><span class="line">        <span class="number">136</span>,</span><br><span class="line">        <span class="number">158</span>,</span><br><span class="line">        <span class="number">210</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">224</span>,</span><br><span class="line">        <span class="number">144</span>,</span><br><span class="line">        <span class="number">189</span>,</span><br><span class="line">        <span class="number">106</span>,</span><br><span class="line">        <span class="number">177</span>,</span><br><span class="line">        <span class="number">251</span>,</span><br><span class="line">        <span class="number">206</span>,</span><br><span class="line">        <span class="number">163</span>,</span><br><span class="line">        <span class="number">167</span>,</span><br><span class="line">        <span class="number">144</span>,</span><br><span class="line">        <span class="number">208</span>,</span><br><span class="line">        <span class="number">254</span>,</span><br><span class="line">        <span class="number">117</span>,</span><br><span class="line">        <span class="number">253</span>,</span><br><span class="line">        <span class="number">100</span>,</span><br><span class="line">        <span class="number">106</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">251</span>,</span><br><span class="line">        <span class="number">251</span>,</span><br><span class="line">        <span class="number">136</span>,</span><br><span class="line">        <span class="number">170</span>,</span><br><span class="line">        <span class="number">145</span>,</span><br><span class="line">        <span class="number">177</span>,</span><br><span class="line">        <span class="number">175</span>,</span><br><span class="line">        <span class="number">124</span>,</span><br><span class="line">        <span class="number">193</span>,</span><br><span class="line">        <span class="number">188</span>,</span><br><span class="line">        <span class="number">193</span>,</span><br><span class="line">        <span class="number">198</span>,</span><br><span class="line">        <span class="number">208</span>,</span><br><span class="line">        <span class="number">171</span>,</span><br><span class="line">        <span class="number">151</span>,</span><br><span class="line">        <span class="number">230</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">143</span>,</span><br><span class="line">        <span class="number">200</span>,</span><br><span class="line">        <span class="number">143</span>,</span><br><span class="line">        <span class="number">150</span>,</span><br><span class="line">        <span class="number">243</span>,</span><br><span class="line">        <span class="number">148</span>,</span><br><span class="line">        <span class="number">136</span>,</span><br><span class="line">        <span class="number">213</span>,</span><br><span class="line">        <span class="number">161</span>,</span><br><span class="line">        <span class="number">224</span>,</span><br><span class="line">        <span class="number">170</span>,</span><br><span class="line">        <span class="number">208</span>,</span><br><span class="line">        <span class="number">185</span>,</span><br><span class="line">        <span class="number">117</span>,</span><br><span class="line">        <span class="number">189</span>,</span><br><span class="line">        <span class="number">242</span>],</span><br><span class="line">    [</span><br><span class="line">        <span class="number">234</span>,</span><br><span class="line">        <span class="number">188</span>,</span><br><span class="line">        <span class="number">226</span>,</span><br><span class="line">        <span class="number">194</span>,</span><br><span class="line">        <span class="number">248</span>,</span><br><span class="line">        <span class="number">168</span>,</span><br><span class="line">        <span class="number">250</span>,</span><br><span class="line">        <span class="number">244</span>,</span><br><span class="line">        <span class="number">166</span>,</span><br><span class="line">        <span class="number">106</span>,</span><br><span class="line">        <span class="number">113</span>,</span><br><span class="line">        <span class="number">218</span>,</span><br><span class="line">        <span class="number">209</span>,</span><br><span class="line">        <span class="number">220</span>,</span><br><span class="line">        <span class="number">158</span>,</span><br><span class="line">        <span class="number">228</span>]]</span><br><span class="line">r = [</span><br><span class="line">    <span class="number">472214</span>,</span><br><span class="line">    <span class="number">480121</span>,</span><br><span class="line">    <span class="number">506256</span>,</span><br><span class="line">    <span class="number">449505</span>,</span><br><span class="line">    <span class="number">433390</span>,</span><br><span class="line">    <span class="number">435414</span>,</span><br><span class="line">    <span class="number">453899</span>,</span><br><span class="line">    <span class="number">536361</span>,</span><br><span class="line">    <span class="number">423332</span>,</span><br><span class="line">    <span class="number">427624</span>,</span><br><span class="line">    <span class="number">440268</span>,</span><br><span class="line">    <span class="number">488759</span>,</span><br><span class="line">    <span class="number">469049</span>,</span><br><span class="line">    <span class="number">484574</span>,</span><br><span class="line">    <span class="number">480266</span>,</span><br><span class="line">    <span class="number">522818</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span>*</span><br><span class="line">f=Solver()</span><br><span class="line">flag=[Int(<span class="string">f&#x27;flag[<span class="subst">&#123;i&#125;</span>]&#x27;</span>)<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>)]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">	v = <span class="number">0</span></span><br><span class="line">	str1=<span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">		v += co[i][j] * flag[j]</span><br><span class="line">		</span><br><span class="line">	f.add(v==r[i])</span><br><span class="line">str1=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">	<span class="keyword">if</span>(f.check()==sat):</span><br><span class="line">		m=f.model()</span><br><span class="line">		str1+=<span class="built_in">str</span>(m[flag[i]])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;NSSCTF&#123;ISEC-&quot;</span>+md5(str1.encode())+<span class="string">&quot;&#125;&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 柏鹭杯2021baby_python</li>
+        <li><strong>Author:</strong> runwu2204</li>
+        <li><strong>Created at:</strong> 2023-06-21 15:48:28</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-06-21 15:53:20
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/06/21/CTF WP/Re/pythonz3/柏鹭杯2021baby_python/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/06/22/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">鹤城杯 2021designEachStep</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/21/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">事件绑定</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">柏鹭杯2021baby_python</div>
+        
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">runwu2204</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+        </div>
+        
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

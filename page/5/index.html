@@ -206,11 +206,11 @@
                         <div class="label">Tags</div>
                     </a>
                     <a class="item" href="/categories">
-                        <div class="number">13</div>
+                        <div class="number">19</div>
                         <div class="label">Categories</div>
                     </a>
                     <a class="item" href="/archives">
-                        <div class="number">44</div>
+                        <div class="number">46</div>
                         <div class="label">Posts</div>
                     </a>
                 </div>
@@ -235,7 +235,137 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">
+                    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/3.elf/">
+                        3.elf
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        尝试对3.elf进行动态调试
+
+寄，我的glibc库版本低了
+
+但根据2.elf的经验，其存储顺序应该是按上到下的顺序存储的，从低位到高位存储的
+同时这个每两位就代表了一个字符刚好就有42个字符符合校验的字符个数
+所以z3破解代码为
+12345678...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Jan 04 2023 14:29:00 GMT+0800">
+                
+                    2023-01-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/3.elf/">Read more<span class="seo-reader-text">3.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/">
+                        2.elf z3暴力破解
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        通过进行动态调试发现确实
+![image-20230104221103045](E:\note\re\pythonz3\2.elf z3暴力破解.assets\image-20230104221103045.png)
+此处是进行校验的字符串
+但是开始...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Jan 04 2023 14:06:58 GMT+0800">
+                
+                    2023-01-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/2.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/">Read more<span class="seo-reader-text">2.elf z3暴力破解</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">
                         1.elf z3暴力破解·改
                     </a>
                 </h3>
@@ -264,13 +394,19 @@
                     
                         <li>
                             
-                            <a href="/categories/re/">re</a>&nbsp;
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
                         </li>
                     
                     
                         <li>
                             &gt; 
-                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
                         </li>
                     
                     
@@ -280,7 +416,7 @@
         
     </div>
 
-    <a href="/2023/01/04/re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">Read more<span class="seo-reader-text">1.elf z3暴力破解·改</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2023/01/04/CTF%20WP/Re/pythonz3/1.elf%20z3%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%C2%B7%E6%94%B9/">Read more<span class="seo-reader-text">1.elf z3暴力破解·改</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -292,7 +428,7 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/12/28/re/pythonz3/1.elf/">
+                    <a href="/2022/12/28/CTF%20WP/Re/pythonz3/1.elf/">
                         1.elf
                     </a>
                 </h3>
@@ -319,13 +455,19 @@
                     
                         <li>
                             
-                            <a href="/categories/re/">re</a>&nbsp;
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
                         </li>
                     
                     
                         <li>
                             &gt; 
-                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
                         </li>
                     
                     
@@ -335,7 +477,7 @@
         
     </div>
 
-    <a href="/2022/12/28/re/pythonz3/1.elf/">Read more<span class="seo-reader-text">1.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2022/12/28/CTF%20WP/Re/pythonz3/1.elf/">Read more<span class="seo-reader-text">1.elf</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -347,7 +489,7 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/12/26/re/pythonz3/pythonz3/">
+                    <a href="/2022/12/26/CTF%20WP/Re/pythonz3/pythonz3/">
                         pythonz3
                     </a>
                 </h3>
@@ -378,13 +520,19 @@ Ints (name...
                     
                         <li>
                             
-                            <a href="/categories/re/">re</a>&nbsp;
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
                         </li>
                     
                     
                         <li>
                             &gt; 
-                            <a href="/categories/re/pythonz3/">pythonz3</a>&nbsp;
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/CTF-WP/Re/pythonz3/">pythonz3</a>&nbsp;
                         </li>
                     
                     
@@ -394,7 +542,7 @@ Ints (name...
         
     </div>
 
-    <a href="/2022/12/26/re/pythonz3/pythonz3/">Read more<span class="seo-reader-text">pythonz3</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2022/12/26/CTF%20WP/Re/pythonz3/pythonz3/">Read more<span class="seo-reader-text">pythonz3</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>

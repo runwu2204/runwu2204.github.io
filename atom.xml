@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-29T07:23:56.000Z</updated>
+  <updated>2023-06-29T08:17:45.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SWPU 2020happy  NSSCTF</title>
+    <link href="http://example.com/2023/06/29/CTF%20WP/Crypto/SWPU%202020happy%20%20NSSCTF/"/>
+    <id>http://example.com/2023/06/29/CTF%20WP/Crypto/SWPU%202020happy%20%20NSSCTF/</id>
+    <published>2023-06-29T08:17:45.000Z</published>
+    <updated>2023-06-29T08:17:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://www.nssctf.cn/problem/149" >SWPU 2020]happy | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(&#x27;c=&#x27;, &#x27;0x7a7e031f14f6b6c3292d11a41161d2491ce8bcdc67ef1baa9eL&#x27;)</span><br><span class="line">(&#x27;e=&#x27;, &#x27;0x872a335&#x27;)</span><br><span class="line">#q + q*p^3 =1285367317452089980789441829580397855321901891350429414413655782431779727560841427444135440068248152908241981758331600586</span><br><span class="line">#qp + q *p^2 = 1109691832903289208389283296592510864729403914873734836011311325874120780079555500202475594</span><br></pre></td></tr></table></figure></div><p>给了c和e</p><p>还有p，q之间的关系</p><p>p和q可以通过z3暴力求</p><p>根据公式</p><p>m&#x3D;c^d(mod p*q)</p><p>d为e关于mod((p-1)*(q-1))的逆元</p><p>exp:</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span>*</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span>*</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line">c=<span class="number">0x7a7e031f14f6b6c3292d11a41161d2491ce8bcdc67ef1baa9e</span></span><br><span class="line">e=<span class="number">0x872a335</span></span><br><span class="line">f=Solver()</span><br><span class="line">p,q=Int(<span class="string">&#x27;p&#x27;</span>),Int(<span class="string">&#x27;q&#x27;</span>)</span><br><span class="line">f.add(q + q*<span class="built_in">pow</span>(p,<span class="number">3</span>) ==<span class="number">1285367317452089980789441829580397855321901891350429414413655782431779727560841427444135440068248152908241981758331600586</span>,</span><br><span class="line">q*p + q *<span class="built_in">pow</span>(p,<span class="number">2</span>) == <span class="number">1109691832903289208389283296592510864729403914873734836011311325874120780079555500202475594</span>)</span><br><span class="line"><span class="keyword">while</span> f.check()==sat:</span><br><span class="line">m=f.model()</span><br><span class="line"><span class="built_in">print</span>(m[p])</span><br><span class="line"><span class="built_in">print</span>(m[q])</span><br><span class="line">np=<span class="built_in">int</span>(<span class="built_in">str</span>(m[p]))</span><br><span class="line">nq=<span class="built_in">int</span>(<span class="built_in">str</span>(m[q]))</span><br><span class="line">f.add(p!=np,q!=nq)</span><br><span class="line">m=<span class="built_in">pow</span>(c,gmpy2.invert(e,(np-<span class="number">1</span>)*(nq-<span class="number">1</span>)),np*nq)</span><br><span class="line"><span class="comment">#gmpy2.invert用于求e关于mod phi(n)的逆元 d</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m).decode())</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://www.nssctf.cn/problem/149&quot; &gt;SWPU 2020]happy | NSSCTF &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square </summary>
+      
+    
+    
+    
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
+    
+    <category term="Crypto" scheme="http://example.com/categories/CTF-WP/Crypto/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pythonz3</title>
+    <link href="http://example.com/2023/06/29/re/pythonz3/pythonz3/"/>
+    <id>http://example.com/2023/06/29/re/pythonz3/pythonz3/</id>
+    <published>2023-06-29T08:09:53.000Z</published>
+    <updated>2023-01-07T21:20:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本变量类型"><a href="#基本变量类型" class="headerlink" title="基本变量类型"></a>基本变量类型</h1><p>其分为整型(Int)，实型(Real)和向量(BitVec)</p><h2 id="整形-int"><a href="#整形-int" class="headerlink" title="整形(int)"></a>整形(int)</h2><p>不是c中具有上下限的整形而是数学意义上的整数</p><p>创建方式</p><ol><li>Int(name, ctx&#x3D;None)，创建一个整数变量，name是名字</li><li>Ints (names, ctx&#x3D;None)，创建多个整数变量，names是空格分隔名字</li><li>IntVal (val, ctx&#x3D;None)，创建一个整数常量，有初始值，没名字。</li></ol><h2 id="实形-real"><a href="#实形-real" class="headerlink" title="实形(real)"></a>实形(real)</h2><p>是数学意义上的实数</p><p>创建方式</p><ol><li>real(name, ctx&#x3D;None)，创建一个实变量，name是名字</li><li>reals (names, ctx&#x3D;None)，创建多个实变量，names是空格分隔名字</li><li>realVal (val, ctx&#x3D;None)，创建一个实常量，有初始值，没名字。</li></ol><h2 id="向量-BitVec"><a href="#向量-BitVec" class="headerlink" title="向量(BitVec)"></a>向量(BitVec)</h2><p>数学意义上的向量</p><p>创建方式</p><p>Bitvec(name,bv,ctx&#x3D;None)，创建一个位向量，name是他的名字，bv表示大小<br>BitVecs(name,bv,ctx&#x3D;None)，创建一个有多变量的位向量，name是名字，bv表示大小<br>BitVecVal(val,bv,ctx&#x3D;None)，创建一个位向量，有初始值，没名字。</p><h1 id="python3-11下的使用"><a href="#python3-11下的使用" class="headerlink" title="python3.11下的使用"></a>python3.11下的使用</h1><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> z3</span><br><span class="line"></span><br><span class="line">x=z3.Real(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">y=z3.Real(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">z3.solve(x&gt;<span class="number">2</span>,y&lt;<span class="number">10</span>,x+<span class="number">2</span>*y==<span class="number">7</span>)</span><br><span class="line"><span class="string">&quot;&quot;&quot;&quot;&quot;&quot;</span></span><br><span class="line">[y = <span class="number">0</span>, x = <span class="number">7</span>]</span><br><span class="line"><span class="string">&quot;&quot;&quot;&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></div><p>在python3.11下使用时需使用”.”访问符访问z3</p><p>类似使用z3这个类中的函数以及数据类型</p><h1 id="具体指令"><a href="#具体指令" class="headerlink" title="具体指令"></a>具体指令</h1><ol><li>s&#x3D;solver()，创建一个解的对象。</li><li>s.add(条件)，为解增加一个限制条件</li><li>s.check()，检查解是否存在，如果存在，会返回”sat”</li><li>model()，输出解得结果</li></ol><p>5.<code>solver.assertions()</code>查看求解器已经添加的约束和约束的个数</p><p>在计算时需给变量约束，没有约束是计算不出结果的，同时给了约束才能进行计算。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;基本变量类型&quot;&gt;&lt;a href=&quot;#基本变量类型&quot; class=&quot;headerlink&quot; title=&quot;基本变量类型&quot;&gt;&lt;/a&gt;基本变量类型&lt;/h1&gt;&lt;p&gt;其分为整型(Int)，实型(Real)和向量(BitVec)&lt;/p&gt;
+&lt;h2 id=&quot;整形-int&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    <category term="re" scheme="http://example.com/categories/re/"/>
+    
+    <category term="pythonz3" scheme="http://example.com/categories/re/pythonz3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Rsa学习</title>
@@ -58,8 +107,8 @@
   
   <entry>
     <title>羊城杯 2021Ez_android</title>
-    <link href="http://example.com/2023/06/23/re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/"/>
-    <id>http://example.com/2023/06/23/re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/</id>
+    <link href="http://example.com/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/"/>
+    <id>http://example.com/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E7%BE%8A%E5%9F%8E%E6%9D%AF%202021Ez_android/</id>
     <published>2023-06-23T03:04:51.000Z</published>
     <updated>2023-06-23T03:30:52.000Z</updated>
     
@@ -74,17 +123,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>GKCTF 2021App-debug</title>
-    <link href="http://example.com/2023/06/23/re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/"/>
-    <id>http://example.com/2023/06/23/re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/</id>
+    <link href="http://example.com/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/"/>
+    <id>http://example.com/2023/06/23/CTF%20WP/Re/%E5%AE%89%E5%8D%93/GKCTF%202021App-debug/</id>
     <published>2023-06-23T01:20:26.000Z</published>
     <updated>2023-06-23T02:44:55.000Z</updated>
     
@@ -98,17 +149,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>SCTF2023 checkin</title>
-    <link href="http://example.com/2023/06/22/Misc/SCTF2023%20checkin/"/>
-    <id>http://example.com/2023/06/22/Misc/SCTF2023%20checkin/</id>
+    <link href="http://example.com/2023/06/22/CTF%20WP/Misc/SCTF2023%20checkin/"/>
+    <id>http://example.com/2023/06/22/CTF%20WP/Misc/SCTF2023%20checkin/</id>
     <published>2023-06-22T09:31:16.000Z</published>
     <updated>2023-06-22T09:40:56.000Z</updated>
     
@@ -126,15 +179,17 @@
     
     
     
-    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
+    
+    <category term="Misc" scheme="http://example.com/categories/CTF-WP/Misc/"/>
     
     
   </entry>
   
   <entry>
     <title>鹤城杯 2021designEachStep</title>
-    <link href="http://example.com/2023/06/22/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/"/>
-    <id>http://example.com/2023/06/22/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/</id>
+    <link href="http://example.com/2023/06/22/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/"/>
+    <id>http://example.com/2023/06/22/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021designEachStep/</id>
     <published>2023-06-22T06:46:05.000Z</published>
     <updated>2023-06-22T08:10:57.000Z</updated>
     
@@ -149,17 +204,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>柏鹭杯2021baby_python</title>
-    <link href="http://example.com/2023/06/21/re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/"/>
-    <id>http://example.com/2023/06/21/re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/</id>
+    <link href="http://example.com/2023/06/21/CTF%20WP/Re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/"/>
+    <id>http://example.com/2023/06/21/CTF%20WP/Re/pythonz3/%E6%9F%8F%E9%B9%AD%E6%9D%AF2021baby_python/</id>
     <published>2023-06-21T07:48:28.000Z</published>
     <updated>2023-06-21T07:53:20.000Z</updated>
     
@@ -177,9 +234,11 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="pythonz3" scheme="http://example.com/categories/re/pythonz3/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="pythonz3" scheme="http://example.com/categories/CTF-WP/Re/pythonz3/"/>
     
     
   </entry>
@@ -231,8 +290,8 @@
   
   <entry>
     <title>CISCN 2021初赛glass</title>
-    <link href="http://example.com/2023/06/16/re/%E5%AE%89%E5%8D%93/CISCN%202021%E5%88%9D%E8%B5%9Bglass/"/>
-    <id>http://example.com/2023/06/16/re/%E5%AE%89%E5%8D%93/CISCN%202021%E5%88%9D%E8%B5%9Bglass/</id>
+    <link href="http://example.com/2023/06/16/CTF%20WP/Re/%E5%AE%89%E5%8D%93/CISCN%202021%E5%88%9D%E8%B5%9Bglass/"/>
+    <id>http://example.com/2023/06/16/CTF%20WP/Re/%E5%AE%89%E5%8D%93/CISCN%202021%E5%88%9D%E8%B5%9Bglass/</id>
     <published>2023-06-16T08:48:51.000Z</published>
     <updated>2023-06-16T08:57:44.000Z</updated>
     
@@ -247,17 +306,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>SWPU 2019ThousandYearsAgo</title>
-    <link href="http://example.com/2023/06/08/re/%E5%AE%89%E5%8D%93/SWPU%202019ThousandYearsAgo/"/>
-    <id>http://example.com/2023/06/08/re/%E5%AE%89%E5%8D%93/SWPU%202019ThousandYearsAgo/</id>
+    <link href="http://example.com/2023/06/08/CTF%20WP/Re/%E5%AE%89%E5%8D%93/SWPU%202019ThousandYearsAgo/"/>
+    <id>http://example.com/2023/06/08/CTF%20WP/Re/%E5%AE%89%E5%8D%93/SWPU%202019ThousandYearsAgo/</id>
     <published>2023-06-08T06:43:18.000Z</published>
     <updated>2023-06-08T09:01:52.000Z</updated>
     
@@ -273,17 +334,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>入门</title>
-    <link href="http://example.com/2023/06/08/re/%E5%85%A5%E9%97%A8/"/>
-    <id>http://example.com/2023/06/08/re/%E5%85%A5%E9%97%A8/</id>
+    <link href="http://example.com/2023/06/08/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%85%A5%E9%97%A8/"/>
+    <id>http://example.com/2023/06/08/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%85%A5%E9%97%A8/</id>
     <published>2023-06-08T06:19:02.000Z</published>
     <updated>2023-06-08T08:44:58.000Z</updated>
     
@@ -300,13 +363,15 @@
     
     <category term="re" scheme="http://example.com/categories/re/"/>
     
+    <category term="实验室报告" scheme="http://example.com/categories/re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/"/>
+    
     
   </entry>
   
   <entry>
     <title>鹏城杯 2022 baby_re</title>
-    <link href="http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%20baby_re/"/>
-    <id>http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%20baby_re/</id>
+    <link href="http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%20baby_re/"/>
+    <id>http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%20baby_re/</id>
     <published>2023-06-07T04:59:04.000Z</published>
     <updated>2023-06-07T05:21:30.000Z</updated>
     
@@ -321,17 +386,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>鹤城杯 2021 AreYouRich</title>
-    <link href="http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021%20AreYouRich/"/>
-    <id>http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021%20AreYouRich/</id>
+    <link href="http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021%20AreYouRich/"/>
+    <id>http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%B9%A4%E5%9F%8E%E6%9D%AF%202021%20AreYouRich/</id>
     <published>2023-06-07T00:41:30.000Z</published>
     <updated>2023-06-07T01:45:19.000Z</updated>
     
@@ -347,17 +414,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>BSidesSF2019blink</title>
-    <link href="http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/BSidesSF2019blink/"/>
-    <id>http://example.com/2023/06/07/re/%E5%AE%89%E5%8D%93/BSidesSF2019blink/</id>
+    <link href="http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/BSidesSF2019blink/"/>
+    <id>http://example.com/2023/06/07/CTF%20WP/Re/%E5%AE%89%E5%8D%93/BSidesSF2019blink/</id>
     <published>2023-06-06T21:56:35.000Z</published>
     <updated>2023-06-06T22:15:08.000Z</updated>
     
@@ -373,17 +442,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>网鼎杯2020青龙组bang1</title>
-    <link href="http://example.com/2023/06/06/re/%E5%AE%89%E5%8D%93/%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84bang1/"/>
-    <id>http://example.com/2023/06/06/re/%E5%AE%89%E5%8D%93/%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84bang1/</id>
+    <link href="http://example.com/2023/06/06/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84bang1/"/>
+    <id>http://example.com/2023/06/06/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84bang1/</id>
     <published>2023-06-06T03:05:17.000Z</published>
     <updated>2023-06-06T03:31:22.000Z</updated>
     
@@ -401,17 +472,19 @@
     
     
     
-    <category term="re" scheme="http://example.com/categories/re/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
-    <category term="安卓" scheme="http://example.com/categories/re/%E5%AE%89%E5%8D%93/"/>
+    <category term="Re" scheme="http://example.com/categories/CTF-WP/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>
   
   <entry>
     <title>好看的维吾尔族小姐姐</title>
-    <link href="http://example.com/2023/05/20/Misc/%E5%A5%BD%E7%9C%8B%E7%9A%84%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%B0%8F%E5%A7%90%E5%A7%90/"/>
-    <id>http://example.com/2023/05/20/Misc/%E5%A5%BD%E7%9C%8B%E7%9A%84%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%B0%8F%E5%A7%90%E5%A7%90/</id>
+    <link href="http://example.com/2023/05/20/CTF%20WP/Misc/%E5%A5%BD%E7%9C%8B%E7%9A%84%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%B0%8F%E5%A7%90%E5%A7%90/"/>
+    <id>http://example.com/2023/05/20/CTF%20WP/Misc/%E5%A5%BD%E7%9C%8B%E7%9A%84%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%B0%8F%E5%A7%90%E5%A7%90/</id>
     <published>2023-05-20T00:38:34.000Z</published>
     <updated>2023-06-06T01:26:50.000Z</updated>
     
@@ -429,7 +502,9 @@
     
     
     
-    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
+    
+    <category term="Misc" scheme="http://example.com/categories/CTF-WP/Misc/"/>
     
     
   </entry>
@@ -448,52 +523,6 @@
       
     <summary type="html">&lt;p&gt;php中变量以$变量名来命令变量&lt;/p&gt;
 &lt;div class=&quot;highlight-container&quot; data-rel=&quot;Php&quot;&gt;&lt;figure class=&quot;iseeu highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>exe生成pyc</title>
-    <link href="http://example.com/2023/04/14/re/exe%E7%94%9F%E6%88%90pyc/"/>
-    <id>http://example.com/2023/04/14/re/exe%E7%94%9F%E6%88%90pyc/</id>
-    <published>2023-04-14T06:53:24.000Z</published>
-    <updated>2023-04-14T06:55:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>通过python “&#x2F;home&#x2F;wrwrw&#x2F;python-exe-unpacker&#x2F;pyinstxtractor.py” “需要提取pyc文件的exe文件” #提取由python合成的exe文件</p><p>将exe解包获取到内部的src和struct</p><p>将struct文件头E3前面所有数据的插入到src文件头E3前面，就可以获得原始的pyc文件，再经过uncompyle6反编译就可以得到原来的python文件了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;通过python “&amp;#x2F;home&amp;#x2F;wrwrw&amp;#x2F;python-exe-unpacker&amp;#x2F;pyinstxtractor.py” “需要提取pyc文件的exe文件” #提取由python合成的exe文件&lt;/p&gt;
-&lt;p&gt;将exe解包获取到内部的</summary>
-      
-    
-    
-    
-    <category term="re" scheme="http://example.com/categories/re/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PHP伪协议</title>
-    <link href="http://example.com/2023/04/13/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://example.com/2023/04/13/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/</id>
-    <published>2023-04-13T02:41:24.000Z</published>
-    <updated>2023-04-13T04:34:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>?file&#x3D;php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;?file&amp;#x3D;php:&amp;#x2F;&amp;#x2F;filter&amp;#x2F;convert.base64-encode&amp;#x2F;resource&amp;#x3D;你要读取的文件名（带后缀）&lt;/p&gt;
-</summary>
       
     
     
