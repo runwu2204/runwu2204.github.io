@@ -479,14 +479,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
+    <loc>http://example.com/categories/Pwn/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Pwn/</loc>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -514,13 +514,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Re/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -542,7 +535,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Re/</loc>
+    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -550,6 +543,13 @@
   
   <url>
     <loc>http://example.com/categories/Re/pe/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/CTF-WP/Re/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
