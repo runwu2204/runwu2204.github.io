@@ -18,20 +18,22 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码  结构是层层递进的，外面是类似于程序名的东西，可以通过层层展开来寻找对应的同级的代码逻辑 下面是在body内第一个声明的，类型是函数声明(“FunctionDeclaration”) 12345678910111213141516171819202122232425262728293031323334">
+        <meta name="description" content="猜错了，可以通过escodegen包来生成对应的js代码 12npm i escodegen optionator  -gesgenerate &quot;对应的ast语法树json文件&quot;   直接运行此段代码即可  AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码  结构是层层递进的，外面是类似于程序名的东西，可以通过层层展开来寻找对应的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SWPUCTF 2021 新生赛astJS">
 <meta property="og:url" content="http://example.com/2023/07/08/CTF%20WP/Re/js/ast/SWPUCTF%202021%20%E6%96%B0%E7%94%9F%E8%B5%9BastJS/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码  结构是层层递进的，外面是类似于程序名的东西，可以通过层层展开来寻找对应的同级的代码逻辑 下面是在body内第一个声明的，类型是函数声明(“FunctionDeclaration”) 12345678910111213141516171819202122232425262728293031323334">
+<meta property="og:description" content="猜错了，可以通过escodegen包来生成对应的js代码 12npm i escodegen optionator  -gesgenerate &quot;对应的ast语法树json文件&quot;   直接运行此段代码即可  AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码  结构是层层递进的，外面是类似于程序名的东西，可以通过层层展开来寻找对应的">
 <meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082207330.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082208792.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082100647.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082149781.png">
 <meta property="article:published_time" content="2023-07-08T13:17:07.000Z">
-<meta property="article:modified_time" content="2023-07-08T13:54:59.000Z">
+<meta property="article:modified_time" content="2023-07-08T14:08:22.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082100647.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082207330.png">
     
     
     <!--- Icon Part-->
@@ -268,8 +270,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-08 21:54:59</span>
-            <span class="mobile">2023-07-08 21:54</span>
+            <span class="desktop">2023-07-08 22:08:22</span>
+            <span class="mobile">2023-07-08 22:08</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -316,7 +318,23 @@
             
 
             <div class="article-content markdown-body">
-                <p>AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码</p>
+                <p>猜错了，可以通过escodegen包来生成对应的js代码</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i escodegen optionator  -g</span><br><span class="line">esgenerate &quot;对应的ast语法树json文件&quot;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082207330.png"
+                      alt="image-20230708220700293"
+                ></p>
+<p>直接运行此段代码即可</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307082208792.png"
+                      alt="image-20230708220815639"
+                ></p>
+<p>AST抽象语法树是在js代码生成过程中产生的，似乎是不可直接生成代码的类似于python的字节码</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -354,7 +372,7 @@
         <li><strong>Created at:</strong> 2023-07-08 21:17:07</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-08 21:54:59
+                <strong>Updated at:</strong> 2023-07-08 22:08:22
             </li>
         
         <li>
