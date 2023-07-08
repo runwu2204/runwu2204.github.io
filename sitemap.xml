@@ -557,13 +557,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Misc/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/CTF-WP/Crypto/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -571,7 +564,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://example.com/categories/CTF-WP/Misc/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -592,6 +585,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/Web/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Re/python/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/CTF-WP/Re/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -606,13 +613,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/python/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -620,14 +620,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Re/pythonz3/</loc>
+    <loc>http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/</loc>
+    <loc>http://example.com/categories/CTF-WP/Re/pythonz3/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
