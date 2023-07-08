@@ -508,6 +508,13 @@
 
   
   <url>
+    <loc>http://example.com/categories/Misc/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/Crypto/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -516,13 +523,6 @@
   
   <url>
     <loc>http://example.com/categories/Pwn/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
