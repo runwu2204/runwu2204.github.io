@@ -13,27 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/03/02/web/前端/qianduan/"/>
+    <link rel="canonical" href="http://example.com/2023/07/10/re/安卓/jniso文件混淆/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="HTMLWXML 微信版的html，有些许修改，但基本上只是参数名上的修改 123456789101112131415161718&lt;view&gt;&lt;&#x2F;view&gt;&lt;!--用于显示块类似于&lt;head&gt;,&lt;body&gt;之类的标签--&gt;&lt;scroll-view scroll-y&#x3D;&quot;true&quot;&gt;&lt;!--滚动条的效果，">
+        <meta name="description" content="主要需要查看so文件的JNI_OnLoad函数，查看是如何进行注册的，对应的函数名是什么 类似于下图，就是将sub_1434注册为java内的com&#x2F;ctf&#x2F;findthekey&#x2F;MainActivity findthekey方法 123456789101112131415jint JNI_OnLoad(JavaVM *vm, void *reserved)&amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="qianduan">
-<meta property="og:url" content="http://example.com/2023/03/02/Web/%E5%89%8D%E7%AB%AF/qianduan/index.html">
+<meta property="og:title" content="JNIso文件混淆">
+<meta property="og:url" content="http://example.com/2023/07/10/Re/%E5%AE%89%E5%8D%93/JNIso%E6%96%87%E4%BB%B6%E6%B7%B7%E6%B7%86/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="HTMLWXML 微信版的html，有些许修改，但基本上只是参数名上的修改 123456789101112131415161718&lt;view&gt;&lt;&#x2F;view&gt;&lt;!--用于显示块类似于&lt;head&gt;,&lt;body&gt;之类的标签--&gt;&lt;scroll-view scroll-y&#x3D;&quot;true&quot;&gt;&lt;!--滚动条的效果，">
+<meta property="og:description" content="主要需要查看so文件的JNI_OnLoad函数，查看是如何进行注册的，对应的函数名是什么 类似于下图，就是将sub_1434注册为java内的com&#x2F;ctf&#x2F;findthekey&#x2F;MainActivity findthekey方法 123456789101112131415jint JNI_OnLoad(JavaVM *vm, void *reserved)&amp;#123">
 <meta property="og:locale">
-<meta property="og:image" content="https://www.runoob.com/images/box-model.gif">
-<meta property="og:image" content="e:\note\%E5%89%8D%E7%AB%AF\qianduan.assets\image-20230305171346536.png">
-<meta property="og:image" content="e:\note\%E5%89%8D%E7%AB%AF\qianduan.assets\image-20230305203312340.png">
-<meta property="og:image" content="e:\note\%E5%89%8D%E7%AB%AF\qianduan.assets\image-20230302213110759.png">
-<meta property="article:published_time" content="2023-03-02T09:07:28.000Z">
-<meta property="article:modified_time" content="2023-03-19T07:02:36.000Z">
+<meta property="article:published_time" content="2023-07-10T07:51:10.000Z">
+<meta property="article:modified_time" content="2023-07-10T07:52:53.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.runoob.com/images/box-model.gif">
     
     
     <!--- Icon Part-->
@@ -45,7 +40,7 @@
     
     <title>
         
-            qianduan -
+            JNIso文件混淆 -
         
         Runwu2204
     </title>
@@ -241,7 +236,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">qianduan</h1>
+                    <h1 class="article-title-regular">JNIso文件混淆</h1>
                 </div>
             
                 
@@ -263,15 +258,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-03-02 17:07:28</span>
-        <span class="mobile">2023-03-02 17:07</span>
+        <span class="desktop">2023-07-10 15:51:10</span>
+        <span class="mobile">2023-07-10 15:51</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-03-19 15:02:36</span>
-            <span class="mobile">2023-03-19 15:02</span>
+            <span class="desktop">2023-07-10 15:52:53</span>
+            <span class="mobile">2023-07-10 15:52</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -282,11 +277,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Web/">Web</a>&nbsp;
+                        <a href="/categories/Re/">Re</a>&nbsp;
                     </li>
                 
                     <li>
-                        &gt; <a href="/categories/Web/%E5%89%8D%E7%AB%AF/">前端</a>&nbsp;
+                        &gt; <a href="/categories/Re/%E5%AE%89%E5%8D%93/">安卓</a>&nbsp;
                     </li>
                 
             </ul>
@@ -310,81 +305,9 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="WXML"><a href="#WXML" class="headerlink" title="WXML"></a>WXML</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://www.runoob.com/images/box-model.gif"
-                      alt="CSS box-model"
-                ></p>
-<p>微信版的html，有些许修改，但基本上只是参数名上的修改</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于显示块类似于&lt;head&gt;,&lt;body&gt;之类的标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-y</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--滚动条的效果，x轴滚动可改为&quot;scroll-x&quot;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">swiper</span>&gt;</span><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--轮播图的父项可以用来装&lt;swiper-item&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span><span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于在容器内部显示轮播图，是swiper的子项可以用来装&lt;view&gt;项--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">自定义名称</span> <span class="attr">class</span>=<span class="string">&quot;自定义名称&quot;</span>&gt;</span>&lt;\自定义名称&gt;</span><br><span class="line"><span class="comment">&lt;!--用于自定义元素，可以通过wxss来定义对应class的参数--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">rich-text</span> <span class="attr">nodes</span>=<span class="string">&quot;html语句&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">rich-text</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--可用于使用服务器所传递的html内容--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;按钮样式&quot;</span> <span class="attr">size</span>=<span class="string">&quot;按钮大小&quot;</span> <span class="attr">plain</span>=<span class="string">&quot;true&quot;</span><span class="attr">镂空</span> <span class="attr">bindtap</span>=<span class="string">&quot;被绑定的函数 类似于c语句goto&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于渲染一个按钮--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;图片地址 可以为图床的地址&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;图片比例&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于渲染图片--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindinput</span>=<span class="string">&quot;方法名&quot;</span>(<span class="attr">调用对应函数</span>) <span class="attr">value</span>=<span class="string">(进行绑定，也可定义显示的初始值)</span>&gt;</span>.&lt;\input&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="swiper参数"><a href="#swiper参数" class="headerlink" title="swiper参数"></a>swiper参数</h3><table>
-<thead>
-<tr>
-<th>indicator-dots</th>
-<th>显示轮播图的位置（第几张）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>indicator-color</td>
-<td>小圆点的颜色</td>
-</tr>
-<tr>
-<td>indicator-active-color</td>
-<td>激活的小圆点颜色</td>
-</tr>
-<tr>
-<td>autoplay</td>
-<td>自动轮播</td>
-</tr>
-<tr>
-<td>interval</td>
-<td>改变轮播时间 单位ms</td>
-</tr>
-<tr>
-<td>circular</td>
-<td>衔接滑动，头尾相连</td>
-</tr>
-</tbody></table>
-<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="E:\note\前端\qianduan.assets\image-20230305171346536.png"
-                      alt="image-20230305171346536"
-                ></p>
-<p>可通过bindtap&#x3D;”对应方法名”来传递事件，该事件可用e(event)来表示可通过e.相应参数来获取对应事件的参数如上图</p>
-<h4 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h4><p>通过对相应元素增加 data-参数名&#x3D;”参数”进行传递</p>
-<p>注意传递的是对应事件，除了通过自身事件的e.target.dataset.”参数名”可通过外部的”e.target.dataset.参数名”来访问具体如下</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="E:\note\前端\qianduan.assets\image-20230305203312340.png"
-                      alt="image-20230305203312340"
-                ></p>
-<p>上面的是当前事件(currentTarget)对应的各项参数</p>
-<p>下面是追溯到实际事件(target)获得的参数</p>
-<p>注意：**<code>Object</code>** 是 JavaScript 的一种 <a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" >数据类型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 <code>Object()</code> 构造函数或者使用 <a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer" >对象字面量 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的方式创建,可类似于结构体</p>
-<h3 id="其他参数"><a href="#其他参数" class="headerlink" title="其他参数"></a>其他参数</h3><h4 id="wx-if-x3D-”“-当if为非0时才会进行渲染对应的元素块"><a href="#wx-if-x3D-”“-当if为非0时才会进行渲染对应的元素块" class="headerlink" title="wx:if &#x3D;”“,当if为非0时才会进行渲染对应的元素块"></a>wx:if &#x3D;”“,当if为非0时才会进行渲染对应的元素块</h4><p>wx:elif，wx:else与上列并行</p>
-<h4 id="hidden-x3D-”“-情况为true"><a href="#hidden-x3D-”“-情况为true" class="headerlink" title="hidden&#x3D;”“,情况为true"></a>hidden&#x3D;”“,情况为true</h4><h4 id="wx-for-x3D-”“-用于循环遍历数组内元素"><a href="#wx-for-x3D-”“-用于循环遍历数组内元素" class="headerlink" title="wx:for&#x3D;”“ 用于循环遍历数组内元素"></a>wx:for&#x3D;”“ 用于循环遍历数组内元素</h4><p>用表示其索引(下标),用表示其元素(在index索引下的元素)，对wx:for-index(或item)可对两者进行改名</p>
-<p>也可用wx:key&#x3D;”key的名字”可提高渲染效率，与数字相对应</p>
-<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="WXSS"><a href="#WXSS" class="headerlink" title="WXSS"></a>WXSS</h2><p>微信版的css</p>
-<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-
-
-<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>()<span class="comment">//用于弹出警告</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>()<span class="comment">//用于输出到控制台</span></span><br></pre></td></tr></table></figure></div>
-
-<h4 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="E:\note\前端\qianduan.assets\image-20230302213110759.png"
-                      alt="image-20230302213110759"
-                ></p>
-<p>data用于存储数据 注意在对其赋值时应当取“:”,用等号时会白屏</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Math.random()可以生成随机数(0~1),可在后面*10生成0到10的随机数,可添加toFixed(位数)限制生成的位数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">request</span>(</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="attr">url</span>:<span class="string">&quot;网址&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">method</span>:<span class="string">&quot;post&quot;</span>或<span class="string">&quot;get&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">data</span>:&#123;&#125;<span class="comment">//shu&#x27;ju</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+                <p>主要需要查看so文件的JNI_OnLoad函数，查看是如何进行注册的，对应的函数名是什么</p>
+<p>类似于下图，就是将sub_1434注册为java内的com&#x2F;ctf&#x2F;findthekey&#x2F;MainActivity findthekey方法</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jint <span class="title function_">JNI_OnLoad</span><span class="params">(JavaVM *vm, <span class="type">void</span> *reserved)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2; <span class="comment">// r0</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [sp+24h] [bp-1Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> v5[<span class="number">3</span>]; <span class="comment">// [sp+28h] [bp-18h] BYREF</span></span><br><span class="line"></span><br><span class="line">  v4 = <span class="number">0</span>;</span><br><span class="line">  sub_15A0(vm, &amp;v4, <span class="number">65542</span>);</span><br><span class="line">  v5[<span class="number">2</span>] = (<span class="type">int</span>)sub_1434;</span><br><span class="line">  v5[<span class="number">1</span>] = (<span class="type">int</span>)byte_5120;                       <span class="comment">// (Ljava/lang/Object;)</span></span><br><span class="line">  v5[<span class="number">0</span>] = (<span class="type">int</span>)byte_510C;                       <span class="comment">// findthekey</span></span><br><span class="line">  v2 = sub_15D4(v4, byte_5140);                 <span class="comment">// &#x27;com/ctf/findthekey/MainActivity&#x27;</span></span><br><span class="line">  sub_15FE(v4, v2, v5, <span class="number">1</span>); <span class="comment">//此处应该是将com/ctf/findthekey/MainActivity的findthekey方法注册为sub_1434方法</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">65542</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
             </div>
@@ -393,16 +316,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> qianduan</li>
+        <li><strong>Title:</strong> JNIso文件混淆</li>
         <li><strong>Author:</strong> runwu2204</li>
-        <li><strong>Created at:</strong> 2023-03-02 17:07:28</li>
+        <li><strong>Created at:</strong> 2023-07-10 15:51:10</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-03-19 15:02:36
+                <strong>Updated at:</strong> 2023-07-10 15:52:53
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/2023/03/02/Web/前端/qianduan/
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/10/Re/安卓/JNIso文件混淆/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -420,29 +343,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/03/03/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/base8%20mp/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">base8 mp</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/13/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/CC++%E5%86%85%E8%81%94%E6%B1%87%E7%BC%96/"
+                            href="/2023/07/09/CTF%20WP/Crypto/SWPUCTF%202021%20%E6%96%B0%E7%94%9F%E8%B5%9Bcrypto1/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">CC++内联汇编</span>
+                                    <span class="post-nav-title-item">SWPUCTF 2021 新生赛crypto1</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -507,8 +415,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">qianduan</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WXML"><span class="nav-text">WXML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#swiper%E5%8F%82%E6%95%B0"><span class="nav-text">swiper参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="nav-text">事件绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-text">其他参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WXSS"><span class="nav-text">WXSS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS"><span class="nav-text">JS</span></a></li></ol>
+        <div class="page-title">JNIso文件混淆</div>
+        
 
     </div>
 </div>
