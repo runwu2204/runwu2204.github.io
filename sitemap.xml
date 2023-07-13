@@ -567,14 +567,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Pwn/</loc>
+    <loc>http://example.com/categories/Web/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/</loc>
+    <loc>http://example.com/categories/Pwn/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -623,13 +623,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/python/</loc>
-    <lastmod>2023-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/CTF-WP/Re/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -638,6 +631,13 @@
   
   <url>
     <loc>http://example.com/categories/Re/pe/</loc>
+    <lastmod>2023-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Re/python/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
