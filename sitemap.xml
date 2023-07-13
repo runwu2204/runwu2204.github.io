@@ -553,14 +553,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/Crypto/</loc>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
+    <loc>http://example.com/categories/Crypto/</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
