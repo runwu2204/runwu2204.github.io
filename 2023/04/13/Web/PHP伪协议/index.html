@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="传参参数名加上伪协议如 1?id&#x3D;data:&#x2F;&#x2F;text&#x2F;plain,wrwrwr  读取数据php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀） 将数据当作文件来对待用于file_get_content()等函数 1234data:&#x2F;&#x2F;text&#x2F;plain,数据(可以是字符串)data">
+        <meta name="description" content="传参参数名加上伪协议如 1?id&#x3D;data:&#x2F;&#x2F;text&#x2F;plain,wrwrwr  读取数据(一般用于读取源码)123php:&#x2F;&#x2F;filter&#x2F;resource&#x3D;你要读取的文件名（带后缀）php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀）    将数据当作文件来对待用于file_get_content()等函数 1234data:&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP伪协议">
 <meta property="og:url" content="http://example.com/2023/04/13/Web/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="传参参数名加上伪协议如 1?id&#x3D;data:&#x2F;&#x2F;text&#x2F;plain,wrwrwr  读取数据php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀） 将数据当作文件来对待用于file_get_content()等函数 1234data:&#x2F;&#x2F;text&#x2F;plain,数据(可以是字符串)data">
+<meta property="og:description" content="传参参数名加上伪协议如 1?id&#x3D;data:&#x2F;&#x2F;text&#x2F;plain,wrwrwr  读取数据(一般用于读取源码)123php:&#x2F;&#x2F;filter&#x2F;resource&#x3D;你要读取的文件名（带后缀）php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀）    将数据当作文件来对待用于file_get_content()等函数 1234data:&#x2F;">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-04-13T10:41:24.000Z">
-<meta property="article:modified_time" content="2023-07-11T07:52:50.000Z">
+<meta property="article:modified_time" content="2023-07-13T17:35:08.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -265,8 +265,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-11 15:52:50</span>
-            <span class="mobile">2023-07-11 15:52</span>
+            <span class="desktop">2023-07-14 01:35:08</span>
+            <span class="mobile">2023-07-14 01:35</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -304,7 +304,10 @@
                 <h1 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h1><p>参数名加上伪协议如</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=data://text/plain,wrwrwr</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><p>php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;你要读取的文件名（带后缀）</p>
+<h2 id="读取数据-一般用于读取源码"><a href="#读取数据-一般用于读取源码" class="headerlink" title="读取数据(一般用于读取源码)"></a>读取数据(一般用于读取源码)</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">php://filter/resource=你要读取的文件名（带后缀）</span><br><span class="line"></span><br><span class="line">php://filter/convert.base64-encode/resource=你要读取的文件名（带后缀）</span><br></pre></td></tr></table></figure></div>
+
+
+
 <h2 id="将数据当作文件来对待"><a href="#将数据当作文件来对待" class="headerlink" title="将数据当作文件来对待"></a>将数据当作文件来对待</h2><p>用于file_get_content()等函数</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">data://text/plain,数据(可以是字符串)</span><br><span class="line"></span><br><span class="line">data://text/plain;base64,数据(base64格式的)</span><br></pre></td></tr></table></figure></div>
 
@@ -320,7 +323,7 @@
         <li><strong>Created at:</strong> 2023-04-13 18:41:24</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-11 15:52:50
+                <strong>Updated at:</strong> 2023-07-14 01:35:08
             </li>
         
         <li>
@@ -430,7 +433,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">PHP伪协议</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%A0%E5%8F%82"><span class="nav-text">传参</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-text">读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E6%95%B0%E6%8D%AE%E5%BD%93%E4%BD%9C%E6%96%87%E4%BB%B6%E6%9D%A5%E5%AF%B9%E5%BE%85"><span class="nav-text">将数据当作文件来对待</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%A0%E5%8F%82"><span class="nav-text">传参</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE-%E4%B8%80%E8%88%AC%E7%94%A8%E4%BA%8E%E8%AF%BB%E5%8F%96%E6%BA%90%E7%A0%81"><span class="nav-text">读取数据(一般用于读取源码)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E6%95%B0%E6%8D%AE%E5%BD%93%E4%BD%9C%E6%96%87%E4%BB%B6%E6%9D%A5%E5%AF%B9%E5%BE%85"><span class="nav-text">将数据当作文件来对待</span></a></li></ol></li></ol>
 
     </div>
 </div>
