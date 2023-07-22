@@ -13,20 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/19/crypto/dp泄露/"/>
+    <link rel="canonical" href="http://example.com/2023/07/21/pwn/通过wsl实时pwn/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="dp &#x3D; d%(p-1) ∴dp*e&#x3D;d*e mod(p-1) ∴d*e&#x3D;dp*e+k1*(p-1)  ① 又有e*d &#x3D; 1mod((p-1)*(q-1)) ∴e*d&#x3D;k2*(p-1)*(q-1)+1 ② ①带入②得 dp*e+k1*(p-1)&#x3D;k2*(p-1)*(q-1)+1	k1,k2∈Z dp*e &#x3D;k2*(p-1)*(">
+        <meta name="description" content="vscode可装wsl插件与wsl远程连接 因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dp泄露">
-<meta property="og:url" content="http://example.com/2023/07/19/Crypto/dp%E6%B3%84%E9%9C%B2/index.html">
+<meta property="og:title" content="通过wsl实时pwn">
+<meta property="og:url" content="http://example.com/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="dp &#x3D; d%(p-1) ∴dp*e&#x3D;d*e mod(p-1) ∴d*e&#x3D;dp*e+k1*(p-1)  ① 又有e*d &#x3D; 1mod((p-1)*(q-1)) ∴e*d&#x3D;k2*(p-1)*(q-1)+1 ② ①带入②得 dp*e+k1*(p-1)&#x3D;k2*(p-1)*(q-1)+1	k1,k2∈Z dp*e &#x3D;k2*(p-1)*(">
+<meta property="og:description" content="vscode可装wsl插件与wsl远程连接 因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-07-19T08:08:26.000Z">
-<meta property="article:modified_time" content="2023-07-19T09:06:34.000Z">
+<meta property="article:published_time" content="2023-07-20T16:22:13.000Z">
+<meta property="article:modified_time" content="2023-07-20T16:29:22.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -40,7 +40,7 @@
     
     <title>
         
-            dp泄露 -
+            通过wsl实时pwn -
         
         Runwu2204
     </title>
@@ -236,7 +236,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">dp泄露</h1>
+                    <h1 class="article-title-regular">通过wsl实时pwn</h1>
                 </div>
             
                 
@@ -258,15 +258,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-19 16:08:26</span>
-        <span class="mobile">2023-07-19 16:08</span>
+        <span class="desktop">2023-07-21 00:22:13</span>
+        <span class="mobile">2023-07-21 00:22</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-19 17:06:34</span>
-            <span class="mobile">2023-07-19 17:06</span>
+            <span class="desktop">2023-07-21 00:29:22</span>
+            <span class="mobile">2023-07-21 00:29</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -277,7 +277,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Crypto/">Crypto</a>&nbsp;
+                        <a href="/categories/Pwn/">Pwn</a>&nbsp;
                     </li>
                 
             </ul>
@@ -301,26 +301,8 @@
             
 
             <div class="article-content markdown-body">
-                <p>dp &#x3D; d%(p-1)</p>
-<p>∴dp*e&#x3D;d*e mod(p-1)</p>
-<p>∴d*e&#x3D;dp*e+k1*(p-1)  ①</p>
-<p>又有e*d &#x3D; 1mod((p-1)*(q-1))</p>
-<p>∴e*d&#x3D;k2*(p-1)*(q-1)+1 ②</p>
-<p>①带入②得</p>
-<p>dp*e+k1*(p-1)&#x3D;k2*(p-1)*(q-1)+1	k1,k2∈Z</p>
-<p>dp*e &#x3D;k2*(p-1)*(q-1)+k3*(p-1)+1	k2,k3∈Z</p>
-<p>e*dp&#x3D;(k2*(q-1)+k3)*(p-1)+1</p>
-<p>∵dp&lt;q-1</p>
-<p>∴(k2*(q-1)+k3)&lt;e</p>
-<p>设(k2*(q-1)+k3)&#x3D;i</p>
-<p>可以通过遍历求出i的值</p>
-<p>根据已知条件n&#x3D;p*q,i*(p-1)+1&#x3D;dp*e</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,e):</span><br><span class="line">	<span class="keyword">if</span> (dp*e-<span class="number">1</span>)%i==<span class="number">0</span>:</span><br><span class="line">		p=((dp*e-<span class="number">1</span>)//i)+<span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> n%p==<span class="number">0</span>:</span><br><span class="line">			q=n//p</span><br><span class="line">			<span class="keyword">if</span> e*dp==i*(p-<span class="number">1</span>)+<span class="number">1</span>:</span><br><span class="line">				d=<span class="built_in">__import__</span>(<span class="string">&#x27;gmpy2&#x27;</span>).invert(e,(p-<span class="number">1</span>)*(q-<span class="number">1</span>))</span><br><span class="line">				<span class="built_in">print</span>(long_to_bytes(<span class="built_in">pow</span>(c,d,n)))</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">	</span><br></pre></td></tr></table></figure></div>
-
-<p>例题[<a class="link"   target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/3973" >LitCTF 2023]P_Leak | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>给了dp,n,c可以直接求</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">e=<span class="number">65537</span></span><br><span class="line"><span class="comment"># m=bytes_to_long(b&#x27;xxxx&#x27;)</span></span><br><span class="line"><span class="comment"># p=getPrime(512)</span></span><br><span class="line"><span class="comment"># q=getPrime(512)</span></span><br><span class="line"><span class="comment"># n=p*q</span></span><br><span class="line"><span class="comment"># phi=(p-1)*(q-1)</span></span><br><span class="line"><span class="comment"># d=inverse(e,phi)</span></span><br><span class="line"><span class="comment"># dp=d%(p-1)</span></span><br><span class="line"><span class="comment"># c=pow(m,e,n)</span></span><br><span class="line"><span class="comment"># print(&quot;dp=&quot;,dp)</span></span><br><span class="line"><span class="comment"># print(&quot;n=&quot;,n)</span></span><br><span class="line"><span class="comment"># print(&quot;c=&quot;,c)</span></span><br><span class="line">dp= <span class="number">5892502924236878675675338970704766304539618343869489297045857272605067962848952532606770917225218534430490745895652561015493032055636004130931491316020329</span></span><br><span class="line">n= <span class="number">50612159190225619689404794427464916374543237300894011803225784470008992781409447214236779975896311093686413491163221778479739252804271270231391599602217675895446538524670610623369953168412236472302812808639218392319634397138871387898452935081756580084070333246950840091192420542761507705395568904875746222477</span></span><br><span class="line">c= <span class="number">39257649468514605476432946851710016346016992413796229928386230062780829495844059368939749930876895443279723032641876662714088329296631207594999580050131450251288839714711436117326769029649419789323982613380617840218087161435260837263996287628129307328857086987521821533565738409794866606381789730458247531619</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,e):</span><br><span class="line">	<span class="keyword">if</span> (dp*e-<span class="number">1</span>)%i==<span class="number">0</span>:</span><br><span class="line">		p=((dp*e-<span class="number">1</span>)//i)+<span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> n%p==<span class="number">0</span>:</span><br><span class="line">			q=n//p</span><br><span class="line">			<span class="keyword">if</span> e*dp==i*(p-<span class="number">1</span>)+<span class="number">1</span>:</span><br><span class="line">				d=<span class="built_in">__import__</span>(<span class="string">&#x27;gmpy2&#x27;</span>).invert(e,(p-<span class="number">1</span>)*(q-<span class="number">1</span>))</span><br><span class="line">				<span class="built_in">print</span>(<span class="built_in">__import__</span>(<span class="string">&#x27;Crypto.Util.number&#x27;</span>, fromlist=[<span class="string">&#x27;*&#x27;</span>]).long_to_bytes(<span class="built_in">pow</span>(c,d,n)))</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">	</span><br></pre></td></tr></table></figure></div>
-
+                <p>vscode可装wsl插件与wsl远程连接</p>
+<p>因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端</p>
 
             </div>
 
@@ -328,16 +310,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> dp泄露</li>
+        <li><strong>Title:</strong> 通过wsl实时pwn</li>
         <li><strong>Author:</strong> runwu2204</li>
-        <li><strong>Created at:</strong> 2023-07-19 16:08:26</li>
+        <li><strong>Created at:</strong> 2023-07-21 00:22:13</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-19 17:06:34
+                <strong>Updated at:</strong> 2023-07-21 00:29:22
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/19/Crypto/dp泄露/
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/21/Pwn/通过wsl实时pwn/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -358,13 +340,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/"
+                            href="/2023/07/21/Pwn/ret2libc/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">通过wsl实时pwn</span>
+                                    <span class="post-nav-title-item">ret2libc</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -374,10 +356,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/07/18/Crypto/Sagemath/"
+                            href="/2023/07/19/Crypto/dp%E6%B3%84%E9%9C%B2/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Sagemath</span>
+                                    <span class="post-nav-title-item">dp泄露</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -442,7 +424,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">dp泄露</div>
+        <div class="page-title">通过wsl实时pwn</div>
         
 
     </div>
