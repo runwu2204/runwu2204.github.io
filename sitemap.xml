@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/07/23/CTF%20WP/Misc/%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2%202022easy_Forensic/</loc>
+    
+    <lastmod>2023-07-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/07/22/Misc/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/</loc>
     
     <lastmod>2023-07-23</lastmod>
@@ -643,13 +652,6 @@
 
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
-    <lastmod>2023-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Crypto/</loc>
     <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -658,6 +660,13 @@
   
   <url>
     <loc>http://example.com/categories/Pwn/</loc>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -727,21 +736,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/python/</loc>
-    <lastmod>2023-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Re/pythonz3/</loc>
-    <lastmod>2023-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -755,7 +750,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-WP/Re/pythonz3/</loc>
+    <loc>http://example.com/categories/Re/python/</loc>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -763,6 +765,13 @@
   
   <url>
     <loc>http://example.com/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/</loc>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/CTF-WP/Re/pythonz3/</loc>
     <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
