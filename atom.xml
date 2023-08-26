@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-17T12:37:10.000Z</updated>
+  <updated>2023-08-24T08:51:27.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tmp1</title>
+    <link href="http://example.com/2023/08/24/tmp1/"/>
+    <id>http://example.com/2023/08/24/tmp1/</id>
+    <published>2023-08-24T08:47:39.000Z</published>
+    <updated>2023-08-24T08:51:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>打开是一个png</p><p>用binwalk查看有两个文件一个jpg一个png，用binwalk没分离出来，用foremost分离出来的</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="C:/Users/wrwrw/AppData/Roaming/Typora/typora-user-images/image-20230824164937100.png"                      alt="image-20230824164937100"                ></p><p>应该是双图盲水印</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="C:/Users/wrwrw/AppData/Roaming/Typora/typora-user-images/image-20230824165112254.png"                      alt="image-20230824165112254"                ></p><p>得到了flag</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="C:/Users/wrwrw/AppData/Roaming/Typora/typora-user-images/image-20230824165104157.png"                      alt="image-20230824165104157"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;打开是一个png&lt;/p&gt;
+&lt;p&gt;用binwalk查看有两个文件一个jpg一个png，用binwalk没分离出来，用foremost分离出来的&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     s</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>zsteg栈报错</title>
@@ -450,30 +474,6 @@
       
     <summary type="html">&lt;p&gt;ret2libc基于没有system或没有&amp;#x2F;bin&amp;#x2F;sh($0可以代替,因为在linux环境变量$0就是当前终端)的情况，构造出一条ret调用链来&lt;/p&gt;
 &lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>通过wsl实时pwn</title>
-    <link href="http://example.com/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/"/>
-    <id>http://example.com/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/</id>
-    <published>2023-07-20T16:22:13.000Z</published>
-    <updated>2023-07-20T16:29:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>vscode可装wsl插件与wsl远程连接</p><p>因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;vscode可装wsl插件与wsl远程连接&lt;/p&gt;
-&lt;p&gt;因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端&lt;/p&gt;
-</summary>
       
     
     
