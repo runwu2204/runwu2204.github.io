@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="runwu2204">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/01/05/re/实验室报告/学习报告(最后一次任务)/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="RE1.PYC先启动该文件看下运行结果  不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码 pyc文件主要是无法通过f5反汇编查找代码逻辑  尝试通过shift+f12查询字符串，结果如下  一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般） 通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习报告(最后一次任务)">
+<meta property="og:url" content="http://example.com/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/index.html">
+<meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="RE1.PYC先启动该文件看下运行结果  不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码 pyc文件主要是无法通过f5反汇编查找代码逻辑  尝试通过shift+f12查询字符串，结果如下  一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般） 通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149458.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149318.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149357.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150550.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150846.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150198.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150785.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150368.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150741.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150199.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150740.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150052.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151495.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151570.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151262.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151830.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151819.png">
+<meta property="article:published_time" content="2023-01-05T09:05:18.000Z">
+<meta property="article:modified_time" content="2023-06-22T17:51:27.000Z">
+<meta property="article:author" content="runwu2204">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149458.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            学习报告(最后一次任务) -
+        
+        Runwu2204
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.2.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Categories":{"path":"/categories/"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"relative","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Runwu2204
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories/"  >
+                                    
+                                        
+                                        CATEGORIES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/categories/"  >
+                             
+                                
+                                CATEGORIES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">学习报告(最后一次任务)</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">runwu2204</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-01-05 17:05:18</span>
+        <span class="mobile">2023-01-05 17:05</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-06-23 01:51:27</span>
+            <span class="mobile">2023-06-23 01:51</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Re/">Re</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="RE1-PYC"><a href="#RE1-PYC" class="headerlink" title="RE1.PYC"></a>RE1.PYC</h1><p>先启动该文件看下运行结果</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149458.png"
+                      alt=" "
+                ></p>
+<p>不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码</p>
+<p>pyc文件主要是无法通过f5反汇编查找代码逻辑</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149318.png"
+                      alt="image-20221203235426178"
+                ></p>
+<p>尝试通过shift+f12查询字符串，结果如下</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230149357.png"
+                      alt="image-20221203234728213"
+                ></p>
+<p>一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般）</p>
+<p>通过双击寻找，往上翻后最终找到了对应的密文（非flag{}此类格式应该是经过了加密）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150550.png"
+                      alt="image-20221203235623344"
+                ></p>
+<p>下方也有说明，表现是通过base64加密的，将其拖入base64中解密</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150846.png"
+                      alt="image-20221203235745853"
+                ></p>
+<p>得到了最后的flag：D0g3{Do_You_Want_To_Hammer_Me}</p>
+<h1 id="RE2"><a href="#RE2" class="headerlink" title="RE2"></a>RE2</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150198.png"
+                      alt="image-20221204003416911"
+                ></p>
+<p>通过反汇编找到对应函数极少（一般是通过了加壳）</p>
+<p>再通过寻找字符串，发现确实是通过了upx加壳,且是3.96版本，用普通的脱壳尝试如下</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150785.png"
+                      alt="image-20221204004546195"
+                ></p>
+<p>发现报错无法脱壳</p>
+<p>疯狂百度，发现是经过了特征码修改</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150368.png"
+                      alt="image-20221205152424562"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150741.png"
+                      alt="image-20221205152739287"
+                ></p>
+<p>尝试通过winhex修改该文件,失败了。</p>
+<p>通过开挂发现需要dump</p>
+<p>不太成功dump出源文件后（需进行反反编译操作将真正的EOP找到，然后再将源文件dump下来，此处我不知道为什么无法获取对原文加密的函数）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150199.png"
+                      alt="image-20221212212627494"
+                ></p>
+<p>正常情况应该如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150740.png"
+                      alt="image-20221212213109598"
+                ></p>
+<p>此处以正常情况距离</p>
+<p>先通过shift+f12搜索显示的字符串</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230150052.png"
+                      alt="image-20221212213343179"
+                ></p>
+<p>双击选中</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151495.png"
+                      alt="image-20221212213424909"
+                ></p>
+<p>再通过x查询交叉引用</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151570.png"
+                      alt="image-20221212213452131"
+                ></p>
+<p>成功找到对应函数</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151262.png"
+                      alt="image-20221212213524142"
+                ></p>
+<p>再通过f5反汇编就可以大致看懂了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151830.png"
+                      alt="image-20221212213555159"
+                ></p>
+<p>根据wp所说此处采用了多重加密（包含仿射加密）</p>
+<p>根据此处可以获得仿射加密的字典</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strcpy</span>(v29, <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwzyz0123456789&#123;&#125;&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>还有被加密的的字符</p>
+<p>unsigned char是因为默认字符有负数</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">char</span> a[]=&#123;</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0A</span>,<span class="number">0xF3</span>,<span class="number">0x1C</span>,<span class="number">0x1C</span>,<span class="number">0x04</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0x02</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,</span><br><span class="line">		<span class="number">0x20</span>,<span class="number">0x32</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x08</span>,<span class="number">0xF3</span>,<span class="number">0x04</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0x2A</span>,<span class="number">0x12</span>,</span><br><span class="line">		<span class="number">0x2A</span>,<span class="number">0xF5</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0x34</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF5</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x12</span>,<span class="number">0xF3</span>,<span class="number">0x02</span>,<span class="number">0xF2</span>,<span class="number">0x12</span>,<span class="number">0x12</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF3</span>,<span class="number">0x0A</span>,</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>根据仿射加密规则c(密文)&#x3D;(a*m(待加密字符)+b)(mod n)</p>
+<p>解密则需要获得密钥a与字典长度n的最大公因数gcd（a,n）</p>
+<p>d(解密)&#x3D;(a-gcd(a,n)(c-b))(mod n)</p>
+<p>其通过异或加密和数字分解加密将实际值掩盖了，首先应该通过</p>
+<p>先异或回去再将质数乘回来</p>
+<p>如下</p>
+<p>此处分别异或的为0xf0和0x0f</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202306230151819.png"
+                      alt="image-20221213151537448"
+                ></p>
+<p> 将分解出的质数拿出来放入数组中得</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> divi_step[] =</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x03</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x03</span>,<span class="number">0x05</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x05</span>,<span class="number">0x02</span>,</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>根据wp</p>
+<p>具体处理则为</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> a[]=&#123;</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0A</span>,<span class="number">0xF3</span>,<span class="number">0x1C</span>,<span class="number">0x1C</span>,<span class="number">0x04</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0x02</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,<span class="number">0xF5</span>,<span class="number">0x08</span>,</span><br><span class="line">		<span class="number">0x20</span>,<span class="number">0x32</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x08</span>,<span class="number">0xF3</span>,<span class="number">0x04</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x0A</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF7</span>,<span class="number">0x08</span>,<span class="number">0x2A</span>,<span class="number">0x12</span>,</span><br><span class="line">		<span class="number">0x2A</span>,<span class="number">0xF5</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x04</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0x34</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF5</span>,<span class="number">0x0A</span>,</span><br><span class="line">		<span class="number">0x12</span>,<span class="number">0xF3</span>,<span class="number">0x02</span>,<span class="number">0xF2</span>,<span class="number">0x12</span>,<span class="number">0x12</span>,<span class="number">0xF2</span>,<span class="number">0xF2</span>,</span><br><span class="line">		<span class="number">0xF2</span>,<span class="number">0xF2</span>,<span class="number">0x0D</span>,<span class="number">0xF3</span>,<span class="number">0x0A</span>,</span><br><span class="line">	&#125;;<span class="comment">//获取的密文</span></span><br><span class="line">	<span class="comment">//0 1 4</span></span><br><span class="line">	<span class="type">int</span> divi_step[] =</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x03</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x01</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x03</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x03</span>,<span class="number">0x05</span>,<span class="number">0x01</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x02</span>,</span><br><span class="line">		<span class="number">0x02</span>,<span class="number">0x01</span>,<span class="number">0x05</span>,<span class="number">0x02</span>,</span><br><span class="line">	&#125;;<span class="comment">//一般F0 最后一位0F</span></span><br><span class="line">	<span class="type">char</span> table[] = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwzyz0123456789&#123;&#125;&quot;</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> wp[<span class="number">64</span>];</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> btmp=<span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,pre_base=<span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//素数分解逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		btmp=<span class="number">1</span>;		</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;divi_step[i];j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(j==divi_step[i]<span class="number">-1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				btmp=(a[pre_base+j]^<span class="number">0x0F</span>)*btmp;<span class="comment">//</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				btmp=(a[pre_base+j]^<span class="number">0xF0</span>)*btmp;<span class="comment">//将原来异或的文字异或回去</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		wp[i]=btmp;</span><br><span class="line">		pre_base+=divi_step[i];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//异或逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">31</span>;i&gt;=<span class="number">0</span>;i--)<span class="comment">// 1 2 3</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">31</span>)</span><br><span class="line">			wp[i]=wp[i]^wp[<span class="number">0</span>];<span class="comment">//通过异或的可逆性恢复原来的字符</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			wp[i]=wp[i]^wp[i+<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//仿射密码学逆推</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		wp[i] = (<span class="type">unsigned</span> <span class="type">char</span>)((wp[i] - <span class="number">47</span>) * <span class="number">45</span>) % <span class="number">64</span>;<span class="comment">//强制转化为unsigned char 防止出现负数</span></span><br><span class="line">        <span class="comment">//这个符号的处理很重要的</span></span><br><span class="line">		wp[i] = table[wp[i]];</span><br><span class="line">	&#125;</span><br><span class="line">	wp[<span class="number">32</span>]=<span class="number">0</span>;<span class="comment">//给字符串一个结尾</span></span><br><span class="line">	<span class="built_in">puts</span>((<span class="type">char</span>*)wp);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>​    最终代码运行结果不是wp的答案那种而是D8g7{TherefIsfAfLongfWa6fTofGof}</p>
+<p>wp中答案则是</p>
+<p>D0g3{There_Is_A_Long_Way_To_Go_}</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 学习报告(最后一次任务)</li>
+        <li><strong>Author:</strong> runwu2204</li>
+        <li><strong>Created at:</strong> 2023-01-05 17:05:18</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-06-23 01:51:27
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/01/05/Re/实验室报告/学习报告(最后一次任务)/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/Re/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Re</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/04/CTF%20WP/Re/pythonz3/3.elf/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">3.elf</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">学习报告(最后一次任务)</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RE1-PYC"><span class="nav-text">RE1.PYC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RE2"><span class="nav-text">RE2</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            {% if (theme.mermaid.enable)  %}
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">runwu2204</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+        </div>
+        
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
