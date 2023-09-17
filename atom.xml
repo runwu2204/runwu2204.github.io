@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-06T16:28:14.000Z</updated>
+  <updated>2023-09-16T16:53:13.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,12 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Coppersmith</title>
+    <link href="http://example.com/2023/09/17/Crypto/sage/Coppersmith/"/>
+    <id>http://example.com/2023/09/17/Crypto/sage/Coppersmith/</id>
+    <published>2023-09-16T16:50:52.000Z</published>
+    <updated>2023-09-16T16:53:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>例子</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> sage.<span class="built_in">all</span> <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># p = getPrime(512)</span></span><br><span class="line"><span class="comment"># q = getPrime(512)</span></span><br><span class="line"><span class="comment"># n = p * q</span></span><br><span class="line"><span class="comment"># e = 65537</span></span><br><span class="line"><span class="comment"># leak = p &gt;&gt; 230</span></span><br><span class="line"><span class="comment"># m = bytes_to_long(flag)</span></span><br><span class="line"><span class="comment"># c = pow(m,e,n)</span></span><br><span class="line"><span class="comment"># print(n)</span></span><br><span class="line"><span class="comment"># print(leak)</span></span><br><span class="line"><span class="comment"># print(c)</span></span><br><span class="line"> </span><br><span class="line">n = <span class="number">114007680041157617250208809154392208683967639953423906669116998085115503737001019559692895227927818755160444076128820965038044269092587109196557720941716578025622244634385547194563001079609897387390680250570961313174656874665690193604984942452581886657386063927035039087208310041149977622001887997061312418381</span></span><br><span class="line">leak = <span class="number">6833525680083767201563383553257365403889275861180069149272377788671845720921410137177</span></span><br><span class="line">c = <span class="number">87627846271126693177889082381507430884663777705438987267317070845965070209704910716182088690758208915234427170455157948022843849997441546596567189456637997191173043345521331111329110083529853409188141263211030032553825858341099759209550785745319223409181813931086979471131074015406202979668575990074985441810</span></span><br><span class="line"></span><br><span class="line">PR = PolynomialRing(Zmod(n),<span class="string">&#x27;x&#x27;</span>)<span class="comment">#此处创建了一个变量为x的环(用于求解方程的范围)</span></span><br><span class="line">x = PR.gen()<span class="comment">#将环内变量赋值给x</span></span><br><span class="line"></span><br><span class="line">f = (leak&lt;&lt;<span class="number">230</span>) +x</span><br><span class="line">v = f.monic().small_roots(X=<span class="number">2</span>**<span class="number">230</span>, beta=<span class="number">0.4</span>, epsilon=<span class="number">0.02</span>)<span class="comment">#epsilon为精度 一般越高越好 不设置可能会出错 X为求解范围一般越接近你需要求的p缺失的位数越好 此处用**用^会出现异或与指数混淆</span></span><br><span class="line">p = <span class="built_in">int</span>(f(v[<span class="number">0</span>]))</span><br><span class="line">m = <span class="built_in">pow</span>(c, inverse_mod(<span class="number">65537</span>, (p-<span class="number">1</span>)),p)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(<span class="built_in">int</span>(m)))</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;例子&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Python&quot;&gt;&lt;figure class=&quot;iseeu highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="sage" scheme="http://example.com/categories/Crypto/sage/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>idc</title>
     <link href="http://example.com/2023/09/07/Re/x86/idc/"/>
     <id>http://example.com/2023/09/07/Re/x86/idc/</id>
     <published>2023-09-06T16:28:14.000Z</published>
-    <updated>2023-09-06T16:28:14.000Z</updated>
+    <updated>2023-09-14T07:34:51.000Z</updated>
     
+    <content type="html"><![CDATA[<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PatchByte()<span class="comment">//一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)</span></span><br><span class="line">Byte()<span class="comment">//一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)</span></span><br><span class="line"></span><br><span class="line">Message</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;highlight-container&quot; data-rel=&quot;C&quot;&gt;&lt;figure class=&quot;iseeu highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/spa</summary>
+      
     
     
     
@@ -38,8 +70,18 @@
     <link href="http://example.com/2023/09/07/Re/python/idapython/"/>
     <id>http://example.com/2023/09/07/Re/python/idapython/</id>
     <published>2023-09-06T16:27:51.000Z</published>
-    <updated>2023-09-06T16:27:51.000Z</updated>
+    <updated>2023-09-14T07:07:39.000Z</updated>
     
+    <content type="html"><![CDATA[<p>个人感觉7.0版本的语法比较方便</p><p>具体修改方式</p><p>ida目录&#x2F;cfg&#x2F;idapython.cfg</p><p>将这一项AUTOIMPORT_COMPAT_IDA695 &#x3D; NO 修改为AUTOIMPORT_COMPAT_IDA695 &#x3D; YES</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;个人感觉7.0版本的语法比较方便&lt;/p&gt;
+&lt;p&gt;具体修改方式&lt;/p&gt;
+&lt;p&gt;ida目录&amp;#x2F;cfg&amp;#x2F;idapython.cfg&lt;/p&gt;
+&lt;p&gt;将这一项AUTOIMPORT_COMPAT_IDA695 &amp;#x3D; NO 修改为AUTOIMPORT_COMPA</summary>
+      
     
     
     
@@ -443,30 +485,6 @@
       
     <summary type="html">&lt;p&gt;ret2libc基于没有system或没有&amp;#x2F;bin&amp;#x2F;sh($0可以代替,因为在linux环境变量$0就是当前终端)的情况，构造出一条ret调用链来&lt;/p&gt;
 &lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>通过wsl实时pwn</title>
-    <link href="http://example.com/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/"/>
-    <id>http://example.com/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/</id>
-    <published>2023-07-20T16:22:13.000Z</published>
-    <updated>2023-07-20T16:29:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>vscode可装wsl插件与wsl远程连接</p><p>因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;vscode可装wsl插件与wsl远程连接&lt;/p&gt;
-&lt;p&gt;因为windows的环境跟linux不同获取了shell也无法正常执行命令所以需要使用wsl终端&lt;/p&gt;
-</summary>
       
     
     
