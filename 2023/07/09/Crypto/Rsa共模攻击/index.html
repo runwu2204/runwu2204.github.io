@@ -26,7 +26,7 @@
 <meta property="og:description" content="共模攻击主要利用的是，同一个明文通过两个互质的e对同一个n取余。（如下） 12c1 &#x3D; pow(m,e1,n)c2 &#x3D; pow(m,e2,n)  数学上存在一个关系 1e1*x+e2*y&#x3D;gcd(e1,e2) #定有x y满足这个式子  同时又有(前提 m&lt;n 否则会在取余时丢失数据) 1234(m^e1)^x * (m^e2)^y %n &#x3D; m^(e1*x+e2*y) %n  (c1^x)">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-07-09T15:16:37.000Z">
-<meta property="article:modified_time" content="2023-08-16T04:20:33.000Z">
+<meta property="article:modified_time" content="2023-09-28T17:19:20.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -265,8 +265,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-08-16 12:20:33</span>
-            <span class="mobile">2023-08-16 12:20</span>
+            <span class="desktop">2023-09-29 01:19:20</span>
+            <span class="mobile">2023-09-29 01:19</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -314,6 +314,11 @@
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">gongmogongji</span>(<span class="params">c1, c2, e1, e2,n</span>):</span><br><span class="line">	<span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line">	<span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext,iroot</span><br><span class="line">	gcd,x,y=gcdext(e1,e2)<span class="comment">#求出e1*x+e2*y=gcd(e1,e2)的解</span></span><br><span class="line">	m=iroot((<span class="built_in">pow</span>(c1,x,n)*<span class="built_in">pow</span>(c2,y,n))%n,gcd)[<span class="number">0</span>]<span class="comment">#根据((c1^x) * (c2^y))^(1/gcd(e1,e2))%n=m %n  计算出对应的m</span></span><br><span class="line">	<span class="keyword">return</span> long_to_bytes(m)<span class="comment">#将m转换回bytes数组</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
+
+<p>m&gt;n时</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">gongmogongji</span>(<span class="params">c1, c2, e1, e2,n</span>):</span><br><span class="line">    <span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line">    <span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext,iroot</span><br><span class="line">    gcd,x,y=gcdext(e1,e2)<span class="comment">#求出e1*x+e2*y=gcd(e1,e2)的解</span></span><br><span class="line">    tmp=<span class="number">0</span></span><br><span class="line">    m=<span class="built_in">int</span>(iroot((<span class="built_in">pow</span>(c1,x,n)*<span class="built_in">pow</span>(c2,y,n))%n+tmp*n,gcd)[<span class="number">0</span>])<span class="comment">#根据((c1^x) * (c2^y))^(1/gcd(e1,e2))%n=m %n  计算出对应的m</span></span><br><span class="line">    <span class="keyword">while</span> <span class="string">b&#x27;DASCTF&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> long_to_bytes(m):</span><br><span class="line">        tmp+=<span class="number">1</span></span><br><span class="line">        m=<span class="built_in">int</span>(iroot((<span class="built_in">pow</span>(c1,x,n)*<span class="built_in">pow</span>(c2,y,n))%n+tmp*n,gcd)[<span class="number">0</span>])<span class="comment">#根据((c1^x) * (c2^y))^(1/gcd(e1,e2))%n=m %n  计算出对应的m</span></span><br><span class="line">    <span class="keyword">return</span> long_to_bytes(m)<span class="comment">#将m转换回bytes数组</span></span><br></pre></td></tr></table></figure></div>
+
+
             </div>
 
             
@@ -325,7 +330,7 @@
         <li><strong>Created at:</strong> 2023-07-09 23:16:37</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-08-16 12:20:33
+                <strong>Updated at:</strong> 2023-09-29 01:19:20
             </li>
         
         <li>
