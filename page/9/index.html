@@ -243,7 +243,7 @@
                         <div class="label">Categories</div>
                     </a>
                     <a class="item" href="/archives">
-                        <div class="number">86</div>
+                        <div class="number">88</div>
                         <div class="label">Posts</div>
                     </a>
                 </div>
@@ -260,6 +260,121 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/Re/">
+                        Re
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        汇编语言cpu中储存需要用到的数值地址之类的名叫寄存器(AX,BX,CX诸如此类)。
+cpu执行命令是按次序进行的通过cs，ip共同决定cs（段地址），ip（偏移地址）
+cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 17:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/Re/">Read more<span class="seo-reader-text">Re</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">
+                        学习报告(最后一次任务)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        RE1.PYC先启动该文件看下运行结果
+
+不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码
+pyc文件主要是无法通过f5反汇编查找代码逻辑
+
+尝试通过shift+f12查询字符串，结...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 17:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                        <li>
+                            &gt; 
+                            <a href="/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">Read more<span class="seo-reader-text">学习报告(最后一次任务)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -405,10 +520,8 @@
 
                 <div class="home-article-content markdown-body">
                     
-                        可通过如下代码
-123&quot;前面需要输入条件&quot;f=Solver()print(f.model)
-
-可以查找自己所输入的条件通过对z3的检验发现自己出现了个python的低级常识性错误for循环时range输出的可遍历对象实际是小于该对...
+                        源代码如下
+123456789101112131415161718192021222324252627282930313233343536373839404142unsigned __int64 level1(void)&#123;  char v1...
                     
                 </div>
 
