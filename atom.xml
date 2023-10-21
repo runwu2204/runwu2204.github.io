@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-05T05:17:41.000Z</updated>
+  <updated>2023-10-17T15:43:35.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WSA</title>
+    <link href="http://example.com/2023/10/17/Re/%E5%AE%89%E5%8D%93/WSA/"/>
+    <id>http://example.com/2023/10/17/Re/%E5%AE%89%E5%8D%93/WSA/</id>
+    <published>2023-10-17T13:33:06.000Z</published>
+    <updated>2023-10-17T15:43:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://a-jiua.github.io/blog/2023/07/22/WSAOnWin10_-_%E5%9C%A8_Windows10_%E4%B8%8A%E4%BD%BF%E7%94%A8WSA/" >WSAOnWin10 - 在 Windows10 上使用WSA | 行雺のBlog | Hexo (a-jiua.github.io) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>具体环境配置，因为wsa api版本过新所以magisk的大部分包都用不了，但magisk自带一个busybox，路径为<code>/data/adb/magisk</code>将其加入代码搜索路径内<code>export PATH=$PATH:/data/adb/magisk</code></p><p>同时因为wsa的<code>ro.debuggable</code>参数被设置为了0所以有些代码调试的时候会跑飞用<code>magisk resetprop ro.debuggable 1</code>命令修改掉默认值(每次重启都会失效)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://a-jiua.github.io/blog/2023/07/22/WSAOnWin10_-_%E5%9C%A8_Windows10_%E4%B8%8A%E4%BD%BF%E7%94%A8WSA/&quot; &gt;WSAOn</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>CRT中国剩余定理</title>
@@ -442,28 +466,6 @@
     <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
     
     <category term="Misc" scheme="http://example.com/categories/CTF-WP/Misc/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>kali John破解密码</title>
-    <link href="http://example.com/2023/07/28/Misc/kali%20John%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/"/>
-    <id>http://example.com/2023/07/28/Misc/kali%20John%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</id>
-    <published>2023-07-28T08:49:20.000Z</published>
-    <updated>2023-07-28T09:10:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h1><h2 id="使用相应的john获取对应文件的密码hash"><a href="#使用相应的john获取对应文件的密码hash" class="headerlink" title="使用相应的john获取对应文件的密码hash"></a>使用相应的john获取对应文件的密码hash</h2><p>此处以破解office的密码为例</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">office2john 从渗透看取证.pptx<span class="comment">#其会输出对应的密码hash</span></span></span><br><span class="line"></span><br><span class="line">从渗透看取证证.pptx:$office$*2007*20*128*16*ae5cec7759d56eba49f6e923a4657c6c*5c91c78a0990d6c1791b3d6577056ada*a1b73a76fb87442b4ecc8f9b3702784312f8a7e2 </span><br></pre></td></tr></table></figure></div><p>john破解一般读取的是文本文件内的hash，所以用管道符号输出至文件</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">office2john 从渗透看取证.pptx<span class="comment">#其会输出对应的密码hash &gt; a</span></span></span><br></pre></td></tr></table></figure></div><h2 id="使用john来破解对应的密码hash"><a href="#使用john来破解对应的密码hash" class="headerlink" title="使用john来破解对应的密码hash"></a>使用john来破解对应的密码hash</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">john a --wordlist=pass.txt a</span></span><br><span class="line">Using default input encoding: UTF-8</span><br><span class="line">Loaded 1 password hash (Office, 2007/2010/2013 [SHA1 256/256 AVX2 8x / SHA512 256/256 AVX2 4x AES])</span><br><span class="line">Cost 1 (MS Office version) is 2007 for all loaded hashes</span><br><span class="line">Cost 2 (iteration count) is 50000 for all loaded hashes</span><br><span class="line">Will run 12 OpenMP threads</span><br><span class="line">Press &#x27;q&#x27; or Ctrl-C to abort, almost any other key for status</span><br><span class="line">287fuweiuhfiute  (从渗透看取证.pptx)</span><br><span class="line">1g 0:00:00:00 DONE (2023-07-28 16:32) 16.66g/s 4566p/s 4566c/s 4566C/s !@#59560955..quanzhshfnsdgsdf</span><br><span class="line">Warning: passwords printed above might not be all those cracked</span><br><span class="line">Use the &quot;--show&quot; option to display all of the cracked passwords reliably</span><br><span class="line">Session completed.</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上面的<span class="string">&quot;287fuweiuhfiute&quot;</span>即为密码</span></span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;基本流程&quot;&gt;&lt;a href=&quot;#基本流程&quot; class=&quot;headerlink&quot; title=&quot;基本流程&quot;&gt;&lt;/a&gt;基本流程&lt;/h1&gt;&lt;h2 id=&quot;使用相应的john获取对应文件的密码hash&quot;&gt;&lt;a href=&quot;#使用相应的john获取对应文件的密码hash&quot;</summary>
-      
-    
-    
-    
-    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
     
     
   </entry>
