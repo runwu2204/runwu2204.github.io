@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-17T15:43:35.000Z</updated>
+  <updated>2023-10-21T13:38:09.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>golang</title>
+    <link href="http://example.com/2023/10/21/Re/x86/golang/"/>
+    <id>http://example.com/2023/10/21/Re/x86/golang/</id>
+    <published>2023-10-21T13:36:53.000Z</published>
+    <updated>2023-10-21T13:38:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>暂存</p><p>rax用于存放对应对象，或者对象传递位置 rbx及其它寄存器用于传递参数</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;暂存&lt;/p&gt;
+&lt;p&gt;rax用于存放对应对象，或者对象传递位置 rbx及其它寄存器用于传递参数&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="x86" scheme="http://example.com/categories/Re/x86/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>WSA</title>
@@ -442,30 +468,6 @@
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
     <category term="x86" scheme="http://example.com/categories/Re/x86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>鹏城杯 2022简单取证</title>
-    <link href="http://example.com/2023/07/28/CTF%20WP/Misc/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%E7%AE%80%E5%8D%95%E5%8F%96%E8%AF%81/"/>
-    <id>http://example.com/2023/07/28/CTF%20WP/Misc/%E9%B9%8F%E5%9F%8E%E6%9D%AF%202022%E7%AE%80%E5%8D%95%E5%8F%96%E8%AF%81/</id>
-    <published>2023-07-28T11:43:06.000Z</published>
-    <updated>2023-07-28T12:03:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[<a class="link"   href="https://www.nssctf.cn/problem/2411" >鹏城杯 2022]简单取证 | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>附件是一个raw文件,一般是内存镜像用vol3看一下</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vol -f file.raw windows.info</span></span><br><span class="line">Volatility 3 Framework 2.4.1</span><br><span class="line">Progress:  100.00               PDB scanning finished</span><br><span class="line">Variable        Value</span><br><span class="line"></span><br><span class="line">Kernel Base     0x804d8000</span><br><span class="line">DTB     0xb37000</span><br><span class="line">Symbols file:///home/wrwrw/.local/lib/python3.11/site-packages/volatility3/symbols/windows/ntkrnlpa.pdb/30B5FB31AE7E4ACAABA750AA241FF331-1.json.xz</span><br><span class="line">Is64Bit False</span><br><span class="line">IsPAE   True</span><br><span class="line">layer_name      0 WindowsIntelPAE</span><br><span class="line">memory_layer    1 FileLayer</span><br><span class="line">KdDebuggerDataBlock     0x80546ae0</span><br><span class="line">NTBuildLab      2600.xpsp.080413-2111</span><br><span class="line">CSDVersion      3</span><br><span class="line">KdVersionBlock  0x80546ab8</span><br><span class="line">Major/Minor     15.2600</span><br><span class="line">MachineType     332</span><br><span class="line">KeNumberProcessors      1</span><br><span class="line">SystemTime      2022-06-20 13:00:12</span><br><span class="line">NtSystemRoot    C:\WINDOWS</span><br><span class="line">NtProductType   NtProductWinNt</span><br><span class="line">NtMajorVersion  5</span><br><span class="line">NtMinorVersion  1</span><br><span class="line">PE MajorOperatingSystemVersion  5</span><br><span class="line">PE MinorOperatingSystemVersion  1</span><br><span class="line">PE Machine      332</span><br><span class="line">PE TimeDateStamp        Sun Apr 13 18:31:06 2008</span><br></pre></td></tr></table></figure></div><p>是windows xp系统的，中文版的桌面叫做“桌面”而不是“Desktop”,直接搜索对应的文件</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vol -f file.raw windows.filescan |grep 桌面</span></span><br><span class="line">0x2072ea0  100.0\Documents and Settings\Administrator\桌面\51763-4FE71AEA7-20220620-130010.raw  112</span><br><span class="line">0x20dd608       \Documents and Settings\Administrator\桌面\DumpIt.exe   112</span><br><span class="line">0x2162df8       \Documents and Settings\Administrator\桌面      112</span><br><span class="line">0x224e028       \Documents and Settings\Administrator\桌面      112</span><br><span class="line">0x2325028       \Documents and Settings\Administrator\桌面\secret.jpg   112</span><br><span class="line">0x23ac178       \Documents and Settings\Administrator\桌面      112</span><br><span class="line">0x23d5960       \Documents and Settings\Administrator\桌面\DumpIt.exe   112</span><br><span class="line">0x240d8d8       \Documents and Settings\All Users\桌面  112</span><br></pre></td></tr></table></figure></div><p>有个secret.jpg，dump下来</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vol -f file.raw windows.dump --physaddr 0x2325028</span></span><br></pre></td></tr></table></figure></div><p>发现该文件其实是base64文本的文本文件</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307281952101.png"                      alt="image-20230728195235912"                ></p><p>解码后发现PK字样，猜测是压缩包直接用脚本解压后发现无法解压，用010editor打开，发现50 4b 03 04在最后面而且是反过来的，更改脚本进行反序输出</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> base64 <span class="keyword">import</span>*</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&quot;file.0x2325028.0x81fc6610.DataSectionObject.secret.jpg&quot;</span>,<span class="string">&quot;rb&quot;</span>)<span class="keyword">as</span> f:</span><br><span class="line">    arr=f.read()</span><br><span class="line">    arr=b64decode(arr)[::-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&quot;a.zip&quot;</span>,<span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> g:</span><br><span class="line">        g.write(arr)</span><br></pre></td></tr></table></figure></div><p>成功输出zip，但发现有密码</p><p>对raw文件用strings搜索相应字符串,发现一个疑似密码的字段</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">strings file.raw |grep  password</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">以上省略</span></span><br><span class="line">echo password = 62b041223bb9a</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">以下省略</span></span><br></pre></td></tr></table></figure></div><p>解压后是一个文本,都是以数对形式存在，猜测是坐标，用于打印像素,且该文本的末尾是349 349 猜测是350*350的图片</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307281957439.png"                      alt="image-20230728195731372"                ></p><p>脚本如下</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&quot;a~\flag.txt&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    pixels=f.read().splitlines()</span><br><span class="line">width = <span class="number">350</span></span><br><span class="line">height = <span class="number">350</span></span><br><span class="line">result=[]</span><br><span class="line">img = Image.new(<span class="string">&#x27;RGB&#x27;</span>, (width, height))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> pixels:</span><br><span class="line">    tmp=i.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    img.putpixel((<span class="built_in">int</span>(tmp[<span class="number">0</span>]),<span class="built_in">int</span>(tmp[<span class="number">1</span>])),(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))<span class="comment">#以白色打印对应像素,因为默认背景为黑色</span></span><br><span class="line"><span class="comment"># 保存图片到本地</span></span><br><span class="line">img.save(<span class="string">r&#x27;a~\output.png&#x27;</span>)</span><br></pre></td></tr></table></figure></div><p>成功输出png，是一个二维码</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307282003576.png"                      alt="image-20230728200300506"                ></p><p>扫描后得到了flag</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://www.nssctf.cn/problem/2411&quot; &gt;鹏城杯 2022]简单取证 | NSSCTF &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square f</summary>
-      
-    
-    
-    
-    <category term="CTF WP" scheme="http://example.com/categories/CTF-WP/"/>
-    
-    <category term="Misc" scheme="http://example.com/categories/CTF-WP/Misc/"/>
     
     
   </entry>
