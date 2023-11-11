@@ -13,27 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/22/misc/内存取证/"/>
+    <link rel="canonical" href="http://example.com/2023/11/02/安卓开发/golangaar导入/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="只是一些草稿windows取证工具地址volatility3  参考(42条消息) 内存取证-volatility工具的使用 （史上更全教程，更全命令）_路baby的博客-CSDN博客  可以在插件后面跟-h获取该插件的帮助 123456789101112vol -f &quot;windows内存转储地址&quot;  windows.info #分析该内存转储的操作系统等其余信息vol -f">
+        <meta name="description" content="安装好gomobile后 如果使用go mod模式就直接在.go文件处go mod init xxx即可 gomobile bind -target android (init出来的包名) 注意golang的外部可调用方法得开头大写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内存取证">
-<meta property="og:url" content="http://example.com/2023/07/22/Misc/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/index.html">
+<meta property="og:title" content="golangAAR导入">
+<meta property="og:url" content="http://example.com/2023/11/02/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="只是一些草稿windows取证工具地址volatility3  参考(42条消息) 内存取证-volatility工具的使用 （史上更全教程，更全命令）_路baby的博客-CSDN博客  可以在插件后面跟-h获取该插件的帮助 123456789101112vol -f &quot;windows内存转储地址&quot;  windows.info #分析该内存转储的操作系统等其余信息vol -f">
+<meta property="og:description" content="安装好gomobile后 如果使用go mod模式就直接在.go文件处go mod init xxx即可 gomobile bind -target android (init出来的包名) 注意golang的外部可调用方法得开头大写">
 <meta property="og:locale">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231459232.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231501287.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231507155.png">
-<meta property="og:image" content="c:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20230723150407151.png">
-<meta property="article:published_time" content="2023-07-22T14:13:27.000Z">
-<meta property="article:modified_time" content="2023-10-23T04:08:04.000Z">
+<meta property="article:published_time" content="2023-11-02T09:51:27.000Z">
+<meta property="article:modified_time" content="2023-11-02T12:48:41.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231459232.png">
     
     
     <!--- Icon Part-->
@@ -45,7 +40,7 @@
     
     <title>
         
-            内存取证 -
+            golangAAR导入 -
         
         Runwu2204
     </title>
@@ -241,7 +236,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">内存取证</h1>
+                    <h1 class="article-title-regular">golangAAR导入</h1>
                 </div>
             
                 
@@ -263,15 +258,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-22 22:13:27</span>
-        <span class="mobile">2023-07-22 22:13</span>
+        <span class="desktop">2023-11-02 17:51:27</span>
+        <span class="mobile">2023-11-02 17:51</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-23 12:08:04</span>
-            <span class="mobile">2023-10-23 12:08</span>
+            <span class="desktop">2023-11-02 20:48:41</span>
+            <span class="mobile">2023-11-02 20:48</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -282,7 +277,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Misc/">Misc</a>&nbsp;
+                        <a href="/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/">安卓开发</a>&nbsp;
                     </li>
                 
             </ul>
@@ -306,58 +301,27 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="只是一些草稿"><a href="#只是一些草稿" class="headerlink" title="只是一些草稿"></a>只是一些草稿</h2><h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><p>取证工具地址<a class="link"   target="_blank" rel="noopener" href="https://github.com/volatilityfoundation/volatility3" >volatility3 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>参考<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/m0_68012373/article/details/127419463" >(42条消息) 内存取证-volatility工具的使用 （史上更全教程，更全命令）_路baby的博客-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>可以在插件后面跟-h获取该插件的帮助</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vol -f &quot;windows内存转储地址&quot;  windows.info #分析该内存转储的操作系统等其余信息</span><br><span class="line">vol -f &quot;windows内存转储地址&quot;  windows.pslist #会分析该内存的运行进程</span><br><span class="line">vol -f &quot;windows内存转储地址&quot; windows.filescan #分析有什么文件,其中地址是physaddr</span><br><span class="line">vol -f &quot;windows内存转储地址&quot; windows.dump -h</span><br><span class="line">usage: volatility windows.dumpfiles.DumpFiles [-h] [--pid PID] [--virtaddr VIRTADDR] [--physaddr PHYSADDR]</span><br><span class="line"></span><br><span class="line">options:</span><br><span class="line">  -h, --help           show this help message and exit</span><br><span class="line">  --pid PID            Process ID to include (all other processes are excluded)</span><br><span class="line">  --virtaddr VIRTADDR  Dump a single _FILE_OBJECT at this virtual address</span><br><span class="line">  --physaddr PHYSADDR  Dump a single _FILE_OBJECT at this physical address</span><br><span class="line">  vol -f &quot;windows内存转储地址&quot; windows.dump --physaddr &quot;具体文件地址，详情可见windows.filescan插件的结果&quot; #可以将内存文件输出出来</span><br></pre></td></tr></table></figure></div>
+                <p>安装好gomobile后</p>
+<p>如果使用go mod模式就直接在.go文件处<code>go mod init xxx</code>即可</p>
+<p><code>gomobile bind -target android (init出来的包名)</code></p>
+<p>注意golang的外部可调用方法得开头大写</p>
 
-<p>如果无法输出也可以通过diskgenius挂载该转储文件(作为虚拟硬盘),具体方法如下</p>
-<p>1.将其作为虚拟硬盘打开</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231459232.png"
-                      alt="image-20230723145957046"
-                ></p>
-<p>2.右下角查看文件类型改为所有文件</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231501287.png"
-                      alt="image-20230723150121254"
-                ></p>
-<p>3.右键新出现的虚拟硬盘,选择已删除或格式化后的文件恢复</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307231507155.png"
-                      alt="image-20230723150714113"
-                ></p>
-<p>即可打开对应的镜像获取文件</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="C:\Users\wrwrw\AppData\Roaming\Typora\typora-user-images\image-20230723150407151.png"
-                      alt="image-20230723150407151"
-                ></p>
-<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>[巅峰极客 2022easy_Forensic - Runwu2204](<a class="link"   target="_blank" rel="noopener" href="https://runwu2204.github.io/2023/07/23/CTF" >https://runwu2204.github.io/2023/07/23/CTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> WP&#x2F;Misc&#x2F;巅峰极客 2022easy_Forensic&#x2F;)</p>
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1>
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 内存取证</li>
+        <li><strong>Title:</strong> golangAAR导入</li>
         <li><strong>Author:</strong> runwu2204</li>
-        <li><strong>Created at:</strong> 2023-07-22 22:13:27</li>
+        <li><strong>Created at:</strong> 2023-11-02 17:51:27</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-10-23 12:08:04
+                <strong>Updated at:</strong> 2023-11-02 20:48:41
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/22/Misc/内存取证/
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/11/02/安卓开发/golangAAR导入/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -378,13 +342,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/07/23/CTF%20WP/Misc/%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2%202022easy_Forensic/"
+                            href="/2023/11/09/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/apk%E7%AD%BE%E5%90%8D/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">巅峰极客 2022easy_Forensic</span>
+                                    <span class="post-nav-title-item">apk签名</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -394,10 +358,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/07/21/Pwn/ret2libc/"
+                            href="/2023/10/28/Pwn/PIE%E4%BF%9D%E6%8A%A4/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">ret2libc</span>
+                                    <span class="post-nav-title-item">PIE保护</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -462,8 +426,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">内存取证</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E6%98%AF%E4%B8%80%E4%BA%9B%E8%8D%89%E7%A8%BF"><span class="nav-text">只是一些草稿</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows"><span class="nav-text">windows</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux"><span class="nav-text">linux</span></a>
+        <div class="page-title">golangAAR导入</div>
+        
 
     </div>
 </div>
