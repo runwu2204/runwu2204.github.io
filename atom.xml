@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-20T17:56:04.000Z</updated>
+  <updated>2024-01-20T18:58:54.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>环境配置</title>
+    <link href="http://example.com/2024/01/21/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/01/21/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-01-20T18:26:20.000Z</published>
+    <updated>2024-01-20T18:58:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>frida是标准的C&#x2F;S模式，服务端需要安在手机上，客户端需要安在电脑上</p><p><strong>注意，两者版本需一致</strong></p><p><em>可先安装客户端，知道客户端版本再去整服务端</em></p><h2 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h2><h3 id="直接使用pip"><a href="#直接使用pip" class="headerlink" title="直接使用pip"></a>直接使用pip</h3><blockquote><p>在终端内输入<code>pip install frida -i https://pypi.tuna.tsinghua.edu.cn/simple #使用清华源下载会快点，可以手动指定frida的version 可自行搜</code></p><p>无报错后输入<code>pip show frida #显示frida的详情</code>找到frida的version，需要记住这个version</p></blockquote><h2 id="服务端安装"><a href="#服务端安装" class="headerlink" title="服务端安装"></a>服务端安装</h2><p><a class="link"   href="https://github.com/frida/frida/releases/" >Releases · frida&#x2F;frida (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>找到之前客户端version一致的server</p><p>比如我的frida version是16.1.4</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210240627.png"                      alt="image-20240121024040573"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210241008.png"                      alt="image-20240121024119884"                ></p><p>在github中找到16.1.4的assets并下载对应架构的server文件，手机基本上都是64位支持32位的，所以可以下载下面两种，<em>因为我是模拟器所以是x86架构而不是arm架构</em></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210243826.png"                      alt="image-20240121024349729"                ></p><p>xz文件时压缩包文件需要解压后发送给手机</p><p>通过adb发送文件给手机（具体adb连接教程可以在网上搜）</p><p>连接成功后</p><p>进行 <code>adb push </code>操作，将外部文件输入设备内</p><p><code>adb push 需要传输的文件位置  /data/local/tmp </code>       </p><p>&#x2F;data&#x2F;local&#x2F;tmp&#x2F;是不在手机重启保护的范围内的路径，不会因为手机重启而丢失数据，其他地方则不同，每次重启会丢失数据</p></blockquote><h2 id="进行连接"><a href="#进行连接" class="headerlink" title="进行连接"></a>进行连接</h2><p>frida-server传输成功后，在adb shell中启动对应位数的server</p><p>在电脑端命令行运行<code>frida-ps -U</code>#-U指通过USB我的虚拟机可以直接被当成usb设备连接</p><p>如果显示了你当前安装的进程就代表成功了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;frida是标准的C&amp;#x2F;S模式，服务端需要安在手机上，客户端需要安在电脑上&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意，两者版本需一致&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;可先安装客户端，知道客户端版本再去整服务端&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;客户端安装&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="frida框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ZIP文件明文攻击</title>
@@ -494,34 +523,6 @@
     <published>2023-10-02T08:45:24.000Z</published>
     <updated>2023-10-02T08:45:24.000Z</updated>
     
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ida界面设置</title>
-    <link href="http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/</id>
-    <published>2023-10-02T07:53:45.000Z</published>
-    <updated>2023-10-02T08:03:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="添加窗口"><a href="#添加窗口" class="headerlink" title="添加窗口"></a>添加窗口</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202310021559856.png"                      alt="image-20231002155911771"                ></p><h2 id="移动窗口"><a href="#移动窗口" class="headerlink" title="移动窗口"></a>移动窗口</h2><h3 id="选中窗口将鼠标移动到灰线处-箭头所指的地方"><a href="#选中窗口将鼠标移动到灰线处-箭头所指的地方" class="headerlink" title="选中窗口将鼠标移动到灰线处(箭头所指的地方)"></a>选中窗口将鼠标移动到灰线处(箭头所指的地方)</h3><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202310021601936.png"                      alt="image-20231002160132898"                ></p><p>长按将其拖动到一类位置(带有标记的地方),不同位置对应的不同效果可以自己试一试</p><h3 id=""><a href="#" class="headerlink" title=""></a><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202310021603990.png"                      alt="image-20231002160330840"                ></h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;添加窗口&quot;&gt;&lt;a href=&quot;#添加窗口&quot; class=&quot;headerlink&quot; title=&quot;添加窗口&quot;&gt;&lt;/a&gt;添加窗口&lt;/h2&gt;&lt;p&gt;&lt;img  
-                     lazyload
-                     src=</summary>
-      
     
     
     
