@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-19T13:01:36.000Z</updated>
+  <updated>2024-01-20T17:56:04.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ZIP文件明文攻击</title>
+    <link href="http://example.com/2024/01/21/Misc/%E6%9D%82%E5%AD%A6/ZIP%E6%96%87%E4%BB%B6%E6%98%8E%E6%96%87%E6%94%BB%E5%87%BB/"/>
+    <id>http://example.com/2024/01/21/Misc/%E6%9D%82%E5%AD%A6/ZIP%E6%96%87%E4%BB%B6%E6%98%8E%E6%96%87%E6%94%BB%E5%87%BB/</id>
+    <published>2024-01-20T17:55:26.000Z</published>
+    <updated>2024-01-20T17:56:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pkcrack"><a href="#pkcrack" class="headerlink" title="pkcrack"></a>pkcrack</h2><h2 id="bkcrack"><a href="#bkcrack" class="headerlink" title="bkcrack"></a>bkcrack</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;pkcrack&quot;&gt;&lt;a href=&quot;#pkcrack&quot; class=&quot;headerlink&quot; title=&quot;pkcrack&quot;&gt;&lt;/a&gt;pkcrack&lt;/h2&gt;&lt;h2 id=&quot;bkcrack&quot;&gt;&lt;a href=&quot;#bkcrack&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    
+    <category term="杂学" scheme="http://example.com/categories/Misc/%E6%9D%82%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>claripy</title>
-    <link href="http://example.com/2024/01/18/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/claripy/"/>
-    <id>http://example.com/2024/01/18/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/claripy/</id>
+    <link href="http://example.com/2024/01/18/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/claripy/"/>
+    <id>http://example.com/2024/01/18/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/claripy/</id>
     <published>2024-01-18T12:00:27.000Z</published>
     <updated>2024-01-19T13:01:36.000Z</updated>
     
@@ -37,15 +61,17 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>基本使用</title>
-    <link href="http://example.com/2024/01/15/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2024/01/15/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <link href="http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
     <published>2024-01-15T08:23:03.000Z</published>
     <updated>2024-01-15T16:17:31.000Z</updated>
     
@@ -61,17 +87,19 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="qiling框架" scheme="http://example.com/categories/Re/qiling%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="qilingida" scheme="http://example.com/categories/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
+    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="qilingida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
     
     
   </entry>
   
   <entry>
     <title>环境配置</title>
-    <link href="http://example.com/2024/01/15/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2024/01/15/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <link href="http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2024-01-15T07:31:29.000Z</published>
     <updated>2024-01-15T08:22:04.000Z</updated>
     
@@ -92,21 +120,23 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="qiling框架" scheme="http://example.com/categories/Re/qiling%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="qilingida" scheme="http://example.com/categories/Re/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
+    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="qilingida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
     
     
   </entry>
   
   <entry>
     <title>windbg+ida设置</title>
-    <link href="http://example.com/2024/01/03/Re/x86/windbg+ida%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://example.com/2024/01/03/Re/x86/windbg+ida%E8%AE%BE%E7%BD%AE/</id>
+    <link href="http://example.com/2024/01/03/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/windbg+ida%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://example.com/2024/01/03/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/windbg+ida%E8%AE%BE%E7%BD%AE/</id>
     <published>2024-01-03T14:27:46.000Z</published>
-    <updated>2024-01-03T15:49:41.000Z</updated>
+    <updated>2024-01-20T17:55:01.000Z</updated>
     
-    <content type="html"><![CDATA[<p>进入ida目录&#x2F;cfg&#x2F;ida.cfg</p><p>如果你的ida是64位架构的则填入x64(我的ida是7.6 ida和ida64都是64位的)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/img/image-20240103222822214.png"                      alt="image-20240103222822214"                ></p>]]></content>
+    <content type="html"><![CDATA[<p>进入ida目录&#x2F;cfg&#x2F;ida.cfg</p><p>如果你的ida是64位架构的则填入x64(我的ida是7.6 ida和ida64都是64位的)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210154855.png"                      alt="image-20240103222822214"                ></p>]]></content>
     
     
       
@@ -122,15 +152,17 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="x86" scheme="http://example.com/categories/Re/x86/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
     
     
   </entry>
   
   <entry>
     <title>state</title>
-    <link href="http://example.com/2024/01/02/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/"/>
-    <id>http://example.com/2024/01/02/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/</id>
+    <link href="http://example.com/2024/01/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/"/>
+    <id>http://example.com/2024/01/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/</id>
     <published>2024-01-02T10:48:04.000Z</published>
     <updated>2024-01-02T14:04:15.000Z</updated>
     
@@ -146,15 +178,17 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>2</title>
-    <link href="http://example.com/2024/01/01/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/02/"/>
-    <id>http://example.com/2024/01/01/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/02/</id>
+    <link href="http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/02/"/>
+    <id>http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/02/</id>
     <published>2024-01-01T09:37:04.000Z</published>
     <updated>2024-01-01T09:43:03.000Z</updated>
     
@@ -174,19 +208,23 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
     
     
   </entry>
   
   <entry>
     <title>1</title>
-    <link href="http://example.com/2024/01/01/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/01/"/>
-    <id>http://example.com/2024/01/01/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/01/</id>
+    <link href="http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/01/"/>
+    <id>http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/01/</id>
     <published>2023-12-31T17:19:31.000Z</published>
-    <updated>2023-12-31T17:34:05.000Z</updated>
+    <updated>2024-01-20T17:53:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>avoid- 用于提升angr计算速度,避免进入内部</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/img/image-20240101013027355.png"                      alt="image-20240101013027355"                ></p><p>在设置explore参数时增加avoid参数并将参数设置为avoid_me的首地址</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> angr <span class="keyword">import</span> *</span><br><span class="line">p=Project(<span class="string">&quot;./01_angr_avoid&quot;</span>)</span><br><span class="line">state=p.factory.entry_state()</span><br><span class="line">sm=p.factory.simulation_manager(state)</span><br><span class="line">sm.explore(find=<span class="number">0x080492FB</span>,avoid=<span class="number">0x0080492BB</span>)</span><br><span class="line">sm.found[<span class="number">0</span>].posix.dumps(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>]]></content>
+    <content type="html"><![CDATA[<p>avoid- 用于提升angr计算速度,避免进入内部</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210153393.png"                      alt="image-20240101013027355"                ></p><p>在设置explore参数时增加avoid参数并将参数设置为avoid_me的首地址</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> angr <span class="keyword">import</span> *</span><br><span class="line">p=Project(<span class="string">&quot;./01_angr_avoid&quot;</span>)</span><br><span class="line">state=p.factory.entry_state()</span><br><span class="line">sm=p.factory.simulation_manager(state)</span><br><span class="line">sm.explore(find=<span class="number">0x080492FB</span>,avoid=<span class="number">0x0080492BB</span>)</span><br><span class="line">sm.found[<span class="number">0</span>].posix.dumps(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>]]></content>
     
     
       
@@ -202,15 +240,19 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
     
     
   </entry>
   
   <entry>
     <title>0</title>
-    <link href="http://example.com/2023/12/31/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/00/"/>
-    <id>http://example.com/2023/12/31/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/00/</id>
+    <link href="http://example.com/2023/12/31/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/00/"/>
+    <id>http://example.com/2023/12/31/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/00/</id>
     <published>2023-12-31T09:10:02.000Z</published>
     <updated>2023-12-31T10:00:52.000Z</updated>
     
@@ -226,15 +268,19 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
     
     
   </entry>
   
   <entry>
     <title>环境配置</title>
-    <link href="http://example.com/2023/12/30/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2023/12/30/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <link href="http://example.com/2023/12/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2023/12/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2023-12-29T17:13:11.000Z</published>
     <updated>2023-12-29T17:13:38.000Z</updated>
     
@@ -252,15 +298,17 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>e特别大的情况</title>
-    <link href="http://example.com/2023/12/17/Crypto/e%E7%89%B9%E5%88%AB%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5/"/>
-    <id>http://example.com/2023/12/17/Crypto/e%E7%89%B9%E5%88%AB%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5/</id>
+    <link href="http://example.com/2023/12/17/Crypto/RSA/e%E7%89%B9%E5%88%AB%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5/"/>
+    <id>http://example.com/2023/12/17/Crypto/RSA/e%E7%89%B9%E5%88%AB%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5/</id>
     <published>2023-12-17T10:18:44.000Z</published>
     <updated>2023-12-17T10:19:53.000Z</updated>
     
@@ -276,13 +324,15 @@
     
     <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
     
+    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
+    
     
   </entry>
   
   <entry>
     <title>apk签名</title>
-    <link href="http://example.com/2023/11/09/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/apk%E7%AD%BE%E5%90%8D/"/>
-    <id>http://example.com/2023/11/09/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/apk%E7%AD%BE%E5%90%8D/</id>
+    <link href="http://example.com/2023/11/09/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/apk%E7%AD%BE%E5%90%8D/"/>
+    <id>http://example.com/2023/11/09/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/apk%E7%AD%BE%E5%90%8D/</id>
     <published>2023-11-09T15:38:32.000Z</published>
     <updated>2023-11-09T16:47:04.000Z</updated>
     
@@ -297,17 +347,19 @@
     
     
     
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
     
     
   </entry>
   
   <entry>
     <title>golangAAR导入</title>
-    <link href="http://example.com/2023/11/02/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/"/>
-    <id>http://example.com/2023/11/02/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/</id>
+    <link href="http://example.com/2023/11/02/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/"/>
+    <id>http://example.com/2023/11/02/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/</id>
     <published>2023-11-02T09:51:27.000Z</published>
-    <updated>2023-11-02T12:48:41.000Z</updated>
+    <updated>2024-01-20T17:58:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>安装好gomobile后</p><p>如果使用go mod模式就直接在.go文件处<code>go mod init xxx</code>即可</p><p><code>gomobile bind -target android (init出来的包名)</code></p><p>注意golang的外部可调用方法得开头大写</p>]]></content>
     
@@ -321,7 +373,9 @@
     
     
     
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
     
     
   </entry>
@@ -401,8 +455,8 @@
   
   <entry>
     <title>CRT中国剩余定理</title>
-    <link href="http://example.com/2023/10/05/Crypto/CRT%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/"/>
-    <id>http://example.com/2023/10/05/Crypto/CRT%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</id>
+    <link href="http://example.com/2023/10/05/Crypto/RSA/CRT%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/"/>
+    <id>http://example.com/2023/10/05/Crypto/RSA/CRT%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</id>
     <published>2023-10-05T05:17:41.000Z</published>
     <updated>2023-10-05T05:17:41.000Z</updated>
     
@@ -411,13 +465,15 @@
     
     <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
     
+    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
+    
     
   </entry>
   
   <entry>
     <title>密钥交换协定</title>
-    <link href="http://example.com/2023/10/04/Crypto/%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E5%AE%9A/"/>
-    <id>http://example.com/2023/10/04/Crypto/%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E5%AE%9A/</id>
+    <link href="http://example.com/2023/10/04/Crypto/%E6%8A%80%E5%B7%A7%E5%8F%8A%E5%B7%A5%E5%85%B7/%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E5%AE%9A/"/>
+    <id>http://example.com/2023/10/04/Crypto/%E6%8A%80%E5%B7%A7%E5%8F%8A%E5%B7%A5%E5%85%B7/%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E5%AE%9A/</id>
     <published>2023-10-04T11:56:26.000Z</published>
     <updated>2023-10-04T11:56:26.000Z</updated>
     
@@ -426,13 +482,15 @@
     
     <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
     
+    <category term="技巧及工具" scheme="http://example.com/categories/Crypto/%E6%8A%80%E5%B7%A7%E5%8F%8A%E5%B7%A5%E5%85%B7/"/>
+    
     
   </entry>
   
   <entry>
     <title>dll注入</title>
-    <link href="http://example.com/2023/10/02/Re/x86/dll%E6%B3%A8%E5%85%A5/"/>
-    <id>http://example.com/2023/10/02/Re/x86/dll%E6%B3%A8%E5%85%A5/</id>
+    <link href="http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/dll%E6%B3%A8%E5%85%A5/"/>
+    <id>http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/dll%E6%B3%A8%E5%85%A5/</id>
     <published>2023-10-02T08:45:24.000Z</published>
     <updated>2023-10-02T08:45:24.000Z</updated>
     
@@ -441,15 +499,17 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="x86" scheme="http://example.com/categories/Re/x86/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
     
     
   </entry>
   
   <entry>
     <title>ida界面设置</title>
-    <link href="http://example.com/2023/10/02/Re/x86/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://example.com/2023/10/02/Re/x86/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/</id>
+    <link href="http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://example.com/2023/10/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/ida%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/</id>
     <published>2023-10-02T07:53:45.000Z</published>
     <updated>2023-10-02T08:03:43.000Z</updated>
     
@@ -467,30 +527,9 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="x86" scheme="http://example.com/categories/Re/x86/"/>
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>randcrack</title>
-    <link href="http://example.com/2023/09/21/Crypto/randcrack/"/>
-    <id>http://example.com/2023/09/21/Crypto/randcrack/</id>
-    <published>2023-09-21T14:50:11.000Z</published>
-    <updated>2023-10-02T08:15:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>利用随机数漏洞预测随机数</p><p>参考[<a class="link"   href="https://blog.csdn.net/qq_42557115/article/details/128228201" >CTF&#x2F;randcrack]python随机数预测模块分析及改进方案_ctf 随机数_虚空guoql的博客-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;利用随机数漏洞预测随机数&lt;/p&gt;
-&lt;p&gt;参考[&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/qq_42557115/article/details/128228201&quot; &gt;CTF&amp;#x2F;randcrack]python随机数</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
     
     
   </entry>
