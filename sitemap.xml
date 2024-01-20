@@ -985,7 +985,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/Pwn/</loc>
+    <loc>http://example.com/categories/Misc/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -999,14 +999,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Web/</loc>
+    <loc>http://example.com/categories/Pwn/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Misc/</loc>
+    <loc>http://example.com/categories/Web/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1090,14 +1090,21 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/pythonz3/</loc>
+    <loc>http://example.com/categories/Re/python/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/python/</loc>
+    <loc>http://example.com/categories/Re/pe/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Re/pythonz3/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1112,13 +1119,6 @@
   
   <url>
     <loc>http://example.com/categories/Re/qiling%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Re/pe/</loc>
     <lastmod>2024-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
