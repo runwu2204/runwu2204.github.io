@@ -1,4 +1,4 @@
-Global.initMasonry = () => {
+export function initMasonry() {
   var loadingPlaceholder = document.querySelector(".loading-placeholder");
   var masonryContainer = document.querySelector("#masonry-container");
   if (!loadingPlaceholder || !masonryContainer) return;
@@ -6,7 +6,9 @@ Global.initMasonry = () => {
   loadingPlaceholder.style.display = "block";
   masonryContainer.style.display = "none";
 
-  var images = document.querySelectorAll("#masonry-container .masonry-item img");
+  var images = document.querySelectorAll(
+    "#masonry-container .masonry-item img",
+  );
   var loadedCount = 0;
 
   function onImageLoad() {
@@ -28,19 +30,35 @@ Global.initMasonry = () => {
   if (loadedCount === images.length) {
     initializeMasonryLayout();
   }
-
   function initializeMasonryLayout() {
-    loadingPlaceholder.style.display = "none";
-    masonryContainer.style.display = "block";
-
-    var masonry = new MiniMasonry({
-      container: masonryContainer,
-      gutterX: 10,
-      gutterY: 5,
-      surroundingGutter: false,
-    });
-    masonry.layout();
+    loadingPlaceholder.style.opacity = 0;
+    setTimeout(() => {
+      loadingPlaceholder.style.display = "none";
+      masonryContainer.style.display = "block";
+      var screenWidth = window.innerWidth;
+      var baseWidth;
+      if (screenWidth >= 768) {
+        baseWidth = 255;
+      } else {
+        baseWidth = 150;
+      }
+      var masonry = new MiniMasonry({
+        baseWidth: baseWidth,
+        container: masonryContainer,
+        gutterX: 10,
+        gutterY: 10,
+        surroundingGutter: false,
+      });
+      masonry.layout();
+      masonryContainer.style.opacity = 1;
+    }, 100);
   }
 }
 
-  
+if (data.masonry) {
+  try {
+    swup.hooks.on("page:view", initMasonry);
+  } catch (e) {}
+
+  document.addEventListener("DOMContentLoaded", initMasonry);
+}

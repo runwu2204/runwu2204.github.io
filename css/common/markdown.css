@@ -61,7 +61,7 @@
 }
 .markdown-body ul > li,
 .markdown-body ol > li {
-  margin-left: 16px;
+  margin-left: 20px;
   line-height: 2rem;
 }
 .markdown-body ul {
@@ -81,6 +81,12 @@
 }
 .markdown-body ol li {
   list-style: decimal;
+}
+.markdown-body ol li ul li {
+  list-style: disc;
+}
+.markdown-body ol li ul ul li {
+  list-style: circle;
 }
 .markdown-body ol li ol li {
   list-style: upper-alpha;
@@ -202,4 +208,15 @@ redefine-tablet()
 }
 .markdown-body > table tr:nth-child(2n) {
   background-color: var(--second-background-color);
+}
+.markdown-body mjx-container {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.markdown-body mjx-container svg {
+  display: inline;
+}
+.markdown-body mjx-container[display="true"] {
+  display: flex !important;
+  justify-content: center;
 }

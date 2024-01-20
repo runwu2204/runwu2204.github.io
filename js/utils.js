@@ -1,14 +1,22 @@
-/* global function */
+/* utils function */
+import { navbarShrink } from "./layouts/navbarShrink.js";
+import { initTOC } from "./layouts/toc.js";
+import { main } from "./main.js";
+import imageViewer from "./tools/imageViewer.js";
 
-Global.initUtils = () => {
-  Global.utils = {
+export const navigationState = {
+  isNavigating: false,
+};
+
+export default function initUtils() {
+  const utils = {
     html_root_dom: document.querySelector("html"),
     pageContainer_dom: document.querySelector(".page-container"),
     pageTop_dom: document.querySelector(".main-content-header"),
     homeBanner_dom: document.querySelector(".home-banner-container"),
+    homeBannerBackground_dom: document.querySelector(".home-banner-background"),
     scrollProgressBar_dom: document.querySelector(".scroll-progress-bar"),
     pjaxProgressBar_dom: document.querySelector(".pjax-progress-bar"),
-    pjaxProgressIcon_dom: document.querySelector(".pjax-progress-icon"),
     backToTopButton_dom: document.querySelector(".tool-scroll-to-top"),
     toolsList: document.querySelector(".hidden-tools-list"),
     toggleButton: document.querySelector(".toggle-tools-list"),
@@ -17,62 +25,63 @@ Global.initUtils = () => {
     pjaxProgressBarTimer: null,
     prevScrollValue: 0,
     fontSizeLevel: 0,
+    triggerViewHeight: 0.5 * window.innerHeight,
 
-    isHasScrollProgressBar:
-      Global.theme_config.global.scroll_progress.bar === true,
-    isHasScrollPercent:
-      Global.theme_config.global.scroll_progress.percentage === true,
+    isHasScrollProgressBar: theme.global.scroll_progress.bar === true,
+    isHasScrollPercent: theme.global.scroll_progress.percentage === true,
 
     // Scroll Style
     updateScrollStyle() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = window.innerHeight || document.documentElement.clientHeight;
-      const percent = this.calculatePercentage(scrollTop, scrollHeight, clientHeight);
-    
+      const clientHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      const percent = this.calculatePercentage(
+        scrollTop,
+        scrollHeight,
+        clientHeight,
+      );
+
       this.updateScrollProgressBar(percent);
       this.updateScrollPercent(percent);
       this.updatePageTopVisibility(scrollTop, clientHeight);
-      
+
       this.prevScrollValue = scrollTop;
     },
 
-    calculatePercentage(scrollTop, scrollHeight, clientHeight) {
-      return Math.round((scrollTop / (scrollHeight - clientHeight)) * 100);
-    },
-
-    
     updateScrollProgressBar(percent) {
       if (this.isHasScrollProgressBar) {
         const progressPercent = percent.toFixed(3);
-        const visibility = percent === 0 ? 'hidden' : 'visible';
-    
+        const visibility = percent === 0 ? "hidden" : "visible";
+
         this.scrollProgressBar_dom.style.visibility = visibility;
         this.scrollProgressBar_dom.style.width = `${progressPercent}%`;
       }
     },
-    
+
     updateScrollPercent(percent) {
       if (this.isHasScrollPercent) {
-        const percentDom = this.backToTopButton_dom.querySelector('.percent');
+        const percentDom = this.backToTopButton_dom.querySelector(".percent");
         const showButton = percent !== 0 && percent !== undefined;
-    
-        this.backToTopButton_dom.classList.toggle('show', showButton);
+
+        this.backToTopButton_dom.classList.toggle("show", showButton);
         percentDom.innerHTML = percent.toFixed(0);
       }
     },
-    
+
     updatePageTopVisibility(scrollTop, clientHeight) {
-      if (Global.theme_config.navbar.auto_hide) {
+      if (theme.navbar.auto_hide) {
         const prevScrollValue = this.prevScrollValue;
-        const hidePageTop = prevScrollValue > clientHeight && scrollTop > prevScrollValue;
-    
-        this.pageTop_dom.classList.toggle('hide', hidePageTop);
+        const hidePageTop =
+          prevScrollValue > clientHeight && scrollTop > prevScrollValue;
+
+        this.pageTop_dom.classList.toggle("hide", hidePageTop);
       } else {
-        this.pageTop_dom.classList.remove('hide');
+        this.pageTop_dom.classList.remove("hide");
       }
     },
-    
+
     calculatePercentage(scrollTop, scrollHeight, clientHeight) {
       return Math.round((scrollTop / (scrollHeight - clientHeight)) * 100);
     },
@@ -83,75 +92,88 @@ Global.initUtils = () => {
         this.updateScrollStyle();
         this.updateTOCScroll();
         this.updateNavbarShrink();
-        this.updateHomeBannerBlur();
+        // this.updateHomeBannerBlur();
         this.updateAutoHideTools();
-        this.updateAPlayerAutoHide();
       });
+      window.addEventListener(
+        "scroll",
+        this.debounce(() => this.updateHomeBannerBlur(), 20),
+      );
     },
-    
+
     updateTOCScroll() {
-      if (Global.theme_config.articles.toc.enable && Global.utils.hasOwnProperty("updateActiveTOCLink")) {
-        Global.utils.updateActiveTOCLink();
+      if (
+        theme.articles.toc.enable &&
+        initTOC().hasOwnProperty("updateActiveTOCLink")
+      ) {
+        initTOC().updateActiveTOCLink();
       }
     },
-    
+
     updateNavbarShrink() {
-      navbarShrink.init();
-    },
-    
-    updateHomeBannerBlur() {
-      if (Global.theme_config.home_banner.style === "fixed" && location.pathname === Global.hexo_config.root) {
-        const blurElement = document.querySelector(".home-banner-background");
-        const viewHeight = window.innerHeight;
-        const scrollY = window.scrollY || window.pageYOffset;
-        const triggerViewHeight = viewHeight / 2;
-        const blurValue = scrollY >= triggerViewHeight ? 15 : 0;
-    
-        try {
-          blurElement.style.transition = "0.3s";
-          blurElement.style.webkitFilter = `blur(${blurValue}px)`;
-        } catch (e) {}
+      if (!navigationState.isNavigating) {
+        navbarShrink.init();
       }
     },
-    
-    updateAutoHideTools() {
-      const y = window.pageYOffset;
-      const height = document.body.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const toolList = document.getElementsByClassName('right-side-tools-container');
-    
-      for (let i = 0; i < toolList.length; i++) {
-        const tools = toolList[i];
-        if (y <= 0) {
-          if (location.pathname !== '/') {
-            //console.log(location.pathname)
-          } else {
-            tools.classList.add('hide');
-          }
-        } else if (y + windowHeight >= height - 20) {
-          tools.classList.add('hide');
-        } else {
-          tools.classList.remove('hide');
+
+    debounce(func, delay) {
+      let timer;
+      return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, arguments), delay);
+      };
+    },
+
+    updateHomeBannerBlur() {
+      if (!this.homeBannerBackground_dom) return;
+
+      if (
+        theme.home_banner.style === "fixed" &&
+        location.pathname === config.root
+      ) {
+        const scrollY = window.scrollY || window.pageYOffset;
+        const blurValue = scrollY >= this.triggerViewHeight ? 15 : 0;
+
+        try {
+          requestAnimationFrame(() => {
+            this.homeBannerBackground_dom.style.filter = `blur(${blurValue}px)`;
+            this.homeBannerBackground_dom.style.webkitFilter = `blur(${blurValue}px)`;
+          });
+        } catch (e) {
+          // Handle or log the error properly
+          console.error("Error updating banner blur:", e);
         }
       }
     },
-    
-    updateAPlayerAutoHide() {
-      const aplayer = document.getElementById('aplayer');
-      if (aplayer == null) {} else {
-        const y = window.pageYOffset;
-        const height = document.body.scrollHeight;
-        const windowHeight = window.innerHeight;
-        if (y <= 0) {
-          if (location.pathname !== '/') {
-            //console.log(location.pathname)
-          } else {
-            aplayer.classList.add('hide');
+
+    updateAutoHideTools() {
+      const y = window.scrollY;
+      const height = document.body.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const toolList = document.getElementsByClassName(
+        "right-side-tools-container",
+      );
+      const aplayer = document.getElementById("aplayer");
+
+      for (let i = 0; i < toolList.length; i++) {
+        const tools = toolList[i];
+        if (y <= 100) {
+          if (location.pathname === config.root) {
+            tools.classList.add("hide");
+            if (aplayer !== null) {
+              aplayer.classList.add("hide");
+            }
           }
         } else if (y + windowHeight >= height - 20) {
-          aplayer.classList.add('hide');
+          tools.classList.add("hide");
+          if (aplayer !== null) {
+            aplayer.classList.add("hide");
+          }
         } else {
-          aplayer.classList.remove('hide');
+          tools.classList.remove("hide");
+          if (aplayer !== null) {
+            aplayer.classList.remove("hide");
+          }
         }
       }
     },
@@ -161,109 +183,59 @@ Global.initUtils = () => {
         this.toolsList.classList.toggle("show");
       });
     },
-    
+
+    fontAdjPlus_dom: document.querySelector(".tool-font-adjust-plus"),
+    fontAdMinus_dom: document.querySelector(".tool-font-adjust-minus"),
     globalFontSizeAdjust() {
       const htmlRoot = this.html_root_dom;
-      const fontAdjustPlus = document.querySelector('.tool-font-adjust-plus');
-      const fontAdjustMinus = document.querySelector('.tool-font-adjust-minus');
-    
-      const fontSize = document.defaultView.getComputedStyle(document.body).fontSize;
+      const fontAdjustPlus = this.fontAdjPlus_dom;
+      const fontAdjustMinus = this.fontAdMinus_dom;
+
+      const fontSize = document.defaultView.getComputedStyle(
+        document.body,
+      ).fontSize;
       const baseFontSize = parseFloat(fontSize);
-    
+
       let fontSizeLevel = 0;
-      const styleStatus = Global.getStyleStatus();
+      const styleStatus = main.getStyleStatus();
       if (styleStatus) {
         fontSizeLevel = styleStatus.fontSizeLevel;
         setFontSize(fontSizeLevel);
       }
-    
+
       function setFontSize(level) {
         const fontSize = baseFontSize * (1 + level * 0.05);
         htmlRoot.style.fontSize = `${fontSize}px`;
-        Global.styleStatus.fontSizeLevel = level;
-        Global.setStyleStatus();
+        main.styleStatus.fontSizeLevel = level;
+        main.setStyleStatus();
       }
-    
+
       function increaseFontSize() {
         fontSizeLevel = Math.min(fontSizeLevel + 1, 5);
         setFontSize(fontSizeLevel);
       }
-    
+
       function decreaseFontSize() {
         fontSizeLevel = Math.max(fontSizeLevel - 1, 0);
         setFontSize(fontSizeLevel);
       }
-    
-      fontAdjustPlus.addEventListener('click', increaseFontSize);
-      fontAdjustMinus.addEventListener('click', decreaseFontSize);
+
+      fontAdjustPlus.addEventListener("click", increaseFontSize);
+      fontAdjustMinus.addEventListener("click", decreaseFontSize);
     },
-
-    // toggle content area width
-    contentAreaWidthAdjust() {
-      const toolExpandDom = document.querySelector(".tool-expand-width");
-      const navbarContentDom = document.querySelector(".navbar-content");
-      const mainContentDom = document.querySelector(".main-content");
-      const iconDom = toolExpandDom.querySelector("i");
-
-      const defaultMaxWidth =
-        Global.theme_config.global.content_max_width || "1000px";
-      const expandMaxWidth = "90%";
-      let navbarMaxWidth = defaultMaxWidth;
-
-      let isExpand = false;
-
-      if (
-        Global.theme_config.home_banner.enable === true &&
-        window.location.pathname === "/"
-      ) {
-        navbarMaxWidth = parseInt(defaultMaxWidth) * 1.2 + "px";
-      }
-
-      const setPageWidth = (isExpand) => {
-        Global.styleStatus.isExpandPageWidth = isExpand;
-        Global.setStyleStatus();
-        if (isExpand) {
-          iconDom.classList.remove("fa-expand");
-          iconDom.classList.add("fa-compress");
-          navbarContentDom.style.maxWidth = expandMaxWidth;
-          mainContentDom.style.maxWidth = expandMaxWidth;
-        } else {
-          iconDom.classList.remove("fa-compress");
-          iconDom.classList.add("fa-expand");
-          navbarContentDom.style.maxWidth = navbarMaxWidth;
-          mainContentDom.style.maxWidth = defaultMaxWidth;
-        }
-      };
-
-      const initPageWidth = () => {
-        const styleStatus = Global.getStyleStatus();
-        if (styleStatus) {
-          isExpand = styleStatus.isExpandPageWidth;
-          setPageWidth(isExpand);
-        }
-      };
-
-      initPageWidth();
-
-      toolExpandDom.addEventListener("click", () => {
-        isExpand = !isExpand;
-        setPageWidth(isExpand);
-      });
-    },
-
     // go comment anchor
     goComment() {
       this.goComment_dom = document.querySelector(".go-comment");
       if (this.goComment_dom) {
         this.goComment_dom.addEventListener("click", () => {
           const target = document.querySelector("#comment-anchor");
-          const offset = target.getBoundingClientRect().top + window.scrollY;
-          window.anime({
-            targets: document.scrollingElement,
-            duration: 500,
-            easing: 'linear',
-            scrollTop: offset - 10
-          });
+          if (target) {
+            const offset = target.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+              top: offset,
+              behavior: "smooth",
+            });
+          }
         });
       }
     },
@@ -297,50 +269,13 @@ Global.initUtils = () => {
       }
     },
 
-    // big image viewer
-    imageViewer() {
-      let isBigImage = false;
-
-      const showHandle = (maskDom, isShow) => {
-        document.body.style.overflow = isShow ? "hidden" : "auto";
-        if (isShow) {
-          maskDom.classList.add("active");
-        } else {
-          maskDom.classList.remove("active");
-        }
-      };
-
-      const imageViewerDom = document.querySelector(".image-viewer-container");
-      const targetImg = document.querySelector(".image-viewer-container img");
-      imageViewerDom &&
-        imageViewerDom.addEventListener("click", () => {
-          isBigImage = false;
-          showHandle(imageViewerDom, isBigImage);
-        });
-
-      const imgDoms = document.querySelectorAll(".markdown-body img, .masonry-item img");
-
-      if (imgDoms.length) {
-        imgDoms.forEach((img) => {
-          img.addEventListener("click", () => {
-            isBigImage = true;
-            showHandle(imageViewerDom, isBigImage);
-            targetImg.setAttribute("src", img.getAttribute("src"));
-          });
-        });
-      } else {
-        this.pageContainer_dom.removeChild(imageViewerDom);
-      }
-    },
-
     // set how long ago language
     setHowLongAgoLanguage(p1, p2) {
       return p2.replace(/%s/g, p1);
     },
-    
 
     getHowLongAgo(timestamp) {
-      const l = Global.language_ago;
+      const l = lang_ago;
 
       const __Y = Math.floor(timestamp / (60 * 60 * 24 * 30) / 12);
       const __M = Math.floor(timestamp / (60 * 60 * 24 * 30));
@@ -369,168 +304,63 @@ Global.initUtils = () => {
 
     relativeTimeInHome() {
       const post = document.querySelectorAll(
-        ".home-article-meta-info .home-article-date"
+        ".home-article-meta-info .home-article-date",
       );
-      const df = Global.theme_config.home.article_date_format;
+      const df = theme.home.article_date_format;
       if (df === "relative") {
         post &&
           post.forEach((v) => {
             const nowDate = Date.now();
-            const postDate = new Date(v.dataset.date.split(" GMT")[0]).getTime();
+            const postDate = new Date(
+              v.dataset.date.split(" GMT")[0],
+            ).getTime();
             v.innerHTML = this.getHowLongAgo(
-              Math.floor((nowDate - postDate) / 1000)
+              Math.floor((nowDate - postDate) / 1000),
             );
           });
       } else if (df === "auto") {
         post &&
-        post.forEach((v) => {
-          const nowDate = Date.now();
-          const postDate = new Date(v.dataset.date.split(" GMT")[0]).getTime();
-          const finalDays = Math.floor(
-            (nowDate - postDate) / (60 * 60 * 24 * 1000)
-          );
-          if (finalDays < 7) {
-            v.innerHTML = this.getHowLongAgo(
-              Math.floor((nowDate - postDate) / 1000)
+          post.forEach((v) => {
+            const nowDate = Date.now();
+            const postDate = new Date(
+              v.dataset.date.split(" GMT")[0],
+            ).getTime();
+            const finalDays = Math.floor(
+              (nowDate - postDate) / (60 * 60 * 24 * 1000),
             );
-          }
-        });
+            if (finalDays < 7) {
+              v.innerHTML = this.getHowLongAgo(
+                Math.floor((nowDate - postDate) / 1000),
+              );
+            }
+          });
       }
     },
-
-    // loading progress bar start
-    pjaxProgressBarStart() {
-      this.pjaxProgressBarTimer && clearInterval(this.pjaxProgressBarTimer);
-      if (this.isHasScrollProgressBar) {
-        this.scrollProgressBar_dom.classList.add("hide");
-      }
-
-      this.pjaxProgressBar_dom.style.width = "0";
-      this.pjaxProgressIcon_dom.classList.add("show");
-
-      let width = 1;
-      const maxWidth = 99;
-
-      this.pjaxProgressBar_dom.classList.add("show");
-      this.pjaxProgressBar_dom.style.width = width + "%";
-
-      this.pjaxProgressBarTimer = setInterval(() => {
-        width += 5;
-        if (width > maxWidth) width = maxWidth;
-        this.pjaxProgressBar_dom.style.width = width + "%";
-      }, 100);
-    },
-
-    // loading progress bar end
-    pjaxProgressBarEnd() {
-      this.pjaxProgressBarTimer && clearInterval(this.pjaxProgressBarTimer);
-      this.pjaxProgressBar_dom.style.width = "100%";
-
-      const temp_1 = setTimeout(() => {
-        this.pjaxProgressBar_dom.classList.remove("show");
-        this.pjaxProgressIcon_dom.classList.remove("show");
-
-        if (this.isHasScrollProgressBar) {
-          this.scrollProgressBar_dom.classList.remove("hide");
-        }
-
-        const temp_2 = setTimeout(() => {
-          this.pjaxProgressBar_dom.style.width = "0";
-          clearTimeout(temp_1), clearTimeout(temp_2);
-        }, 200);
-      }, 200);
-    },
-
-
-
-    /*
-    calculateMaterialColors(hex) {
-      // Convert hex to RGB
-      hex = hex.replace(/#/g, "");
-      if (hex.length === 3) {
-        hex = hex
-          .split("")
-          .map(function (hex) {
-            return hex + hex;
-          })
-          .join("");
-      }
-      var result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})[\da-z]{0,0}$/i.exec(
-        hex
-      );
-      if (!result) {
-        return null;
-      }
-      var r = parseInt(result[1], 16);
-      var g = parseInt(result[2], 16);
-      var b = parseInt(result[3], 16);
-      (r /= 255), (g /= 255), (b /= 255);
-      var max = Math.max(r, g, b),
-        min = Math.min(r, g, b);
-      var h,
-        s,
-        l = (max + min) / 2;
-      if (max == min) {
-        h = s = 0;
-      } else {
-        var d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch (max) {
-          case r:
-            h = (g - b) / d + (g < b ? 6 : 0);
-            break;
-          case g:
-            h = (b - r) / d + 2;
-            break;
-          case b:
-            h = (r - g) / d + 4;
-            break;
-        }
-        h /= 6;
-      }
-      s = s * 100;
-      s = Math.round(s);
-      l = l * 100;
-      l = Math.round(l);
-      h = Math.round(360 * h);
-
-      // Compute primary, secondary, and tertiary colors
-      const primaryColor = `hsl(${h}, ${s}%, ${l}%)`;
-      const secondaryColor = `hsl(${h}, ${s - 15}%, ${l - 15}%)`;
-      const tertiaryColor = `hsl(${h}, ${s - 25}%, ${l - 25}%)`;
-      document.documentElement.style.setProperty('--primary-color-temp', primaryColor);
-      document.documentElement.style.setProperty('--secondary-color-temp', secondaryColor);
-      document.documentElement.style.setProperty('--tertiary-color-temp', tertiaryColor);
-    },*/
   };
 
+  utils.updateAutoHideTools();
+
   // init scroll
-  Global.utils.registerWindowScroll();
+  utils.registerWindowScroll();
 
   // toggle show tools list
-  Global.utils.toggleToolsList();
+  utils.toggleToolsList();
 
-  // global font adjust
-  Global.utils.globalFontSizeAdjust();
-
-  // adjust content area width
-  Global.utils.contentAreaWidthAdjust();
+  // main font adjust
+  utils.globalFontSizeAdjust();
 
   // go comment
-  Global.utils.goComment();
+  utils.goComment();
 
   // init page height handle
-  Global.utils.initPageHeightHandle();
+  utils.initPageHeightHandle();
 
   // init first screen height
-  Global.utils.inithomeBannerHeight();
-
-  // big image viewer handle
-  Global.utils.imageViewer();
+  utils.inithomeBannerHeight();
 
   // set how long ago in home article block
-  Global.utils.relativeTimeInHome();
+  utils.relativeTimeInHome();
 
-  // calculate material colors
-  //Global.utils.calculateMaterialColors(Global.theme_config.colors.primary);
-};
+  // image viewer handle
+  imageViewer();
+}
