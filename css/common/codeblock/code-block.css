@@ -54,58 +54,44 @@
   top: 0;
 }
 .highlight-container[data-rel] {
-  background: var(--third-background-color);
+  background: var(--highlight-background);
   border-radius: $redefine-border-radius-large;
-  box-shadow: var(--redefine-box-shadow-flat);
   padding-top: 40px;
+  padding-left: 5px;
   margin-top: 10px;
   margin-bottom: 1.2rem;
   position: relative;
+  box-shadow: var(--redefine-box-shadow-flat);
 }
 .highlight-container[data-rel] figcaption {
   font-weight: bold;
   font-size: 16px;
   position: absolute;
-  top: 12px;
+  top: 16px;
   left: 50%;
   transform: translateX(-50%);
 }
 .highlight-container[data-rel] figcaption a {
   margin-left: 10px;
 }
-.highlight-container[data-rel]::before {
-  position: absolute;
-  content: attr(data-rel);
-  line-height: 38px;
-  border-radius: $redefine-border-radius-full;
-  box-shadow: none;
-  height: 12px;
-  left: 12px;
-  position: absolute;
-  width: auto;
-  margin-left: 80px;
-  top: 0;
-  color: var(--default-text-color);
-  font-weight: bold;
-  font-size: 16px;
-}
 .highlight-container[data-rel] .folded figure {
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important;
 }
-.highlight-container[data-rel]::after {
-  content: ' ';
+.highlight-container[data-rel]::before {
   position: absolute;
-  -webkit-border-radius: $redefine-border-radius-full;
-  border-radius: $redefine-border-radius-full;
-  background: #fc625d;
-  width: 12px;
+  content: attr(data-rel);
+  line-height: 42px;
+  border-radius: $redefine-border-radius-large;
+  box-shadow: none;
   height: 12px;
-  top: 0;
-  left: 20px;
-  margin-top: 13px;
-  -webkit-box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
-  box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
-  z-index: 3;
+  left: 4px;
+  position: absolute;
+  width: auto;
+  margin-left: 10px;
+  top: 2px;
+  color: var(--default-text-color);
+  font-weight: bold;
+  font-size: 16px;
 }
