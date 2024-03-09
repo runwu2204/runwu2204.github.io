@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-02-21T08:32:19.000Z</updated>
+  <updated>2024-03-05T09:54:32.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>label结构</title>
+    <link href="http://example.com/2024/03/05/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/label%E7%BB%93%E6%9E%84/"/>
+    <id>http://example.com/2024/03/05/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/label%E7%BB%93%E6%9E%84/</id>
+    <published>2024-03-05T07:49:04.000Z</published>
+    <updated>2024-03-05T09:54:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://app.roboflow.com/" >手动标签生成数据集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403051736569.png"                      alt="image-20240305173618382"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://app.roboflow.com/&quot; &gt;手动标签生成数据集 &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square fa-sm&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="深度学习" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基本使用</title>
+    <link href="http://example.com/2024/03/01/%E5%BC%80%E5%8F%91/IOT/proteus/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2024/03/01/%E5%BC%80%E5%8F%91/IOT/proteus/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <published>2024-03-01T13:10:26.000Z</published>
+    <updated>2024-03-01T13:10:26.000Z</updated>
+    
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="IOT" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/"/>
+    
+    <category term="proteus" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/proteus/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>符号链接-任意文件访问</title>
+    <link href="http://example.com/2024/02/27/Web/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE/"/>
+    <id>http://example.com/2024/02/27/Web/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE/</id>
+    <published>2024-02-27T13:37:14.000Z</published>
+    <updated>2024-02-27T13:46:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>zip支持带符号链接压缩，可以将符号链接移植到其他系统上达成任意文件读取</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;zip支持带符号链接压缩，可以将符号链接移植到其他系统上达成任意文件读取&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs原型链污染</title>
+    <link href="http://example.com/2024/02/26/Web/nodejs/nodejs%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93/"/>
+    <id>http://example.com/2024/02/26/Web/nodejs/nodejs%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93/</id>
+    <published>2024-02-26T15:56:38.000Z</published>
+    <updated>2024-02-27T10:15:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考 <a class="link"   href="https://blog.csdn.net/qq_51586883/article/details/119867720" >js原型链污染(超详细)-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>原型链类似于父类</p><p>由相同类形成的对象 其共用同一种原型 所以可以通过更改其中一个对象的原型达成修改所有对象的目的</p><p>例如</p><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">in</span>: tmp=&#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="attr">out</span>: &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="attr">in</span>: tmp.<span class="property">a</span>.<span class="property">constructor</span>.<span class="property"><span class="keyword">prototype</span></span>==tmp.<span class="property">__proto__</span> <span class="comment">//此处是tmp.a(number)的原型跟tmp(object)原型不对应</span></span><br><span class="line"><span class="attr">out</span>: <span class="literal">false</span></span><br><span class="line"><span class="attr">in</span>: tmp.<span class="property">b</span>=&#123;<span class="string">&#x27;c&#x27;</span>:<span class="number">2</span>&#125;</span><br><span class="line"><span class="attr">out</span>: &#123;<span class="string">&#x27;c&#x27;</span>:<span class="number">2</span>&#125;</span><br><span class="line"><span class="attr">in</span>: tmp.<span class="property">b</span>.<span class="property">constructor</span>.<span class="property"><span class="keyword">prototype</span></span>==tmp.<span class="property">__proto__</span> <span class="comment">//此处是tmp.b(object)跟tmp(object)类型一样,所以共用原型</span></span><br><span class="line"><span class="attr">out</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></div><p>node js中万物皆对象</p><p>当该对象中没有这个属性时会从其原型寻找，所以可以通过修改其原型来达成修改该对象属性的目的</p><p>此处Object指任意对象 class指任意类</p><p>可以有下列办法</p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Object.constructor.prototype</span><br><span class="line">Object.constructor.__proto__</span><br><span class="line">class.prototype</span><br></pre></td></tr></table></figure></div><p>待完成</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;参考 &lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/qq_51586883/article/details/119867720&quot; &gt;js原型链污染(超详细)-CSDN博客 &lt;i class=&quot;fa-regular fa-arro</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="nodejs" scheme="http://example.com/categories/Web/nodejs/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Franklin-Reiter_相关信息攻击</title>
+    <link href="http://example.com/2024/02/24/Crypto/RSA/Franklin-Reiter_%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%E6%94%BB%E5%87%BB/"/>
+    <id>http://example.com/2024/02/24/Crypto/RSA/Franklin-Reiter_%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%E6%94%BB%E5%87%BB/</id>
+    <published>2024-02-24T10:48:42.000Z</published>
+    <updated>2024-02-24T10:48:42.000Z</updated>
+    
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>特定id私钥生成脚本</title>
@@ -411,152 +519,6 @@
     <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
     <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>state</title>
-    <link href="http://example.com/2024/01/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/"/>
-    <id>http://example.com/2024/01/02/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/state/</id>
-    <published>2024-01-02T10:48:04.000Z</published>
-    <updated>2024-01-02T14:04:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://docs.angr.io/en/latest/core-concepts/states.html" >官方文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><table><thead><tr><th>state</th><th>explain</th></tr></thead><tbody><tr><td>.blank_state</td><td>大多数数据未初始化，进入时返回没有约束的符号值</td></tr><tr><td>.entry_state</td><td>准备调用main之前的状态</td></tr><tr><td>.full_init_state</td><td>共享库和预定义内容都已经加载完毕，在enter状态之前，例如刚刚加载完共享库</td></tr><tr><td>.call_state</td><td>准备调用函数的状态</td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://docs.angr.io/en/latest/core-concepts/states.html&quot; &gt;官方文档 &lt;i class=&quot;fa-regular fa-arrow-up-right-from-squar</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2</title>
-    <link href="http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/02/"/>
-    <id>http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/02/</id>
-    <published>2024-01-01T09:37:04.000Z</published>
-    <updated>2024-01-01T09:43:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>explore的avoid参数可以用lambda确定find和avoid</p><p>find-用于寻找</p><p>avoid-用于避免</p><p>exp</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> angr <span class="keyword">import</span> *</span><br><span class="line">p=Project(<span class="string">&quot;./02_angr_find_condition&quot;</span>)</span><br><span class="line">state=p.factory.entry_state()</span><br><span class="line">sm=p.factory.simulation_manager(state)</span><br><span class="line">sm.explore(find=<span class="keyword">lambda</span> x: <span class="string">b&quot;Good Job.&quot;</span> <span class="keyword">in</span> x.posix.dumps(<span class="number">1</span>),avoid= <span class="keyword">lambda</span> y: <span class="string">b&quot;Try again.&quot;</span> <span class="keyword">in</span> y.posix.dumps(<span class="number">1</span>))<span class="comment">#限定标准输出中有&quot;Good Job.&quot;为需要寻找的，有&quot;Try again.&quot;是需要避免的，avoid用于增加查找速度</span></span><br><span class="line">sm.explore(find=<span class="keyword">lambda</span> x: <span class="string">b&quot;Good Job.&quot;</span> <span class="keyword">in</span> x.posix.dumps(<span class="number">1</span>))<span class="comment">#也可以不加avoid 会慢一点</span></span><br><span class="line">sm.found[<span class="number">0</span>].posix.dumps(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;explore的avoid参数可以用lambda确定find和avoid&lt;/p&gt;
-&lt;p&gt;find-用于寻找&lt;/p&gt;
-&lt;p&gt;avoid-用于避免&lt;/p&gt;
-&lt;p&gt;exp&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Python&quot;</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>1</title>
-    <link href="http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/01/"/>
-    <id>http://example.com/2024/01/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/01/</id>
-    <published>2023-12-31T17:19:31.000Z</published>
-    <updated>2024-01-20T17:53:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>avoid- 用于提升angr计算速度,避免进入内部</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210153393.png"                      alt="image-20240101013027355"                ></p><p>在设置explore参数时增加avoid参数并将参数设置为avoid_me的首地址</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> angr <span class="keyword">import</span> *</span><br><span class="line">p=Project(<span class="string">&quot;./01_angr_avoid&quot;</span>)</span><br><span class="line">state=p.factory.entry_state()</span><br><span class="line">sm=p.factory.simulation_manager(state)</span><br><span class="line">sm.explore(find=<span class="number">0x080492FB</span>,avoid=<span class="number">0x0080492BB</span>)</span><br><span class="line">sm.found[<span class="number">0</span>].posix.dumps(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;avoid- 用于提升angr计算速度,避免进入内部&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&quot;/images/loading.svg&quot;
-                   </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>0</title>
-    <link href="http://example.com/2023/12/31/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/00/"/>
-    <id>http://example.com/2023/12/31/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr_ctf/00/</id>
-    <published>2023-12-31T09:10:02.000Z</published>
-    <updated>2023-12-31T10:00:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> angr <span class="keyword">import</span> *<span class="comment">#导入angr框架</span></span><br><span class="line">p=Project(<span class="string">&quot;二进制文件&quot;</span>)<span class="comment">#导入二进制文件,第一步一般就是这个</span></span><br><span class="line">state=p.factory.entry_state()<span class="comment">#状态，entry_state指的是程序刚进行时候的状态(包含寄存器之类的)</span></span><br><span class="line">sm=p.factory.simulation_manager(state)<span class="comment">#模拟状态管理器类似于z3的新建solver(个人理解),内部参数为状态，可以为刚刚的entry_state()</span></span><br><span class="line">sm.explore(find=地址)<span class="comment">#启动简单搜索,具体在下方</span></span><br><span class="line"><span class="comment">#也可以使用lambda添加条件 sm.explore(find=lambda x: &quot;Good&quot; in x.posix.dumps(1)) 这个条件就是Good字符串出现在标准输出中</span></span><br><span class="line">sm.found[<span class="number">0</span>].posix.dump(<span class="number">0</span>)<span class="comment">#获取标准输入</span></span><br></pre></td></tr></table></figure></div><p><a class="link"   href="https://www.jianshu.com/p/95dc43d52227" >Simulation Manager <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>简单探索(Simple Exploration)</p><p>符号执行最普遍的操作是找到能够到达某个地址的状态，同时丢弃其他不能到达这个地址的状态。SM为使用这种执行模式提供了捷径：<code>.explore()</code>方法。当使用<code>find</code>参数启动<code>.explore()</code>方法时，程序将会一直执行，直到发现了一个和<code>find</code>参数指定的条件相匹配的状态。<code>find</code>参数的内容可以是想要执行到的某个地址、或者想要执行到的地址列表、或者一个获取state作为参数并判断这个state是否满足某些条件的函数。当<code>active</code>stash中的任意状态和<code>find</code>中的条件匹配的时候，它们就会被放到<code>found</code>stash中，执行随即停止。之后你可以探索找到的状态，或者决定丢弃它，转而探索其它状态。你还可以按照和<code>find</code>相同的格式设置另一个参数——<code>avoid</code>。当一个状态和<code>avoid</code>中的条件匹配时，它就会被放进<code>avoided</code>stash中，之后继续执行。最后，<code>num_find</code>参数指定函数返回前需要找到的符合条件的状态的个数，这个参数默认是1。当然，如果<code>active</code>stash中已经没有状态可以执行，那么不论有没有找到你指定的状态个数，都会停止执行。</p></blockquote><h2 id="SimState类"><a href="#SimState类" class="headerlink" title="SimState类"></a><a class="link"   href="https://blog.csdn.net/zhuzhuzhu22/article/details/80408760" >SimState类 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><blockquote><p>p.factory.entry_state(),sm.found[0]同属于SimState类 </p><p>posix – MISNOMER: 操作系统或者环境模型的表示 (包含stdin(0),stdout(1),stderr(2))</p><p>posix.dumps()用于导出posix中的输入输出、错误，参数就是对应的数据标号</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Python&quot;&gt;&lt;figure class=&quot;iseeu highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;li</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="angr_ctf" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/angr-ctf/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>环境配置</title>
-    <link href="http://example.com/2023/12/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2023/12/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2023-12-29T17:13:11.000Z</published>
-    <updated>2023-12-29T17:13:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>pip install angr -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</code></p><p>即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;pip install angr -i https://pypi.tuna.tsinghua.edu.cn/simple some-package&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;即可&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
