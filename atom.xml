@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-05T09:54:32.000Z</updated>
+  <updated>2024-03-15T17:34:53.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hook</title>
+    <link href="http://example.com/2024/03/16/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/hook/"/>
+    <id>http://example.com/2024/03/16/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/hook/</id>
+    <published>2024-03-15T16:16:49.000Z</published>
+    <updated>2024-03-15T17:34:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>frida通过js脚本实现功能（命令行类似于ipython</p><p>有多种启动方式</p><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">frida -U ps-name <span class="comment">#可通过frida-ps 获取</span></span><br><span class="line">frida -UF <span class="comment">#运行前台应用,wsa运行会有问题</span></span><br><span class="line">frida -l ps-name js文件 <span class="comment">#调用对应js文件</span></span><br><span class="line">frida -UF -l js文件 <span class="comment">#调用js并hook前台activity</span></span><br></pre></td></tr></table></figure></div><h2 id="hook-native层函数"><a href="#hook-native层函数" class="headerlink" title="hook native层函数"></a>hook native层函数</h2><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>);<span class="comment">//查找对应so某函数位置</span></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) <span class="comment">//函数调用前运行，可用于获取参数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;<span class="comment">//函数调用后运行，可用于获取返回值</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div><h2 id="hook-java层"><a href="#hook-java层" class="headerlink" title="hook java层"></a>hook java层</h2><h2 id="exp"><a href="#exp" class="headerlink" title="exp:"></a>exp:</h2><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>); <span class="comment">// 查找名为 &quot;libmidand.so&quot; 的库中导出函数名为 &quot;_Z10murmur3_32PKcjj&quot; 的函数，并将函数地址赋值给 func_addr 变量</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;func addr is ---&quot;</span> + func_addr) <span class="comment">// 打印找到的函数的地址</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hookso</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 拦截器回调函数，在被拦截函数返回之后执行</span></span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;</span><br><span class="line">        <span class="comment">// 打印被拦截函数的返回值的十六进制表示</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bytes2hexstr_2</span>(<span class="params">arrBytes</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">var</span> str_hex = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(arrBytes);</span><br><span class="line">   <span class="keyword">return</span> str_hex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hookjava</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.moible.midand.MainActivity&quot;</span>);</span><br><span class="line">        tmp.<span class="property">Java_NativeUtils_readResourceFileBytes</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1, arg2</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">bytes2hexstr_2</span>(arg2));</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">char_set</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&quot;java.nio.charset.Charset&quot;</span>,&#123;</span><br><span class="line">        <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">tmp</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Charset</span>.<span class="title function_">defaultCharset</span>())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;frida通过js脚本实现功能（命令行类似于ipython&lt;/p&gt;
+&lt;p&gt;有多种启动方式&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Bash&quot;&gt;&lt;figure class=&quot;iseeu highlight bash&quot;&gt;&lt;t</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="frida框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ChipWhisperer</title>
+    <link href="http://example.com/2024/03/12/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/ChipWhisperer/"/>
+    <id>http://example.com/2024/03/12/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/ChipWhisperer/</id>
+    <published>2024-03-12T15:50:52.000Z</published>
+    <updated>2024-03-12T16:04:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>测信道攻击工具</p><p><a class="link"   href="https://chipwhisperer.readthedocs.io/en/latest/index.html" >ChipWhisperer — ChipWhisperer 5.7.0 documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测信道攻击工具&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://chipwhisperer.readthedocs.io/en/latest/index.html&quot; &gt;ChipWhisperer — ChipWhisperer 5.7.0 do</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="IOT" scheme="http://example.com/categories/Re/IOT/"/>
+    
+    <category term="侧信道" scheme="http://example.com/categories/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>bindiff</title>
+    <link href="http://example.com/2024/03/12/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/bindiff/"/>
+    <id>http://example.com/2024/03/12/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/bindiff/</id>
+    <published>2024-03-12T09:28:09.000Z</published>
+    <updated>2024-03-12T09:29:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>可用于导入函数名</p><p>比如某程序静态编译了某glibc库，可通过比较对应的glibc来导入对应的函数名 方便进行程序分析</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;可用于导入函数名&lt;/p&gt;
+&lt;p&gt;比如某程序静态编译了某glibc库，可通过比较对应的glibc来导入对应的函数名 方便进行程序分析&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
+    
+    <category term="plugins" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>label结构</title>
@@ -428,97 +513,6 @@
     <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
     <category term="angr分析框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/angr%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>基本使用</title>
-    <link href="http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
-    <published>2024-01-15T08:23:03.000Z</published>
-    <updated>2024-01-15T16:17:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>参考<a class="link"   href="https://docs.qiling.io/en/latest/ida/" >IDAPro Plugin - Qiling Framework Documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>在进行qiling框架搭建的过程中需要先进行setup</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151624593.png"                      alt="image-20240115162436570"                ></p><p>主要需要处理的就下面两处 其他可以直接为空</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151702214.png"                      alt="image-20240115170252163"                ></p><p>Rootfs path 在<a class="link"   href="https://github.com/qilingframework/qiling" >qilingframework&#x2F;qiling: A True Instrumentable Binary Emulation Framework (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这个仓库内</p><p>需要进行<code>git clone —recursive https://github.com/qilingframework/qiling</code> —recursive的原因是因为有子模块需要导出</p><p>clone的仓库位置\examples\rootfs 存有很多的运行库此处以linux_8664为例</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151722456.png"                      alt="image-20240115172208425"                ></p><p>脚本需要自己编写，现在最简单的例子如下</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> qiling <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">QILING_IDA</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">custom_prepare</span>(<span class="params">self, ql</span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">custom_continue</span>(<span class="params">self, ql:Qiling</span>):</span><br><span class="line">        hook = []</span><br><span class="line">        <span class="keyword">return</span> hook</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">custom_step</span>(<span class="params">self, ql:Qiling</span>):</span><br><span class="line">        hook = []</span><br><span class="line">        <span class="keyword">return</span> hook</span><br></pre></td></tr></table></figure></div><p>然后将这个脚本的位置写入Custom script path内即可</p><p>start后出现下列字符串代表加载成功</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151731290.png"                      alt="image-20240115173124263"                ></p><p>然后在左下角（下面的都是在这个地方输入）</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151733330.png"                      alt="image-20240115173347292"                ></p><blockquote><p>输入下面的字符串,获取当前的ida qiling插件的对象</p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import ida_ida</span><br><span class="line">ql_plugin = ida_ida.ql_plugin </span><br><span class="line">qlemu = ql_plugin.qlemu </span><br><span class="line">ql = qlemu.ql</span><br></pre></td></tr></table></figure></div><p>获取内存映射表</p><p><code>ql.mem.mapinfo</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151740267.png"                      alt="image-20240115174012240"                ></p><p>此处我的elf是qilinglab-x86_64(首地址是0x555555554000)</p><p>读取对应位置的内存信息</p><p><code>ql.mem.read(0x555555554000,10)</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151742247.png"                      alt="image-20240115174208225"                ></p><p>是正常的elf文件 且映射对的上文件头</p><p>因为ida插件的setpc存在问题（pc跟汇编中的eip作用一样）对自己要运行的指令进行setpc操作时地址不是对应的内存映射表的地址 也就是ra无法对应va所以需要手动更改基址</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151745818.png"                      alt="image-20240115174512766"                ></p><p>输入刚刚内存映射表得到的elf首地址即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151745824.png"                      alt="image-20240115174555798"                ></p><p>在要运行的地方右键选择setpc即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151746153.png"                      alt="image-20240115174630104"                ></p><p>然后步入操作（step）直接输入ctrl+shift+f9即可</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;参考&lt;a class=&quot;link&quot;   href=&quot;https://docs.qiling.io/en/latest/ida/&quot; &gt;IDAPro Plugin - Qiling Framework Documentation &lt;i class=&quot;fa-regular fa-</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="qilingida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>环境配置</title>
-    <link href="http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2024/01/15/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2024-01-15T07:31:29.000Z</published>
-    <updated>2024-01-15T08:22:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>先需要安装python中的 qiling插件</p><p><code>pip install qiling</code></p><p>找到qiling安装位置</p><p><code>pip show qiling</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151551166.png"                      alt="image-20240115155157099"                ></p><p>访问location所指目录下的qiling文件夹，下面用用相对地址代指位置</p><p>qiling\extensions\idaplugin下的qilingida.py通过创建链接的操作放到ida目录下的plugins</p><p><code>mklink ida的plugins路径\qilingida.py qiling\extensions\idaplugin\qilingida.py</code></p><p>效果类似下面</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151620095.png"                      alt="image-20240115162015058"                ></p><p>打开ida后出现这个即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401151622063.png"                      alt="image-20240115162202017"                ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;先需要安装python中的 qiling插件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install qiling&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;找到qiling安装位置&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip show qiling&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img  
-     </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="qilingida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/qilingida/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>windbg+ida设置</title>
-    <link href="http://example.com/2024/01/03/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/windbg+ida%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://example.com/2024/01/03/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/windbg+ida%E8%AE%BE%E7%BD%AE/</id>
-    <published>2024-01-03T14:27:46.000Z</published>
-    <updated>2024-01-20T17:55:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>进入ida目录&#x2F;cfg&#x2F;ida.cfg</p><p>如果你的ida是64位架构的则填入x64(我的ida是7.6 ida和ida64都是64位的)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202401210154855.png"                      alt="image-20240103222822214"                ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;进入ida目录&amp;#x2F;cfg&amp;#x2F;ida.cfg&lt;/p&gt;
-&lt;p&gt;如果你的ida是64位架构的则填入x64(我的ida是7.6 ida和ida64都是64位的)&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-        </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
     
     
   </entry>
