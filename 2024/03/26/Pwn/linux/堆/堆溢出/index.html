@@ -13,20 +13,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/09/07/re/x86/idc/"/>
+    <link rel="canonical" href="http://example.com/2024/03/26/pwn/linux/堆/堆溢出/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="1234PatchByte()&#x2F;&#x2F;一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)Byte()&#x2F;&#x2F;一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)Message&#x2F;&#x2F;用于打印到终端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="idc">
-<meta property="og:url" content="http://example.com/2023/09/07/Re/x86/idc/index.html">
+        <meta property="og:type" content="article">
+<meta property="og:title" content="堆溢出">
+<meta property="og:url" content="http://example.com/2024/03/26/Pwn/linux/%E5%A0%86/%E5%A0%86%E6%BA%A2%E5%87%BA/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="1234PatchByte()&#x2F;&#x2F;一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)Byte()&#x2F;&#x2F;一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)Message&#x2F;&#x2F;用于打印到终端">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-06T16:28:14.000Z">
-<meta property="article:modified_time" content="2023-09-30T14:11:39.000Z">
+<meta property="article:published_time" content="2024-03-26T10:46:15.000Z">
+<meta property="article:modified_time" content="2024-03-26T10:46:15.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -40,7 +38,7 @@
     
     <title>
         
-            idc -
+            堆溢出 -
         
         Runwu2204
     </title>
@@ -470,11 +468,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">54</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">124</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">129</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -500,7 +498,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">idc</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">堆溢出</h1>
                 </div>
             
             </div>
@@ -514,22 +512,22 @@
                     <div class="author flex items-center">
                         <span class="name text-default-text-color text-lg font-semibold">runwu2204</span>
                         
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
                         
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-09-07 00:28:14</span>
-        <span class="mobile">2023-09-07 00:28:14</span>
+        <span class="desktop">2024-03-26 18:46:15</span>
+        <span class="mobile">2024-03-26 18:46:15</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-30 22:11:39</span>
-            <span class="mobile">2023-09-30 22:11:39</span>
+            <span class="desktop">2024-03-26 18:46:15</span>
+            <span class="mobile">2024-03-26 18:46:15</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -543,7 +541,7 @@
                     
                         
                         <li>
-                            <a href="/categories/Re/">Re</a>&nbsp;
+                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
                         </li>
                     
                     
@@ -553,7 +551,17 @@
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/Re/x86/">x86</a>&nbsp;
+                            <a href="/categories/Pwn/linux/">linux</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/%E5%A0%86/">堆</a>&nbsp;
                         </li>
                     
                     
@@ -582,27 +590,25 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PatchByte()<span class="comment">//一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)</span></span><br><span class="line">Byte()<span class="comment">//一般都未类型名 可以为Byte(1字节) Word(2字节) Dword(4字节) Qword(8字节)</span></span><br><span class="line"></span><br><span class="line">Message<span class="comment">//用于打印到终端</span></span><br></pre></td></tr></table></figure></div>
-
-
+            
         </div>
 
         
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> idc</li>
+        <li><strong>标题:</strong> 堆溢出</li>
         <li><strong>作者:</strong> runwu2204</li>
         <li><strong>创建于
-                :</strong> 2023-09-07 00:28:14</li>
+                :</strong> 2024-03-26 18:46:15</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-09-30 22:11:39
+                    :</strong> 2024-03-26 18:46:15
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2023/09/07/Re/x86/idc/
+            <strong>链接:</strong> https://runwu2204.github.io/2024/03/26/Pwn/linux/堆/堆溢出/
         </li>
         <li>
             <strong>
@@ -630,13 +636,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2023/09/17/Crypto/sage/Coppersmith/"
+                        href="/2024/03/30/Re/windows/pe/%E9%A9%B1%E5%8A%A8/sys%E7%BB%93%E6%9E%84/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Coppersmith</span>
+                                <span class="post-nav-title-item">sys结构</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -646,10 +652,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2023/09/07/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/python/idapython/"
+                        href="/2024/03/20/Re/windows/pe/x86%E8%BD%ACx64/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">idapython</span>
+                                <span class="post-nav-title-item">x86转x64</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -712,7 +718,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">idc</div>
+        <div class="page-title">堆溢出</div>
         
 
     </div>

@@ -18,13 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="article">
+        <meta name="description" content="Franklin-Reiter相关消息攻击已知pow(x,e,n)和pow(ax+b,e,n) 可以通过形如下列式子求解 123456789101112131415from sage.all import *def franklinReiter(n,e,c1,c2,a,b):    PR&#x3D;PolynomialRing(Zmod(n),&amp;#x27;X&amp;#x27;)     X&#x3D;PR.gen()">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Franklin-Reiter_相关信息攻击">
 <meta property="og:url" content="http://example.com/2024/02/24/Crypto/RSA/Franklin-Reiter_%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%E6%94%BB%E5%87%BB/index.html">
 <meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="Franklin-Reiter相关消息攻击已知pow(x,e,n)和pow(ax+b,e,n) 可以通过形如下列式子求解 123456789101112131415from sage.all import *def franklinReiter(n,e,c1,c2,a,b):    PR&#x3D;PolynomialRing(Zmod(n),&amp;#x27;X&amp;#x27;)     X&#x3D;PR.gen()">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-24T10:48:42.000Z">
-<meta property="article:modified_time" content="2024-02-24T10:48:42.000Z">
+<meta property="article:modified_time" content="2024-03-18T17:49:20.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -468,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">54</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">124</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">129</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -512,7 +514,7 @@
                     <div class="author flex items-center">
                         <span class="name text-default-text-color text-lg font-semibold">runwu2204</span>
                         
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
                         
                     </div>
                     <div class="meta-info">
@@ -526,8 +528,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-02-24 18:48:42</span>
-            <span class="mobile">2024-02-24 18:48:42</span>
+            <span class="desktop">2024-03-19 01:49:20</span>
+            <span class="mobile">2024-03-19 01:49:20</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -580,7 +582,15 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            
+            <h2 id="Franklin-Reiter相关消息攻击"><a href="#Franklin-Reiter相关消息攻击" class="headerlink" title="Franklin-Reiter相关消息攻击"></a>Franklin-Reiter相关消息攻击</h2><p>已知<code>pow(x,e,n)</code>和<code>pow(ax+b,e,n)</code></p>
+<p>可以通过形如下列式子求解</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sage.<span class="built_in">all</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">franklinReiter</span>(<span class="params">n,e,c1,c2,a,b</span>):</span><br><span class="line">    PR=PolynomialRing(Zmod(n),<span class="string">&#x27;X&#x27;</span>) </span><br><span class="line">    X=PR.gen()</span><br><span class="line">    f1 = X**e - c1 <span class="comment">#</span></span><br><span class="line">    f2 = (X*a+ b)**e - c2 <span class="comment">#</span></span><br><span class="line">    <span class="comment"># coefficient 0 = -m, which is what we wanted!</span></span><br><span class="line">    <span class="keyword">return</span> Integer(n-(compositeModulusGCD(f1,f2)).coefficients()[<span class="number">0</span>]) <span class="comment"># 系数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compositeModulusGCD</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="keyword">if</span>(b == <span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> a.monic()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> compositeModulusGCD(b, a % b)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>最好将x的已知位给到最大，比如<code>pow(x&lt;&lt;30,e,n)</code>与<code>pow(a*(x&lt;&lt;30),e,n)</code>这里会有三十的已知位</p>
+<p>如果直接把x&lt;&lt;30求解，可能会有较大误差可以试着更改</p>
+<p><code>f1 = (X*2**30)**e - c1</code> <code>f2 = ((X*2**30)*a)**e - c2</code></p>
+<p>注意sage中&lt;&lt;并不是左移而是增大多少次方</p>
+
         </div>
 
         
@@ -594,7 +604,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-02-24 18:48:42
+                    :</strong> 2024-03-19 01:49:20
             </li>
         
         <li>
@@ -709,7 +719,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">Franklin-Reiter_相关信息攻击</div>
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Franklin-Reiter%E7%9B%B8%E5%85%B3%E6%B6%88%E6%81%AF%E6%94%BB%E5%87%BB"><span class="nav-text">Franklin-Reiter相关消息攻击</span></a></li></ol>
 
     </div>
 </div>
