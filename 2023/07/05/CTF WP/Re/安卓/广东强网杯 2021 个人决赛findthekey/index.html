@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307101547679.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307101548731.png">
 <meta property="article:published_time" content="2023-07-05T03:43:17.000Z">
-<meta property="article:modified_time" content="2023-07-10T07:49:36.000Z">
+<meta property="article:modified_time" content="2024-04-12T09:25:45.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307101537741.png">
@@ -474,11 +474,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">54</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">129</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">138</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -532,8 +532,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-10 15:49:36</span>
-            <span class="mobile">2023-07-10 15:49:36</span>
+            <span class="desktop">2024-04-12 17:25:45</span>
+            <span class="mobile">2024-04-12 17:25:45</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -611,7 +611,10 @@
                 ></p>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jint <span class="title function_">JNI_OnLoad</span><span class="params">(JavaVM *vm, <span class="type">void</span> *reserved)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2; <span class="comment">// r0</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [sp+24h] [bp-1Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> v5[<span class="number">3</span>]; <span class="comment">// [sp+28h] [bp-18h] BYREF</span></span><br><span class="line"></span><br><span class="line">  v4 = <span class="number">0</span>;</span><br><span class="line">  sub_15A0(vm, &amp;v4, <span class="number">65542</span>);</span><br><span class="line">  v5[<span class="number">2</span>] = (<span class="type">int</span>)sub_1434;</span><br><span class="line">  v5[<span class="number">1</span>] = (<span class="type">int</span>)byte_5120;                      </span><br><span class="line">  v5[<span class="number">0</span>] = (<span class="type">int</span>)byte_510C;                       </span><br><span class="line">  v2 = sub_15D4(v4, byte_5140);                </span><br><span class="line">  sub_15FE(v4, v2, v5, <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">65542</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>重新异或回去得出</p>
+<p>用脚本重新异或回去得出</p>
+<blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">patch</span>(<span class="params">addr,xor,size</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size):</span><br><span class="line">        idaapi.patch_byte(addr+i,Byte(addr+i)^xor)</span><br><span class="line">patch(<span class="number">0x5004</span>,<span class="number">0x20</span>,<span class="number">4</span>)</span><br><span class="line">patch(<span class="number">0x5010</span>,<span class="number">0x90</span>,<span class="number">0x14</span>)</span><br><span class="line">patch(<span class="number">0x5025</span>,<span class="number">0x54</span>, <span class="number">0xF</span>)</span><br><span class="line">patch(<span class="number">0x5035</span>,<span class="number">0xF9</span>,<span class="number">5</span>)</span><br><span class="line">patch(<span class="number">0x5040</span>,<span class="number">0x5F</span>,<span class="number">0x18</span>)</span><br><span class="line">patch(<span class="number">0x5060</span>,<span class="number">0x6D</span>,<span class="number">0x19</span>)</span><br><span class="line">patch(<span class="number">0x507A</span>,<span class="number">0xF1</span>,<span class="number">4</span>)</span><br><span class="line">patch(<span class="number">0x5080</span>,<span class="number">0xA7</span>,<span class="number">0x15</span>)</span><br><span class="line">patch(<span class="number">0x50A0</span>,<span class="number">0x78</span>,<span class="number">0x40</span>)</span><br><span class="line">patch(<span class="number">0x50F0</span>,<span class="number">0x86</span>,<span class="number">0x18</span>)</span><br><span class="line">patch(<span class="number">0x5109</span>,<span class="number">0xF4</span>,<span class="number">2</span>)</span><br><span class="line">patch(<span class="number">0x510C</span>,<span class="number">0x74</span>, <span class="number">0xA</span>)</span><br><span class="line">patch(<span class="number">0x5120</span>,<span class="number">0xFC</span>,<span class="number">0x15</span>)</span><br><span class="line">patch(<span class="number">0x5140</span>, <span class="number">0x45</span>,<span class="number">0x1F</span>)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jint <span class="title function_">JNI_OnLoad</span><span class="params">(JavaVM *vm, <span class="type">void</span> *reserved)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2; <span class="comment">// r0</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [sp+24h] [bp-1Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> v5[<span class="number">3</span>]; <span class="comment">// [sp+28h] [bp-18h] BYREF</span></span><br><span class="line"></span><br><span class="line">  v4 = <span class="number">0</span>;</span><br><span class="line">  sub_15A0(vm, &amp;v4, <span class="number">65542</span>);</span><br><span class="line">  v5[<span class="number">2</span>] = (<span class="type">int</span>)sub_1434;</span><br><span class="line">  v5[<span class="number">1</span>] = (<span class="type">int</span>)byte_5120;                       <span class="comment">// (Ljava/lang/Object;)</span></span><br><span class="line">  v5[<span class="number">0</span>] = (<span class="type">int</span>)byte_510C;                       <span class="comment">// findthekey</span></span><br><span class="line">  v2 = sub_15D4(v4, byte_5140);                 <span class="comment">// &#x27;com/ctf/findthekey/MainActivity&#x27;</span></span><br><span class="line">  sub_15FE(v4, v2, v5, <span class="number">1</span>); <span class="comment">//此处应该是将com/ctf/findthekey/MainActivity的findthekey方法注册为sub_1434方法</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">65542</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>所以直接查看sub_1434函数(此处将)</p>
@@ -639,6 +642,7 @@
                      data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307101548731.png"
                       alt="image-20230710154852630"
                 ></p>
+<p>flag{thisisthekey}</p>
 
         </div>
 
@@ -653,7 +657,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-07-10 15:49:36
+                    :</strong> 2024-04-12 17:25:45
             </li>
         
         <li>

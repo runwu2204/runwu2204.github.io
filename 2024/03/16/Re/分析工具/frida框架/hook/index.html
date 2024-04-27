@@ -25,10 +25,12 @@
 <meta property="og:site_name" content="runwu2204">
 <meta property="og:description" content="frida通过js脚本实现功能（命令行类似于ipython 有多种启动方式 1234frida -U ps-name #可通过frida-ps 获取对应的进程名frida -UF #运行前台应用,wsa运行会有问题frida -l ps-name js文件 #调用对应js文件frida -UF -l js文件 #调用js并hook前台activity  Androidhook native层函数1">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png">
 <meta property="article:published_time" content="2024-03-15T16:16:49.000Z">
-<meta property="article:modified_time" content="2024-03-25T16:58:26.000Z">
+<meta property="article:modified_time" content="2024-04-06T11:23:56.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png">
     
     
     <!--- Icon Part-->
@@ -470,11 +472,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">54</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">129</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">138</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -528,8 +530,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-26 00:58:26</span>
-            <span class="mobile">2024-03-26 00:58:26</span>
+            <span class="desktop">2024-04-06 19:23:56</span>
+            <span class="mobile">2024-04-06 19:23:56</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -598,7 +600,28 @@
 
 <h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="hook-native层函数"><a href="#hook-native层函数" class="headerlink" title="hook native层函数"></a>hook native层函数</h2><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>);<span class="comment">//查找对应so某函数位置，注意该函数返回的是ptr对象,可用ptr(地址)生成</span></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) <span class="comment">//函数调用前运行，可用于获取参数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;<span class="comment">//函数调用后运行，可用于获取返回值</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="hook-java层"><a href="#hook-java层" class="headerlink" title="hook java层"></a>hook java层</h2><h2 id="exp"><a href="#exp" class="headerlink" title="exp:"></a>exp:</h2><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>); <span class="comment">// 查找名为 &quot;libmidand.so&quot; 的库中导出函数名为 &quot;_Z10murmur3_32PKcjj&quot; 的函数，并将函数地址赋值给 func_addr 变量</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;func addr is ---&quot;</span> + func_addr) <span class="comment">// 打印找到的函数的地址</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hookso</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上, func_addr实际上不是地址是ptr()对象如果需要手动拦截可用ptr(实际地址)</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 拦截器回调函数，在被拦截函数返回之后执行</span></span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;</span><br><span class="line">        <span class="comment">// 打印被拦截函数的返回值的十六进制表示</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bytes2hexstr_2</span>(<span class="params">arrBytes</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">var</span> str_hex = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(arrBytes);</span><br><span class="line">   <span class="keyword">return</span> str_hex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hookjava</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.moible.midand.MainActivity&quot;</span>);</span><br><span class="line">        tmp.<span class="property">Java_NativeUtils_readResourceFileBytes</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1, arg2</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">bytes2hexstr_2</span>(arg2));</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">char_set</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&quot;java.nio.charset.Charset&quot;</span>,&#123;</span><br><span class="line">        <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">tmp</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Charset</span>.<span class="title function_">defaultCharset</span>())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="hook-java层"><a href="#hook-java层" class="headerlink" title="hook java层"></a>hook java层</h2><h3 id="hook类"><a href="#hook类" class="headerlink" title="hook类"></a>hook类</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;完整classname&quot;</span>);</span><br><span class="line">        tmp.<span class="property">methodname</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1, arg2</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">bytes2hexstr_2</span>(arg2));</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="hook对象"><a href="#hook对象" class="headerlink" title="hook对象"></a>hook对象</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">char_set</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&quot;java.nio.charset.Charset&quot;</span>,&#123;<span class="comment">//搜索类的实例化对象</span></span><br><span class="line">        <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">tmp</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Charset</span>.<span class="title function_">defaultCharset</span>())<span class="comment">//进行主动调用</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="hook匿名类"><a href="#hook匿名类" class="headerlink" title="hook匿名类"></a>hook匿名类</h3><p>根据匿名类的生成规则</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;outer <span class="keyword">class</span> <span class="title class_">name</span>&gt;$&lt;number&gt; <span class="comment">//number从一开始每次增加一</span></span><br></pre></td></tr></table></figure></div>
+
+<p>也可通过smali语法查看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png"
+                      alt="image-20240406192051874"
+                ></p>
+<p>所以也可通过hook类方式进行hook</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.example.crackme1.MainActivity$1&quot;</span>);</span><br><span class="line">    tmp.<span class="property">onClick</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(arg1);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+
 
 <h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1>
         </div>
@@ -614,7 +637,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-03-26 00:58:26
+                    :</strong> 2024-04-06 19:23:56
             </li>
         
         <li>
@@ -646,7 +669,7 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/03/17/Re/windows/pe/SEH/"
+                        href="/2024/03/17/Re/C&amp;C++/windows/pe/SEH/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
@@ -729,7 +752,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">hook</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Android"><span class="nav-text">Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hook-native%E5%B1%82%E5%87%BD%E6%95%B0"><span class="nav-text">hook native层函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hook-java%E5%B1%82"><span class="nav-text">hook java层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exp"><span class="nav-text">exp:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows"><span class="nav-text">windows</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Android"><span class="nav-text">Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hook-native%E5%B1%82%E5%87%BD%E6%95%B0"><span class="nav-text">hook native层函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hook-java%E5%B1%82"><span class="nav-text">hook java层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hook%E7%B1%BB"><span class="nav-text">hook类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hook%E5%AF%B9%E8%B1%A1"><span class="nav-text">hook对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hook%E5%8C%BF%E5%90%8D%E7%B1%BB"><span class="nav-text">hook匿名类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows"><span class="nav-text">windows</span></a></li></ol>
 
     </div>
 </div>
