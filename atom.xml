@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-26T16:41:40.000Z</updated>
+  <updated>2024-05-02T16:09:07.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,140 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拼图</title>
+    <link href="http://example.com/2024/05/03/Misc/%E6%9D%82%E5%AD%A6/%E6%8B%BC%E5%9B%BE/"/>
+    <id>http://example.com/2024/05/03/Misc/%E6%9D%82%E5%AD%A6/%E6%8B%BC%E5%9B%BE/</id>
+    <published>2024-05-02T16:02:19.000Z</published>
+    <updated>2024-05-02T16:09:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>前提</p><p><a class="link"   href="https://imagemagick.org/script/download.php#windows" >ImageMagick – Download <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> -下载适合你系统的版本即可</p><p>默认选项会配好环境变量</p></blockquote><h2 id="将图片直接拼合成一张大图"><a href="#将图片直接拼合成一张大图" class="headerlink" title="将图片直接拼合成一张大图"></a>将图片直接拼合成一张大图</h2><p><code>magick montage *.png -tile 23x25 -geometry +0+0 big.jpg</code></p><blockquote><p>*.png 是指当前目录所有的以png为后缀的都参与拼图</p><p>23x25 是指 横向的图片x纵向的图片个数,这个需要自己手动计算哪个比例合理</p><p>-geometry 指图像偏移默认会将图片间自动填充空白，不适合后续拼图操作</p><p>big.jpg 指最后输出的图像</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前提&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://imagemagick.org/script/download.php#windows&quot; &gt;ImageMagick – Download &lt;i class=&quot;fa-</summary>
+      
+    
+    
+    
+    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    
+    <category term="杂学" scheme="http://example.com/categories/Misc/%E6%9D%82%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PIL</title>
+    <link href="http://example.com/2024/05/01/Misc/%E6%9D%82%E5%AD%A6/PIL/"/>
+    <id>http://example.com/2024/05/01/Misc/%E6%9D%82%E5%AD%A6/PIL/</id>
+    <published>2024-05-01T13:44:43.000Z</published>
+    <updated>2024-05-01T13:44:43.000Z</updated>
+    
+    
+    
+    
+    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    
+    <category term="杂学" scheme="http://example.com/categories/Misc/%E6%9D%82%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>aab2apk</title>
+    <link href="http://example.com/2024/05/01/Re/%E5%AE%89%E5%8D%93/aab2apk/"/>
+    <id>http://example.com/2024/05/01/Re/%E5%AE%89%E5%8D%93/aab2apk/</id>
+    <published>2024-04-30T17:51:28.000Z</published>
+    <updated>2024-04-30T17:51:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://jedok.com/converter/aab-to-apk" >https://jedok.com/converter/aab-to-apk <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>有在线转换器</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://jedok.com/converter/aab-to-apk&quot; &gt;https://jedok.com/converter/aab-to-apk &lt;i class=&quot;fa-regular fa-arrow-up-</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>parse_url绕过</title>
+    <link href="http://example.com/2024/05/01/Web/php/parse_url%E7%BB%95%E8%BF%87/"/>
+    <id>http://example.com/2024/05/01/Web/php/parse_url%E7%BB%95%E8%BF%87/</id>
+    <published>2024-04-30T17:24:06.000Z</published>
+    <updated>2024-04-30T17:36:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://www.cnblogs.com/Lee-404/p/12826352.html" >parse_url绕过 - Lee-404 - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="双斜杠绕过"><a href="#双斜杠绕过" class="headerlink" title="双斜杠绕过"></a>双斜杠绕过</h2><p>逻辑类似下面的</p><div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$url</span> = <span class="title function_ invoke__">parse_url</span>(<span class="variable">$_SERVER</span>[<span class="string">&#x27;REQUEST_URI&#x27;</span>]);</span><br><span class="line">            <span class="title function_ invoke__">parse_str</span>(<span class="variable">$url</span>[<span class="string">&#x27;query&#x27;</span>],<span class="variable">$query</span>);</span><br><span class="line">            <span class="keyword">foreach</span>(<span class="variable">$query</span> <span class="keyword">as</span> <span class="variable">$value</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^O/i&quot;</span>,<span class="variable">$value</span>))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">die</span>(<span class="string">&#x27;STOP HACKING&#x27;</span>);</span><br><span class="line">                    <span class="keyword">exit</span>();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure></div><p>可通过给上上级路由添加两个<code>/</code></p><p>如<code>127.0.0.1:8000///web/index.php?aaa=bbb</code></p><p>原理</p><blockquote><p>$_SERVER[‘REQUEST_URI’]为你输入的url值也就是当前链接<code>127.0.0.1:8000///web/index.php?aaa=bbb</code></p><p><code>//</code>会引起parse_url报错返回false而false就无法执行<code>parse_str($url[&#39;query&#39;],$query)</code>自然就进不了waf逻辑</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.cnblogs.com/Lee-404/p/12826352.html&quot; &gt;parse_url绕过 - Lee-404 - 博客园 (cnblogs.com) &lt;i class=&quot;fa-regular </summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="php" scheme="http://example.com/categories/Web/php/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>反序列化</title>
+    <link href="http://example.com/2024/05/01/Web/php/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <id>http://example.com/2024/05/01/Web/php/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+    <published>2024-04-30T16:56:38.000Z</published>
+    <updated>2024-04-30T17:29:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/ambionics/phpggc" >ambionics&#x2F;phpggc: PHPGGC is a library of PHP unserialize() payloads along with a tool to generate them, from command line or programmatically. (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>[<a class="link"   href="https://icode.best/i/98379040861373" >安洵杯 2019]iamthinking-爱代码爱编程 (icode.best) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://www.cnblogs.com/xrzxyyds/p/the-introduction-and-installation-of-the-use-of-phpggc-s81yc.html" >PHPGGC的使用介绍和安装 - xrzx - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/ambionics/phpggc&quot; &gt;ambionics&amp;#x2F;phpggc: PHPGGC is a library of PHP unserialize() payloads al</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="php" scheme="http://example.com/categories/Web/php/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>反序列化</title>
+    <link href="http://example.com/2024/04/30/Web/%E6%A1%86%E6%9E%B6/thinkphp/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <id>http://example.com/2024/04/30/Web/%E6%A1%86%E6%9E%B6/thinkphp/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+    <published>2024-04-30T15:02:11.000Z</published>
+    <updated>2024-04-30T15:02:11.000Z</updated>
+    
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="框架" scheme="http://example.com/categories/Web/%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="thinkphp" scheme="http://example.com/categories/Web/%E6%A1%86%E6%9E%B6/thinkphp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>start</title>
@@ -130,7 +264,7 @@
     <link href="http://example.com/2024/04/13/%E5%BC%80%E5%8F%91/IOT/Clion/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://example.com/2024/04/13/%E5%BC%80%E5%8F%91/IOT/Clion/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2024-04-13T13:54:06.000Z</published>
-    <updated>2024-04-17T17:46:52.000Z</updated>
+    <updated>2024-05-01T02:38:58.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><blockquote><p>1.Clion</p><ol start="2"><li></li></ol></blockquote><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404180146023.png"                      alt="image-20240418014608801"                ></p><blockquote><p>路径引用问题将下面的改为绝对路径即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404180146290.png"                      alt="image-20240418014650216"                ></p></blockquote>]]></content>
     
@@ -358,158 +492,6 @@
     <category term="windows" scheme="http://example.com/categories/Re/C-C/windows/"/>
     
     <category term="pe" scheme="http://example.com/categories/Re/C-C/windows/pe/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hook</title>
-    <link href="http://example.com/2024/03/16/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/hook/"/>
-    <id>http://example.com/2024/03/16/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/hook/</id>
-    <published>2024-03-15T16:16:49.000Z</published>
-    <updated>2024-04-06T11:23:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>frida通过js脚本实现功能（命令行类似于ipython</p><p>有多种启动方式</p><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">frida -U ps-name <span class="comment">#可通过frida-ps 获取对应的进程名</span></span><br><span class="line">frida -UF <span class="comment">#运行前台应用,wsa运行会有问题</span></span><br><span class="line">frida -l ps-name js文件 <span class="comment">#调用对应js文件</span></span><br><span class="line">frida -UF -l js文件 <span class="comment">#调用js并hook前台activity</span></span><br></pre></td></tr></table></figure></div><h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="hook-native层函数"><a href="#hook-native层函数" class="headerlink" title="hook native层函数"></a>hook native层函数</h2><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>);<span class="comment">//查找对应so某函数位置，注意该函数返回的是ptr对象,可用ptr(地址)生成</span></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) <span class="comment">//函数调用前运行，可用于获取参数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;<span class="comment">//函数调用后运行，可用于获取返回值</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div><h2 id="hook-java层"><a href="#hook-java层" class="headerlink" title="hook java层"></a>hook java层</h2><h3 id="hook类"><a href="#hook类" class="headerlink" title="hook类"></a>hook类</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;完整classname&quot;</span>);</span><br><span class="line">        tmp.<span class="property">methodname</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1, arg2</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">bytes2hexstr_2</span>(arg2));</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></div><h3 id="hook对象"><a href="#hook对象" class="headerlink" title="hook对象"></a>hook对象</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">char_set</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&quot;java.nio.charset.Charset&quot;</span>,&#123;<span class="comment">//搜索类的实例化对象</span></span><br><span class="line">        <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">tmp</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Charset</span>.<span class="title function_">defaultCharset</span>())<span class="comment">//进行主动调用</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h3 id="hook匿名类"><a href="#hook匿名类" class="headerlink" title="hook匿名类"></a>hook匿名类</h3><p>根据匿名类的生成规则</p><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;outer <span class="keyword">class</span> <span class="title class_">name</span>&gt;$&lt;number&gt; <span class="comment">//number从一开始每次增加一</span></span><br></pre></td></tr></table></figure></div><p>也可通过smali语法查看</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png"                      alt="image-20240406192051874"                ></p><p>所以也可通过hook类方式进行hook</p><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> tmp = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.example.crackme1.MainActivity$1&quot;</span>);</span><br><span class="line">    tmp.<span class="property">onClick</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">arg1</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(arg1);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div><h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;frida通过js脚本实现功能（命令行类似于ipython&lt;/p&gt;
-&lt;p&gt;有多种启动方式&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Bash&quot;&gt;&lt;figure class=&quot;iseeu highlight bash&quot;&gt;&lt;t</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="frida框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ChipWhisperer</title>
-    <link href="http://example.com/2024/03/12/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/ChipWhisperer/"/>
-    <id>http://example.com/2024/03/12/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/ChipWhisperer/</id>
-    <published>2024-03-12T15:50:52.000Z</published>
-    <updated>2024-03-12T16:04:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>测信道攻击工具</p><p><a class="link"   href="https://chipwhisperer.readthedocs.io/en/latest/index.html" >ChipWhisperer — ChipWhisperer 5.7.0 documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;测信道攻击工具&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://chipwhisperer.readthedocs.io/en/latest/index.html&quot; &gt;ChipWhisperer — ChipWhisperer 5.7.0 do</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="IOT" scheme="http://example.com/categories/Re/IOT/"/>
-    
-    <category term="侧信道" scheme="http://example.com/categories/Re/IOT/%E4%BE%A7%E4%BF%A1%E9%81%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>bindiff</title>
-    <link href="http://example.com/2024/03/12/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/bindiff/"/>
-    <id>http://example.com/2024/03/12/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/bindiff/</id>
-    <published>2024-03-12T09:28:09.000Z</published>
-    <updated>2024-03-12T09:29:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>可用于导入函数名</p><p>比如某程序静态编译了某glibc库，可通过比较对应的glibc来导入对应的函数名 方便进行程序分析</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;可用于导入函数名&lt;/p&gt;
-&lt;p&gt;比如某程序静态编译了某glibc库，可通过比较对应的glibc来导入对应的函数名 方便进行程序分析&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
-    
-    <category term="plugins" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/plugins/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>label结构</title>
-    <link href="http://example.com/2024/03/05/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/label%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2024/03/05/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/label%E7%BB%93%E6%9E%84/</id>
-    <published>2024-03-05T07:49:04.000Z</published>
-    <updated>2024-03-05T09:54:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://app.roboflow.com/" >手动标签生成数据集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403051736569.png"                      alt="image-20240305173618382"                ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://app.roboflow.com/&quot; &gt;手动标签生成数据集 &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square fa-sm&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="深度学习" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>基本使用</title>
-    <link href="http://example.com/2024/03/01/%E5%BC%80%E5%8F%91/IOT/proteus/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2024/03/01/%E5%BC%80%E5%8F%91/IOT/proteus/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
-    <published>2024-03-01T13:10:26.000Z</published>
-    <updated>2024-03-01T13:10:26.000Z</updated>
-    
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="IOT" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/"/>
-    
-    <category term="proteus" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/proteus/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>符号链接-任意文件访问</title>
-    <link href="http://example.com/2024/02/27/Web/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE/"/>
-    <id>http://example.com/2024/02/27/Web/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE/</id>
-    <published>2024-02-27T13:37:14.000Z</published>
-    <updated>2024-02-27T13:46:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>zip支持带符号链接压缩，可以将符号链接移植到其他系统上达成任意文件读取</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;zip支持带符号链接压缩，可以将符号链接移植到其他系统上达成任意文件读取&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
     
     
   </entry>
