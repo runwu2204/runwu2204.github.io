@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-24T15:19:18.000Z</updated>
+  <updated>2024-05-28T17:16:54.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RootAndroidStudio_emulator</title>
+    <link href="http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/RootAndroidStudio_emulator/"/>
+    <id>http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/RootAndroidStudio_emulator/</id>
+    <published>2024-05-28T17:15:59.000Z</published>
+    <updated>2024-05-28T17:16:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://xdaforums.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-linux-darwin-macos-win-google-play-store-apis.4218123/" >SCRIPT] rootAVD - root your Android Studio Virtual Device emulator with Magisk [Android][Linux][Darwin&#x2F;MacOS][WIN][Google Play Store APIs] | XDA Forums <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://xdaforums.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-linu</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>one_gadget</title>
@@ -454,30 +478,6 @@
     <category term="unity游戏逆向" scheme="http://example.com/categories/Re/C/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/"/>
     
     <category term="il2cpp" scheme="http://example.com/categories/Re/C/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/il2cpp/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>pem解析</title>
-    <link href="http://example.com/2024/03/30/Crypto/RSA/pem%E8%A7%A3%E6%9E%90/"/>
-    <id>http://example.com/2024/03/30/Crypto/RSA/pem%E8%A7%A3%E6%9E%90/</id>
-    <published>2024-03-29T16:49:56.000Z</published>
-    <updated>2024-03-29T16:50:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://tover.xyz/p/pem-by-hand/" >手撕PEM密钥（RSA） | Tover’s Blog <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://tover.xyz/p/pem-by-hand/&quot; &gt;手撕PEM密钥（RSA） | Tover’s Blog &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
     
     
   </entry>
