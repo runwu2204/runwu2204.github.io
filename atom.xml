@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-07T08:24:05.000Z</updated>
+  <updated>2024-06-08T17:26:28.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作</title>
+    <link href="http://example.com/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/</id>
+    <published>2024-06-08T10:48:34.000Z</published>
+    <updated>2024-06-08T17:26:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://www.cnblogs.com/murkuo/p/15965270.html" >pwndbg 基本操作指令 - MuRKuo - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://www.bookstack.cn/read/CTF-All-In-One/doc-2.3.1_gdb.md#gdb-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" >动态分析工具 - 2.3.1 GDB - 《CTF 竞赛入门指南(CTF All In One)》 - 书栈网 · BookStack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.cnblogs.com/murkuo/p/15965270.html&quot; &gt;pwndbg 基本操作指令 - MuRKuo - 博客园 (cnblogs.com) &lt;i class=&quot;fa-regular </summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="tool" scheme="http://example.com/categories/Pwn/linux/tool/"/>
+    
+    <category term="pwndbg" scheme="http://example.com/categories/Pwn/linux/tool/pwndbg/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>堆结构</title>
+    <link href="http://example.com/2024/06/08/Pwn/linux/%E5%A0%86/%E5%A0%86%E7%BB%93%E6%9E%84/"/>
+    <id>http://example.com/2024/06/08/Pwn/linux/%E5%A0%86/%E5%A0%86%E7%BB%93%E6%9E%84/</id>
+    <published>2024-06-08T09:02:22.000Z</published>
+    <updated>2024-06-08T10:20:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经申请的堆结构类似于下面</p><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> prev_size;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">int</span> size;<span class="comment">//注意4字节对齐,&amp;表示整过</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">int</span> flag:<span class="number">3</span>;</span><br><span class="line">            <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">            &#123;</span></span><br><span class="line">            <span class="type">bool</span> PREV_INUSE:<span class="number">1</span>;<span class="comment">//如果前面一个chunk处于分配状态，那么此位为1。一般来说，堆中第一个被分配的内存块的 size 字段的 P 位都会被设置为 1，以便于防止访问前面的非法内存。当一个chunk 的size 的P位为0时，我们能通过 prev_size 字段来获取上一个 chunk 的大小以及地址。这也方便进行空闲chunk之间的合并</span></span><br><span class="line">            <span class="type">bool</span> IS_MAPPED:<span class="number">1</span>;<span class="comment">//记录当前chunk是否是由mmap分配的</span></span><br><span class="line">            <span class="type">bool</span> NON_MAIN_AREA:<span class="number">1</span>;<span class="comment">//记录当前 chunk 是否不属于主线程</span></span><br><span class="line">            &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">    <span class="type">char</span>* data[(size&amp;<span class="number">0xFFFFFFF8</span>)<span class="number">-8</span>];<span class="comment">//只取高29位</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;已经申请的堆结构类似于下面&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;C&quot;&gt;&lt;figure class=&quot;iseeu highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="堆" scheme="http://example.com/categories/Pwn/linux/%E5%A0%86/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>api</title>
@@ -71,17 +126,19 @@
   
   <entry>
     <title>seccomp</title>
-    <link href="http://example.com/2024/06/07/Pwn/linux/seccomp/"/>
-    <id>http://example.com/2024/06/07/Pwn/linux/seccomp/</id>
+    <link href="http://example.com/2024/06/07/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/seccomp/"/>
+    <id>http://example.com/2024/06/07/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/seccomp/</id>
     <published>2024-06-07T07:22:14.000Z</published>
-    <updated>2024-06-07T07:22:32.000Z</updated>
+    <updated>2024-06-08T18:13:20.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Sandbox的安全机制"><a href="#Sandbox的安全机制" class="headerlink" title="Sandbox的安全机制"></a>Sandbox的安全机制</h2><p>限制系统调用</p>]]></content>
+    <content type="html"><![CDATA[<p>Sandbox的安全机制，用于限制系统调用</p><p>可用seccomp-tools 来查看是否启用对应的沙箱检测</p><p><code>seccomp-tools dump 对应程序</code></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;Sandbox的安全机制&quot;&gt;&lt;a href=&quot;#Sandbox的安全机制&quot; class=&quot;headerlink&quot; title=&quot;Sandbox的安全机制&quot;&gt;&lt;/a&gt;Sandbox的安全机制&lt;/h2&gt;&lt;p&gt;限制系统调用&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Sandbox的安全机制，用于限制系统调用&lt;/p&gt;
+&lt;p&gt;可用seccomp-tools 来查看是否启用对应的沙箱检测&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;seccomp-tools dump 对应程序&lt;/code&gt;&lt;/p&gt;
 </summary>
       
     
@@ -90,6 +147,8 @@
     <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
     
     <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="保护措施" scheme="http://example.com/categories/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/"/>
     
     
   </entry>
@@ -195,17 +254,28 @@
   
   <entry>
     <title>one_gadget</title>
-    <link href="http://example.com/2024/05/24/Pwn/linux/one_gadget/"/>
-    <id>http://example.com/2024/05/24/Pwn/linux/one_gadget/</id>
+    <link href="http://example.com/2024/05/24/Pwn/linux/tool/one_gadget/"/>
+    <id>http://example.com/2024/05/24/Pwn/linux/tool/one_gadget/</id>
     <published>2024-05-24T15:19:18.000Z</published>
-    <updated>2024-05-24T15:19:18.000Z</updated>
+    <updated>2024-06-08T18:11:37.000Z</updated>
     
+    <content type="html"><![CDATA[<p>可通过glibc来获取shell</p><p><code>pip3 install one_gadget</code>安装即可</p><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><blockquote><p>通过<code>one_gadget libc路径</code>找到对应的 <code>get shell</code>地址和 <code>get shell</code>的条件</p><p>如下面的</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]</span><br><span class="line">└─$ one_gadget /lib/x86_64-linux-gnu/libc.so.6</span><br><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0x4d753 posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rcx == NULL || &#123;rcx, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0xd636b execve(&quot;/bin/sh&quot;, rbp-0x40, r13)</span><br><span class="line">constraints:</span><br><span class="line">  address rbp-0x38 is writable</span><br><span class="line">  rdi == NULL || &#123;&quot;/bin/sh&quot;, rdi, NULL&#125; is a valid argv</span><br><span class="line">  [r13] == NULL || r13 == NULL || r13 is a valid envp</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><p>例如</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)#posix_spawn 类似于system 也是执行函数</span><br><span class="line">constraints:#获取shell的约束条件 </span><br><span class="line">  address rsp+0x68 is writable#rsp+0x68是可写的</span><br><span class="line">  rsp &amp; 0xf == 0#rsp &amp; 0xf为0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;可通过glibc来获取shell&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip3 install one_gadget&lt;/code&gt;安装即可&lt;/p&gt;
+&lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Exampl</summary>
+      
     
     
     
     <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
     
     <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="tool" scheme="http://example.com/categories/Pwn/linux/tool/"/>
     
     
   </entry>
@@ -439,47 +509,6 @@
     <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     <category term="Electron" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Electron/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>gccException</title>
-    <link href="http://example.com/2024/04/24/Re/C&amp;C++/gccException/"/>
-    <id>http://example.com/2024/04/24/Re/C&amp;C++/gccException/</id>
-    <published>2024-04-24T13:39:24.000Z</published>
-    <updated>2024-04-25T05:33:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://solotzg.github.io/2023/09/04/system/cpp-exception/#C-Exception-Handling" >浅析 C++ 异常机制 | SOLOTZG <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://4nsw3r.top/2022/02/03/SCTF-REVERSE-CplusExceptionEncrypt-%E8%B5%9B%E5%90%8E%E5%A4%8D%E7%8E%B0" >https://4nsw3r.top/2022/02/03/SCTF-REVERSE-CplusExceptionEncrypt-%E8%B5%9B%E5%90%8E%E5%A4%8D%E7%8E%B0 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;exception&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> std::<span class="built_in">exception</span>();<span class="comment">//抛出异常,对象需要继承 exception 基类</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">catch</span>(<span class="type">const</span> std::exception&amp; e)</span><br><span class="line">    &#123; </span><br><span class="line">        std::cerr &lt;&lt; e.<span class="built_in">what</span>() &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;<span class="comment">//异常处理语句</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://solotzg.github.io/2023/09/04/system/cpp-exception/#C-Exception-Handling&quot; &gt;浅析 C++ 异常机制 | SOLOTZG &lt;i class=</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="C&amp;C++" scheme="http://example.com/categories/Re/C-C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ida调试</title>
-    <link href="http://example.com/2024/04/17/Re/QEMU/ida%E8%B0%83%E8%AF%95/"/>
-    <id>http://example.com/2024/04/17/Re/QEMU/ida%E8%B0%83%E8%AF%95/</id>
-    <published>2024-04-17T13:14:38.000Z</published>
-    <updated>2024-04-17T13:14:38.000Z</updated>
-    
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="QEMU" scheme="http://example.com/categories/Re/QEMU/"/>
     
     
   </entry>

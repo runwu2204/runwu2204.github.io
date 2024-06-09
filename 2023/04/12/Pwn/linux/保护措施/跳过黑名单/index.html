@@ -13,18 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/05/24/pwn/linux/one_gadget/"/>
+    <link rel="canonical" href="http://example.com/2023/04/12/pwn/linux/保护措施/跳过黑名单/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="article">
-<meta property="og:title" content="one_gadget">
-<meta property="og:url" content="http://example.com/2024/05/24/Pwn/linux/one_gadget/index.html">
+        <meta name="description" content="可用引号来截断来绕过对应的黑名单检测 同时可用$IFS来代替空格 但$IFS如果后面跟了其他字符就不知道$这个符号到底持续到什么位置所以需要“空”来中断$的作用位置如$9-第九个参数 如果实际没有第九个参数就是为空,用其他为空的代替也一样">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跳过黑名单">
+<meta property="og:url" content="http://example.com/2023/04/12/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/%E8%B7%B3%E8%BF%87%E9%BB%91%E5%90%8D%E5%8D%95/index.html">
 <meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="可用引号来截断来绕过对应的黑名单检测 同时可用$IFS来代替空格 但$IFS如果后面跟了其他字符就不知道$这个符号到底持续到什么位置所以需要“空”来中断$的作用位置如$9-第九个参数 如果实际没有第九个参数就是为空,用其他为空的代替也一样">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-24T15:19:18.000Z">
-<meta property="article:modified_time" content="2024-05-24T15:19:18.000Z">
+<meta property="article:published_time" content="2023-04-12T10:10:29.000Z">
+<meta property="article:modified_time" content="2023-04-12T10:14:08.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -38,7 +40,7 @@
     
     <title>
         
-            one_gadget -
+            跳过黑名单 -
         
         Runwu2204
     </title>
@@ -468,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">69</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">72</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">155</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">157</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -498,7 +500,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">one_gadget</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">跳过黑名单</h1>
                 </div>
             
             </div>
@@ -519,15 +521,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-05-24 23:19:18</span>
-        <span class="mobile">2024-05-24 23:19:18</span>
+        <span class="desktop">2023-04-12 18:10:29</span>
+        <span class="mobile">2023-04-12 18:10:29</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-05-24 23:19:18</span>
-            <span class="mobile">2024-05-24 23:19:18</span>
+            <span class="desktop">2023-04-12 18:14:08</span>
+            <span class="mobile">2023-04-12 18:14:08</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -556,6 +558,16 @@
                     
                     
                 
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/">保护措施</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
         </span>
     
@@ -580,25 +592,29 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            
+            <p>可用引号来截断来绕过对应的黑名单检测</p>
+<p>同时可用$IFS来代替空格</p>
+<p>但$IFS如果后面跟了其他字符就不知道$这个符号到底持续到什么位置所以需要“空”来中断$的作用位置如$9-第九个参数</p>
+<p>如果实际没有第九个参数就是为空,用其他为空的代替也一样</p>
+
         </div>
 
         
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> one_gadget</li>
+        <li><strong>标题:</strong> 跳过黑名单</li>
         <li><strong>作者:</strong> runwu2204</li>
         <li><strong>创建于
-                :</strong> 2024-05-24 23:19:18</li>
+                :</strong> 2023-04-12 18:10:29</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-05-24 23:19:18
+                    :</strong> 2023-04-12 18:14:08
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2024/05/24/Pwn/linux/one_gadget/
+            <strong>链接:</strong> https://runwu2204.github.io/2023/04/12/Pwn/linux/保护措施/跳过黑名单/
         </li>
         <li>
             <strong>
@@ -626,13 +642,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/"
+                        href="/2023/04/13/Web/php/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">AndroidStudioemulator_Root</span>
+                                <span class="post-nav-title-item">PHP伪协议</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -642,10 +658,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/05/15/Re/golang/Cgo_dll/"
+                        href="/2023/04/01/CTF%20WP/Misc/ctfshow/%E5%A5%87%E6%80%AA%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85/%E5%8E%8B%E7%BC%A9%E5%8C%85/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Cgo_dll</span>
+                                <span class="post-nav-title-item">压缩包</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -708,7 +724,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">one_gadget</div>
+        <div class="page-title">跳过黑名单</div>
         
 
     </div>

@@ -13,20 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/10/28/pwn/linux/pie保护/"/>
+    <link rel="canonical" href="http://example.com/2024/05/24/pwn/linux/tool/one_gadget/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="PIE保护不会随机化低12bit位，如果 shell在附近 可以通过爆破低6位来获得完整的低2字节">
+        <meta name="description" content="可通过glibc来获取shell pip3 install one_gadget安装即可 Example 通过one_gadget libc路径找到对应的 get shell地址和 get shell的条件 如下面的 12345678910111213141516171819202122┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]└─$ one_gadget &#x2F;lib&#x2F;x86_64">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PIE保护">
-<meta property="og:url" content="http://example.com/2023/10/28/Pwn/linux/PIE%E4%BF%9D%E6%8A%A4/index.html">
+<meta property="og:title" content="one_gadget">
+<meta property="og:url" content="http://example.com/2024/05/24/Pwn/linux/tool/one_gadget/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="PIE保护不会随机化低12bit位，如果 shell在附近 可以通过爆破低6位来获得完整的低2字节">
+<meta property="og:description" content="可通过glibc来获取shell pip3 install one_gadget安装即可 Example 通过one_gadget libc路径找到对应的 get shell地址和 get shell的条件 如下面的 12345678910111213141516171819202122┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]└─$ one_gadget &#x2F;lib&#x2F;x86_64">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-28T14:57:42.000Z">
-<meta property="article:modified_time" content="2023-10-28T14:58:37.000Z">
+<meta property="article:published_time" content="2024-05-24T15:19:18.000Z">
+<meta property="article:modified_time" content="2024-06-08T18:11:37.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -40,7 +40,7 @@
     
     <title>
         
-            PIE保护 -
+            one_gadget -
         
         Runwu2204
     </title>
@@ -470,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">69</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">72</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">155</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">157</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -500,7 +500,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">PIE保护</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">one_gadget</h1>
                 </div>
             
             </div>
@@ -521,15 +521,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-10-28 22:57:42</span>
-        <span class="mobile">2023-10-28 22:57:42</span>
+        <span class="desktop">2024-05-24 23:19:18</span>
+        <span class="mobile">2024-05-24 23:19:18</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-28 22:58:37</span>
-            <span class="mobile">2023-10-28 22:58:37</span>
+            <span class="desktop">2024-06-09 02:11:37</span>
+            <span class="mobile">2024-06-09 02:11:37</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -558,6 +558,16 @@
                     
                     
                 
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/tool/">tool</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
         </span>
     
@@ -582,7 +592,17 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <p>PIE保护不会随机化低12bit位，如果 shell在附近 可以通过爆破低6位来获得完整的低2字节</p>
+            <p>可通过glibc来获取shell</p>
+<p><code>pip3 install one_gadget</code>安装即可</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><blockquote>
+<p>通过<code>one_gadget libc路径</code>找到对应的 <code>get shell</code>地址和 <code>get shell</code>的条件</p>
+<p>如下面的</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]</span><br><span class="line">└─$ one_gadget /lib/x86_64-linux-gnu/libc.so.6</span><br><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0x4d753 posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rcx == NULL || &#123;rcx, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0xd636b execve(&quot;/bin/sh&quot;, rbp-0x40, r13)</span><br><span class="line">constraints:</span><br><span class="line">  address rbp-0x38 is writable</span><br><span class="line">  rdi == NULL || &#123;&quot;/bin/sh&quot;, rdi, NULL&#125; is a valid argv</span><br><span class="line">  [r13] == NULL || r13 == NULL || r13 is a valid envp</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>例如</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)#posix_spawn 类似于system 也是执行函数</span><br><span class="line">constraints:#获取shell的约束条件 </span><br><span class="line">  address rsp+0x68 is writable#rsp+0x68是可写的</span><br><span class="line">  rsp &amp; 0xf == 0#rsp &amp; 0xf为0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br></pre></td></tr></table></figure></div>
+
+</blockquote>
 
         </div>
 
@@ -590,18 +610,18 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> PIE保护</li>
+        <li><strong>标题:</strong> one_gadget</li>
         <li><strong>作者:</strong> runwu2204</li>
         <li><strong>创建于
-                :</strong> 2023-10-28 22:57:42</li>
+                :</strong> 2024-05-24 23:19:18</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-10-28 22:58:37
+                    :</strong> 2024-06-09 02:11:37
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2023/10/28/Pwn/linux/PIE保护/
+            <strong>链接:</strong> https://runwu2204.github.io/2024/05/24/Pwn/linux/tool/one_gadget/
         </li>
         <li>
             <strong>
@@ -629,13 +649,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2023/11/02/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golangAAR%E5%AF%BC%E5%85%A5/"
+                        href="/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">golangAAR导入</span>
+                                <span class="post-nav-title-item">AndroidStudioemulator_Root</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -645,10 +665,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2023/10/21/Re/C&amp;C++/windows/pe/x86/golang/"
+                        href="/2024/05/15/Re/golang/Cgo_dll/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">golang</span>
+                                <span class="post-nav-title-item">Cgo_dll</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -711,8 +731,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">PIE保护</div>
-        
+        <div class="page-title">one_gadget</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-text">Example</span></a></li></ol>
 
     </div>
 </div>
