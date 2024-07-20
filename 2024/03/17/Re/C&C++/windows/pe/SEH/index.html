@@ -29,8 +29,9 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403220122453.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403211816112.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403220112114.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407151511174.png">
 <meta property="article:published_time" content="2024-03-17T08:24:25.000Z">
-<meta property="article:modified_time" content="2024-03-22T09:52:42.000Z">
+<meta property="article:modified_time" content="2024-07-15T07:16:34.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202403202020453.png">
@@ -479,7 +480,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">166</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">167</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -533,8 +534,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-22 17:52:42</span>
-            <span class="mobile">2024-03-22 17:52:42</span>
+            <span class="desktop">2024-07-15 15:16:34</span>
+            <span class="mobile">2024-07-15 15:16:34</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -673,6 +674,91 @@
                       alt="image-20240322011210069"
                 ></p>
 <p>说明seh链表中只有old_exception</p>
+<h3 id="手动注册逻辑"><a href="#手动注册逻辑" class="headerlink" title="手动注册逻辑"></a>手动注册逻辑</h3><blockquote>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;tchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Windows.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>    __stdcall <span class="title">CatchProc</span><span class="params">(EXCEPTION_RECORD* pExcept, <span class="type">void</span>* pErr, <span class="type">void</span>* pContext, <span class="type">void</span>* p_Dis)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//	if (pExcept-&gt;ExceptionCode == EXCEPTION_BREAKPOINT)</span></span><br><span class="line"><span class="comment">//	&#123;</span></span><br><span class="line"><span class="comment">//		printf(&quot;BREAKPOINT catched&quot;);</span></span><br><span class="line"><span class="comment">//		return 0;</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;catched 0x%08X\n&quot;</span>, pExcept-&gt;ExceptionCode);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> __stdcall <span class="title">SetCatchProc</span><span class="params">(<span class="type">void</span>* pCProc)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">char</span>* p_ExpProcEntry;</span><br><span class="line">	__asm</span><br><span class="line">	&#123;</span><br><span class="line">		mov eax, fs: [<span class="number">0</span>]</span><br><span class="line">		add eax, <span class="number">4</span></span><br><span class="line">		mov eax, dword ptr[eax]</span><br><span class="line">		mov p_ExpProcEntry, eax</span><br><span class="line">	&#125;</span><br><span class="line">	DWORD p_oldProtect = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">VirtualProtect</span>(p_ExpProcEntry, <span class="number">5</span>, PAGE_EXECUTE_READWRITE, &amp;p_oldProtect))</span><br><span class="line">	&#123;</span><br><span class="line">		*(BYTE*)p_ExpProcEntry = <span class="number">0xE9</span>;</span><br><span class="line">		*(DWORD*)(p_ExpProcEntry + <span class="number">1</span>) = (<span class="type">char</span>*)pCProc - p_ExpProcEntry - <span class="number">5</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> _tmain(<span class="type">int</span> argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">SetCatchProc</span>(CatchProc);</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">5</span> / i;</span><br><span class="line">	<span class="type">char</span> p1[<span class="number">255</span>];</span><br><span class="line">	<span class="built_in">gets_s</span>(p1);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>它的输出就是</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407151511174.png"
+                      alt="image-20240715151146044"
+                ></p>
+<p>第一次是触发的除零异常，第二次则是在展开(unwind)时用于清理处理异常的一些参数</p>
+<p>正常的异常处理会对这两个进行判断，而我们手动注册的没有对这两个进行判断，就相当于执行了两次</p>
+<table>
+<thead>
+<tr>
+<th align="left">异常代码</th>
+<th align="left">异常的原因</th>
+<th>CODE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">STATUS_ACCESS_VIOLATION</td>
+<td align="left">读取或写入不可访问的内存位置。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_BREAKPOINT</td>
+<td align="left">遇到硬件定义的断点；仅由调试器使用。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_DATATYPE_MISALIGNMENT</td>
+<td align="left">在没有正确对齐的地址上读取或写入数据；例如，16 位实体必须在 2 字节边界对齐。 （不适用于 Intel 80 x 86 处理器。）</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_FLOAT_DIVIDE_BY_ZERO</td>
+<td align="left">将浮点类型除以 0.0。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_FLOAT_OVERFLOW</td>
+<td align="left">超过浮点类型的最大正指数。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_FLOAT_UNDERFLOW</td>
+<td align="left">超过浮点类型的最小负指数的大小。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_FLOATING_RESEVERED_OPERAND</td>
+<td align="left">使用保留的浮点格式（无效的使用格式）。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_ILLEGAL_INSTRUCTION</td>
+<td align="left">尝试执行处理器未定义的指令代码。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_PRIVILEGED_INSTRUCTION</td>
+<td align="left">执行当前计算机模式下不允许的指令。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_INTEGER_DIVIDE_BY_ZERO</td>
+<td align="left">将整数类型除以 0。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_INTEGER_OVERFLOW</td>
+<td align="left">尝试超出整数的范围的操作。</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">STATUS_SINGLE_STEP</td>
+<td align="left">以单步模式执行一条指令；仅由调试器使用。</td>
+<td></td>
+</tr>
+</tbody></table>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> WIN32_NO_STATUS </span></span><br><span class="line"><span class="comment">/*lint -save -e767 */</span>  </span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_WAIT_0                           ((DWORD   )0x00000000L) </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ABANDONED_WAIT_0          ((DWORD   )0x00000080L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_USER_APC                  ((DWORD   )0x000000C0L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_TIMEOUT                   ((DWORD   )0x00000102L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_PENDING                   ((DWORD   )0x00000103L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_EXCEPTION_HANDLED            ((DWORD   )0x00010001L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_CONTINUE                     ((DWORD   )0x00010002L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_SEGMENT_NOTIFICATION      ((DWORD   )0x40000005L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FATAL_APP_EXIT            ((DWORD   )0x40000015L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_REPLY_LATER                  ((DWORD   )0x40010001L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_TERMINATE_THREAD             ((DWORD   )0x40010003L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_TERMINATE_PROCESS            ((DWORD   )0x40010004L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_CONTROL_C                    ((DWORD   )0x40010005L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_PRINTEXCEPTION_C             ((DWORD   )0x40010006L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_RIPEXCEPTION                 ((DWORD   )0x40010007L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_CONTROL_BREAK                ((DWORD   )0x40010008L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_COMMAND_EXCEPTION            ((DWORD   )0x40010009L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_PRINTEXCEPTION_WIDE_C        ((DWORD   )0x4001000AL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_GUARD_PAGE_VIOLATION      ((DWORD   )0x80000001L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_DATATYPE_MISALIGNMENT     ((DWORD   )0x80000002L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_BREAKPOINT                ((DWORD   )0x80000003L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_SINGLE_STEP               ((DWORD   )0x80000004L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_LONGJUMP                  ((DWORD   )0x80000026L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_UNWIND_CONSOLIDATE        ((DWORD   )0x80000029L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DBG_EXCEPTION_NOT_HANDLED        ((DWORD   )0x80010001L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ACCESS_VIOLATION          ((DWORD   )0xC0000005L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_IN_PAGE_ERROR             ((DWORD   )0xC0000006L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INVALID_HANDLE            ((DWORD   )0xC0000008L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INVALID_PARAMETER         ((DWORD   )0xC000000DL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_NO_MEMORY                 ((DWORD   )0xC0000017L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ILLEGAL_INSTRUCTION       ((DWORD   )0xC000001DL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_NONCONTINUABLE_EXCEPTION  ((DWORD   )0xC0000025L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INVALID_DISPOSITION       ((DWORD   )0xC0000026L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ARRAY_BOUNDS_EXCEEDED     ((DWORD   )0xC000008CL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_DENORMAL_OPERAND    ((DWORD   )0xC000008DL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_DIVIDE_BY_ZERO      ((DWORD   )0xC000008EL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_INEXACT_RESULT      ((DWORD   )0xC000008FL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_INVALID_OPERATION   ((DWORD   )0xC0000090L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_OVERFLOW            ((DWORD   )0xC0000091L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_STACK_CHECK         ((DWORD   )0xC0000092L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_UNDERFLOW           ((DWORD   )0xC0000093L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INTEGER_DIVIDE_BY_ZERO    ((DWORD   )0xC0000094L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INTEGER_OVERFLOW          ((DWORD   )0xC0000095L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_PRIVILEGED_INSTRUCTION    ((DWORD   )0xC0000096L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_STACK_OVERFLOW            ((DWORD   )0xC00000FDL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_DLL_NOT_FOUND             ((DWORD   )0xC0000135L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ORDINAL_NOT_FOUND         ((DWORD   )0xC0000138L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ENTRYPOINT_NOT_FOUND      ((DWORD   )0xC0000139L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_CONTROL_C_EXIT            ((DWORD   )0xC000013AL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_DLL_INIT_FAILED           ((DWORD   )0xC0000142L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_CONTROL_STACK_VIOLATION   ((DWORD   )0xC00001B2L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_MULTIPLE_FAULTS     ((DWORD   )0xC00002B4L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_FLOAT_MULTIPLE_TRAPS      ((DWORD   )0xC00002B5L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_REG_NAT_CONSUMPTION       ((DWORD   )0xC00002C9L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_HEAP_CORRUPTION           ((DWORD   )0xC0000374L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_STACK_BUFFER_OVERRUN      ((DWORD   )0xC0000409L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INVALID_CRUNTIME_PARAMETER ((DWORD   )0xC0000417L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ASSERTION_FAILURE         ((DWORD   )0xC0000420L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ENCLAVE_VIOLATION         ((DWORD   )0xC00004A2L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_INTERRUPTED               ((DWORD   )0xC0000515L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_THREAD_NOT_RUNNING        ((DWORD   )0xC0000516L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_ALREADY_REGISTERED        ((DWORD   )0xC0000718L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> defined(STATUS_SUCCESS) || (_WIN32_WINNT &gt; 0x0500) || (_WIN32_FUSION &gt;= 0x0100) </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_SXS_EARLY_DEACTIVATION    ((DWORD   )0xC015000FL)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> STATUS_SXS_INVALID_DEACTIVATION  ((DWORD   )0xC0150010L)    </span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> </span></span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
 
         </div>
 
@@ -687,7 +773,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-03-22 17:52:42
+                    :</strong> 2024-07-15 15:16:34
             </li>
         
         <li>
@@ -802,7 +888,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">SEH</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%BA"><span class="nav-text">基本结构为</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FS%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">FS寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0"><span class="nav-text">fs:[0]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0x18"><span class="nav-text">fs:[0x18]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0x30"><span class="nav-text">fs:[0x30]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="nav-text">基本处理流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#example"><span class="nav-text">example</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%BA"><span class="nav-text">基本结构为</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FS%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">FS寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0"><span class="nav-text">fs:[0]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0x18"><span class="nav-text">fs:[0x18]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fs-0x30"><span class="nav-text">fs:[0x30]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="nav-text">基本处理流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#example"><span class="nav-text">example</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%B3%A8%E5%86%8C%E9%80%BB%E8%BE%91"><span class="nav-text">手动注册逻辑</span></a></li></ol></li></ol>
 
     </div>
 </div>
