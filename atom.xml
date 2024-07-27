@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-07-14T14:35:36.000Z</updated>
+  <updated>2024-07-25T06:08:56.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,111 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gobuster</title>
+    <link href="http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/Gobuster/"/>
+    <id>http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/Gobuster/</id>
+    <published>2024-07-25T06:06:59.000Z</published>
+    <updated>2024-07-25T06:08:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>sudo apt install gobuster</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;sudo apt install gobuster&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>androidkiller_runtime_error</title>
+    <link href="http://example.com/2024/07/24/Re/%E5%AE%89%E5%8D%93/androidkiller_runtime_error/"/>
+    <id>http://example.com/2024/07/24/Re/%E5%AE%89%E5%8D%93/androidkiller_runtime_error/</id>
+    <published>2024-07-24T07:56:08.000Z</published>
+    <updated>2024-07-24T07:59:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>更改androidkiller下的configs.ini</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407241559849.png"                      alt="image-20240724155954742"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;更改androidkiller下的configs.ini&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/loading.svg&quot;
+                 </summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>创建项目</title>
+    <link href="http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/xposed/%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/xposed/%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</id>
+    <published>2024-07-23T14:33:29.000Z</published>
+    <updated>2024-07-23T14:33:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://www.lbqaq.top/p/init-xposed/#%E7%BB%93%E8%AF%AD" >从零开始编写Xposed模块 (lbqaq.top) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.lbqaq.top/p/init-xposed/#%E7%BB%93%E8%AF%AD&quot; &gt;从零开始编写Xposed模块 (lbqaq.top) &lt;i class=&quot;fa-regular fa-arro</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    <category term="xposed" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/xposed/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>blutter</title>
+    <link href="http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/flutter/blutter/"/>
+    <id>http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/flutter/blutter/</id>
+    <published>2024-07-23T09:09:12.000Z</published>
+    <updated>2024-07-23T16:14:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/worawit/blutter" >worawit&#x2F;blutter: Flutter Mobile Application Reverse Engineering Tool (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>[<a class="link"   href="https://bbs.kanxue.com/thread-279403.htm" >原创]flutter逆向 ACTF native app-Android安全-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/worawit/blutter&quot; &gt;worawit&amp;#x2F;blutter: Flutter Mobile Application Reverse Engineering Tool (g</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
+    
+    <category term="flutter" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/flutter/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>apk重打包</title>
@@ -421,10 +526,10 @@ B--&gt;C[JNI_Onload]&lt;/pre&gt;
   
   <entry>
     <title>模拟发包</title>
-    <link href="http://example.com/2024/06/03/Web/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/"/>
-    <id>http://example.com/2024/06/03/Web/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/</id>
+    <link href="http://example.com/2024/06/03/Web/%E5%B7%A5%E5%85%B7/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/"/>
+    <id>http://example.com/2024/06/03/Web/%E5%B7%A5%E5%85%B7/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/</id>
     <published>2024-06-03T14:55:17.000Z</published>
-    <updated>2024-06-03T14:55:27.000Z</updated>
+    <updated>2024-07-25T06:08:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>scapy</p>]]></content>
     
@@ -439,109 +544,7 @@ B--&gt;C[JNI_Onload]&lt;/pre&gt;
     
     <category term="Web" scheme="http://example.com/categories/Web/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>misc</title>
-    <link href="http://example.com/2024/06/03/Re/%E5%AE%89%E5%8D%93/misc/"/>
-    <id>http://example.com/2024/06/03/Re/%E5%AE%89%E5%8D%93/misc/</id>
-    <published>2024-06-02T18:05:51.000Z</published>
-    <updated>2024-06-02T18:15:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="应用操作"><a href="#应用操作" class="headerlink" title="应用操作"></a>应用操作</h2><h3 id="手动发送广播"><a href="#手动发送广播" class="headerlink" title="手动发送广播"></a>手动发送广播</h3><blockquote><p><a class="link"   href="https://www.cnblogs.com/tc310/p/11152853.html" >Android通过adb shell am broadcast发送广播 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></blockquote><h3 id="启动actvity"><a href="#启动actvity" class="headerlink" title="启动actvity"></a>启动actvity</h3><blockquote><p><a class="link"   href="https://www.cnblogs.com/yhjoker/p/8974119.html" >Android Studio 动态调试 apk 反编译出的 smali 代码 - yhjoker - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><code> adb shell am start -D -S -W packageName/ActivityName</code>    &#x2F;&#x2F;以调试状态运行目标activity </p></blockquote><h2 id="自启动任务"><a href="#自启动任务" class="headerlink" title="自启动任务"></a>自启动任务</h2><p>向<code>/data/adb/post-fs-data.d</code>写入自定义<code>.sh</code>文件即可</p><p>注意给xxx权限(<code>chmod +xxx</code>)</p><p>比如</p><blockquote><p>1、<code>su -c /data/local/tmp/frida-server-16.3.1-android-arm</code>写入frida.sh(名字任意)</p><p>2、<code>chmod +xxx frida.sh</code></p><p>重启后用frida hook任意应用,能hook即可</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;应用操作&quot;&gt;&lt;a href=&quot;#应用操作&quot; class=&quot;headerlink&quot; title=&quot;应用操作&quot;&gt;&lt;/a&gt;应用操作&lt;/h2&gt;&lt;h3 id=&quot;手动发送广播&quot;&gt;&lt;a href=&quot;#手动发送广播&quot; class=&quot;headerlink&quot; title=&quot;手动发送广</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自动任务</title>
-    <link href="http://example.com/2024/06/02/Re/%E5%AE%89%E5%8D%93/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1/"/>
-    <id>http://example.com/2024/06/02/Re/%E5%AE%89%E5%8D%93/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1/</id>
-    <published>2024-06-02T10:06:19.000Z</published>
-    <updated>2024-06-02T17:59:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>向<code>/data/adb/post-fs-data.d</code>写入自定义<code>.sh</code>文件即可</p><p>注意给xxx权限(<code>chmod +xxx</code>)</p><p>比如</p><blockquote><p>1、<code>su -c /data/local/tmp/frida-server-16.3.1-android-arm</code>写入frida.sh(名字任意)</p><p>2、<code>chmod +xxx frida.sh</code></p><p>重启后用frida hook任意应用,能hook即可</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;向&lt;code&gt;/data/adb/post-fs-data.d&lt;/code&gt;写入自定义&lt;code&gt;.sh&lt;/code&gt;文件即可&lt;/p&gt;
-&lt;p&gt;注意给xxx权限(&lt;code&gt;chmod +xxx&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;比如&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1、</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidStudioemulator_Root</title>
-    <link href="http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/"/>
-    <id>http://example.com/2024/05/29/Re/%E5%AE%89%E5%8D%93/AndroidStudioemulator_Root/</id>
-    <published>2024-05-28T17:15:59.000Z</published>
-    <updated>2024-06-03T13:53:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[<a class="link"   href="https://xdaforums.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-linux-darwin-macos-win-google-play-store-apis.4218123/" >SCRIPT] rootAVD - root your Android Studio Virtual Device emulator with Magisk [Android][Linux][Darwin&#x2F;MacOS][WIN][Google Play Store APIs] | XDA Forums <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://xdaforums.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-linu</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>one_gadget</title>
-    <link href="http://example.com/2024/05/24/Pwn/linux/tool/one_gadget/"/>
-    <id>http://example.com/2024/05/24/Pwn/linux/tool/one_gadget/</id>
-    <published>2024-05-24T15:19:18.000Z</published>
-    <updated>2024-06-08T18:11:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>可通过glibc来获取shell</p><p><code>pip3 install one_gadget</code>安装即可</p><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><blockquote><p>通过<code>one_gadget libc路径</code>找到对应的 <code>get shell</code>地址和 <code>get shell</code>的条件</p><p>如下面的</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]</span><br><span class="line">└─$ one_gadget /lib/x86_64-linux-gnu/libc.so.6</span><br><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0x4d753 posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)</span><br><span class="line">constraints:</span><br><span class="line">  address rsp+0x68 is writable</span><br><span class="line">  rsp &amp; 0xf == 0</span><br><span class="line">  rcx == NULL || &#123;rcx, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br><span class="line"></span><br><span class="line">0xd636b execve(&quot;/bin/sh&quot;, rbp-0x40, r13)</span><br><span class="line">constraints:</span><br><span class="line">  address rbp-0x38 is writable</span><br><span class="line">  rdi == NULL || &#123;&quot;/bin/sh&quot;, rdi, NULL&#125; is a valid argv</span><br><span class="line">  [r13] == NULL || r13 == NULL || r13 is a valid envp</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><p>例如</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0x4d74c posix_spawn(rsp+0xc, &quot;/bin/sh&quot;, 0, rbx, rsp+0x50, environ)#posix_spawn 类似于system 也是执行函数</span><br><span class="line">constraints:#获取shell的约束条件 </span><br><span class="line">  address rsp+0x68 is writable#rsp+0x68是可写的</span><br><span class="line">  rsp &amp; 0xf == 0#rsp &amp; 0xf为0</span><br><span class="line">  rax == NULL || &#123;&quot;sh&quot;, rax, rip+0x14a6c3, r12, ...&#125; is a valid argv</span><br><span class="line">  rbx == NULL || (u16)[rbx] == NULL</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;可通过glibc来获取shell&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip3 install one_gadget&lt;/code&gt;安装即可&lt;/p&gt;
-&lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Exampl</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    <category term="tool" scheme="http://example.com/categories/Pwn/linux/tool/"/>
+    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
     
     
   </entry>
