@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="向&#x2F;data&#x2F;adb&#x2F;post-fs-data.d写入自定义.sh文件即可 注意给xxx权限(chmod +xxx) 比如  1、su -c &#x2F;data&#x2F;local&#x2F;tmp&#x2F;frida-server-16.3.1-android-arm写入frida.sh(名字任意) 2、chmod +xxx frida.sh 重启后用frida hook任意应用,能hook即可">
+        <meta name="description" content="向&#x2F;data&#x2F;adb&#x2F;post-fs-data.d写入自定义.sh文件即可 注意给xxx权限(chmod +xxx) 比如  1、su -c &#x2F;data&#x2F;local&#x2F;tmp&#x2F;frida-server-16.3.1-android-arm写入frida.sh(名字任意) 2、chmod +xxx frida.sh 重启后用frida hook任意应用,能hook即可  还有  su -c magis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动任务">
 <meta property="og:url" content="http://example.com/2024/06/02/Re/%E5%AE%89%E5%8D%93/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="向&#x2F;data&#x2F;adb&#x2F;post-fs-data.d写入自定义.sh文件即可 注意给xxx权限(chmod +xxx) 比如  1、su -c &#x2F;data&#x2F;local&#x2F;tmp&#x2F;frida-server-16.3.1-android-arm写入frida.sh(名字任意) 2、chmod +xxx frida.sh 重启后用frida hook任意应用,能hook即可">
+<meta property="og:description" content="向&#x2F;data&#x2F;adb&#x2F;post-fs-data.d写入自定义.sh文件即可 注意给xxx权限(chmod +xxx) 比如  1、su -c &#x2F;data&#x2F;local&#x2F;tmp&#x2F;frida-server-16.3.1-android-arm写入frida.sh(名字任意) 2、chmod +xxx frida.sh 重启后用frida hook任意应用,能hook即可  还有  su -c magis">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-02T10:06:19.000Z">
-<meta property="article:modified_time" content="2024-06-02T17:59:08.000Z">
+<meta property="article:modified_time" content="2024-07-29T09:18:07.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -470,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">76</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">80</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">171</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">179</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -528,8 +528,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-03 01:59:08</span>
-            <span class="mobile">2024-06-03 01:59:08</span>
+            <span class="desktop">2024-07-29 17:18:07</span>
+            <span class="mobile">2024-07-29 17:18:07</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -590,6 +590,10 @@
 <p>2、<code>chmod +xxx frida.sh</code></p>
 <p>重启后用frida hook任意应用,能hook即可</p>
 </blockquote>
+<p>还有</p>
+<blockquote>
+<p><code>su -c magisk resetprop ro.debuggable 1&quot;&gt;&gt;debug.sh &amp;&amp; su -c chmod +xxx ./debug.sh</code>每次启动时自动设置<code>ro.debuggable</code></p>
+</blockquote>
 
         </div>
 
@@ -604,7 +608,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-06-03 01:59:08
+                    :</strong> 2024-07-29 17:18:07
             </li>
         
         <li>

