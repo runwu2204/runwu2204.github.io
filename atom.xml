@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-02T06:17:37.000Z</updated>
+  <updated>2024-08-03T12:16:34.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不可逆混淆</title>
+    <link href="http://example.com/2024/08/03/python/%E4%B8%8D%E5%8F%AF%E9%80%86%E6%B7%B7%E6%B7%86/"/>
+    <id>http://example.com/2024/08/03/python/%E4%B8%8D%E5%8F%AF%E9%80%86%E6%B7%B7%E6%B7%86/</id>
+    <published>2024-08-03T12:16:08.000Z</published>
+    <updated>2024-08-03T12:16:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://pyarmor.readthedocs.io/en/stable/topic/bccmode.html" >4.5. Insight Into BCC Mode — Pyarmor 8.5.11 documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://pyarmor.dashingsoft.com/index-zh.html" >Pyarmor - 加密 Python 脚本 (dashingsoft.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://pyarmor.readthedocs.io/en/stable/topic/bccmode.html&quot; &gt;4.5. Insight Into BCC Mode — Pyarmor 8.5.11 documen</summary>
+      
+    
+    
+    
+    <category term="python" scheme="http://example.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ffuf</title>
@@ -512,32 +534,6 @@ B--&gt;C[JNI_Onload]&lt;/pre&gt;
     <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
     
     <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>调用已经存在的lib</title>
-    <link href="http://example.com/2024/06/11/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%B0%83%E7%94%A8%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8%E7%9A%84lib/"/>
-    <id>http://example.com/2024/06/11/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%B0%83%E7%94%A8%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8%E7%9A%84lib/</id>
-    <published>2024-06-10T16:55:50.000Z</published>
-    <updated>2024-06-10T16:56:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>只</p><p>build.gradle</p><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id <span class="string">&#x27;com.android.application&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">android &#123;</span><br><span class="line">    namespace <span class="string">&#x27;com.example.challengemobile&#x27;</span></span><br><span class="line">    compileSdk <span class="number">33</span></span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId <span class="string">&quot;com.example.challengemobile&quot;</span></span><br><span class="line">        minSdk <span class="number">28</span></span><br><span class="line">        targetSdk <span class="number">33</span></span><br><span class="line">        versionCode <span class="number">1</span></span><br><span class="line">        versionName <span class="string">&quot;1.0&quot;</span></span><br><span class="line"></span><br><span class="line">        testInstrumentationRunner <span class="string">&quot;androidx.test.runner.AndroidJUnitRunner&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled <span class="literal">false</span></span><br><span class="line">            proguardFiles <span class="title function_">getDefaultProguardFile</span><span class="params">(<span class="string">&#x27;proguard-android-optimize.txt&#x27;</span>)</span>, &#x27;proguard-rules.pro&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main &#123;<span class="comment">//只需要寫入這個即可</span></span><br><span class="line">            jniLibs.srcDirs = [<span class="string">&#x27;libs&#x27;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    compileOptions &#123;</span><br><span class="line">        sourceCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">        targetCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">    &#125;</span><br><span class="line">    ndkVersion <span class="string">&#x27;21.3.6528147&#x27;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line"></span><br><span class="line">    implementation <span class="string">&#x27;androidx.appcompat:appcompat:1.6.1&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;com.google.android.material:material:1.8.0&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;androidx.constraintlayout:constraintlayout:2.1.4&#x27;</span></span><br><span class="line">    testImplementation <span class="string">&#x27;junit:junit:4.13.2&#x27;</span></span><br><span class="line">    androidTestImplementation <span class="string">&#x27;androidx.test.ext:junit:1.1.5&#x27;</span></span><br><span class="line">    androidTestImplementation <span class="string">&#x27;androidx.test.espresso:espresso-core:3.5.1&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;只&lt;/p&gt;
-&lt;p&gt;build.gradle&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;C&quot;&gt;&lt;figure class=&quot;iseeu highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
     
     
   </entry>
