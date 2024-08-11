@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-03T12:16:34.000Z</updated>
+  <updated>2024-08-06T17:32:16.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>节区</title>
+    <link href="http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/"/>
+    <id>http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/</id>
+    <published>2024-08-06T16:54:32.000Z</published>
+    <updated>2024-08-06T17:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><blockquote><p>通过<code>#pragma code_seg(&quot;.节区名&quot;)</code>定义节区留空则为默认节区</p><p>注意其影响范围为下面所有所以需要在切换节区时使用<code>#pragma code_seg()</code>中断这个节区的定义</p><p>通过<code>#pragma comment(linker, &quot;/SECTION:.节区名,权限&quot;)</code>定义节区权限</p><p>权限有</p><blockquote><p>E 执行</p><p>R 读取</p><p>W 写入</p></blockquote><p>具体操作</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg(<span class="string">&quot;.SMF&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> flag[] = <span class="string">&quot;flag&#123;this_is_test&#125;&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, flag);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment(linker, <span class="string">&quot;/SECTION:.SMF,ERW&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg()</span></span><br></pre></td></tr></table></figure></div></blockquote><h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><blockquote><p><code>__attribute__((section(&quot;.段名&quot;)))</code>即可，权限需要手动更改ld文件或者手动更改<code>IMAGE_SECTION_HEADER SectionHeaders</code>内的段权限</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="built_in">section</span>(<span class="string">&quot;.SMC&quot;</span>)))</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;MSVC&quot;&gt;&lt;a href=&quot;#MSVC&quot; class=&quot;headerlink&quot; title=&quot;MSVC&quot;&gt;&lt;/a&gt;MSVC&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;通过&lt;code&gt;#pragma code_seg(&amp;quot;.节区名&amp;quot;)&lt;/code&gt;</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="C-C++" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/C-C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>不可逆混淆</title>
@@ -510,30 +535,6 @@ B--&gt;C[JNI_Onload]&lt;/pre&gt;
     <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
     
     <category term="sage" scheme="http://example.com/categories/Crypto/sage/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>elf文件结构</title>
-    <link href="http://example.com/2024/06/19/Pwn/linux/elf%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2024/06/19/Pwn/linux/elf%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/</id>
-    <published>2024-06-19T01:51:21.000Z</published>
-    <updated>2024-06-19T01:51:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://www.jianshu.com/p/5092d6d5caa3" >彻底搞清楚 GOT 和 PLT - 简书 (jianshu.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.jianshu.com/p/5092d6d5caa3&quot; &gt;彻底搞清楚 GOT 和 PLT - 简书 (jianshu.com) &lt;i class=&quot;fa-regular fa-arrow-up-righ</summary>
-      
-    
-    
-    
-    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
-    
-    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
     
     
   </entry>
