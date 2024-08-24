@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-06T17:32:16.000Z</updated>
+  <updated>2024-08-20T06:00:15.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,112 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>trace</title>
+    <link href="http://example.com/2024/08/20/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/trace/"/>
+    <id>http://example.com/2024/08/20/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/trace/</id>
+    <published>2024-08-20T05:09:49.000Z</published>
+    <updated>2024-08-20T06:00:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202408201359217.png"                      alt="image-20240820135935052"                ></p><p>点击对应的trace条目会在寄存器栏显示对应寄存器状态</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202408201400342.png"                      alt="image-20240820140012263"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/loading.svg&quot;
+                     data-src=&quot;https://cdn.jsdelivr.n</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>lzma文件</title>
+    <link href="http://example.com/2024/08/18/Misc/%E6%9D%82%E5%AD%A6/lzma%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2024/08/18/Misc/%E6%9D%82%E5%AD%A6/lzma%E6%96%87%E4%BB%B6/</id>
+    <published>2024-08-18T08:22:33.000Z</published>
+    <updated>2024-08-18T08:41:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>与xz无关 开头如下<code>5D 00 00 80 00</code>可以用binwalk扫出</p><p>python的lzma不支持解压此格式，其只支持xz格式<code>FD 37 7A 58 5A</code></p><p>lzma格式可用python的<code>pylzma</code>解压</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&quot;./Untitled2&quot;</span>,<span class="string">&#x27;rb&#x27;</span>)<span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">import</span> pylzma</span><br><span class="line">    data=pylzma.decompress(f.read())</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;与xz无关 开头如下&lt;code&gt;5D 00 00 80 00&lt;/code&gt;可以用binwalk扫出&lt;/p&gt;
+&lt;p&gt;python的lzma不支持解压此格式，其只支持xz格式&lt;code&gt;FD 37 7A 58 5A&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;lzma格式可用python的&lt;c</summary>
+      
+    
+    
+    
+    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
+    
+    <category term="杂学" scheme="http://example.com/categories/Misc/%E6%9D%82%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RTSP_RTMP</title>
+    <link href="http://example.com/2024/08/15/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/RTSP_RTMP/"/>
+    <id>http://example.com/2024/08/15/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/RTSP_RTMP/</id>
+    <published>2024-08-15T15:36:39.000Z</published>
+    <updated>2024-08-15T16:39:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>需要推流到中间服务器</p><p><a class="link"   href="https://github.com/bluenviron/mediamtx/releases" >Releases · bluenviron&#x2F;mediamtx (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>注意主机ip为<code>10.0.2.2</code></p><p>主机</p><blockquote><p>启动中间服务器<code>mediamtx</code></p><p>通过<code>ffmpeg -re -i input_movie -c copy -rtsp_transport tcp -f rtsp rtsp://127.0.0.1:8554/stream</code>推流</p><p>在本地使用<code>ffplay rtsp://127.0.0.1:8554/stream </code></p></blockquote><p>手机</p><blockquote><p>在<code>AndroidManifest.xml</code>中</p><p>形如这样在manifest下加入网络访问的permission</p><div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;需要推流到中间服务器&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/bluenviron/mediamtx/releases&quot; &gt;Releases · bluenviron&amp;#x2F;mediamtx (github.c</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>多版本管理</title>
+    <link href="http://example.com/2024/08/11/%E5%BC%80%E5%8F%91/Golang/%E5%A4%9A%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    <id>http://example.com/2024/08/11/%E5%BC%80%E5%8F%91/Golang/%E5%A4%9A%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</id>
+    <published>2024-08-11T15:58:05.000Z</published>
+    <updated>2024-08-11T16:00:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>go install golang.org/dl/go版本@latest</code></p><p>安装完成后<code>go版本 download</code>即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;go install golang.org/dl/go版本@latest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后&lt;code&gt;go版本 download&lt;/code&gt;即可&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Golang" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Golang/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>节区</title>
@@ -422,119 +528,6 @@
     <category term="Re" scheme="http://example.com/categories/Re/"/>
     
     <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>复数域上的计算</title>
-    <link href="http://example.com/2024/06/29/Crypto/RSA/%E5%A4%8D%E6%95%B0%E5%9F%9F%E4%B8%8A%E7%9A%84%E8%AE%A1%E7%AE%97/"/>
-    <id>http://example.com/2024/06/29/Crypto/RSA/%E5%A4%8D%E6%95%B0%E5%9F%9F%E4%B8%8A%E7%9A%84%E8%AE%A1%E7%AE%97/</id>
-    <published>2024-06-28T16:56:06.000Z</published>
-    <updated>2024-06-28T16:56:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://blog.csdn.net/XiongSiqi_blog/article/details/134742341" >complex_复数域rsa-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/XiongSiqi_blog/article/details/134742341&quot; &gt;complex_复数域rsa-CSDN博客 &lt;i class=&quot;fa-regular fa-ar</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hook</title>
-    <link href="http://example.com/2024/06/27/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/hook/"/>
-    <id>http://example.com/2024/06/27/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/hook/</id>
-    <published>2024-06-27T08:58:37.000Z</published>
-    <updated>2024-06-27T14:56:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://mp.weixin.qq.com/s/IwKxtqDd-5v0xhg9UzKe-g" >2024 RCTF writeup by Arr3stY0u (qq.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>dir和help可以查看导出的对象</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> check_secret</span><br><span class="line"><span class="built_in">help</span>(check_secret)</span><br><span class="line"><span class="comment">#可通过hook对应的返回值和参数，查看对应进行的操作</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hook</span>(<span class="params">func,name</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">func_hook</span>(<span class="params">a,b</span>):</span><br><span class="line">        res=func(a,b)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;0x<span class="subst">&#123;a:&gt;08x&#125;</span> <span class="subst">&#123;name&#125;</span> 0x<span class="subst">&#123;b:&gt;08x&#125;</span>=0x<span class="subst">&#123;res:&gt;08x&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="keyword">return</span> func_hook</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> check_secret.<span class="built_in">map</span>.keys():</span><br><span class="line">    check_secret.<span class="built_in">map</span>[i]=hook(check_secret.<span class="built_in">map</span>[i],i)</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://mp.weixin.qq.com/s/IwKxtqDd-5v0xhg9UzKe-g&quot; &gt;2024 RCTF writeup by Arr3stY0u (qq.com) &lt;i class=&quot;fa-regular </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="语言逆向" scheme="http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/"/>
-    
-    <category term="pyd" scheme="http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/pyd/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>native开发</title>
-    <link href="http://example.com/2024/06/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/native%E5%BC%80%E5%8F%91/"/>
-    <id>http://example.com/2024/06/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/native%E5%BC%80%E5%8F%91/</id>
-    <published>2024-06-26T16:37:04.000Z</published>
-    <updated>2024-06-26T16:45:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>调用步骤</p><pre class="mermaid">graph TB;subgraph init_arrayA[手动声明的构造函数]-->B[带自定义类的静态变量]endB-->C[JNI_Onload]</pre><p>手动声明的构造函数</p><p>会自动填充在init_array里，按声明顺序依次排布</p><p>声明方法:</p><blockquote><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((constructor)) <span class="function"><span class="type">void</span> <span class="title">funcname</span><span class="params">(<span class="type">void</span>)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></blockquote><p>带自定类的静态变量</p><p>如std::string</p><p>声明在代码最开头</p><blockquote><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> std::string hello=<span class="string">&quot;String from JNI&quot;</span>;</span><br></pre></td></tr></table></figure></div></blockquote><p>如果是C++原始类型则不会放在init_array内</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;调用步骤&lt;/p&gt;
-&lt;pre class=&quot;mermaid&quot;&gt;graph TB;
-
-subgraph init_array
-A[手动声明的构造函数]--&gt;B[带自定义类的静态变量]
-end
-B--&gt;C[JNI_Onload]&lt;/pre&gt;
-
-&lt;p&gt;手动声明的构造函数&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>two_squre</title>
-    <link href="http://example.com/2024/06/22/Crypto/sage/two_squre/"/>
-    <id>http://example.com/2024/06/22/Crypto/sage/two_squre/</id>
-    <published>2024-06-22T13:15:09.000Z</published>
-    <updated>2024-06-28T11:48:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>two_squares(n)</p><blockquote><p>类似p^2+q^2的问题求解</p><p>可化成复数域的平方差</p><p>(p-iq)*(p+iq)</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;two_squares(n)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;类似p^2+q^2的问题求解&lt;/p&gt;
-&lt;p&gt;可化成复数域的平方差&lt;/p&gt;
-&lt;p&gt;(p-iq)*(p+iq)&lt;/p&gt;
-&lt;/blockquote&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="sage" scheme="http://example.com/categories/Crypto/sage/"/>
     
     
   </entry>
