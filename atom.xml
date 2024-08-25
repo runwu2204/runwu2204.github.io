@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-20T06:00:15.000Z</updated>
+  <updated>2024-08-24T09:46:14.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件路径</title>
+    <link href="http://example.com/2024/08/24/Re/windows/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
+    <id>http://example.com/2024/08/24/Re/windows/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</id>
+    <published>2024-08-24T09:46:07.000Z</published>
+    <updated>2024-08-24T09:46:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://learn.microsoft.com/zh-cn/dotnet/standard/io/file-path-formats" >Windows 系统中的文件路径格式 - .NET | Microsoft Learn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://learn.microsoft.com/zh-cn/dotnet/standard/io/file-path-formats&quot; &gt;Windows 系统中的文件路径格式 - .NET | Microsoft Le</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="windows" scheme="http://example.com/categories/Re/windows/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>trace</title>
@@ -497,30 +521,6 @@
 &lt;p&gt;&lt;code&gt;apktool b .&#92;com.zrubfinance -o 1.apk&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>脱壳</title>
-    <link href="http://example.com/2024/07/13/Re/%E5%AE%89%E5%8D%93/%E8%84%B1%E5%A3%B3/"/>
-    <id>http://example.com/2024/07/13/Re/%E5%AE%89%E5%8D%93/%E8%84%B1%E5%A3%B3/</id>
-    <published>2024-07-12T16:49:25.000Z</published>
-    <updated>2024-07-13T16:44:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://blog.csdn.net/shulianghan/article/details/121895054" >【Android 逆向】脱壳解决方案 ( DEX 整体加壳 | 函数抽取加壳 | VMP 加壳 | Dex2C 加壳 | Android 应用加固防护级别 )-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>[<a class="link"   href="https://bbs.kanxue.com/thread-281745.htm#msg_header_h1_10" >原创]关于最近脱壳的笔记 还请各位大佬指教-Android安全-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>普通的壳类似于SMC</p><h2 id="爱加密"><a href="#爱加密" class="headerlink" title="爱加密"></a>爱加密</h2><p>参考<a class="link"   href="https://blog.csdn.net/xiziyunqi/article/details/77514751" >脱掉“爱加密”家的壳_爱加密企业版脱壳-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>以application为基准</p><div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:theme</span>=<span class="string">&quot;@style/ZrubAppTheme&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:label</span>=<span class="string">&quot;@string/app_name&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:icon</span>=<span class="string">&quot;@drawable/icon_logo&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:name</span>=<span class="string">&quot;p000s.p001h.p002e.p003l.p004l.ApplicationC0014S&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:excludeFromRecents</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:testOnly</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:allowBackup</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:hardwareAccelerated</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:largeHeap</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:extractNativeLibs</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:usesCleartextTraffic</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:resizeableActivity</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:networkSecurityConfig</span>=<span class="string">&quot;@xml/network_security_config&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:appComponentFactory</span>=<span class="string">&quot;s.h.e.l.l.A&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:requestLegacyExternalStorage</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:allowNativeHeapPointerTagging</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div><p>此处添加了<code>android:name</code>项</p><p>参考<a class="link"   href="https://blog.csdn.net/qq_41767945/article/details/99697407" >AndroidManifest.xml中application name功能介绍_android application name-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>用于启用自己私有的<code>Application</code>类用来进行壳相关操作</p><p>Application有三类方法<code>attachBaseContext</code> <code>onCreate</code> </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/shulianghan/article/details/121895054&quot; &gt;【Android 逆向】脱壳解决方案 ( DEX 整体加壳 | 函数抽取加壳 | VMP 加壳 | D</summary>
       
     
     
