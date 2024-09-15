@@ -18,16 +18,16 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="frida通过js脚本实现功能（命令行类似于ipython 有多种启动方式 1234frida -U ps-name #可通过frida-ps 获取对应的进程名frida -UF #运行前台应用,wsa运行会有问题frida -l ps-name js文件 #调用对应js文件frida -UF -l js文件 #调用js并hook前台activity  Androidhook native层函数h">
+        <meta name="description" content="frida通过js脚本实现功能（命令行类似于ipython 有多种启动方式 1234frida -U ps-name #可通过frida-ps 获取对应的进程名frida -UF #运行前台应用,wsa运行会有问题frida -l ps-name js文件 #调用对应js文件frida -UF -l js文件 #调用js并hook前台activity  Androidhook native层函数如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hook">
 <meta property="og:url" content="http://example.com/2024/03/16/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/frida%E6%A1%86%E6%9E%B6/hook/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="frida通过js脚本实现功能（命令行类似于ipython 有多种启动方式 1234frida -U ps-name #可通过frida-ps 获取对应的进程名frida -UF #运行前台应用,wsa运行会有问题frida -l ps-name js文件 #调用对应js文件frida -UF -l js文件 #调用js并hook前台activity  Androidhook native层函数h">
+<meta property="og:description" content="frida通过js脚本实现功能（命令行类似于ipython 有多种启动方式 1234frida -U ps-name #可通过frida-ps 获取对应的进程名frida -UF #运行前台应用,wsa运行会有问题frida -l ps-name js文件 #调用对应js文件frida -UF -l js文件 #调用js并hook前台activity  Androidhook native层函数如">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png">
 <meta property="article:published_time" content="2024-03-15T16:16:49.000Z">
-<meta property="article:modified_time" content="2024-07-09T06:59:06.000Z">
+<meta property="article:modified_time" content="2024-09-07T07:33:26.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202404061920042.png">
@@ -472,11 +472,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">82</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">85</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">185</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">188</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -530,8 +530,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-09 14:59:06</span>
-            <span class="mobile">2024-07-09 14:59:06</span>
+            <span class="desktop">2024-09-07 15:33:26</span>
+            <span class="mobile">2024-09-07 15:33:26</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -598,7 +598,8 @@
 <p>有多种启动方式</p>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">frida -U ps-name <span class="comment">#可通过frida-ps 获取对应的进程名</span></span><br><span class="line">frida -UF <span class="comment">#运行前台应用,wsa运行会有问题</span></span><br><span class="line">frida -l ps-name js文件 <span class="comment">#调用对应js文件</span></span><br><span class="line">frida -UF -l js文件 <span class="comment">#调用js并hook前台activity</span></span><br></pre></td></tr></table></figure></div>
 
-<h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="hook-native层函数"><a href="#hook-native层函数" class="headerlink" title="hook native层函数"></a>hook native层函数</h2><h3 id="hook普通函数"><a href="#hook普通函数" class="headerlink" title="hook普通函数"></a>hook普通函数</h3><blockquote>
+<h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="hook-native层函数"><a href="#hook-native层函数" class="headerlink" title="hook native层函数"></a>hook native层函数</h2><p>如果在x86模拟器中想要hook houdini兼容层运行的lib 可以加上 <code>--realm=emulated</code>参数,类似于<code> frida -U Rustdroid --realm=emulated</code></p>
+<h3 id="hook普通函数"><a href="#hook普通函数" class="headerlink" title="hook普通函数"></a>hook普通函数</h3><blockquote>
 <div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func_addr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libmidand.so&quot;</span>, <span class="string">&quot;_Z10murmur3_32PKcjj&quot;</span>);<span class="comment">//查找对应so某函数位置，注意该函数返回的是ptr对象,可用ptr(地址)生成</span></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(func_addr,&#123; <span class="comment">// 将拦截器附加到 func_addr 所指向的函数上</span></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span>(<span class="params">args</span>) <span class="comment">//函数调用前运行，可用于获取参数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hexdump</span>(args[<span class="number">0</span>]))</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span>(<span class="params">args</span>)&#123;<span class="comment">//函数调用后运行，可用于获取返回值</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;enter murmur3_32 retvalue-&gt;\n&quot;</span> + <span class="title function_">hexdump</span>(args));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
 </blockquote>
 <h3 id="hook-init-array"><a href="#hook-init-array" class="headerlink" title="hook init_array"></a>hook init_array</h3><blockquote>
@@ -643,7 +644,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-09 14:59:06
+                    :</strong> 2024-09-07 15:33:26
             </li>
         
         <li>

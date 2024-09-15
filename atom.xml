@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-24T09:46:14.000Z</updated>
+  <updated>2024-09-08T17:24:23.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>api</title>
+    <link href="http://example.com/2024/09/09/Pwn/linux/kernel/api/"/>
+    <id>http://example.com/2024/09/09/Pwn/linux/kernel/api/</id>
+    <published>2024-09-08T17:14:53.000Z</published>
+    <updated>2024-09-08T17:24:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>misc_register(struct miscdevice *misc)</p><blockquote><p><a class="link"   href="https://blog.csdn.net/angle_birds/article/details/8330407" >MISC混杂设备 struct miscdevice &#x2F;misc_register()&#x2F;misc_deregister()-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></blockquote><p>unlocked_ioctl</p><blockquote><p><a class="link"   href="https://xz.aliyun.com/t/9469?time__1311=n4+xnD0Du0mqgDBqPoGkDRDfxGqx7q2w4vhFpD" >userfaultfd机制在Kernel提权中的应用 - 先知社区 (aliyun.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;misc_register(struct miscdevice *misc)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/angle_birds/article/details/8330</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="kernel" scheme="http://example.com/categories/Pwn/linux/kernel/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>脚本</title>
+    <link href="http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/%E8%84%9A%E6%9C%AC/"/>
+    <id>http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/%E8%84%9A%E6%9C%AC/</id>
+    <published>2024-09-01T15:18:26.000Z</published>
+    <updated>2024-09-01T15:19:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不太支持rust程序的分析</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不太支持rust程序的分析&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="脚本" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>运行程序</title>
+    <link href="http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</id>
+    <published>2024-09-01T12:27:04.000Z</published>
+    <updated>2024-09-01T12:27:04.000Z</updated>
+    
+    
+    
+    
+    <category term="Re" scheme="http://example.com/categories/Re/"/>
+    
+    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Unicorn" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>文件路径</title>
@@ -324,9 +400,9 @@
     <link href="http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
     <id>http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</id>
     <published>2024-07-30T13:50:40.000Z</published>
-    <updated>2024-07-30T13:50:45.000Z</updated>
+    <updated>2024-09-03T15:56:45.000Z</updated>
     
-    <content type="html"><![CDATA[<p>[<a class="link"   href="https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4" >原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4" >原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="调试命令"><a href="#调试命令" class="headerlink" title="调试命令"></a>调试命令</h3><blockquote><p>r 查看寄存器</p><blockquote><p>r 寄存器名称 查看对应寄存器</p><p>r 寄存器名称&#x3D;值 设置对应寄存器</p></blockquote></blockquote><h3 id="伪寄存器语法"><a href="#伪寄存器语法" class="headerlink" title="伪寄存器语法"></a>伪寄存器语法</h3><p><a class="link"   href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debuggercmds/pseudo-register-syntax" >伪寄存器语法 - Windows drivers | Microsoft Learn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="自动化脚本"><a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本</h2><p><a class="link"   href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/javascript-debugger-scripting" >JavaScript 调试器脚本 - Windows 驱动程序 |Microsoft 学习 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>执行已加载的js的函数</p><p> Debugger.State.Scripts.&lt;js名称&gt;.Contents.函数名</p><p>例如break在main函数</p><p>我用1.js</p><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">break_in_main</span>(<span class="params"></span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> main_base=host.<span class="property">currentProcess</span>.<span class="property">Modules</span>[<span class="number">0</span>].<span class="property">BaseAddress</span></span><br><span class="line">    <span class="keyword">let</span> ctl=host.<span class="property">namespace</span>.<span class="property">Debugger</span>.<span class="property">Utility</span>.<span class="property">Control</span>;</span><br><span class="line">    ctl.<span class="title class_">ExecuteCommand</span>(<span class="string">&quot;bp &quot;</span>+(main_base+<span class="number">0x14a4</span>).<span class="title function_">toString</span>(<span class="number">16</span>))</span><br><span class="line">    host.<span class="property">diagnostics</span>.<span class="title function_">debugLog</span>(<span class="string">&quot;break in &quot;</span>+(main_base+<span class="number">0x14a4</span>).<span class="title function_">toString</span>(<span class="number">16</span>)+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p>执行的时候就需要</p><p><code>.scriptload D:\Desktop\1.js</code></p><p><code>dx Debugger.State.Scripts.@&quot;1&quot;.Contents.break_in_main()</code></p></blockquote><h2 id="js-api"><a href="#js-api" class="headerlink" title="js-api"></a>js-api</h2><blockquote><p>输入命令</p><blockquote><pre><code>let ctl=host.namespace.Debugger.Utility.Control;ctl.ExecuteCommand(&quot;windbg调试命令&quot;)</code></pre></blockquote></blockquote>]]></content>
     
     
       
@@ -442,85 +518,6 @@
                      lazyload
                      src=&quot;/images/loading.svg&quot;
                  </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>创建项目</title>
-    <link href="http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/xposed/%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/xposed/%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</id>
-    <published>2024-07-23T14:33:29.000Z</published>
-    <updated>2024-07-23T14:33:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://www.lbqaq.top/p/init-xposed/#%E7%BB%93%E8%AF%AD" >从零开始编写Xposed模块 (lbqaq.top) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.lbqaq.top/p/init-xposed/#%E7%BB%93%E8%AF%AD&quot; &gt;从零开始编写Xposed模块 (lbqaq.top) &lt;i class=&quot;fa-regular fa-arro</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    <category term="xposed" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/xposed/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>blutter</title>
-    <link href="http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/flutter/blutter/"/>
-    <id>http://example.com/2024/07/23/Re/%E5%AE%89%E5%8D%93/flutter/blutter/</id>
-    <published>2024-07-23T09:09:12.000Z</published>
-    <updated>2024-07-23T16:14:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/worawit/blutter" >worawit&#x2F;blutter: Flutter Mobile Application Reverse Engineering Tool (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>[<a class="link"   href="https://bbs.kanxue.com/thread-279403.htm" >原创]flutter逆向 ACTF native app-Android安全-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/worawit/blutter&quot; &gt;worawit&amp;#x2F;blutter: Flutter Mobile Application Reverse Engineering Tool (g</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
-    
-    <category term="flutter" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/flutter/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>apk重打包</title>
-    <link href="http://example.com/2024/07/14/Re/%E5%AE%89%E5%8D%93/apk%E9%87%8D%E6%89%93%E5%8C%85/"/>
-    <id>http://example.com/2024/07/14/Re/%E5%AE%89%E5%8D%93/apk%E9%87%8D%E6%89%93%E5%8C%85/</id>
-    <published>2024-07-14T14:25:10.000Z</published>
-    <updated>2024-08-25T16:56:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>apktool d input.apk</code>解包input.apk 不能直接解压会出现确实某参数的问题</p><p><code>apktool b .\com.zrubfinance -o 1.apk</code></p><blockquote><p>注意 重封包的apk未进行内存对齐需通过</p><p><code>zipalign -p -f -v 4 input.apk out.apk</code></p><p>然后签名</p><p><code>apksigner sign -ks E:\keystore\test1.jks -out out.apk input.apk</code></p><p>就可以了</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;apktool d input.apk&lt;/code&gt;解包input.apk 不能直接解压会出现确实某参数的问题&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;apktool b .&#92;com.zrubfinance -o 1.apk&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;</summary>
       
     
     
