@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-08T17:24:23.000Z</updated>
+  <updated>2024-09-27T14:32:13.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,171 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设置avd位置</title>
+    <link href="http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEavd%E4%BD%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEavd%E4%BD%8D%E7%BD%AE/</id>
+    <published>2024-09-27T14:31:47.000Z</published>
+    <updated>2024-09-27T14:32:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202409272231493.png"                      alt="image-20240927223154345"                ></p><p>环境变量中添加这几个键值用于限定android工具链位置</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/loading.svg&quot;
+                     data-src=&quot;https://cdn.jsdelivr.n</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常见保护措施</title>
+    <link href="http://example.com/2024/09/19/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/%E5%B8%B8%E8%A7%81%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/"/>
+    <id>http://example.com/2024/09/19/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/%E5%B8%B8%E8%A7%81%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/</id>
+    <published>2024-09-18T18:04:52.000Z</published>
+    <updated>2024-09-18T18:20:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://blog.csdn.net/qq_44108455/article/details/104985351" >pwn学习—保护机制_pie enabled-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/qq_44108455/article/details/104985351&quot; &gt;pwn学习—保护机制_pie enabled-CSDN博客 &lt;i class=&quot;fa-regular </summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="保护措施" scheme="http://example.com/categories/Pwn/linux/%E4%BF%9D%E6%8A%A4%E6%8E%AA%E6%96%BD/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>unsortedbin</title>
+    <link href="http://example.com/2024/09/17/Pwn/linux/heap/unsortedbin/"/>
+    <id>http://example.com/2024/09/17/Pwn/linux/heap/unsortedbin/</id>
+    <published>2024-09-17T15:02:48.000Z</published>
+    <updated>2024-09-17T18:16:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>unsorted bin</p><p>是循环双向链表结构 而且是先进先出(先进入unsortedbin的先参与下次分配 相同大小情况)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202409180055836.jpeg"                      alt="img"                ></p><p>参考<a class="link"   href="https://www.cnblogs.com/CH13hh/p/18162356" >Fastbin attack&amp;&amp;Double free和Unsortbin leak的综合使用 - CH13hh - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://ctf-wiki.org/pwn/linux/user-mode/heap/ptmalloc2/unsorted-bin-attack/" >Unsorted Bin Attack - CTF Wiki (ctf-wiki.org) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>获取libc基址</p><blockquote><p>当只有一个unsortbin的时候，其fd和bk指向<code>main_arena+0x60</code>(unsorted bin 起始指针)处</p><p>如果有多个unsortbin</p><p>每次分配以unsorted bin 起始指针的bk为主</p><pre class="mermaid">> graph BT;subgraph LR B["free_2"];head2["addr"]fd2["fd"]bk2["bk"]end;subgraph LR A["free_1"];head1["addr"]bk1["bk"]fd1["fd"]end;subgraph LR C["unsorted bin pointer"];head3["addr"]fd3["fd"]bk3["bk"]end;fd2-->head1bk2-->head3fd1-->head3bk1-->head2fd3-->head2bk3-->head1</pre><p>exp:</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一次</span></span><br><span class="line">tcachebins</span><br><span class="line">0x30 [  1]: 0x55555555f260 ◂— 0</span><br><span class="line">fastbins</span><br><span class="line">empty</span><br><span class="line">unsortedbin</span><br><span class="line">all: 0x55555555f280 —▸ 0x7ffff7dcdca0 ◂— 0x55555555f280</span><br><span class="line">smallbins</span><br><span class="line">empty</span><br><span class="line">largebins</span><br><span class="line">empty</span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">x/16x 0x55555555f280</span></span><br><span class="line">0x55555555f280: 0x0000000000000000      0x0000000000000471</span><br><span class="line">0x55555555f290: 0x00007ffff7dcdca0      0x00007ffff7dcdca0</span><br><span class="line">0x55555555f2a0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2b0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2c0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2d0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2e0: 0x0000000000000000      0x0000000000000000</span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">x/16x 0x7ffff7dcdca0</span></span><br><span class="line">0x7ffff7dcdca0: 0x000055555555fbe0      0x0000000000000000</span><br><span class="line">0x7ffff7dcdcb0: 0x000055555555f280      0x000055555555f280</span><br><span class="line">0x7ffff7dcdcc0: 0x00007ffff7dcdcb0      0x00007ffff7dcdcb0</span><br><span class="line">0x7ffff7dcdcd0: 0x00007ffff7dcdcc0      0x00007ffff7dcdcc0</span><br><span class="line">0x7ffff7dcdce0: 0x00007ffff7dcdcd0      0x00007ffff7dcdcd0</span><br><span class="line">0x7ffff7dcdcf0: 0x00007ffff7dcdce0      0x00007ffff7dcdce0</span><br><span class="line">0x7ffff7dcdd00: 0x00007ffff7dcdcf0      0x00007ffff7dcdcf0</span><br><span class="line">0x7ffff7dcdd10: 0x00007ffff7dcdd00      0x00007ffff7dcdd00</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第二次</span></span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">bin</span></span><br><span class="line">tcachebins</span><br><span class="line">0x30 [  2]: 0x55555555f700 —▸ 0x55555555f260 ◂— 0</span><br><span class="line">fastbins</span><br><span class="line">empty</span><br><span class="line">unsortedbin</span><br><span class="line">all: 0x55555555f720 —▸ 0x55555555f280 —▸ 0x7ffff7dcdca0 ◂— 0x55555555f720</span><br><span class="line">smallbins</span><br><span class="line">empty</span><br><span class="line">largebins</span><br><span class="line">empty</span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">x/16x 0x55555555f720</span></span><br><span class="line">0x55555555f720: 0x0000000000000000      0x0000000000000471</span><br><span class="line">0x55555555f730: 0x000055555555f280      0x00007ffff7dcdca0</span><br><span class="line">0x55555555f740: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f750: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f760: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f770: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f780: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f790: 0x0000000000000000      0x0000000000000000</span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">x/16x 0x55555555f280</span></span><br><span class="line">0x55555555f280: 0x0000000000000000      0x0000000000000471</span><br><span class="line">0x55555555f290: 0x00007ffff7dcdca0      0x000055555555f720</span><br><span class="line">0x55555555f2a0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2b0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2c0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2d0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2e0: 0x0000000000000000      0x0000000000000000</span><br><span class="line">0x55555555f2f0: 0x0000000000000000      0x0000000000000000</span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">x/16x 0x7ffff7dcdca0</span></span><br><span class="line">0x7ffff7dcdca0: 0x000055555555fbe0      0x0000000000000000</span><br><span class="line">0x7ffff7dcdcb0: 0x000055555555f720      0x000055555555f280</span><br><span class="line">0x7ffff7dcdcc0: 0x00007ffff7dcdcb0      0x00007ffff7dcdcb0</span><br><span class="line">0x7ffff7dcdcd0: 0x00007ffff7dcdcc0      0x00007ffff7dcdcc0</span><br><span class="line">0x7ffff7dcdce0: 0x00007ffff7dcdcd0      0x00007ffff7dcdcd0</span><br><span class="line">0x7ffff7dcdcf0: 0x00007ffff7dcdce0      0x00007ffff7dcdce0</span><br><span class="line">0x7ffff7dcdd00: 0x00007ffff7dcdcf0      0x00007ffff7dcdcf0</span><br><span class="line">0x7ffff7dcdd10: 0x00007ffff7dcdd00      0x00007ffff7dcdd00</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重新分配相同大小的</span></span><br><span class="line"><span class="meta prompt_">gdb-peda$ </span><span class="language-bash">bin</span></span><br><span class="line">tcachebins</span><br><span class="line">0x30 [  1]: 0x55555555f260 ◂— 0</span><br><span class="line">fastbins</span><br><span class="line">empty</span><br><span class="line">unsortedbin</span><br><span class="line">all: 0x55555555f720 —▸ 0x7ffff7dcdca0 ◂— 0x55555555f720</span><br><span class="line">smallbins</span><br><span class="line">empty</span><br><span class="line">largebins</span><br><span class="line">empty</span><br></pre></td></tr></table></figure></div></blockquote><p>所以如果拿到一个unsortbin则可通过uaf获取对应基址</p><p>计算方法:</p><p><a class="link"   href="https://blog.csdn.net/qq_33976344/article/details/119941461" >确认main_arena相对libc的偏移地址_如何计算unsorted bin到 main arena的偏移-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;unsorted bin&lt;/p&gt;
+&lt;p&gt;是循环双向链表结构 而且是先进先出(先进入unsortedbin的先参与下次分配 相同大小情况)&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     src</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="heap" scheme="http://example.com/categories/Pwn/linux/heap/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>patchelf</title>
+    <link href="http://example.com/2024/09/16/Pwn/linux/tool/patchelf/"/>
+    <id>http://example.com/2024/09/16/Pwn/linux/tool/patchelf/</id>
+    <published>2024-09-16T11:31:46.000Z</published>
+    <updated>2024-09-16T18:04:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过patchelf更改链接库版本</p><p><code>patchelf --add-needed lib_path elf_path</code>更改除了<code>ld-linux-x86-64.so.2</code>外的库</p><p><code>patchelf --set-interpreter lib_path elf_path</code>更改<code>ld-linux-x86-64.so.2</code>库</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;通过patchelf更改链接库版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;patchelf --add-needed lib_path elf_path&lt;/code&gt;更改除了&lt;code&gt;ld-linux-x86-64.so.2&lt;/code&gt;外的库&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;patche</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="tool" scheme="http://example.com/categories/Pwn/linux/tool/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>fastbin,tcache加密机制(glibc2.29之后)</title>
+    <link href="http://example.com/2024/09/16/Pwn/linux/heap/fastbin,tcache%E5%8A%A0%E5%AF%86%E6%9C%BA%E5%88%B6(glibc2.29%E4%B9%8B%E5%90%8E)/"/>
+    <id>http://example.com/2024/09/16/Pwn/linux/heap/fastbin,tcache%E5%8A%A0%E5%AF%86%E6%9C%BA%E5%88%B6(glibc2.29%E4%B9%8B%E5%90%8E)/</id>
+    <published>2024-09-16T11:05:06.000Z</published>
+    <updated>2024-09-16T11:12:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>类似下面的</p><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0x40</span> [  <span class="number">6</span>]: <span class="number">0x555555559670</span> —▸ <span class="number">0x5555555599a0</span> —▸ <span class="number">0x55555555a460</span> —▸ <span class="number">0x55555555a130</span> —▸ <span class="number">0x555555559ad0</span> —▸ <span class="number">0x5555555597a0</span> ◂— <span class="number">0</span></span><br></pre></td></tr></table></figure></div><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gdb-peda$ x/<span class="number">4</span>x <span class="number">0x555555559670</span><span class="number">-0x10</span></span><br><span class="line"><span class="number">0x555555559660</span>: <span class="number">0x0000000000000000</span>      <span class="number">0x0000000000000041</span></span><br><span class="line"><span class="number">0x555555559670</span>: <span class="number">0x000055500000ccf9</span>      <span class="number">0xdcf96e51fa77b2f5</span></span><br><span class="line">gdb-peda$ x/<span class="number">4</span>x <span class="number">0x5555555599a0</span><span class="number">-0x10</span></span><br><span class="line"><span class="number">0x555555559990</span>: <span class="number">0x00000000000000f0</span>      <span class="number">0x0000000000000040</span></span><br><span class="line"><span class="number">0x5555555599a0</span>: <span class="number">0x000055500000f139</span>      <span class="number">0xdcf96e51fa77b2f5</span></span><br></pre></td></tr></table></figure></div><p>此处fd分别为<code>0x000055500000ccf9 </code> <code>0x000055500000f139</code></p><p>实际上就是正常fd异或一个key的结果</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">7</span>]: <span class="built_in">hex</span>(<span class="number">0x000055500000ccf9</span>^<span class="number">0x5555555599a0</span>)<span class="comment">#enc_fd^dec_fd=key</span></span><br><span class="line">Out[<span class="number">7</span>]: <span class="string">&#x27;0x555555559&#x27;</span><span class="comment">#key</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">8</span>]: <span class="built_in">hex</span>(<span class="number">0x000055500000f139</span>^<span class="number">0x555555559</span>)<span class="comment">#enc_fd^key=dec_fd</span></span><br><span class="line">Out[<span class="number">8</span>]: <span class="string">&#x27;0x55555555a460&#x27;</span></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;类似下面的&lt;/p&gt;
+&lt;div class=&quot;highlight-container&quot; data-rel=&quot;C&quot;&gt;&lt;figure class=&quot;iseeu highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="heap" scheme="http://example.com/categories/Pwn/linux/heap/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>doublefree</title>
+    <link href="http://example.com/2024/09/16/Pwn/linux/heap/doublefree/"/>
+    <id>http://example.com/2024/09/16/Pwn/linux/heap/doublefree/</id>
+    <published>2024-09-15T19:10:14.000Z</published>
+    <updated>2024-09-16T18:04:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>free只会更改fd值，fd相当于链表的下一项地址</p><p><a class="link"   href="https://taqini.github.io/2020/02/22/Double-free/#%E6%80%8E%E4%B9%88%E5%88%A9%E7%94%A8-double-free" >Fastbin Double free 知识点总结 | TaQini <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;free只会更改fd值，fd相当于链表的下一项地址&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://taqini.github.io/2020/02/22/Double-free/#%E6%80%8E%E4%B9%88%E5%88%A9%E7%</summary>
+      
+    
+    
+    
+    <category term="Pwn" scheme="http://example.com/categories/Pwn/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
+    
+    <category term="heap" scheme="http://example.com/categories/Pwn/linux/heap/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>api</title>
@@ -367,164 +532,6 @@
     <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
     
     <category term="待学" scheme="http://example.com/categories/Crypto/%E5%BE%85%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sieve_base</title>
-    <link href="http://example.com/2024/07/31/Crypto/RSA/sieve_base/"/>
-    <id>http://example.com/2024/07/31/Crypto/RSA/sieve_base/</id>
-    <published>2024-07-30T18:24:53.000Z</published>
-    <updated>2024-07-30T18:25:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[<a class="link"   href="https://blog.csdn.net/shshss64/article/details/127171266" >NCTF2019]childRSA（费马定理）-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/shshss64/article/details/127171266&quot; &gt;NCTF2019]childRSA（费马定理）-CSDN博客 &lt;i class=&quot;fa-regular f</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>基本用法</title>
-    <link href="http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
-    <id>http://example.com/2024/07/30/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</id>
-    <published>2024-07-30T13:50:40.000Z</published>
-    <updated>2024-09-03T15:56:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[<a class="link"   href="https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4" >原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="调试命令"><a href="#调试命令" class="headerlink" title="调试命令"></a>调试命令</h3><blockquote><p>r 查看寄存器</p><blockquote><p>r 寄存器名称 查看对应寄存器</p><p>r 寄存器名称&#x3D;值 设置对应寄存器</p></blockquote></blockquote><h3 id="伪寄存器语法"><a href="#伪寄存器语法" class="headerlink" title="伪寄存器语法"></a>伪寄存器语法</h3><p><a class="link"   href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debuggercmds/pseudo-register-syntax" >伪寄存器语法 - Windows drivers | Microsoft Learn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="自动化脚本"><a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本</h2><p><a class="link"   href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/javascript-debugger-scripting" >JavaScript 调试器脚本 - Windows 驱动程序 |Microsoft 学习 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>执行已加载的js的函数</p><p> Debugger.State.Scripts.&lt;js名称&gt;.Contents.函数名</p><p>例如break在main函数</p><p>我用1.js</p><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">break_in_main</span>(<span class="params"></span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> main_base=host.<span class="property">currentProcess</span>.<span class="property">Modules</span>[<span class="number">0</span>].<span class="property">BaseAddress</span></span><br><span class="line">    <span class="keyword">let</span> ctl=host.<span class="property">namespace</span>.<span class="property">Debugger</span>.<span class="property">Utility</span>.<span class="property">Control</span>;</span><br><span class="line">    ctl.<span class="title class_">ExecuteCommand</span>(<span class="string">&quot;bp &quot;</span>+(main_base+<span class="number">0x14a4</span>).<span class="title function_">toString</span>(<span class="number">16</span>))</span><br><span class="line">    host.<span class="property">diagnostics</span>.<span class="title function_">debugLog</span>(<span class="string">&quot;break in &quot;</span>+(main_base+<span class="number">0x14a4</span>).<span class="title function_">toString</span>(<span class="number">16</span>)+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p>执行的时候就需要</p><p><code>.scriptload D:\Desktop\1.js</code></p><p><code>dx Debugger.State.Scripts.@&quot;1&quot;.Contents.break_in_main()</code></p></blockquote><h2 id="js-api"><a href="#js-api" class="headerlink" title="js-api"></a>js-api</h2><blockquote><p>输入命令</p><blockquote><pre><code>let ctl=host.namespace.Debugger.Utility.Control;ctl.ExecuteCommand(&quot;windbg调试命令&quot;)</code></pre></blockquote></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://bbs.kanxue.com/thread-250670.htm#%E6%A0%87%E5%87%86%E5%91%BD%E4%BB%A4&quot; &gt;原创]Windbg新手入坑指南-软件逆向-看雪-安全社区|安全招</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="windbg" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/windbg/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tool</title>
-    <link href="http://example.com/2024/07/30/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/tool/"/>
-    <id>http://example.com/2024/07/30/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/tool/</id>
-    <published>2024-07-30T09:40:45.000Z</published>
-    <updated>2024-07-30T09:40:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/keeganryan/flatter" >keeganryan&#x2F;flatter: Fast lattice reduction (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/keeganryan/flatter&quot; &gt;keeganryan&amp;#x2F;flatter: Fast lattice reduction (github.com) &lt;i class=&quot;fa</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="格密码" scheme="http://example.com/categories/Crypto/%E6%A0%BC%E5%AF%86%E7%A0%81/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>天堂之门</title>
-    <link href="http://example.com/2024/07/30/Re/windows/pe/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8/"/>
-    <id>http://example.com/2024/07/30/Re/windows/pe/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8/</id>
-    <published>2024-07-30T05:28:32.000Z</published>
-    <updated>2024-07-31T07:31:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在windows环境下，有win32和x64两种环境，用于区分它们的则是CS寄存器状态(起始时的CS是由pe文件的架构来定的)</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407301347825.png"                      alt="image-20240730134744662"                ></p><p>exp题目 <a class="link"   href="https://www.cnblogs.com/lordtianqiyi/articles/16501516.html" >天堂之门 - TLSN - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在windows环境下，有win32和x64两种环境，用于区分它们的则是CS寄存器状态(起始时的CS是由pe文件的架构来定的)&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&quot;/im</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="windows" scheme="http://example.com/categories/Re/windows/"/>
-    
-    <category term="pe" scheme="http://example.com/categories/Re/windows/pe/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Gobuster</title>
-    <link href="http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/fuzz/Gobuster/"/>
-    <id>http://example.com/2024/07/25/Web/%E5%B7%A5%E5%85%B7/fuzz/Gobuster/</id>
-    <published>2024-07-25T06:06:59.000Z</published>
-    <updated>2024-07-25T06:08:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>sudo apt install gobuster</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;sudo apt install gobuster&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="fuzz" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/fuzz/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>androidkiller_runtime_error</title>
-    <link href="http://example.com/2024/07/24/Re/%E5%AE%89%E5%8D%93/androidkiller_runtime_error/"/>
-    <id>http://example.com/2024/07/24/Re/%E5%AE%89%E5%8D%93/androidkiller_runtime_error/</id>
-    <published>2024-07-24T07:56:08.000Z</published>
-    <updated>2024-07-24T07:59:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>更改androidkiller下的configs.ini</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202407241559849.png"                      alt="image-20240724155954742"                ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;更改androidkiller下的configs.ini&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&quot;/images/loading.svg&quot;
-                 </summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="安卓" scheme="http://example.com/categories/Re/%E5%AE%89%E5%8D%93/"/>
     
     
   </entry>

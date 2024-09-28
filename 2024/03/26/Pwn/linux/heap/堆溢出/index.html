@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/03/26/pwn/linux/堆/堆溢出/"/>
+    <link rel="canonical" href="http://example.com/2024/03/26/pwn/linux/heap/堆溢出/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,12 +21,12 @@
         <meta name="description" content="主要是对tcache(用于存放free后的空闲堆块)进行对应的pwn 参考tcache运行实例[原创]tcache bin利用总结-Pwn-看雪-安全社区|安全招聘|kanxue.com  而任何堆块都呈现下面这种结构 12345678910111213141516171819struct chunk&amp;#123;    size_t prev_size;    union    &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="堆溢出">
-<meta property="og:url" content="http://example.com/2024/03/26/Pwn/linux/%E5%A0%86/%E5%A0%86%E6%BA%A2%E5%87%BA/index.html">
+<meta property="og:url" content="http://example.com/2024/03/26/Pwn/linux/heap/%E5%A0%86%E6%BA%A2%E5%87%BA/index.html">
 <meta property="og:site_name" content="runwu2204">
 <meta property="og:description" content="主要是对tcache(用于存放free后的空闲堆块)进行对应的pwn 参考tcache运行实例[原创]tcache bin利用总结-Pwn-看雪-安全社区|安全招聘|kanxue.com  而任何堆块都呈现下面这种结构 12345678910111213141516171819struct chunk&amp;#123;    size_t prev_size;    union    &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-26T10:46:15.000Z">
-<meta property="article:modified_time" content="2024-09-14T17:06:20.000Z">
+<meta property="article:modified_time" content="2024-09-16T18:10:43.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -474,7 +474,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">188</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">194</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -528,8 +528,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-15 01:06:20</span>
-            <span class="mobile">2024-09-15 01:06:20</span>
+            <span class="desktop">2024-09-17 02:10:43</span>
+            <span class="mobile">2024-09-17 02:10:43</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -563,7 +563,7 @@
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/Pwn/linux/%E5%A0%86/">堆</a>&nbsp;
+                            <a href="/categories/Pwn/linux/heap/">heap</a>&nbsp;
                         </li>
                     
                     
@@ -595,15 +595,16 @@
             <p>主要是对tcache(用于存放free后的空闲堆块)进行对应的pwn</p>
 <p>参考tcache运行实例[<a class="link"   target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-275302.htm" >原创]tcache bin利用总结-Pwn-看雪-安全社区|安全招聘|kanxue.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>而任何堆块都呈现下面这种结构</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">size_t</span> prev_size;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">size_t</span> size;<span class="comment">//注意16字节对齐</span></span><br><span class="line">    	<span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    	&#123;</span></span><br><span class="line">        	<span class="type">int</span> flag:<span class="number">3</span>;</span><br><span class="line">            <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">            &#123;</span></span><br><span class="line">            	<span class="type">bool</span> PREV_INUSE:<span class="number">1</span>;<span class="comment">//如果前面一个chunk处于分配状态，那么此位为1。一般来说，堆中第一个被分配的内存块的 size 字段的 P 位都会被设置为 1，以便于防止访问前面的非法内存。当一个chunk 的size 的P位为0时，我们能通过 prev_size 字段来获取上一个 chunk 的大小以及地址。这也方便进行空闲chunk之间的合并</span></span><br><span class="line">            	<span class="type">bool</span> IS_MAPPED:<span class="number">1</span>;<span class="comment">//记录当前chunk是否是由mmap分配的</span></span><br><span class="line">            	<span class="type">bool</span> NON_MAIN_AREA:<span class="number">1</span>;<span class="comment">//记录当前 chunk 是否不属于主线程</span></span><br><span class="line">            &#125;;</span><br><span class="line">    	&#125;;</span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="type">char</span>* data[size&amp;<span class="number">0xFFFFFFF8</span>];<span class="comment">//只取高29位</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">size_t</span> prev_size;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">size_t</span> size;<span class="comment">//注意16字节对齐</span></span><br><span class="line">    	<span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    	&#123;</span></span><br><span class="line">        	<span class="type">int</span> flag:<span class="number">3</span>;</span><br><span class="line">            <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">            &#123;</span></span><br><span class="line">            	<span class="type">bool</span> PREV_INUSE:<span class="number">1</span>;<span class="comment">//如果前面一个chunk处于分配状态，那么此位为1。一般来说，堆中第一个被分配的内存块的 size 字段的 P 位都会被设置为 1，以便于防止访问前面的非法内存。当一个chunk 的size 的P位为0时，我们能通过 prev_size 字段来获取上一个 chunk 的大小以及地址。这也方便进行空闲chunk之间的合并</span></span><br><span class="line">            	<span class="type">bool</span> IS_MAPPED:<span class="number">1</span>;<span class="comment">//记录当前chunk是否是由mmap分配的</span></span><br><span class="line">            	<span class="type">bool</span> NON_MAIN_AREA:<span class="number">1</span>;<span class="comment">//记录当前 chunk 是否不属于主线程</span></span><br><span class="line">            &#125;;</span><br><span class="line">    	&#125;;</span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="type">char</span>* data[size&amp;<span class="number">0xFFFFFFF8</span>];<span class="comment">//只取高29位,这里开始存放数据,所以实际chunk地址需要减去16或者8</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
-<p>UAF Example:</p>
-<blockquote>
+<p>有下列三种攻击方式</p>
+<h2 id="UAF-Example"><a href="#UAF-Example" class="headerlink" title="UAF Example:"></a>UAF Example:</h2><blockquote>
 <p>[<a class="link"   target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/2058" >NISACTF 2022]ezheap | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> __cdecl <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">char</span> *command; <span class="comment">// [esp+8h] [ebp-10h]</span></span><br><span class="line">  <span class="type">char</span> *s; <span class="comment">// [esp+Ch] [ebp-Ch]</span></span><br><span class="line"></span><br><span class="line">  setbuf(<span class="built_in">stdin</span>, <span class="number">0</span>);</span><br><span class="line">  setbuf(<span class="built_in">stdout</span>, <span class="number">0</span>);</span><br><span class="line">  s = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">0x16</span>u);</span><br><span class="line">  command = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">0x16</span>u);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;Input:&quot;</span>);</span><br><span class="line">  gets(s);</span><br><span class="line">  system(command);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
 </blockquote>
+<h2 id="chunk-extend"><a href="#chunk-extend" class="headerlink" title="chunk extend"></a>chunk extend</h2><p>[<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Breeze_CAT/article/details/103788698" >pwn]堆：fastbin attack详解-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
         </div>
 
@@ -618,11 +619,11 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-09-15 01:06:20
+                    :</strong> 2024-09-17 02:10:43
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2024/03/26/Pwn/linux/堆/堆溢出/
+            <strong>链接:</strong> https://runwu2204.github.io/2024/03/26/Pwn/linux/heap/堆溢出/
         </li>
         <li>
             <strong>
@@ -733,7 +734,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">堆溢出</div>
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UAF-Example"><span class="nav-text">UAF Example:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chunk-extend"><span class="nav-text">chunk extend</span></a></li></ol>
 
     </div>
 </div>
