@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-27T14:32:13.000Z</updated>
+  <updated>2024-10-02T09:31:07.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二次剩余</title>
+    <link href="http://example.com/2024/10/02/Crypto/RSA/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/"/>
+    <id>http://example.com/2024/10/02/Crypto/RSA/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/</id>
+    <published>2024-10-02T09:31:02.000Z</published>
+    <updated>2024-10-02T09:31:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[<a class="link"   href="https://www.nssctf.cn/problem/262" >羊城杯 2020]GMC | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[&lt;a class=&quot;link&quot;   href=&quot;https://www.nssctf.cn/problem/262&quot; &gt;羊城杯 2020]GMC | NSSCTF &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square fa-</summary>
+      
+    
+    
+    
+    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
+    
+    <category term="RSA" scheme="http://example.com/categories/Crypto/RSA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vscode</title>
+    <link href="http://example.com/2024/09/30/%E5%BC%80%E5%8F%91/IOT/rust/vscode/"/>
+    <id>http://example.com/2024/09/30/%E5%BC%80%E5%8F%91/IOT/rust/vscode/</id>
+    <published>2024-09-30T13:43:01.000Z</published>
+    <updated>2024-09-30T13:53:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/rust-embedded/cortex-m-quickstart" >rust-embedded&#x2F;cortex-m-quickstart: Template to develop bare metal applications for Cortex-M microcontrollers (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>需要<code>cargo generate</code></p><p><code>cargo install generate</code>即可</p><p>stm32f103c8t6的 memory.x</p><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Linker script for the STM32F103C8T6 */</span></span><br><span class="line">MEMORY</span><br><span class="line">&#123;</span><br><span class="line">  FLASH : ORIGIN = <span class="number">0x08000000</span>, LENGTH = <span class="number">64</span>K</span><br><span class="line">  RAM : ORIGIN = <span class="number">0x20000000</span>, LENGTH = <span class="number">20</span>K</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/rust-embedded/cortex-m-quickstart&quot; &gt;rust-embedded&amp;#x2F;cortex-m-quickstart: Template to develo</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="IOT" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/"/>
+    
+    <category term="rust" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/rust/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>设置avd位置</title>
@@ -392,9 +442,9 @@
     <link href="http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/"/>
     <id>http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/</id>
     <published>2024-08-06T16:54:32.000Z</published>
-    <updated>2024-08-06T17:32:16.000Z</updated>
+    <updated>2024-10-08T16:57:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><blockquote><p>通过<code>#pragma code_seg(&quot;.节区名&quot;)</code>定义节区留空则为默认节区</p><p>注意其影响范围为下面所有所以需要在切换节区时使用<code>#pragma code_seg()</code>中断这个节区的定义</p><p>通过<code>#pragma comment(linker, &quot;/SECTION:.节区名,权限&quot;)</code>定义节区权限</p><p>权限有</p><blockquote><p>E 执行</p><p>R 读取</p><p>W 写入</p></blockquote><p>具体操作</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg(<span class="string">&quot;.SMF&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> flag[] = <span class="string">&quot;flag&#123;this_is_test&#125;&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, flag);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment(linker, <span class="string">&quot;/SECTION:.SMF,ERW&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg()</span></span><br></pre></td></tr></table></figure></div></blockquote><h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><blockquote><p><code>__attribute__((section(&quot;.段名&quot;)))</code>即可，权限需要手动更改ld文件或者手动更改<code>IMAGE_SECTION_HEADER SectionHeaders</code>内的段权限</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="built_in">section</span>(<span class="string">&quot;.SMC&quot;</span>)))</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><blockquote><p>通过<code>#pragma code_seg(&quot;.节区名&quot;)</code>定义节区留空则为默认节区</p><p>注意其影响范围为下面所有所以需要在切换节区时使用<code>#pragma code_seg()</code>中断这个节区的定义</p><p>通过<code>#pragma comment(linker, &quot;/SECTION:.节区名,权限&quot;)</code>定义节区权限</p><p>权限有</p><blockquote><p>E 执行</p><p>R 读取</p><p>W 写入</p></blockquote><p>具体操作</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg(<span class="string">&quot;.SMF&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> flag[] = <span class="string">&quot;flag&#123;this_is_test&#125;&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, flag);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment(linker, <span class="string">&quot;/SECTION:.SMF,ERW&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg()</span></span><br></pre></td></tr></table></figure></div><p>注意，msvc会将带有可执行权限的第一个节区作为start的位置(可以不是<code>.text</code>段)如此处为SMF则它会被当作第一个</p></blockquote><h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><blockquote><p><code>__attribute__((section(&quot;.段名&quot;)))</code>即可，权限需要手动更改ld文件或者手动更改<code>IMAGE_SECTION_HEADER SectionHeaders</code>内的段权限</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="built_in">section</span>(<span class="string">&quot;.SMC&quot;</span>)))</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
     
     
       
@@ -484,54 +534,6 @@
     <category term="Web" scheme="http://example.com/categories/Web/"/>
     
     <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>汉明距离</title>
-    <link href="http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB/"/>
-    <id>http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB/</id>
-    <published>2024-07-31T07:30:57.000Z</published>
-    <updated>2024-07-31T07:31:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://www.jianshu.com/p/ecd767d9af0d" >2019-De1CTF-xorz - 简书 (jianshu.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.jianshu.com/p/ecd767d9af0d&quot; &gt;2019-De1CTF-xorz - 简书 (jianshu.com) &lt;i class=&quot;fa-regular fa-arrow-up-rig</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="待学" scheme="http://example.com/categories/Crypto/%E5%BE%85%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index1</title>
-    <link href="http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/index1/"/>
-    <id>http://example.com/2024/07/31/Crypto/%E5%BE%85%E5%AD%A6/index1/</id>
-    <published>2024-07-30T18:43:35.000Z</published>
-    <updated>2024-07-30T18:46:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://www.cnblogs.com/JustGo12/p/18009944" >L3HCTF 2024 -Cry部分 - JustG0 - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://cn-sec.com/archives/474106.html" >2021第二届祥云杯Crypto部分Write-Up全 | CN-SEC 中文网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://www.cnblogs.com/JustGo12/p/18009944&quot; &gt;L3HCTF 2024 -Cry部分 - JustG0 - 博客园 (cnblogs.com) &lt;i class=&quot;fa-regula</summary>
-      
-    
-    
-    
-    <category term="Crypto" scheme="http://example.com/categories/Crypto/"/>
-    
-    <category term="待学" scheme="http://example.com/categories/Crypto/%E5%BE%85%E5%AD%A6/"/>
     
     
   </entry>
