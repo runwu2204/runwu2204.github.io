@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-02T09:31:07.000Z</updated>
+  <updated>2024-11-03T18:51:14.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,235 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>取消warningaserror</title>
+    <link href="http://example.com/2024/11/04/%E5%BC%80%E5%8F%91/IOT/idf/%E5%8F%96%E6%B6%88warningaserror/"/>
+    <id>http://example.com/2024/11/04/%E5%BC%80%E5%8F%91/IOT/idf/%E5%8F%96%E6%B6%88warningaserror/</id>
+    <published>2024-11-03T18:50:08.000Z</published>
+    <updated>2024-11-03T18:51:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>将源码的<code>CMakeLists.txt</code>（不是项目根目录的）在这个后面<code>idf_component_register(SRCS &quot;main.c&quot;)</code>加上<code>set_target_properties($&#123;COMPONENT_LIB&#125; PROPERTIES COMPILE_FLAGS -w )</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;将源码的&lt;code&gt;CMakeLists.txt&lt;/code&gt;（不是项目根目录的）在这个后面&lt;code&gt;idf_component_register(SRCS &amp;quot;main.c&amp;quot;)&lt;/code&gt;加上&lt;code&gt;set_target_properties($</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="IOT" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/"/>
+    
+    <category term="idf" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/idf/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda</title>
+    <link href="http://example.com/2024/11/03/%E5%BC%80%E5%8F%91/Python/Anaconda/"/>
+    <id>http://example.com/2024/11/03/%E5%BC%80%E5%8F%91/Python/Anaconda/</id>
+    <published>2024-11-03T12:10:12.000Z</published>
+    <updated>2024-11-03T18:50:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>运行库缺失如<a class="link"   href="https://blog.csdn.net/qzzzxiaosheng/article/details/125119006?utm_source=app&app_version=5.0.0" >Microsoft Visual C++ 14.0 is required.-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>设置环境变量</p><p><code>conda env config vars set xxx=xxx</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;运行库缺失如&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/qzzzxiaosheng/article/details/125119006?utm_source=app&amp;app_version=5.0.0&quot; &gt;Microsoft </summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>多工具链</title>
+    <link href="http://example.com/2024/11/03/%E5%BC%80%E5%8F%91/Rust/%E5%A4%9A%E5%B7%A5%E5%85%B7%E9%93%BE/"/>
+    <id>http://example.com/2024/11/03/%E5%BC%80%E5%8F%91/Rust/%E5%A4%9A%E5%B7%A5%E5%85%B7%E9%93%BE/</id>
+    <published>2024-11-02T17:02:51.000Z</published>
+    <updated>2024-11-02T17:35:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>rustup toolchain install xxx</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;rustup toolchain install xxx&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Rust" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ndisfilter驱动</title>
+    <link href="http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/"/>
+    <id>http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/</id>
+    <published>2024-11-02T15:48:58.000Z</published>
+    <updated>2024-11-02T16:38:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/Ragebone/MS_bindview" >Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>需要inf文件</p><p>选择service点击install</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png"                      alt="image-20241103003622135"                ></p><p>从磁盘安装</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036175.png"                      alt="image-20241103003602133"                ></p><p>选择inf</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030037832.png"                      alt="image-20241103003710782"                ></p><p>通过instDrv操纵驱动启停也可通过命令行<code>net start servicename</code> <code>net stop servicename</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/Ragebone/MS_bindview&quot; &gt;Ragebone&amp;#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it w</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网络重置</title>
+    <link href="http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/linux/%E7%BD%91%E7%BB%9C%E9%87%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/linux/%E7%BD%91%E7%BB%9C%E9%87%8D%E7%BD%AE/</id>
+    <published>2024-11-01T17:52:48.000Z</published>
+    <updated>2024-11-01T17:52:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://blog.csdn.net/weixin_54513557/article/details/124722681" >Kali-Linux虚拟机连接网络失败以及kali无法ping主机的问题_kaliping不通主机-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://blog.csdn.net/weixin_54513557/article/details/124722681&quot; &gt;Kali-Linux虚拟机连接网络失败以及kali无法ping主机的问题_kaliping不通</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="linux" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基本操作</title>
+    <link href="http://example.com/2024/11/01/%E5%BC%80%E5%8F%91/Git/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2024/11/01/%E5%BC%80%E5%8F%91/Git/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <published>2024-10-31T17:32:06.000Z</published>
+    <updated>2024-10-31T17:39:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>两种协议(根据链接不同)</p><blockquote><p>https 不能免密</p><p><a class="link"   href="https://github.com/username/reponame" >https://github.com/username/reponame <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>ssh 可免密</p><p><a class="link"   href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;" >&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>:username&#x2F;reponame</p></blockquote><p>免密传输</p><blockquote><p>需要远程信任本地公钥</p><p><code>ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;</code></p><p>github <code>setting</code>-&gt;<code>SSH and GPG keys</code>-&gt;<code>New SSH key</code></p><p><code>ssh -T git@github.com</code> 输出successfully代表网络连接成功</p><p><code>ssh-agent -s</code>启用ssh服务后<code>ssh-add 私钥地址(默认生成在~/.ssh/id_rsa) </code></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;两种协议(根据链接不同)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https 不能免密&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/username/reponame&quot; &gt;https://github.com/user</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Git" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Git/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1</title>
+    <link href="http://example.com/2024/10/31/%E5%BC%80%E5%8F%91/MSYS2/1/"/>
+    <id>http://example.com/2024/10/31/%E5%BC%80%E5%8F%91/MSYS2/1/</id>
+    <published>2024-10-31T15:48:00.000Z</published>
+    <updated>2024-10-31T15:48:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>F:\Development\env\msys2\msys2_shell.cmd -msys2 -no-start -mintty -c &quot; some command&quot;</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;F:&#92;Development&#92;env&#92;msys2&#92;msys2_shell.cmd -msys2 -no-start -mintty -c &amp;quot; some command&amp;quot;&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="MSYS2" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/MSYS2/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vmware双机调试</title>
+    <link href="http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/"/>
+    <id>http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/</id>
+    <published>2024-10-28T03:13:20.000Z</published>
+    <updated>2024-10-28T04:15:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>双机调试需要配置一个虚拟机</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281119860.png"                      alt="image-20241028111942588"                ></p><p>在虚拟机内<code>win+r</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281154655.png"                      alt="image-20241028115407606"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155364.png"                      alt="image-20241028115501314"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155864.png"                      alt="image-20241028115512824"                ></p><p>command</p><blockquote><p>创建驱动服务<code>sc create mydriver binpath=c:\1.sys type=kernel start=demand error=ignore</code></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;双机调试需要配置一个虚拟机&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/loading.svg&quot;
+                     data-src=&quot;h</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>windows</title>
+    <link href="http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/"/>
+    <id>http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/</id>
+    <published>2024-10-25T17:30:02.000Z</published>
+    <updated>2024-11-03T05:05:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples" >microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>wdk</p><blockquote><p>使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本</p></blockquote><p>LLVM</p><blockquote><p>安装完成后将<code>LLVM路径/bin</code>放入<code>LIBCLANG_PATH</code>环境变量中</p></blockquote></blockquote><p>测试的时候在根目录下<code>cargo make</code>即可</p><blockquote><p>出现以下问题</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png"                      alt="image-20241026013233394"                ></p><p>代表你有多个kit版本，主要需要将<code>Windows Kits\10\Lib</code>与<code>Windows Kits\10\Tools</code>出现的最高版本一样，否则他会在另外一个地方找不到对应文件的存在</p><p>例如一个10.0.26一个10.0.22,他会直接在两个地方找10.0.26，如果没找到就会报错</p><p>需要注意对应wdk安装的版本</p></blockquote><p>快速创建项目</p><blockquote><p>工具cargo-generate</p><p><code>cargo install cargo-generate</code>即可</p></blockquote><p><code>cargo generate --git https://github.com/microsoft/Windows-rust-driver-samples</code></p><h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>参考<a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples/issues/30" >Driver does not attach to device and does not log anything · Issue #30 · microsoft&#x2F;Windows-rust-driver-samples <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p><code>pnputil.exe /add-driver .\echo_2.inf /install</code></p><p><code>pnputil /enum-devices /class Sample /connected</code></p><p><code>devgen.exe /add /hardwareid &quot;root\ECHO_2&quot;</code></p></blockquote><p>因为对应设备使用的驱动为<code> c_swdevice.inf</code>而不是我们安装的<code>echo_2.inf</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030847031.png"                      alt="image-20241103084747669"                ></p><p>原因是证书未被信任(优先级 已签名&gt;未签名)，可以先将target下的</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030906763.png"                      alt="image-20241103090620603"                ></p><p>放入根证书 然后重新安装即可</p><h2 id="代码37"><a href="#代码37" class="headerlink" title="代码37"></a>代码37</h2><p>老工具链</p><blockquote><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030913718.png"                      alt="image-20241103091322633"                ></p><p><a class="link"   href="https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389" >https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>更改<code>wdk-sys/src/wdf.rs</code></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WdfMinimumVersionRequired: ULONG = 33;</span><br><span class="line">//变为</span><br><span class="line">WdfMinimumVersionRequired: ULONG = 31;</span><br></pre></td></tr></table></figure></div></blockquote><p>新工具链</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/microsoft/Windows-rust-driv</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Rust" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/"/>
+    
+    <category term="Driver" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/Driver/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>二次剩余</title>
@@ -67,9 +296,9 @@
   </entry>
   
   <entry>
-    <title>设置avd位置</title>
-    <link href="http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEavd%E4%BD%8D%E7%BD%AE/"/>
-    <id>http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEavd%E4%BD%8D%E7%BD%AE/</id>
+    <title>设置Androidavd</title>
+    <link href="http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEAndroidavd/"/>
+    <id>http://example.com/2024/09/27/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/%E8%AE%BE%E7%BD%AEAndroidavd/</id>
     <published>2024-09-27T14:31:47.000Z</published>
     <updated>2024-09-27T14:32:13.000Z</updated>
     
@@ -303,237 +532,6 @@
     <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
     
     <category term="Unicorn" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文件路径</title>
-    <link href="http://example.com/2024/08/24/Re/windows/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
-    <id>http://example.com/2024/08/24/Re/windows/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</id>
-    <published>2024-08-24T09:46:07.000Z</published>
-    <updated>2024-08-24T09:46:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://learn.microsoft.com/zh-cn/dotnet/standard/io/file-path-formats" >Windows 系统中的文件路径格式 - .NET | Microsoft Learn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://learn.microsoft.com/zh-cn/dotnet/standard/io/file-path-formats&quot; &gt;Windows 系统中的文件路径格式 - .NET | Microsoft Le</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="windows" scheme="http://example.com/categories/Re/windows/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>trace</title>
-    <link href="http://example.com/2024/08/20/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/trace/"/>
-    <id>http://example.com/2024/08/20/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/trace/</id>
-    <published>2024-08-20T05:09:49.000Z</published>
-    <updated>2024-08-20T06:00:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202408201359217.png"                      alt="image-20240820135935052"                ></p><p>点击对应的trace条目会在寄存器栏显示对应寄存器状态</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202408201400342.png"                      alt="image-20240820140012263"                ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&quot;/images/loading.svg&quot;
-                     data-src=&quot;https://cdn.jsdelivr.n</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ida" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/ida/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>lzma文件</title>
-    <link href="http://example.com/2024/08/18/Misc/%E6%9D%82%E5%AD%A6/lzma%E6%96%87%E4%BB%B6/"/>
-    <id>http://example.com/2024/08/18/Misc/%E6%9D%82%E5%AD%A6/lzma%E6%96%87%E4%BB%B6/</id>
-    <published>2024-08-18T08:22:33.000Z</published>
-    <updated>2024-08-18T08:41:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>与xz无关 开头如下<code>5D 00 00 80 00</code>可以用binwalk扫出</p><p>python的lzma不支持解压此格式，其只支持xz格式<code>FD 37 7A 58 5A</code></p><p>lzma格式可用python的<code>pylzma</code>解压</p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&quot;./Untitled2&quot;</span>,<span class="string">&#x27;rb&#x27;</span>)<span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">import</span> pylzma</span><br><span class="line">    data=pylzma.decompress(f.read())</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;与xz无关 开头如下&lt;code&gt;5D 00 00 80 00&lt;/code&gt;可以用binwalk扫出&lt;/p&gt;
-&lt;p&gt;python的lzma不支持解压此格式，其只支持xz格式&lt;code&gt;FD 37 7A 58 5A&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;lzma格式可用python的&lt;c</summary>
-      
-    
-    
-    
-    <category term="Misc" scheme="http://example.com/categories/Misc/"/>
-    
-    <category term="杂学" scheme="http://example.com/categories/Misc/%E6%9D%82%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>RTSP_RTMP</title>
-    <link href="http://example.com/2024/08/15/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/RTSP_RTMP/"/>
-    <id>http://example.com/2024/08/15/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/RTSP_RTMP/</id>
-    <published>2024-08-15T15:36:39.000Z</published>
-    <updated>2024-08-15T16:39:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>需要推流到中间服务器</p><p><a class="link"   href="https://github.com/bluenviron/mediamtx/releases" >Releases · bluenviron&#x2F;mediamtx (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>注意主机ip为<code>10.0.2.2</code></p><p>主机</p><blockquote><p>启动中间服务器<code>mediamtx</code></p><p>通过<code>ffmpeg -re -i input_movie -c copy -rtsp_transport tcp -f rtsp rtsp://127.0.0.1:8554/stream</code>推流</p><p>在本地使用<code>ffplay rtsp://127.0.0.1:8554/stream </code></p></blockquote><p>手机</p><blockquote><p>在<code>AndroidManifest.xml</code>中</p><p>形如这样在manifest下加入网络访问的permission</p><div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;需要推流到中间服务器&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/bluenviron/mediamtx/releases&quot; &gt;Releases · bluenviron&amp;#x2F;mediamtx (github.c</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="安卓开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>多版本管理</title>
-    <link href="http://example.com/2024/08/11/%E5%BC%80%E5%8F%91/Golang/%E5%A4%9A%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
-    <id>http://example.com/2024/08/11/%E5%BC%80%E5%8F%91/Golang/%E5%A4%9A%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</id>
-    <published>2024-08-11T15:58:05.000Z</published>
-    <updated>2024-08-11T16:00:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>go install golang.org/dl/go版本@latest</code></p><p>安装完成后<code>go版本 download</code>即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;go install golang.org/dl/go版本@latest&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;安装完成后&lt;code&gt;go版本 download&lt;/code&gt;即可&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="Golang" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Golang/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>节区</title>
-    <link href="http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/"/>
-    <id>http://example.com/2024/08/07/%E5%BC%80%E5%8F%91/C-C++/%E8%8A%82%E5%8C%BA/</id>
-    <published>2024-08-06T16:54:32.000Z</published>
-    <updated>2024-10-08T16:57:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><blockquote><p>通过<code>#pragma code_seg(&quot;.节区名&quot;)</code>定义节区留空则为默认节区</p><p>注意其影响范围为下面所有所以需要在切换节区时使用<code>#pragma code_seg()</code>中断这个节区的定义</p><p>通过<code>#pragma comment(linker, &quot;/SECTION:.节区名,权限&quot;)</code>定义节区权限</p><p>权限有</p><blockquote><p>E 执行</p><p>R 读取</p><p>W 写入</p></blockquote><p>具体操作</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg(<span class="string">&quot;.SMF&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> flag[] = <span class="string">&quot;flag&#123;this_is_test&#125;&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, flag);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment(linker, <span class="string">&quot;/SECTION:.SMF,ERW&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> code_seg()</span></span><br></pre></td></tr></table></figure></div><p>注意，msvc会将带有可执行权限的第一个节区作为start的位置(可以不是<code>.text</code>段)如此处为SMF则它会被当作第一个</p></blockquote><h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><blockquote><p><code>__attribute__((section(&quot;.段名&quot;)))</code>即可，权限需要手动更改ld文件或者手动更改<code>IMAGE_SECTION_HEADER SectionHeaders</code>内的段权限</p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="built_in">section</span>(<span class="string">&quot;.SMC&quot;</span>)))</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;MSVC&quot;&gt;&lt;a href=&quot;#MSVC&quot; class=&quot;headerlink&quot; title=&quot;MSVC&quot;&gt;&lt;/a&gt;MSVC&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;通过&lt;code&gt;#pragma code_seg(&amp;quot;.节区名&amp;quot;)&lt;/code&gt;</summary>
-      
-    
-    
-    
-    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="C-C++" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/C-C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>不可逆混淆</title>
-    <link href="http://example.com/2024/08/03/python/%E4%B8%8D%E5%8F%AF%E9%80%86%E6%B7%B7%E6%B7%86/"/>
-    <id>http://example.com/2024/08/03/python/%E4%B8%8D%E5%8F%AF%E9%80%86%E6%B7%B7%E6%B7%86/</id>
-    <published>2024-08-03T12:16:08.000Z</published>
-    <updated>2024-08-03T12:16:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a class="link"   href="https://pyarmor.readthedocs.io/en/stable/topic/bccmode.html" >4.5. Insight Into BCC Mode — Pyarmor 8.5.11 documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a class="link"   href="https://pyarmor.dashingsoft.com/index-zh.html" >Pyarmor - 加密 Python 脚本 (dashingsoft.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://pyarmor.readthedocs.io/en/stable/topic/bccmode.html&quot; &gt;4.5. Insight Into BCC Mode — Pyarmor 8.5.11 documen</summary>
-      
-    
-    
-    
-    <category term="python" scheme="http://example.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ffuf</title>
-    <link href="http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fuzz/ffuf/"/>
-    <id>http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fuzz/ffuf/</id>
-    <published>2024-08-02T06:08:19.000Z</published>
-    <updated>2024-08-02T06:17:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>go install github.com/ffuf/ffuf@latest</code></p><p>过滤353大小的字符</p><div class="highlight-container" data-rel="Sh"><figure class="iseeu highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffuf -w /usr/share/wordlists/rockyou.txt -u http://node5.anna.nssctf.cn:21990/?FUZZ=&#123;7*9&#125; -fs 353</span><br></pre></td></tr></table></figure></div><p>-fc</p><p>过滤对应的response code</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;go install github.com/ffuf/ffuf@latest&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;过滤353大小的字符&lt;/p&gt;
-&lt;div class=&quot;highlight-container&quot; data-rel=&quot;Sh&quot;&gt;&lt;figure class=&quot;i</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="fuzz" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/fuzz/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>fenjing</title>
-    <link href="http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fenjing/"/>
-    <id>http://example.com/2024/08/02/Web/%E5%B7%A5%E5%85%B7/fenjing/</id>
-    <published>2024-08-02T05:55:42.000Z</published>
-    <updated>2024-08-02T06:04:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>搞SSTI非常好</p><p><code>pip install fenjing</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;搞SSTI非常好&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install fenjing&lt;/code&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Web" scheme="http://example.com/categories/Web/"/>
-    
-    <category term="工具" scheme="http://example.com/categories/Web/%E5%B7%A5%E5%85%B7/"/>
     
     
   </entry>

@@ -26,7 +26,7 @@
 <meta property="og:description" content="free后的堆块管理根据不同情况使用不同的bin链 堆漏洞挖掘中的bins分类(fastbin、unsorted bin、small bin、large bin)-CSDN博客  已经申请的堆结构类似于下面 12345678910111213141516171819202122struct chunk&amp;#123;    size_t prev_size;    union    &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-08T09:02:22.000Z">
-<meta property="article:modified_time" content="2024-09-17T17:41:15.000Z">
+<meta property="article:modified_time" content="2024-10-27T15:03:47.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
     
@@ -470,11 +470,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">86</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">94</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">196</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">205</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -528,8 +528,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-18 01:41:15</span>
-            <span class="mobile">2024-09-18 01:41:15</span>
+            <span class="desktop">2024-10-27 23:03:47</span>
+            <span class="mobile">2024-10-27 23:03:47</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -598,8 +598,15 @@
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">size_t</span> prev_size;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">size_t</span> size;<span class="comment">//注意16字节对齐</span></span><br><span class="line">    	<span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    	&#123;</span></span><br><span class="line">        	<span class="type">int</span> flag:<span class="number">3</span>;</span><br><span class="line">            <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">            &#123;</span></span><br><span class="line">            	<span class="type">bool</span> PREV_INUSE:<span class="number">1</span>;<span class="comment">//如果前面一个chunk处于分配状态，那么此位为1。一般来说，堆中第一个被分配的内存块的 size 字段的 P 位都会被设置为 1，以便于防止访问前面的非法内存。当一个chunk 的size 的P位为0时，我们能通过 prev_size 字段来获取上一个 chunk 的大小以及地址。这也方便进行空闲chunk之间的合并</span></span><br><span class="line">            	<span class="type">bool</span> IS_MAPPED:<span class="number">1</span>;<span class="comment">//记录当前chunk是否是由mmap分配的</span></span><br><span class="line">            	<span class="type">bool</span> NON_MAIN_AREA:<span class="number">1</span>;<span class="comment">//记录当前 chunk 是否不属于主线程</span></span><br><span class="line">            &#125;;</span><br><span class="line">    	&#125;;</span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="type">char</span> data[size&amp;<span class="number">0xFFFFFFF8</span>]<span class="comment">//只取高29位</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
 <p>而其中<code>char data[size&amp;0xFFFFFFF8]</code>部分的第一个<code>size_t</code>大小个字节用于fd,第二个<code>size_t</code>大小个字节用于bk在已经分配的情况下，这两个指针无意义可直接被数据覆盖</p>
+<p>已经free掉的则为</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chunk</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="comment">//具体定义根据对应堆类型决定</span></span><br><span class="line">    <span class="type">size_t</span> fd;<span class="comment">//指向下一个堆块</span></span><br><span class="line">    <span class="type">size_t</span> bk;<span class="comment">//指向上一个堆块</span></span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>这些chunk由链表串联，这一系列相同大小的称为bin</p>
+<p>例如xxbin[0x20]–&gt;chunk1–&gt;chunk2 (其实是循环链表)</p>
+<blockquote>
 <h2 id="Tcache-bin"><a href="#Tcache-bin" class="headerlink" title="Tcache bin"></a>Tcache bin</h2><p>tcache bin 是在后续glibc版本中使用的(libc2.26)</p>
-<h2 id="Unsorted-bin"><a href="#Unsorted-bin" class="headerlink" title="Unsorted bin"></a>Unsorted bin</h2>
+<h2 id="Unsorted-bin"><a href="#Unsorted-bin" class="headerlink" title="Unsorted bin"></a>Unsorted bin</h2></blockquote>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         </div>
 
         
@@ -613,7 +620,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-09-18 01:41:15
+                    :</strong> 2024-10-27 23:03:47
             </li>
         
         <li>
@@ -728,7 +735,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">堆结构</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tcache-bin"><span class="nav-text">Tcache bin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unsorted-bin"><span class="nav-text">Unsorted bin</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tcache-bin"><span class="nav-text">Tcache bin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unsorted-bin"><span class="nav-text">Unsorted bin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a></li></ol>
 
     </div>
 </div>
