@@ -320,11 +320,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">94</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">205</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -361,11 +361,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">94</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">205</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -382,6 +382,85 @@
                 
                     <div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/06/08/Pwn/linux/heap/%E5%A0%86%E7%BB%93%E6%9E%84/">
+                            堆结构
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            free后的堆块管理根据不同情况使用不同的bin链
+堆漏洞挖掘中的bins分类(fastbin、unsorted bin、small bin、large bin)-CSDN博客 
+已经申请的堆结构类似于下面
+12345678910111213141516171819202122struct chunk&#123;    size_t prev_size;    union    &#123;...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Jun 08 2024 17:02:22 GMT+0800">
+                
+                    2024-06-08
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/">linux</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/heap/">heap</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/06/08/Pwn/linux/heap/%E5%A0%86%E7%BB%93%E6%9E%84/">阅读全文<span class="seo-reader-text">堆结构</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1050,99 +1129,6 @@ Example
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/05/12/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/WASM/start/">
-                            start
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            工具
-
-推荐工具jeb
-其他工具apt安装下面两个即可
-wabt	binaryen 
-wasm-decompile 用于将wasm转为类js语言
-wasm2wat 用于将wasm转为wat 前者是二进制文件 后者是文本
-
-jeb操作拖进jeb里选择wasmbc即可
-
-
-
-函数入口一般会以start开头
-
-
-
-之后就可以逆向啦
-但是存在一个问题，它可能会将常量认为是指针(地址)，同时在更改对应...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun May 12 2024 00:22:27 GMT+0800">
-                
-                    2024-05-12
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/Re/">Re</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/">语言逆向</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/WASM/">WASM</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/12/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/WASM/start/">阅读全文<span class="seo-reader-text">start</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1177,7 +1163,7 @@ jeb操作拖进jeb里选择wasmbc即可
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 205 篇文章
+                        共撰写了 206 篇文章
                     </span>
                     
                 </p>
