@@ -36,162 +36,15 @@
     
     <title>
         
-        Runwu2204
+            Runwu2204 - Redefine Your Hexo Journey.
+        
     </title>
 
     
 <link rel="stylesheet" href="/fonts/Chillax/chillax.css">
 
 
-    
-        <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
-        }
-    }
-
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    
-<script src="/js/libs/anime.min.js"></script>
-
-    <h1 class="ml13">
-        Runwu2204
-    </h1>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
-
-
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [100,0],
-                translateZ: 0,
-                opacity: [0,1],
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i
-            }).add({
-            targets: '.ml13 .letter',
-            translateY: [0,-100],
-            opacity: [1,0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        });
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
-            }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
-        } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
-        });
-
-        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
-        hidePreloaderAfterTimeout(5000);
-
-        function hidePreloaderAfterTimeout(delay) {
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 200);
-            }, delay);
-        }
-    </script>
-</div>
+    <!--- Inject Part-->
     
 
     
@@ -205,22 +58,22 @@
     
 
     
-<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
 
     
-<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
 
     <!--- Font Part-->
     
     
     
     
-
-    <!--- Inject Part-->
     
+    
+
     <script id="hexo-configurations">
     window.config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories/"},"links":{"submenus":{"Me":"/about","Github":"https://github.com/runwu2204","Blog":"https://runwu2204.github.io/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"relative","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories/"},"links":{"submenus":{"Me":"/about","Github":"https://github.com/runwu2204","Blog":"https://runwu2204.github.io/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"relative","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -259,17 +112,17 @@
 </div>
 
 
+
 <main class="page-container" id="swup">
 
     
 
-    <div class="main-content-container">
+    <div class="main-content-container flex flex-col justify-between min-h-dvh">
 
 
         <div class="main-content-header">
-            <header class="navbar-container">
-
-    <div class="navbar-content">
+            <header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
         <div class="left">
             
             <a class="logo-title" href="/">
@@ -377,8 +230,8 @@
         </div>
     </div>
 
-    <!-- Mobile drawer -->
-    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
         <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
             
                 
@@ -455,6 +308,9 @@
                             </div>
                         
                     </li>
+            
+
+            
             
         </ul>
 
@@ -543,9 +399,10 @@
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             HTMLWXML
 微信版的html，有些许修改，但基本上只是参数名上的修改
-123456789101112131415161718&lt;view&gt;&lt;/view&gt;&lt;!--用于显示块类似于&lt;head&gt;,&lt;bod...
+123456789101112131415161718&lt;view&gt;&lt;/view&gt;&lt;!--用于显示块类似于&lt;head&gt;,&lt;body&gt;之类的标签--&gt;&lt;scroll-view scroll-y=&quot;true&quot;&gt;&lt;!--滚动条的...
                         
                     </div>
 
@@ -610,10 +467,11 @@
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             C\C++语言具有asm关键字在我vscode中我使用的g++编译器进行编译的(g++跟gcc一样使用的是AT&amp;T语法)
 跟visualstudio中的MSCV编译器不同(MSCV使用的是intel语法)
 其需要用asm关键字
-12345as...
+12345asm(    &quot;语句1\n\t&quot;    &quot;语句2\n\t&quot;   )//&quot;\n\t&quot;用于...
                         
                     </div>
 
@@ -678,10 +536,11 @@
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             5.elf教会了我需要注意数据的类型与数据的长度，不然也容易犯错误
 关键在于看懂那几个强制类型转化，和运算符的顺序
 其main函数为
-1234567891011121314151617181920212223242526272829303132333...
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869i...
                         
                     </div>
 
@@ -756,12 +615,13 @@
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             装好了ubuntu
 它的glibc版本够用
 通过动态调试找到了其存储数据的正确顺序
 
 先依次输入数组中存起来备用
-123456789101112if ( v3 == v9 )  &#123;    for ( i = 0; i &lt;= 16; +...
+123456789101112if ( v3 == v9 )  &#123;    for ( i = 0; i &lt;= 16; ++i )    &#123;      if ( (unsigned __int8)s[i] &gt; 0x60u &amp;&amp; (un...
                         
                     </div>
 
@@ -836,10 +696,12 @@
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             学习报告（一到二周）语言学习汇编语言已基本了解其使用语法，及其功能（函数调用，返回父函数）
 mov，jmp，push，pop（基本语句）
 call（调用子函数），ret（返回父函数），leave（将栈中的指向子函数地址去除，恢复父函数指令）
-stac...
+stack用法存储函数在内存中的位置，存储变量，存储命令等
+C语言基本理解指针用法（用于指向变量地址），可用于子函数中调用外部变量,也可用于间接修改和间...
                         
                     </div>
 
@@ -904,9 +766,10 @@ stac...
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             学习报告（三到四周）base16可通过位运算（高效率）进行加密
 基本已经知道其加密模式
-123456789101112131415161718192021222324252627282930313233343536373839404142434445...
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980#i...
                         
                     </div>
 
@@ -971,10 +834,13 @@ stac...
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             寄存器在动态调试中需知道各寄存器意义及作用
 寄存器分为两类，通用寄存器和特殊寄存器。
 通用寄存器
-EAX（寄存器寄存器-累加器）：最常用于算术，逻辑和数据传输指令、乘法和除法运算使用此寄存器。对于Windows API函数，函数的返回值通常将存储在E...
+EAX（寄存器寄存器-累加器）：最常用于算术，逻辑和数据传输指令、乘法和除法运算使用此寄存器。对于Windows API函数，函数的返回值通常将存储在EAX寄存器中。
+EBX（基址寄存器）：EBX寄存器可以直接访问存储器数据，它也是一个通用寄存器。
+ECX（计数寄存器）：ECX是一个共享寄存器，...
                         
                     </div>
 
@@ -1039,9 +905,14 @@ EAX（寄存器寄存器-累加器）：最常用于算术，逻辑和数据传�
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             汇编语言cpu中储存需要用到的数值地址之类的名叫寄存器(AX,BX,CX诸如此类)。
 cpu执行命令是按次序进行的通过cs，ip共同决定cs（段地址），ip（偏移地址）
-cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2...
+cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2（由下条命令长度决定）
+然后执行下次命令。如下图（由左至右CS:IP,指令在十六进制下的表现,指令含义）
+
+工具Dosbox常用命令
+r命令-展...
                         
                     </div>
 
@@ -1106,12 +977,16 @@ cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             RE1.PYC先启动该文件看下运行结果
 
 不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码
 pyc文件主要是无法通过f5反汇编查找代码逻辑
 
-尝试通过shift+f12查询字符串，结...
+尝试通过shift+f12查询字符串，结果如下
+
+一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般）
+通过双击寻找，往上翻后最终找到了对应的密文（非flag...
                         
                     </div>
 
@@ -1176,6 +1051,7 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
 
                     <div class="home-article-content markdown-body">
                         
+                            
                             尝试对3.elf进行动态调试
 
 寄，我的glibc库版本低了
@@ -1183,7 +1059,7 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
 但根据2.elf的经验，其存储顺序应该是按上到下的顺序存储的，从低位到高位存储的
 同时这个每两位就代表了一个字符刚好就有42个字符符合校验的字符个数
 所以z3破解代码为
-12345678...
+12345678910111213141516171819202122232425262728293031323334353637383940414243444...
                         
                     </div>
 
@@ -1272,9 +1148,18 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
               -
             
             2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">runwu2204</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 205 篇文章
+                    </span>
+                    
+                </p>
+            
         </div>
         
-            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
             <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
                 
                     <span id="busuanzi_container_site_uv" class="lg:!block">
@@ -1292,7 +1177,7 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
         
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
-            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.0</a></span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
         </div>
         
         
@@ -1383,7 +1268,7 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="站内搜索您需要的内容..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
@@ -1511,18 +1396,29 @@ pyc文件主要是无法通过f5反汇编查找代码逻辑
 
 
 
-
-<div class="post-scripts" data-swup-reload-script>
     
-        
-<script src="/js/tools/tocToggle.js" type="module"></script>
+<script src="/js/libs/anime.min.js"></script>
 
-<script src="/js/layouts/toc.js" type="module"></script>
 
-<script src="/js/plugins/tabs.js" type="module"></script>
+
+
 
     
-</div>
+<script src="/js/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
 
 
 </body>
