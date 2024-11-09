@@ -320,11 +320,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -361,11 +361,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -382,6 +382,152 @@
                 
                     <div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/Re/">
+                            Re
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            汇编语言cpu中储存需要用到的数值地址之类的名叫寄存器(AX,BX,CX诸如此类)。
+cpu执行命令是按次序进行的通过cs，ip共同决定cs（段地址），ip（偏移地址）
+cs*16+ip便为此次命令的地址，若此次命令并不改变cs或ip，则ip+3或2（由下条命令长度决定）
+然后执行下次命令。如下图（由左至右CS:IP,指令在十六进制下的表现,指令含义）
+
+工具Dosbox常用命令
+r命令-展...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 17:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/Re/">阅读全文<span class="seo-reader-text">Re</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">
+                            学习报告(最后一次任务)
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            RE1.PYC先启动该文件看下运行结果
+
+不知道是因为什么无法再次运行，通过搜索找到是因为没有原py文件所以无法再次运行，那就通过ida(32位)看看其源代码
+pyc文件主要是无法通过f5反汇编查找代码逻辑
+
+尝试通过shift+f12查询字符串，结果如下
+
+一般有效的字符串，线索之类的会出现在此，如果不有效也一般会放在内存附近（一般）
+通过双击寻找，往上翻后最终找到了对应的密文（非flag...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jan 05 2023 17:05:18 GMT+0800">
+                
+                    2023-01-05
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/">实验室报告</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/05/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A(%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1)/">阅读全文<span class="seo-reader-text">学习报告(最后一次任务)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -892,7 +1038,7 @@ IntVal (val, ctx&#x3D;None)，创建一个...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 206 篇文章
+                        共撰写了 208 篇文章
                     </span>
                     
                 </p>

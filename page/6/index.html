@@ -320,11 +320,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -361,11 +361,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -382,6 +382,193 @@
                 
                     <div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/06/09/Pwn/linux/Fmtstr/">
+                            Fmtstr
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            主要利用printf(&quot;用户输入&quot;)达成任意地址读写
+写入主要使用 %n占位符(将该占位符之前的字符数输出到对应地址)
+
+
+
+
+占位符
+字节数
+
+
+
+%lln
+8
+
+
+%n
+4
+
+
+%hn
+2
+
+
+%hhn
+1
+
+
+
+再结合%数字$占位符
+例如
+
+%2$s 指的就是第二个参数当作s输出
+
+结合这两个，如果我要写入一个’a’(0x61)到对应地址0x12345678，假设此...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Jun 09 2024 23:36:36 GMT+0800">
+                
+                    2024-06-09
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/">linux</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/06/09/Pwn/linux/Fmtstr/">阅读全文<span class="seo-reader-text">Fmtstr</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/">
+                            操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            pwndbg 基本操作指令 - MuRKuo - 博客园 (cnblogs.com) 
+动态分析工具 - 2.3.1 GDB - 《CTF 竞赛入门指南(CTF All In One)》 - 书栈网 · BookStack 
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Jun 08 2024 18:48:34 GMT+0800">
+                
+                    2024-06-08
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/">linux</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/tool/">tool</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Pwn/linux/tool/pwndbg/">pwndbg</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/06/08/Pwn/linux/tool/pwndbg/%E6%93%8D%E4%BD%9C/">阅读全文<span class="seo-reader-text">操作</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -972,163 +1159,6 @@ su -c ma...
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/05/24/Pwn/linux/tool/one_gadget/">
-                            one_gadget
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            可通过glibc来获取shell
-pip3 install one_gadget安装即可
-Example
-通过one_gadget libc路径找到对应的 get shell地址和 get shell的条件
-如下面的
-12345678910111213141516171819202122┌──(wrwrw㉿DESKTOP-1DM15A6)-[~]└─$ one_gadget /lib/x86...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri May 24 2024 23:19:18 GMT+0800">
-                
-                    2024-05-24
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/Pwn/">Pwn</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Pwn/linux/">linux</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Pwn/linux/tool/">tool</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/24/Pwn/linux/tool/one_gadget/">阅读全文<span class="seo-reader-text">one_gadget</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/05/15/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/golang/Cgo_dll/">
-                            Cgo_dll
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 02:01:27 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/Re/">Re</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/">语言逆向</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/golang/">golang</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/golang/Cgo_dll/">阅读全文<span class="seo-reader-text">Cgo_dll</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1163,7 +1193,7 @@ Example
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 206 篇文章
+                        共撰写了 208 篇文章
                     </span>
                     
                 </p>

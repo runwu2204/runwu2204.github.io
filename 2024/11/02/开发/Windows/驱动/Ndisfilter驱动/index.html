@@ -13,27 +13,26 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/10/26/开发/rust/driver/windows/"/>
+    <link rel="canonical" href="http://example.com/2024/11/02/开发/windows/驱动/ndisfilter驱动/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="参考microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs   wdk  使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本  LLVM  安装完成后将LL">
+        <meta name="description" content="Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me  需要inf文件和cer文件 inf文件用于安装驱动，cer文件用于根证书信任驱动  如果没有根证书信任，会将自己安装的驱动优先级放到最后，会被系统默认的驱动占用，导致无">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows">
-<meta property="og:url" content="http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/index.html">
+<meta property="og:title" content="Ndisfilter驱动">
+<meta property="og:url" content="http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Ndisfilter%E9%A9%B1%E5%8A%A8/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="参考microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs   wdk  使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本  LLVM  安装完成后将LL">
+<meta property="og:description" content="Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me  需要inf文件和cer文件 inf文件用于安装驱动，cer文件用于根证书信任驱动  如果没有根证书信任，会将自己安装的驱动优先级放到最后，会被系统默认的驱动占用，导致无">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030847031.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030906763.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030913718.png">
-<meta property="article:published_time" content="2024-10-25T17:30:02.000Z">
-<meta property="article:modified_time" content="2024-11-03T05:05:53.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036175.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030037832.png">
+<meta property="article:published_time" content="2024-11-02T15:48:58.000Z">
+<meta property="article:modified_time" content="2024-11-06T16:27:50.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png">
     
     
     <!--- Icon Part-->
@@ -45,7 +44,7 @@
     
     <title>
         
-            windows | Runwu2204
+            Ndisfilter驱动 | Runwu2204
         
     </title>
 
@@ -329,11 +328,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -359,7 +358,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">windows</h1>
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Ndisfilter驱动</h1>
                 </div>
             
             </div>
@@ -380,15 +379,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-10-26 01:30:02</span>
-        <span class="mobile">2024-10-26 01:30:02</span>
+        <span class="desktop">2024-11-02 23:48:58</span>
+        <span class="mobile">2024-11-02 23:48:58</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-03 13:05:53</span>
-            <span class="mobile">2024-11-03 13:05:53</span>
+            <span class="desktop">2024-11-07 00:27:50</span>
+            <span class="mobile">2024-11-07 00:27:50</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -412,7 +411,7 @@
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E5%8F%91/Rust/">Rust</a>&nbsp;
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/">Windows</a>&nbsp;
                         </li>
                     
                     
@@ -422,7 +421,7 @@
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E5%8F%91/Rust/Driver/">Driver</a>&nbsp;
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/">驱动</a>&nbsp;
                         </li>
                     
                     
@@ -451,72 +450,34 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/microsoft/Windows-rust-driver-samples" >microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+            <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/Ragebone/MS_bindview" >Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>需要inf文件和cer文件</p>
+<p>inf文件用于安装驱动，cer文件用于根证书信任驱动</p>
 <blockquote>
-<p>wdk</p>
-<blockquote>
-<p>使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本</p>
+<p>如果没有根证书信任，会将自己安装的驱动优先级放到最后，会被系统默认的驱动占用，导致无法正常使用设备。</p>
 </blockquote>
-<p>LLVM</p>
-<blockquote>
-<p>安装完成后将<code>LLVM路径/bin</code>放入<code>LIBCLANG_PATH</code>环境变量中</p>
-</blockquote>
-</blockquote>
-<p>测试的时候在根目录下<code>cargo make</code>即可</p>
-<blockquote>
-<p>出现以下问题</p>
+<p>选择service点击install</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png"
-                      alt="image-20241026013233394"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png"
+                      alt="image-20241103003622135"
                 ></p>
-<p>代表你有多个kit版本，主要需要将<code>Windows Kits\10\Lib</code>与<code>Windows Kits\10\Tools</code>出现的最高版本一样，否则他会在另外一个地方找不到对应文件的存在</p>
-<p>例如一个10.0.26一个10.0.22,他会直接在两个地方找10.0.26，如果没找到就会报错</p>
-<p>需要注意对应wdk安装的版本</p>
-</blockquote>
-<p>快速创建项目</p>
-<blockquote>
-<p>工具cargo-generate</p>
-<p><code>cargo install cargo-generate</code>即可</p>
-</blockquote>
-<p><code>cargo generate --git https://github.com/microsoft/Windows-rust-driver-samples</code></p>
-<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>参考<a class="link"   target="_blank" rel="noopener" href="https://github.com/microsoft/Windows-rust-driver-samples/issues/30" >Driver does not attach to device and does not log anything · Issue #30 · microsoft&#x2F;Windows-rust-driver-samples <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<blockquote>
-<p><code>pnputil.exe /add-driver .\echo_2.inf /install</code></p>
-<p><code>pnputil /enum-devices /class Sample /connected</code></p>
-<p><code>devgen.exe /add /hardwareid &quot;root\ECHO_2&quot;</code></p>
-</blockquote>
-<p>因为对应设备使用的驱动为<code> c_swdevice.inf</code>而不是我们安装的<code>echo_2.inf</code></p>
+<p>从磁盘安装</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030847031.png"
-                      alt="image-20241103084747669"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036175.png"
+                      alt="image-20241103003602133"
                 ></p>
-<p>原因是证书未被信任(优先级 已签名&gt;未签名)，可以先将target下的</p>
+<p>选择inf</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030906763.png"
-                      alt="image-20241103090620603"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030037832.png"
+                      alt="image-20241103003710782"
                 ></p>
-<p>放入根证书 然后重新安装即可</p>
-<h2 id="代码37"><a href="#代码37" class="headerlink" title="代码37"></a>代码37</h2><p>老工具链</p>
-<blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030913718.png"
-                      alt="image-20241103091322633"
-                ></p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389" >https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>更改<code>wdk-sys/src/wdf.rs</code></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WdfMinimumVersionRequired: ULONG = 33;</span><br><span class="line">//变为</span><br><span class="line">WdfMinimumVersionRequired: ULONG = 31;</span><br></pre></td></tr></table></figure></div>
-
-
-</blockquote>
-<p>新工具链</p>
+<p>通过instDrv操纵驱动启停也可通过命令行<code>net start servicename</code> <code>net stop servicename</code></p>
 
         </div>
 
@@ -524,18 +485,18 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> windows</li>
+        <li><strong>标题:</strong> Ndisfilter驱动</li>
         <li><strong>作者:</strong> runwu2204</li>
         <li><strong>创建于
-                :</strong> 2024-10-26 01:30:02</li>
+                :</strong> 2024-11-02 23:48:58</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-11-03 13:05:53
+                    :</strong> 2024-11-07 00:27:50
             </li>
         
         <li>
-            <strong>链接:</strong> https://runwu2204.github.io/2024/10/26/开发/Rust/Driver/windows/
+            <strong>链接:</strong> https://runwu2204.github.io/2024/11/02/开发/Windows/驱动/Ndisfilter驱动/
         </li>
         <li>
             <strong>
@@ -563,13 +524,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/"
+                        href="/2024/11/03/%E5%BC%80%E5%8F%91/Rust/%E5%A4%9A%E5%B7%A5%E5%85%B7%E9%93%BE/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Vmware双机调试</span>
+                                <span class="post-nav-title-item">多工具链</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -579,10 +540,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/10/02/Crypto/RSA/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/"
+                        href="/2024/11/02/%E5%BC%80%E5%8F%91/linux/%E7%BD%91%E7%BB%9C%E9%87%8D%E7%BD%AE/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">二次剩余</span>
+                                <span class="post-nav-title-item">网络重置</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -646,8 +607,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">目录</div>
-        <div class="page-title">windows</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD"><span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%8137"><span class="nav-text">代码37</span></a></li></ol>
+        <div class="page-title">Ndisfilter驱动</div>
+        
 
     </div>
 </div>
@@ -680,7 +641,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 206 篇文章
+                        共撰写了 208 篇文章
                     </span>
                     
                 </p>

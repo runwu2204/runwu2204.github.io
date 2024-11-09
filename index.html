@@ -350,11 +350,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -391,11 +391,11 @@
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">95</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">206</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">208</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -412,6 +412,177 @@
                 
                     <div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/11/09/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/windbg%E8%B0%83%E8%AF%95/">
+                            windbg调试
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            在虚拟机上配置net调试后
+
+bcdedit /set testsigning on
+bcdedit /dbgsettings net hostip:宿主机ip(不是虚拟机) port:54321
+bcdedit /dbgsettings
+
+
+此处我的驱动名叫echo_2.sys
+设置对应的加载事件断点
+sxe ld echo_2
+lm m echo_2
+
+12343: kd&gt; lm ...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 09 2024 17:09:00 GMT+0800">
+                
+                    2024-11-09
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/">Windows</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/">驱动</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/">调试</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/11/09/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/windbg%E8%B0%83%E8%AF%95/">阅读全文<span class="seo-reader-text">windbg调试</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/11/08/%E5%BC%80%E5%8F%91/VMware/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">
+                            端口转发
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            
+
+
+
+
+类似于这样即可
+
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Nov 08 2024 01:44:30 GMT+0800">
+                
+                    2024-11-08
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/VMware/">VMware</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/11/08/%E5%BC%80%E5%8F%91/VMware/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">阅读全文<span class="seo-reader-text">端口转发</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -635,7 +806,7 @@ conda env config vars set xxx=xxx
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/">
+                        <a href="/2024/11/02/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Ndisfilter%E9%A9%B1%E5%8A%A8/">
                             Ndisfilter驱动
                         </a>
                     </h3>
@@ -644,14 +815,10 @@ conda env config vars set xxx=xxx
                         
                             
                             Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me 
-需要inf文件
-选择service点击install
+需要inf文件和cer文件
+inf文件用于安装驱动，cer文件用于根证书信任驱动
 
-从磁盘安装
-
-选择inf
-
-通过instDrv操纵驱动启停也可通过命令行net start service...
+如果没有根证书信任，会将自己安装的驱动优先级放到最后，会被系统默认的驱动占用，...
                         
                     </div>
 
@@ -688,13 +855,23 @@ conda env config vars set xxx=xxx
                     
                     
                 
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/">驱动</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
         </span>
         
         
     </div>
 
-    <a href="/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/">阅读全文<span class="seo-reader-text">Ndisfilter驱动</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/11/02/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Ndisfilter%E9%A9%B1%E5%8A%A8/">阅读全文<span class="seo-reader-text">Ndisfilter驱动</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -789,12 +966,12 @@ conda env config vars set xxx=xxx
 https 不能免密
 https://github.com/username/reponame 
 ssh 可免密
-&#x67;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d; :username&#x2F;reponame
+&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d; :username&#x2F;reponame
 
 免密传输
 
 需要远程信任本地公钥
-ss...
+...
                         
                     </div>
 
@@ -919,7 +1096,7 @@ ss...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/">
+                        <a href="/2024/10/28/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/">
                             Vmware双机调试
                         </a>
                     </h3>
@@ -927,7 +1104,7 @@ ss...
                     <div class="home-article-content markdown-body">
                         
                             
-                            双机调试需要配置一个虚拟机
+                            串口双机调试需要配置一个虚拟机
 
 在虚拟机内win+r
 
@@ -937,7 +1114,9 @@ command
 
 创建驱动服务sc create mydriver binpath=c:\1.sys type=kernel start=demand error=ignore
 
-
+TCPbcdedit /set testsigning on
+重启后使用
+bcdedit /dbgsettings net hostip:宿主机ip(不...
                         
                     </div>
 
@@ -974,66 +1153,12 @@ command
                     
                     
                 
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/">阅读全文<span class="seo-reader-text">Vmware双机调试</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/">
-                            windows
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            参考microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs 
-
-wdk
-
-使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本
-
-LLVM
-
-安装完成后...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Oct 26 2024 01:30:02 GMT+0800">
-                
-                    2024-10-26
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
                     
                         
+                            <li>></li>
+                        
                         <li>
-                            <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/">驱动</a>&nbsp;
                         </li>
                     
                     
@@ -1043,7 +1168,7 @@ LLVM
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E5%8F%91/Rust/">Rust</a>&nbsp;
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/">调试</a>&nbsp;
                         </li>
                     
                     
@@ -1053,7 +1178,7 @@ LLVM
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E5%8F%91/Rust/Driver/">Driver</a>&nbsp;
+                            <a href="/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>&nbsp;
                         </li>
                     
                     
@@ -1064,74 +1189,7 @@ LLVM
         
     </div>
 
-    <a href="/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/">阅读全文<span class="seo-reader-text">windows</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/10/02/Crypto/RSA/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/">
-                            二次剩余
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            [羊城杯 2020]GMC | NSSCTF 
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 02 2024 17:31:02 GMT+0800">
-                
-                    2024-10-02
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/Crypto/">Crypto</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/Crypto/RSA/">RSA</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/10/02/Crypto/RSA/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/">阅读全文<span class="seo-reader-text">二次剩余</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/10/28/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/">阅读全文<span class="seo-reader-text">Vmware双机调试</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1171,7 +1229,7 @@ LLVM
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 206 篇文章
+                        共撰写了 208 篇文章
                     </span>
                     
                 </p>

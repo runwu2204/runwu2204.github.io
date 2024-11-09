@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-03T18:51:14.000Z</updated>
+  <updated>2024-11-09T10:16:23.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windbg调试</title>
+    <link href="http://example.com/2024/11/09/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/windbg%E8%B0%83%E8%AF%95/"/>
+    <id>http://example.com/2024/11/09/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/windbg%E8%B0%83%E8%AF%95/</id>
+    <published>2024-11-09T09:09:00.000Z</published>
+    <updated>2024-11-09T10:16:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在虚拟机上配置net调试后</p><blockquote><p><code>bcdedit /set testsigning on</code></p><p><code>bcdedit /dbgsettings net hostip:宿主机ip(不是虚拟机) port:54321</code></p><p><code>bcdedit /dbgsettings</code></p></blockquote><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411091709757.png"                      alt="image-20241109170927301"                ></p><p>此处我的驱动名叫<code>echo_2.sys</code></p><p>设置对应的加载事件断点</p><p><code>sxe ld echo_2</code></p><p><code>lm m echo_2</code></p><blockquote><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3: kd&gt; lm m echo_2</span><br><span class="line">Browse full module list</span><br><span class="line">start             end                 module name</span><br><span class="line">fffff807`282b0000 fffff807`282cf000   echo_2     (deferred)     </span><br></pre></td></tr></table></figure></div></blockquote><p>IDA上设置基址为刚拿到的<code>0xfffff807282b0000</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411091739095.png"                      alt="image-20241109173916817"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411091740920.png"                      alt="image-20241109174023751"                ></p><p>找到要断住的位置比如我要断<code> FxDriverEntry</code></p><p>在windbg内<code>bp FFFFF807282C00F4</code></p><p>就可以中断在对应位置</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411091741255.png"                      alt="image-20241109174132063"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在虚拟机上配置net调试后&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;bcdedit /set testsigning on&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcdedit /dbgsettings net hostip:宿主机ip(不是虚拟机) port</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
+    
+    <category term="驱动" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/"/>
+    
+    <category term="调试" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>端口转发</title>
+    <link href="http://example.com/2024/11/08/%E5%BC%80%E5%8F%91/VMware/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    <id>http://example.com/2024/11/08/%E5%BC%80%E5%8F%91/VMware/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</id>
+    <published>2024-11-07T17:44:30.000Z</published>
+    <updated>2024-11-07T17:44:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080101297.png"                      alt="image-20241108010100098"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080101998.png"                      alt="image-20241108010136931"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080101009.png"                      alt="image-20241108010151955"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080102397.png"                      alt="image-20241108010205234"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080102783.png"                      alt="image-20241108010217733"                ></p><p>类似于这样即可</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411080102108.png"                      alt="image-20241108010223082"                ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/loading.svg&quot;
+                     data-src=&quot;https://cdn.jsdelivr.n</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="VMware" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/VMware/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>取消warningaserror</title>
@@ -93,12 +151,12 @@
   
   <entry>
     <title>Ndisfilter驱动</title>
-    <link href="http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/"/>
-    <id>http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/Ndisfilter%E9%A9%B1%E5%8A%A8/</id>
+    <link href="http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Ndisfilter%E9%A9%B1%E5%8A%A8/"/>
+    <id>http://example.com/2024/11/02/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Ndisfilter%E9%A9%B1%E5%8A%A8/</id>
     <published>2024-11-02T15:48:58.000Z</published>
-    <updated>2024-11-02T16:38:16.000Z</updated>
+    <updated>2024-11-06T16:27:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/Ragebone/MS_bindview" >Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>需要inf文件</p><p>选择service点击install</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png"                      alt="image-20241103003622135"                ></p><p>从磁盘安装</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036175.png"                      alt="image-20241103003602133"                ></p><p>选择inf</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030037832.png"                      alt="image-20241103003710782"                ></p><p>通过instDrv操纵驱动启停也可通过命令行<code>net start servicename</code> <code>net stop servicename</code></p>]]></content>
+    <content type="html"><![CDATA[<p><a class="link"   href="https://github.com/Ragebone/MS_bindview" >Ragebone&#x2F;MS_bindview: Compiled Microsoft Bindview tool, since it was a PITA to build. 64Bit. #pls_dont_sue_me <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>需要inf文件和cer文件</p><p>inf文件用于安装驱动，cer文件用于根证书信任驱动</p><blockquote><p>如果没有根证书信任，会将自己安装的驱动优先级放到最后，会被系统默认的驱动占用，导致无法正常使用设备。</p></blockquote><p>选择service点击install</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036180.png"                      alt="image-20241103003622135"                ></p><p>从磁盘安装</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030036175.png"                      alt="image-20241103003602133"                ></p><p>选择inf</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030037832.png"                      alt="image-20241103003710782"                ></p><p>通过instDrv操纵驱动启停也可通过命令行<code>net start servicename</code> <code>net stop servicename</code></p>]]></content>
     
     
       
@@ -111,6 +169,8 @@
     <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
+    
+    <category term="驱动" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/"/>
     
     
   </entry>
@@ -146,7 +206,7 @@
     <published>2024-10-31T17:32:06.000Z</published>
     <updated>2024-10-31T17:39:47.000Z</updated>
     
-    <content type="html"><![CDATA[<p>两种协议(根据链接不同)</p><blockquote><p>https 不能免密</p><p><a class="link"   href="https://github.com/username/reponame" >https://github.com/username/reponame <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>ssh 可免密</p><p><a class="link"   href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d;" >&#x67;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>:username&#x2F;reponame</p></blockquote><p>免密传输</p><blockquote><p>需要远程信任本地公钥</p><p><code>ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;</code></p><p>github <code>setting</code>-&gt;<code>SSH and GPG keys</code>-&gt;<code>New SSH key</code></p><p><code>ssh -T git@github.com</code> 输出successfully代表网络连接成功</p><p><code>ssh-agent -s</code>启用ssh服务后<code>ssh-add 私钥地址(默认生成在~/.ssh/id_rsa) </code></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>两种协议(根据链接不同)</p><blockquote><p>https 不能免密</p><p><a class="link"   href="https://github.com/username/reponame" >https://github.com/username/reponame <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>ssh 可免密</p><p><a class="link"   href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;" >&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>:username&#x2F;reponame</p></blockquote><p>免密传输</p><blockquote><p>需要远程信任本地公钥</p><p><code>ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;</code></p><p>github <code>setting</code>-&gt;<code>SSH and GPG keys</code>-&gt;<code>New SSH key</code></p><p><code>ssh -T git@github.com</code> 输出successfully代表网络连接成功</p><p><code>ssh-agent -s</code>启用ssh服务后<code>ssh-add 私钥地址(默认生成在~/.ssh/id_rsa) </code></p></blockquote>]]></content>
     
     
       
@@ -193,21 +253,20 @@
   
   <entry>
     <title>Vmware双机调试</title>
-    <link href="http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/"/>
-    <id>http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/</id>
+    <link href="http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/"/>
+    <id>http://example.com/2024/10/28/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Vmware%E5%8F%8C%E6%9C%BA%E8%B0%83%E8%AF%95/</id>
     <published>2024-10-28T03:13:20.000Z</published>
-    <updated>2024-10-28T04:15:10.000Z</updated>
+    <updated>2024-11-08T14:29:44.000Z</updated>
     
-    <content type="html"><![CDATA[<p>双机调试需要配置一个虚拟机</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281119860.png"                      alt="image-20241028111942588"                ></p><p>在虚拟机内<code>win+r</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281154655.png"                      alt="image-20241028115407606"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155364.png"                      alt="image-20241028115501314"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155864.png"                      alt="image-20241028115512824"                ></p><p>command</p><blockquote><p>创建驱动服务<code>sc create mydriver binpath=c:\1.sys type=kernel start=demand error=ignore</code></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="串口"><a href="#串口" class="headerlink" title="串口"></a>串口</h2><p>双机调试需要配置一个虚拟机</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281119860.png"                      alt="image-20241028111942588"                ></p><p>在虚拟机内<code>win+r</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281154655.png"                      alt="image-20241028115407606"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155364.png"                      alt="image-20241028115501314"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410281155864.png"                      alt="image-20241028115512824"                ></p><p>command</p><blockquote><p>创建驱动服务<code>sc create mydriver binpath=c:\1.sys type=kernel start=demand error=ignore</code></p></blockquote><h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><code>bcdedit /set testsigning on</code></p><p>重启后使用</p><p><code>bcdedit /dbgsettings net hostip:宿主机ip(不是虚拟机) port:50010</code>设置对应端口，此处我使用NAT</p><p>可以用<code>bcdedit /dbgsettings</code>查看当前调试配置</p><blockquote><p>注意：需要两个电脑相互ping通，注意防火墙的配置</p></blockquote><p>最好将虚拟机设置成静态ip，方便vmware进行端口转发</p><p>ida其他版本 </p><p>ida9.0的windbg <code>connect string</code>:<code>net:port=54321,key=w229goc2j72k.2pnz9ylivxg79.17cgn4ndol1zi.1keplhskzpdtx</code></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;双机调试需要配置一个虚拟机&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;串口&quot;&gt;&lt;a href=&quot;#串口&quot; class=&quot;headerlink&quot; title=&quot;串口&quot;&gt;&lt;/a&gt;串口&lt;/h2&gt;&lt;p&gt;双机调试需要配置一个虚拟机&lt;/p&gt;
 &lt;p&gt;&lt;img  
                      lazyload
-                     src=&quot;/images/loading.svg&quot;
-                     data-src=&quot;h</summary>
+            </summary>
       
     
     
@@ -216,17 +275,23 @@
     
     <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
     
+    <category term="驱动" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/"/>
+    
+    <category term="调试" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/"/>
+    
+    <category term="环境配置" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/%E8%B0%83%E8%AF%95/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
     
   </entry>
   
   <entry>
-    <title>windows</title>
-    <link href="http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/"/>
-    <id>http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Rust/Driver/windows/</id>
+    <title>DriverSample</title>
+    <link href="http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Rust/DriverSample/"/>
+    <id>http://example.com/2024/10/26/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Rust/DriverSample/</id>
     <published>2024-10-25T17:30:02.000Z</published>
-    <updated>2024-11-03T05:05:53.000Z</updated>
+    <updated>2024-11-08T12:11:09.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples" >microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>wdk</p><blockquote><p>使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本</p></blockquote><p>LLVM</p><blockquote><p>安装完成后将<code>LLVM路径/bin</code>放入<code>LIBCLANG_PATH</code>环境变量中</p></blockquote></blockquote><p>测试的时候在根目录下<code>cargo make</code>即可</p><blockquote><p>出现以下问题</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png"                      alt="image-20241026013233394"                ></p><p>代表你有多个kit版本，主要需要将<code>Windows Kits\10\Lib</code>与<code>Windows Kits\10\Tools</code>出现的最高版本一样，否则他会在另外一个地方找不到对应文件的存在</p><p>例如一个10.0.26一个10.0.22,他会直接在两个地方找10.0.26，如果没找到就会报错</p><p>需要注意对应wdk安装的版本</p></blockquote><p>快速创建项目</p><blockquote><p>工具cargo-generate</p><p><code>cargo install cargo-generate</code>即可</p></blockquote><p><code>cargo generate --git https://github.com/microsoft/Windows-rust-driver-samples</code></p><h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>参考<a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples/issues/30" >Driver does not attach to device and does not log anything · Issue #30 · microsoft&#x2F;Windows-rust-driver-samples <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p><code>pnputil.exe /add-driver .\echo_2.inf /install</code></p><p><code>pnputil /enum-devices /class Sample /connected</code></p><p><code>devgen.exe /add /hardwareid &quot;root\ECHO_2&quot;</code></p></blockquote><p>因为对应设备使用的驱动为<code> c_swdevice.inf</code>而不是我们安装的<code>echo_2.inf</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030847031.png"                      alt="image-20241103084747669"                ></p><p>原因是证书未被信任(优先级 已签名&gt;未签名)，可以先将target下的</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030906763.png"                      alt="image-20241103090620603"                ></p><p>放入根证书 然后重新安装即可</p><h2 id="代码37"><a href="#代码37" class="headerlink" title="代码37"></a>代码37</h2><p>老工具链</p><blockquote><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030913718.png"                      alt="image-20241103091322633"                ></p><p><a class="link"   href="https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389" >https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>更改<code>wdk-sys/src/wdf.rs</code></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WdfMinimumVersionRequired: ULONG = 33;</span><br><span class="line">//变为</span><br><span class="line">WdfMinimumVersionRequired: ULONG = 31;</span><br></pre></td></tr></table></figure></div></blockquote><p>新工具链</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples" >microsoft&#x2F;Windows-rust-driver-samples: Rust port of the official Windows Driver Samples on Github. Leverages windows-drivers-rs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p>wdk</p><blockquote><p>使用wdk即可，ewdk没太大必要，需要注意自己使用的wdk对应的msvc链子的版本</p></blockquote><p>LLVM</p><blockquote><p>安装完成后将<code>LLVM路径/bin</code>放入<code>LIBCLANG_PATH</code>环境变量中</p></blockquote></blockquote><p>测试的时候在根目录下<code>cargo make</code>即可</p><blockquote><p>出现以下问题</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202410260132610.png"                      alt="image-20241026013233394"                ></p><p>代表你有多个kit版本，主要需要将<code>Windows Kits\10\Lib</code>与<code>Windows Kits\10\Tools</code>出现的最高版本一样，否则他会在另外一个地方找不到对应文件的存在</p><p>例如一个10.0.26一个10.0.22,他会直接在两个地方找10.0.26，如果没找到就会报错</p><p>需要注意对应wdk安装的版本</p></blockquote><p>快速创建项目</p><blockquote><p>工具cargo-generate</p><p><code>cargo install cargo-generate</code>即可</p></blockquote><p><code>cargo generate --git https://github.com/microsoft/Windows-rust-driver-samples</code></p><h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>参考<a class="link"   href="https://github.com/microsoft/Windows-rust-driver-samples/issues/30" >Driver does not attach to device and does not log anything · Issue #30 · microsoft&#x2F;Windows-rust-driver-samples <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><blockquote><p><code>pnputil.exe /add-driver .\echo_2.inf /install</code></p><p><code>pnputil /enum-devices /class Sample /connected</code></p><p><code>devgen.exe /add /hardwareid &quot;root\ECHO_2&quot;</code></p></blockquote><p>因为对应设备使用的驱动为<code> c_swdevice.inf</code>而不是我们安装的<code>echo_2.inf</code></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030847031.png"                      alt="image-20241103084747669"                ></p><p>原因是证书未被信任(优先级 已签名&gt;未签名)，可以先将target下的</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030906763.png"                      alt="image-20241103090620603"                ></p><p>放入根证书 然后重新安装即可</p><h2 id="代码37"><a href="#代码37" class="headerlink" title="代码37"></a>代码37</h2><p>老工具链</p><blockquote><p>出现类似这种问题</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411082005688.png"                      alt="image-20241108200517328"                ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411030913718.png"                      alt="image-20241103091322633"                ></p><p><a class="link"   href="https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389" >https://github.com/microsoft/windows-drivers-rs/issues/42#issuecomment-1905274389 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>更改<code>wdk-sys/src/wdf.rs</code></p><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WdfMinimumVersionRequired: ULONG = 33;</span><br><span class="line">//变为</span><br><span class="line">WdfMinimumVersionRequired: ULONG = 31;</span><br></pre></td></tr></table></figure></div></blockquote><p>新工具链</p>]]></content>
     
     
       
@@ -238,9 +303,11 @@
     
     <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/"/>
     
-    <category term="Rust" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/"/>
+    <category term="Windows" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/"/>
     
-    <category term="Driver" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/Driver/"/>
+    <category term="驱动" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/"/>
+    
+    <category term="Rust" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/Windows/%E9%A9%B1%E5%8A%A8/Rust/"/>
     
     
   </entry>
@@ -484,54 +551,6 @@
     <category term="linux" scheme="http://example.com/categories/Pwn/linux/"/>
     
     <category term="kernel" scheme="http://example.com/categories/Pwn/linux/kernel/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>脚本</title>
-    <link href="http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/%E8%84%9A%E6%9C%AC/"/>
-    <id>http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/%E8%84%9A%E6%9C%AC/</id>
-    <published>2024-09-01T15:18:26.000Z</published>
-    <updated>2024-09-01T15:19:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>不太支持rust程序的分析</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;不太支持rust程序的分析&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="qiling框架" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/"/>
-    
-    <category term="脚本" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/qiling%E6%A1%86%E6%9E%B6/%E8%84%9A%E6%9C%AC/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>运行程序</title>
-    <link href="http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://example.com/2024/09/01/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</id>
-    <published>2024-09-01T12:27:04.000Z</published>
-    <updated>2024-09-01T12:27:04.000Z</updated>
-    
-    
-    
-    
-    <category term="Re" scheme="http://example.com/categories/Re/"/>
-    
-    <category term="分析工具" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Unicorn" scheme="http://example.com/categories/Re/%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/Unicorn/"/>
     
     
   </entry>
