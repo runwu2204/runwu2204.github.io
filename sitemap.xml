@@ -2147,7 +2147,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/</loc>
+    <loc>http://example.com/categories/Re/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2161,14 +2161,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/%E5%AE%89%E5%8D%93/</loc>
+    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/</loc>
+    <loc>http://example.com/categories/Re/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2231,7 +2231,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/Python/</loc>
+    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/MSYS2/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2239,6 +2239,20 @@
   
   <url>
     <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/Rust/</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/Python/</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/VMware/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2259,21 +2273,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/MSYS2/</loc>
-    <lastmod>2024-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/VMware/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2364,14 +2364,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/golang/</loc>
+    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/WASM/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/WASM/</loc>
+    <loc>http://example.com/categories/Re/%E8%AF%AD%E8%A8%80%E9%80%86%E5%90%91/golang/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2497,14 +2497,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/rust/</loc>
+    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/proteus/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/proteus/</loc>
+    <loc>http://example.com/categories/%E5%BC%80%E5%8F%91/IOT/rust/</loc>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

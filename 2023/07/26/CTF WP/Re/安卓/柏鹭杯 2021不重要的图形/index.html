@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="runwu2204">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/07/26/ctf wp/re/安卓/柏鹭杯 2021不重要的图形/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="[柏鹭杯 2021]不重要的图形 | NSSCTF  123456789101112&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;&lt;manifest xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot; android:vers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="柏鹭杯 2021不重要的图形">
+<meta property="og:url" content="http://example.com/2023/07/26/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E6%9F%8F%E9%B9%AD%E6%9D%AF%202021%E4%B8%8D%E9%87%8D%E8%A6%81%E7%9A%84%E5%9B%BE%E5%BD%A2/index.html">
+<meta property="og:site_name" content="runwu2204">
+<meta property="og:description" content="[柏鹭杯 2021]不重要的图形 | NSSCTF  123456789101112&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;&lt;manifest xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot; android:vers">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307260245646.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307260255342.png">
+<meta property="article:published_time" content="2023-07-25T18:32:16.000Z">
+<meta property="article:modified_time" content="2023-07-25T19:13:25.000Z">
+<meta property="article:author" content="runwu2204">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307260245646.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            柏鹭杯 2021不重要的图形 | Runwu2204
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Steins;Gate","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories/"},"links":{"submenus":{"Me":"/about","Github":"https://github.com/runwu2204","Blog":"https://runwu2204.github.io/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"relative","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="runwu2204" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container flex flex-col justify-between min-h-dvh">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Runwu2204
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories/"
+                                        >
+                                    
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    
+                                    链接
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/runwu2204">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://runwu2204.github.io/">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories/"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-links"
+                        >
+                            <span>
+                                链接
+                            </span>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/runwu2204">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://runwu2204.github.io/">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">99</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">210</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">柏鹭杯 2021不重要的图形</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">runwu2204</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-07-26 02:32:16</span>
+        <span class="mobile">2023-07-26 02:32:16</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-07-26 03:13:25</span>
+            <span class="mobile">2023-07-26 03:13:25</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/CTF-WP/">CTF WP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CTF-WP/Re/">Re</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CTF-WP/Re/%E5%AE%89%E5%8D%93/">安卓</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>[<a class="link"   target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/1263" >柏鹭杯 2021]不重要的图形 | NSSCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span> <span class="attr">android:versionCode</span>=<span class="string">&quot;1&quot;</span> <span class="attr">android:versionName</span>=<span class="string">&quot;1.0&quot;</span> <span class="attr">android:compileSdkVersion</span>=<span class="string">&quot;30&quot;</span> <span class="attr">android:compileSdkVersionCodename</span>=<span class="string">&quot;11&quot;</span> <span class="attr">package</span>=<span class="string">&quot;com.octobox.ctf&quot;</span> <span class="attr">platformBuildVersionCode</span>=<span class="string">&quot;30&quot;</span> <span class="attr">platformBuildVersionName</span>=<span class="string">&quot;11&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">&quot;21&quot;</span> <span class="attr">android:targetSdkVersion</span>=<span class="string">&quot;30&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span> <span class="attr">android:theme</span>=<span class="string">&quot;@style/Theme.MyApplication&quot;</span> <span class="attr">android:label</span>=<span class="string">&quot;@string/app_name&quot;</span> <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span> <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span> <span class="attr">android:appComponentFactory</span>=<span class="string">&quot;androidx.core.app.CoreComponentFactory&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;com.octobox.ctf.MainActivity&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>只有一个主类</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">  </span><br><span class="line">        <span class="comment">/**********************做完后表示以上函数为障眼法***************************************/</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Log.i(<span class="string">&quot;MainAct&quot;</span>, stringBuffer.toString());</span><br><span class="line">            <span class="type">InputStream</span> <span class="variable">open</span> <span class="operator">=</span> getAssets().open(<span class="string">&quot;classes.dex&quot;</span>);</span><br><span class="line">            <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[open.available()];</span><br><span class="line">            open.read(bArr);</span><br><span class="line">            <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(getDir(<span class="string">&quot;data&quot;</span>, <span class="number">0</span>), <span class="string">&quot;decode.dex&quot;</span>);</span><br><span class="line">            <span class="type">FileOutputStream</span> <span class="variable">fileOutputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">            fileOutputStream.write(bArr);</span><br><span class="line">            fileOutputStream.close();</span><br><span class="line">            open.close();</span><br><span class="line">            <span class="keyword">if</span> (checkPassword(stringBuffer.toString().toUpperCase(), file)) &#123;</span><br><span class="line">                <span class="built_in">this</span>.unlockView.setVisibility(<span class="number">8</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">this</span>.handler.sendEmptyMessageDelayed(<span class="number">0</span>, <span class="number">2000L</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;<span class="comment">//将asset的classes.dex复制到data路径中的&quot;decode.dex&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">checkPassword</span><span class="params">(String password, File loadDex)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">Method</span> <span class="variable">declaredMethod</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DexClassLoader</span>(loadDex.getAbsolutePath(), getDir(<span class="string">&quot;dex&quot;</span>, <span class="number">0</span>).getAbsolutePath(), <span class="literal">null</span>, getClass().getClassLoader()).loadClass(<span class="string">&quot;C&quot;</span>).getDeclaredMethod(<span class="string">&quot;isValidate&quot;</span>, Context.class, String.class, <span class="type">int</span>[].class);</span><br><span class="line">            <span class="type">int</span>[] intArray = getResources().getIntArray(C0652R.array.A_offset);</span><br><span class="line">            <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> (String) declaredMethod.invoke(<span class="literal">null</span>, <span class="built_in">this</span>, password, <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">0</span>, intArray[<span class="number">0</span>], intArray[<span class="number">1</span>]&#125;); <span class="comment">// 3,3248</span></span><br><span class="line">            Log.d(<span class="string">&quot;MainActivity&quot;</span>, str);</span><br><span class="line">            <span class="keyword">if</span> (str != <span class="literal">null</span> &amp;&amp; str.startsWith(<span class="string">&quot;Great!&quot;</span>)) &#123;</span><br><span class="line">                <span class="built_in">this</span>.tvText.setText(str);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><p>上面的intArray通过getResources().getIntArray(C0652R.array.A_offset);方法从res中取出了{3,3248}</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307260245646.png"
+                      alt="image-20230726024308945"
+                ></p>
+<p>注意此处的B_offset，以后要用</p>
+<p>同时上面方法的通过反射机制调用了静态方法isValidate，并将最后结果传给了str</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Method</span> <span class="variable">declaredMethod</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DexClassLoader</span>(loadDex.getAbsolutePath(), getDir(<span class="string">&quot;dex&quot;</span>, <span class="number">0</span>).getAbsolutePath(), <span class="literal">null</span>, getClass().getClassLoader()).loadClass(<span class="string">&quot;C&quot;</span>).getDeclaredMethod(<span class="string">&quot;isValidate&quot;</span>, Context.class, String.class, <span class="type">int</span>[].class);</span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> (String) declaredMethod.invoke(<span class="literal">null</span>, <span class="built_in">this</span>, password, <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">0</span>, intArray[<span class="number">0</span>], intArray[<span class="number">1</span>]&#125;); <span class="comment">// 3,3248</span></span><br></pre></td></tr></table></figure></div>
+
+<p>isValidate方法(包括其调用的方法)如下</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">isValidate</span><span class="params">(Context context, String password, <span class="type">int</span>[] original)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        ByteBuffer read;</span><br><span class="line">        File fix;</span><br><span class="line">        Log.i(TAG, <span class="string">&quot;start check password&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (original.length != <span class="number">3</span> || (read = read(context)) == <span class="literal">null</span> || (fix = fix(read, original[<span class="number">0</span>], original[<span class="number">1</span>], original[<span class="number">2</span>], context)) == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ClassLoader</span> <span class="variable">classLoader</span> <span class="operator">=</span> context.getClass().getClassLoader();</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> context.getDir(<span class="string">&quot;fixed&quot;</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> (String) <span class="keyword">new</span> <span class="title class_">DexClassLoader</span>(fix.getAbsolutePath(), dir.getAbsolutePath(), <span class="literal">null</span>, classLoader).loadClass(<span class="string">&quot;A&quot;</span>).getDeclaredMethod(<span class="string">&quot;d&quot;</span>, Context.class, String.class).invoke(<span class="literal">null</span>, context, password);</span><br><span class="line">        fix.delete();<span class="comment">//调用fix修复后的文件再删除fix的文件</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">File</span>(dir, fix.getName()).delete();</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> File <span class="title function_">fix</span><span class="params">(ByteBuffer dexBuffer, <span class="type">int</span> classIndex, <span class="type">int</span> index, <span class="type">int</span> offset, Context context)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">signInfo</span> <span class="operator">=</span> Utils.getSignInfo(context);</span><br><span class="line">        <span class="keyword">if</span> (signInfo == <span class="literal">null</span> || !signInfo.equals(<span class="string">&quot;78856d5c90624ec05bbc3d9be63d3715fd6fefce&quot;</span>)) &#123;<span class="comment">//验证自身文件的特征值</span></span><br><span class="line">            Log.i(TAG, <span class="string">&quot;check signature failed&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> context.getDir(<span class="string">&quot;data&quot;</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">intValue</span> <span class="operator">=</span> C0003D.getClassDefData(dexBuffer, classIndex).get(<span class="string">&quot;class_data_off&quot;</span>).intValue();</span><br><span class="line">        HashMap&lt;String, <span class="type">int</span>[][]&gt; classData = C0003D.getClassData(dexBuffer, intValue);</span><br><span class="line">        classData.get(<span class="string">&quot;direct_methods&quot;</span>)[index][<span class="number">2</span>] = offset;</span><br><span class="line">        <span class="type">byte</span>[] encodeClassData = C0003D.encodeClassData(classData);</span><br><span class="line">        dexBuffer.position(intValue);</span><br><span class="line">        dexBuffer.put(encodeClassData);</span><br><span class="line">        dexBuffer.position(<span class="number">32</span>);</span><br><span class="line">        <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[dexBuffer.capacity() - <span class="number">32</span>];</span><br><span class="line">        dexBuffer.get(bArr);</span><br><span class="line">        <span class="type">byte</span>[] sha1 = Utils.getSha1(bArr);</span><br><span class="line">        dexBuffer.position(<span class="number">12</span>);</span><br><span class="line">        dexBuffer.put(sha1);</span><br><span class="line">        <span class="type">int</span> <span class="variable">checksum</span> <span class="operator">=</span> Utils.checksum(dexBuffer);</span><br><span class="line">        dexBuffer.position(<span class="number">8</span>);</span><br><span class="line">        dexBuffer.putInt(Integer.reverseBytes(checksum));</span><br><span class="line">        <span class="type">byte</span>[] array = dexBuffer.array();</span><br><span class="line">        <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(dir, <span class="string">&quot;1.dex&quot;</span>);</span><br><span class="line">        <span class="type">FileOutputStream</span> <span class="variable">fileOutputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">        fileOutputStream.write(array);</span><br><span class="line">        fileOutputStream.close();<span class="comment">//</span></span><br><span class="line">        <span class="keyword">return</span> file;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ByteBuffer <span class="title function_">read</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(context.getDir(<span class="string">&quot;data&quot;</span>, <span class="number">0</span>), <span class="string">&quot;decode.dex&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (file.exists()) &#123;</span><br><span class="line">                <span class="type">FileInputStream</span> <span class="variable">fileInputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(file);</span><br><span class="line">                <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[fileInputStream.available()];</span><br><span class="line">                fileInputStream.read(bArr);</span><br><span class="line">                <span class="type">ByteBuffer</span> <span class="variable">wrap</span> <span class="operator">=</span> ByteBuffer.wrap(bArr);</span><br><span class="line">                fileInputStream.close();</span><br><span class="line">                <span class="keyword">return</span> wrap;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception unused) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>A类的d方法是通过加密了的，fix方法将decode.dex中A类的d方法解密后再交给反射机制调用，最后再删除掉调用的dex(所以在运行中看不见这个文件，或者只出现一瞬间)</p>
+<p>解密exp:</p>
+<p>直接通过java模拟解密过程，将最后的dex解密出来</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Array;</span><br><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.security.MessageDigest;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">nssctf</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ByteBuffer <span class="title function_">read</span><span class="params">(String dir)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(dir);</span><br><span class="line">            <span class="keyword">if</span> (file.exists()) &#123;</span><br><span class="line">                <span class="type">FileInputStream</span> <span class="variable">fileInputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(file);</span><br><span class="line">                <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[fileInputStream.available()];</span><br><span class="line">                fileInputStream.read(bArr);</span><br><span class="line">                <span class="type">ByteBuffer</span> <span class="variable">wrap</span> <span class="operator">=</span> ByteBuffer.wrap(bArr);</span><br><span class="line">                fileInputStream.close();</span><br><span class="line">                <span class="keyword">return</span> wrap;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception unused) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> HashMap&lt;String, Integer&gt; <span class="title function_">getClassDefData</span><span class="params">(ByteBuffer buffer, <span class="type">int</span> index)</span> &#123;</span><br><span class="line">        buffer.position(<span class="number">100</span>);</span><br><span class="line">        buffer.position(Integer.reverseBytes(buffer.getInt()) + (index * <span class="number">32</span>));</span><br><span class="line">        HashMap&lt;String, Integer&gt; hashMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes2</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes3</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes4</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes5</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes6</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes7</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        <span class="type">int</span> <span class="variable">reverseBytes8</span> <span class="operator">=</span> Integer.reverseBytes(buffer.getInt());</span><br><span class="line">        hashMap.put(<span class="string">&quot;class_idx&quot;</span>, Integer.valueOf(reverseBytes));</span><br><span class="line">        hashMap.put(<span class="string">&quot;access_flag&quot;</span>, Integer.valueOf(reverseBytes2));</span><br><span class="line">        hashMap.put(<span class="string">&quot;superclass_idx&quot;</span>, Integer.valueOf(reverseBytes3));</span><br><span class="line">        hashMap.put(<span class="string">&quot;interfaces_off&quot;</span>, Integer.valueOf(reverseBytes4));</span><br><span class="line">        hashMap.put(<span class="string">&quot;source_file_idx&quot;</span>, Integer.valueOf(reverseBytes5));</span><br><span class="line">        hashMap.put(<span class="string">&quot;annotation_off&quot;</span>, Integer.valueOf(reverseBytes6));</span><br><span class="line">        hashMap.put(<span class="string">&quot;class_data_off&quot;</span>, Integer.valueOf(reverseBytes7));</span><br><span class="line">        hashMap.put(<span class="string">&quot;static_values_off&quot;</span>, Integer.valueOf(reverseBytes8));</span><br><span class="line">        <span class="keyword">return</span> hashMap;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> HashMap&lt;String, <span class="type">int</span>[][]&gt; getClassData(ByteBuffer buffer, <span class="type">int</span> offset) &#123;</span><br><span class="line">        buffer.position(offset);</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> fromULEB128(buffer)[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> fromULEB128(buffer)[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> fromULEB128(buffer)[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i4</span> <span class="operator">=</span> fromULEB128(buffer)[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span>[][] iArr = (<span class="type">int</span>[][]) Array.newInstance(<span class="type">int</span>.class, i, <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i5</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i6</span> <span class="operator">=</span> <span class="number">0</span>; i6 &lt; i; i6++) &#123;</span><br><span class="line">                <span class="type">int</span>[] encode_field = encode_field(buffer);</span><br><span class="line">                <span class="keyword">if</span> (i6 == <span class="number">0</span>) &#123;</span><br><span class="line">                    i5 = encode_field[<span class="number">0</span>];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    i5 += encode_field[<span class="number">0</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span>[] iArr2 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">                iArr2[<span class="number">0</span>] = i5;</span><br><span class="line">                iArr2[<span class="number">1</span>] = encode_field[<span class="number">1</span>];</span><br><span class="line">                iArr[i6] = iArr2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[][] iArr3 = (<span class="type">int</span>[][]) Array.newInstance(<span class="type">int</span>.class, i2, <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span> (i2 &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i7</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i8</span> <span class="operator">=</span> <span class="number">0</span>; i8 &lt; i2; i8++) &#123;</span><br><span class="line">                <span class="type">int</span>[] encode_field2 = encode_field(buffer);</span><br><span class="line">                <span class="keyword">if</span> (i8 == <span class="number">0</span>) &#123;</span><br><span class="line">                    i7 = encode_field2[<span class="number">0</span>];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    i7 += encode_field2[<span class="number">0</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span>[] iArr4 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">                iArr4[<span class="number">0</span>] = i7;</span><br><span class="line">                iArr4[<span class="number">1</span>] = encode_field2[<span class="number">1</span>];</span><br><span class="line">                iArr3[i8] = iArr4;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[][] iArr5 = (<span class="type">int</span>[][]) Array.newInstance(<span class="type">int</span>.class, i3, <span class="number">3</span>);</span><br><span class="line">        <span class="keyword">if</span> (i3 &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i9</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i10</span> <span class="operator">=</span> <span class="number">0</span>; i10 &lt; i3; i10++) &#123;</span><br><span class="line">                <span class="type">int</span>[] encode_method = encode_method(buffer);</span><br><span class="line">                <span class="keyword">if</span> (i10 == <span class="number">0</span>) &#123;</span><br><span class="line">                    i9 = encode_method[<span class="number">0</span>];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    i9 += encode_method[<span class="number">0</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span>[] iArr6 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line">                iArr6[<span class="number">0</span>] = i9;</span><br><span class="line">                iArr6[<span class="number">1</span>] = encode_method[<span class="number">1</span>];</span><br><span class="line">                iArr6[<span class="number">2</span>] = encode_method[<span class="number">2</span>];</span><br><span class="line">                iArr5[i10] = iArr6;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[][] iArr7 = (<span class="type">int</span>[][]) Array.newInstance(<span class="type">int</span>.class, i4, <span class="number">3</span>);</span><br><span class="line">        <span class="keyword">if</span> (i4 &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i11</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i12</span> <span class="operator">=</span> <span class="number">0</span>; i12 &lt; i2; i12++) &#123;</span><br><span class="line">                <span class="type">int</span>[] encode_method2 = encode_method(buffer);</span><br><span class="line">                <span class="keyword">if</span> (i12 == <span class="number">0</span>) &#123;</span><br><span class="line">                    i11 = encode_method2[<span class="number">0</span>];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    i11 += encode_method2[<span class="number">0</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span>[] iArr8 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line">                iArr8[<span class="number">0</span>] = i11;</span><br><span class="line">                iArr8[<span class="number">1</span>] = encode_method2[<span class="number">1</span>];</span><br><span class="line">                iArr8[<span class="number">2</span>] = encode_method2[<span class="number">2</span>];</span><br><span class="line">                iArr7[i12] = iArr8;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;String, <span class="type">int</span>[][]&gt; hashMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        hashMap.put(<span class="string">&quot;static_fields&quot;</span>, iArr);</span><br><span class="line">        hashMap.put(<span class="string">&quot;instance_fields&quot;</span>, iArr3);</span><br><span class="line">        hashMap.put(<span class="string">&quot;direct_methods&quot;</span>, iArr5);</span><br><span class="line">        hashMap.put(<span class="string">&quot;virtual_methods&quot;</span>, iArr7);</span><br><span class="line">        <span class="keyword">return</span> hashMap;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] fromULEB128(ByteBuffer buffer) &#123;</span><br><span class="line">        <span class="type">int</span> i;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> buffer.get() &amp; <span class="number">255</span>;</span><br><span class="line">        <span class="keyword">if</span> (i2 &gt; <span class="number">127</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> buffer.get() &amp; <span class="number">255</span>;</span><br><span class="line">            i2 = (i2 &amp; <span class="number">127</span>) | ((i3 &amp; <span class="number">127</span>) &lt;&lt; <span class="number">7</span>);</span><br><span class="line">            <span class="keyword">if</span> (i3 &gt; <span class="number">127</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">i4</span> <span class="operator">=</span> buffer.get() &amp; <span class="number">255</span>;</span><br><span class="line">                i2 |= (i4 &amp; <span class="number">127</span>) &lt;&lt; <span class="number">14</span>;</span><br><span class="line">                i = <span class="number">3</span>;</span><br><span class="line">                <span class="keyword">if</span> (i4 &gt; <span class="number">127</span>) &#123;</span><br><span class="line">                    <span class="type">int</span> <span class="variable">i5</span> <span class="operator">=</span> buffer.get() &amp; <span class="number">255</span>;</span><br><span class="line">                    i2 |= (i5 &amp; <span class="number">127</span>) &lt;&lt; <span class="number">21</span>;</span><br><span class="line">                    i = <span class="number">4</span>;</span><br><span class="line">                    <span class="keyword">if</span> (i5 &gt; <span class="number">127</span>) &#123;</span><br><span class="line">                        i2 |= (buffer.get() &amp; <span class="number">255</span>) &lt;&lt; <span class="number">28</span>;</span><br><span class="line">                        i = <span class="number">5</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                i = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            i = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;i2, i&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span>[] encode_method(ByteBuffer buffer) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;fromULEB128(buffer)[<span class="number">0</span>], fromULEB128(buffer)[<span class="number">0</span>], fromULEB128(buffer)[<span class="number">0</span>]&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span>[] encode_field(ByteBuffer buffer, <span class="type">int</span> offset) &#123;</span><br><span class="line">        buffer.position(offset);</span><br><span class="line">        <span class="keyword">return</span> encode_field(buffer);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span>[] encode_field(ByteBuffer buffer) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;fromULEB128(buffer)[<span class="number">0</span>], fromULEB128(buffer)[<span class="number">0</span>]&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] encodeClassData(HashMap&lt;String, <span class="type">int</span>[][]&gt; data) &#123;</span><br><span class="line">        <span class="type">int</span>[][] iArr = data.get(<span class="string">&quot;static_fields&quot;</span>);</span><br><span class="line">        <span class="type">int</span>[][] iArr2 = data.get(<span class="string">&quot;instance_fields&quot;</span>);</span><br><span class="line">        <span class="type">int</span>[][] iArr3 = data.get(<span class="string">&quot;direct_methods&quot;</span>);</span><br><span class="line">        <span class="type">int</span>[][] iArr4 = data.get(<span class="string">&quot;virtual_methods&quot;</span>);</span><br><span class="line">        <span class="type">byte</span>[] merge = merge(toULEB128(iArr.length), toULEB128(iArr2.length), toULEB128(iArr3.length), toULEB128(iArr4.length));</span><br><span class="line">        <span class="keyword">if</span> (iArr.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] iArr5 : iArr) &#123;</span><br><span class="line">                merge = merge(merge, decode_field(iArr5, i));</span><br><span class="line">                i = iArr5[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (iArr2.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] iArr6 : iArr2) &#123;</span><br><span class="line">                merge = merge(merge, decode_field(iArr6, i2));</span><br><span class="line">                i2 = iArr6[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (iArr3.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] iArr7 : iArr3) &#123;</span><br><span class="line">                merge = merge(merge, decode_method(iArr7, i3));</span><br><span class="line">                i3 = iArr7[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (iArr4.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i4</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] iArr8 : iArr4) &#123;</span><br><span class="line">                merge = merge(merge, decode_method(iArr8, i4));</span><br><span class="line">                i4 = iArr8[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> merge;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] toULEB128(<span class="type">int</span> data) &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> data &gt;&gt; <span class="number">28</span>;</span><br><span class="line">    <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">byte</span>[]&#123;(<span class="type">byte</span>) ((data &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">7</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">14</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">21</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (i &amp; <span class="number">15</span>)&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> data &gt;&gt; <span class="number">21</span>;</span><br><span class="line">    <span class="keyword">if</span> (i2 &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">byte</span>[]&#123;(<span class="type">byte</span>) ((data &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">7</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">14</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (i2 &amp; <span class="number">127</span>)&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> data &gt;&gt; <span class="number">14</span>;</span><br><span class="line">    <span class="keyword">if</span> (i3 &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">byte</span>[]&#123;(<span class="type">byte</span>) ((data &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (((data &gt;&gt; <span class="number">7</span>) &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (i3 &amp; <span class="number">127</span>)&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i4</span> <span class="operator">=</span> data &gt;&gt; <span class="number">7</span>;</span><br><span class="line">    <span class="keyword">return</span> i4 &gt; <span class="number">0</span> ? <span class="keyword">new</span> <span class="title class_">byte</span>[]&#123;(<span class="type">byte</span>) ((data &amp; <span class="number">127</span>) | <span class="number">128</span>), (<span class="type">byte</span>) (i4 &amp; <span class="number">127</span>)&#125; : <span class="keyword">new</span> <span class="title class_">byte</span>[]&#123;(<span class="type">byte</span>) (data &amp; <span class="number">127</span>)&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">byte</span>[] merge(<span class="type">byte</span>[]... data) &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">byte</span>[] bArr : data) &#123;</span><br><span class="line">        i += bArr.length;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">ByteBuffer</span> <span class="variable">allocate</span> <span class="operator">=</span> ByteBuffer.allocate(i);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">byte</span>[] bArr2 : data) &#123;</span><br><span class="line">        allocate.put(bArr2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">byte</span>[] bArr3 = <span class="keyword">new</span> <span class="title class_">byte</span>[allocate.position()];</span><br><span class="line">    allocate.position(<span class="number">0</span>);</span><br><span class="line">    allocate.get(bArr3);</span><br><span class="line">    <span class="keyword">return</span> bArr3;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">byte</span>[] decode_field(<span class="type">int</span>[] data, <span class="type">int</span> diff_idx) &#123;</span><br><span class="line">    <span class="keyword">return</span> merge(toULEB128(data[<span class="number">0</span>] - diff_idx), toULEB128(data[<span class="number">1</span>]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">byte</span>[] decode_method(<span class="type">int</span>[] data, <span class="type">int</span> diff_idx) &#123;</span><br><span class="line">    <span class="keyword">return</span> merge(toULEB128(data[<span class="number">0</span>] - diff_idx), toULEB128(data[<span class="number">1</span>]), toULEB128(data[<span class="number">2</span>]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] getSha1(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> MessageDigest.getInstance(<span class="string">&quot;SHA&quot;</span>).digest(data);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception unused) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">checksum</span><span class="params">(ByteBuffer dexBuffer)</span> &#123;</span><br><span class="line">    dexBuffer.position(<span class="number">12</span>);</span><br><span class="line">    <span class="type">int</span> <span class="variable">capacity</span> <span class="operator">=</span> dexBuffer.capacity();</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">boolean</span> <span class="variable">z</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">while</span> (dexBuffer.position() &lt; capacity) &#123;</span><br><span class="line">        <span class="type">ArrayList</span> <span class="variable">arrayList</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">        <span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i3 &gt;= <span class="number">1024</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            arrayList.add(Integer.valueOf(dexBuffer.get() &amp; <span class="number">255</span>));</span><br><span class="line">            <span class="keyword">if</span> (dexBuffer.position() == dexBuffer.limit()) &#123;</span><br><span class="line">                z = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            i3++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[] calculateVar = calculateVar(arrayList, i, i2);</span><br><span class="line">        <span class="type">int</span> <span class="variable">i4</span> <span class="operator">=</span> calculateVar[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i5</span> <span class="operator">=</span> calculateVar[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (z) &#123;</span><br><span class="line">            <span class="keyword">return</span> (i5 &lt;&lt; <span class="number">16</span>) + i4;</span><br><span class="line">        &#125;</span><br><span class="line">        i2 = i5;</span><br><span class="line">        i = i4;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span>[] calculateVar(ArrayList&lt;Integer&gt; srcBytes, <span class="type">int</span> vara, <span class="type">int</span> varb) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; srcBytes.size(); i++) &#123;</span><br><span class="line">        vara = (vara + srcBytes.get(i).intValue()) % <span class="number">65521</span>;</span><br><span class="line">        varb = (varb + vara) % <span class="number">65521</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;vara, varb&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">md5</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">bigInteger</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, MessageDigest.getInstance(<span class="string">&quot;md5&quot;</span>).digest(data)).toString(<span class="number">16</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">32</span> - bigInteger.length(); i++) &#123;</span><br><span class="line">            bigInteger = <span class="string">&quot;0&quot;</span> + bigInteger;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bigInteger;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException unused) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;ops!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">        ByteBuffer dexBuffer=read(<span class="string">&quot;classes.dex&quot;</span>);<span class="comment">//修改为assets中的dex地址</span></span><br><span class="line">        <span class="type">int</span> classIndex=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> index=<span class="number">3</span>;</span><br><span class="line">        <span class="type">int</span> offset=<span class="number">3248</span>;</span><br><span class="line">        System.out.println(getClassDefData(dexBuffer, classIndex).get(<span class="string">&quot;class_data_off&quot;</span>).intValue());   </span><br><span class="line">        <span class="type">int</span> <span class="variable">intValue</span> <span class="operator">=</span> getClassDefData(dexBuffer, classIndex).get(<span class="string">&quot;class_data_off&quot;</span>).intValue();</span><br><span class="line">        <span class="comment">// intValue=11388;</span></span><br><span class="line">        HashMap&lt;String, <span class="type">int</span>[][]&gt; classData = getClassData(dexBuffer, intValue);</span><br><span class="line">        classData.get(<span class="string">&quot;direct_methods&quot;</span>)[index][<span class="number">2</span>] = offset;</span><br><span class="line">        <span class="type">byte</span>[] encodeClassData = encodeClassData(classData);</span><br><span class="line">        dexBuffer.position(intValue);</span><br><span class="line">        dexBuffer.put(encodeClassData);</span><br><span class="line">        dexBuffer.position(<span class="number">32</span>);</span><br><span class="line">        <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[dexBuffer.capacity() - <span class="number">32</span>];</span><br><span class="line">        dexBuffer.get(bArr);</span><br><span class="line">        <span class="type">byte</span>[] sha1 = getSha1(bArr);</span><br><span class="line">        dexBuffer.position(<span class="number">12</span>);</span><br><span class="line">        dexBuffer.put(sha1);</span><br><span class="line">        <span class="type">int</span> <span class="variable">checksum</span> <span class="operator">=</span> checksum(dexBuffer);</span><br><span class="line">        dexBuffer.position(<span class="number">8</span>);</span><br><span class="line">        dexBuffer.putInt(Integer.reverseBytes(checksum));</span><br><span class="line">        <span class="type">byte</span>[] array = dexBuffer.array();</span><br><span class="line">        <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;E:\\EDGE下载\\misc4\\assets\\1.dex&quot;</span>);<span class="comment">//你想存解密后的dex地址</span></span><br><span class="line">        <span class="type">FileOutputStream</span> <span class="variable">fileOutputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">        fileOutputStream.write(array);</span><br><span class="line">        fileOutputStream.close();</span><br><span class="line">        &#125;<span class="keyword">catch</span>(Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>发现解密后的dex只有A类的d方法且其相关的B类的d方法也是通过加密了的</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202307260255342.png"
+                      alt="image-20230726025559183"
+                ></p>
+<p>猜测<a href="#%E9%87%8D%E7%82%B9">摁住ctrl点击 跳转</a>中的B_offset也用于解密,所以将解密exp中的main方法中三个变量变为B类的变量，方法如下</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> classIndex=<span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> index=<span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> offset=<span class="number">3248</span>;</span><br><span class="line"><span class="comment">//改为</span></span><br><span class="line"><span class="type">int</span> classIndex=<span class="number">1</span>;<span class="comment">//不改的话会解密成A类的b方法，虽然结果可能没多大区别</span></span><br><span class="line"><span class="type">int</span> index=<span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> offset=<span class="number">3420</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>两个解密后的方法如下</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//A类的方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">d</span><span class="params">(Context context, String password)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">signInfo</span> <span class="operator">=</span> Utils.getSignInfo(context);</span><br><span class="line">        <span class="keyword">if</span> (signInfo != <span class="literal">null</span> &amp;&amp; signInfo.equals(<span class="string">&quot;78856d5c90624ec05bbc3d9be63d3715fd6fefce&quot;</span>)) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">md5</span> <span class="operator">=</span> Utils.md5(password.getBytes());</span><br><span class="line">            <span class="keyword">if</span> (md5.equals(<span class="string">&quot;4155606cedd928c3bb0b93343c81f3f5&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;Great! please call B.d(\&quot;&quot;</span> + Utils.md5(md5.getBytes()) + <span class="string">&quot;\&quot;) to get flag&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//B类的方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">d</span><span class="params">(String src)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;flag&#123;ISEC-&quot;</span> + Utils.md5(Utils.getSha1(src.getBytes())) + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>最终flag的exp:</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"><span class="keyword">import</span> java.security.MessageDigest;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span>&#123;<span class="comment">//运行需要将左边这个类名改为跟文件名一样</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] getSha1(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> MessageDigest.getInstance(<span class="string">&quot;SHA&quot;</span>).digest(data);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception unused) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">md5</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">bigInteger</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, MessageDigest.getInstance(<span class="string">&quot;md5&quot;</span>).digest(data)).toString(<span class="number">16</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">32</span> - bigInteger.length(); i++) &#123;</span><br><span class="line">                bigInteger = <span class="string">&quot;0&quot;</span> + bigInteger;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> bigInteger;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException unused) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;ops!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> </span><br><span class="line">        &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;flag&#123;ISEC-&quot;</span>+md5(getSha1(md5(<span class="string">&quot;4155606cedd928c3bb0b93343c81f3f5&quot;</span>.getBytes()).getBytes()))+<span class="string">&quot;&#125;&quot;</span>);<span class="comment">//通过网上工具sha1的时候结果有问题可能是大小写原因</span></span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 柏鹭杯 2021不重要的图形</li>
+        <li><strong>作者:</strong> runwu2204</li>
+        <li><strong>创建于
+                :</strong> 2023-07-26 02:32:16</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2023-07-26 03:13:25
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://runwu2204.github.io/2023/07/26/CTF WP/Re/安卓/柏鹭杯 2021不重要的图形/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/07/27/CTF%20WP/Re/%E5%AE%89%E5%8D%93/%E9%95%BF%E5%AE%89%E6%9D%AF%202021fantasy/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">长安杯 2021fantasy</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/07/23/CTF%20WP/Misc/%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2%202022easy_Forensic/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">巅峰极客 2022easy_Forensic</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">目录</div>
+        <div class="page-title">柏鹭杯 2021不重要的图形</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E7%82%B9"><span class="nav-text">重点</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">runwu2204</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 210 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="站内搜索您需要的内容..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+</body>
+</html>
