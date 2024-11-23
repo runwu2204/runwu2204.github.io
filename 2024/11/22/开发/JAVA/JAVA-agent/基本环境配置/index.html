@@ -18,12 +18,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="instrumentation Java探针技术-instrutment中retransformClasses和redefineClasses - 洛神灬殇 - 博客园 探秘 Java 热部署三（Java agent agentmain） - 莫那-鲁道 - 博客园 1000个字带你一次性搞懂JavaAgent技术，反正我是彻底服了-腾讯云开发者社区-腾讯云  premain 先于main执行 在">
+        <meta name="description" content="instrumentation Java探针技术-instrutment中retransformClasses和redefineClasses - 洛神灬殇 - 博客园 探秘 Java 热部署三（Java agent agentmain） - 莫那-鲁道 - 博客园 1000个字带你一次性搞懂JavaAgent技术，反正我是彻底服了-腾讯云开发者社区-腾讯云  jar包封装方式可参考封装jar包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基本环境配置">
 <meta property="og:url" content="http://example.com/2024/11/22/%E5%BC%80%E5%8F%91/JAVA/JAVA-agent/%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="runwu2204">
-<meta property="og:description" content="instrumentation Java探针技术-instrutment中retransformClasses和redefineClasses - 洛神灬殇 - 博客园 探秘 Java 热部署三（Java agent agentmain） - 莫那-鲁道 - 博客园 1000个字带你一次性搞懂JavaAgent技术，反正我是彻底服了-腾讯云开发者社区-腾讯云  premain 先于main执行 在">
+<meta property="og:description" content="instrumentation Java探针技术-instrutment中retransformClasses和redefineClasses - 洛神灬殇 - 博客园 探秘 Java 热部署三（Java agent agentmain） - 莫那-鲁道 - 博客园 1000个字带你一次性搞懂JavaAgent技术，反正我是彻底服了-腾讯云开发者社区-腾讯云  jar包封装方式可参考封装jar包">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411230239355.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411230239430.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411231453629.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411231455674.png">
 <meta property="article:published_time" content="2024-11-22T15:15:58.000Z">
-<meta property="article:modified_time" content="2024-11-23T06:56:59.000Z">
+<meta property="article:modified_time" content="2024-11-23T07:05:39.000Z">
 <meta property="article:author" content="runwu2204">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/runwu2204/Blog_imgs/202411230239355.png">
@@ -384,8 +384,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-23 14:56:59</span>
-            <span class="mobile">2024-11-23 14:56:59</span>
+            <span class="desktop">2024-11-23 15:05:39</span>
+            <span class="mobile">2024-11-23 15:05:39</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -453,6 +453,7 @@
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/stateis0/p/9062201.html" >探秘 Java 热部署三（Java agent agentmain） - 莫那-鲁道 - 博客园<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2050980" >1000个字带你一次性搞懂JavaAgent技术，反正我是彻底服了-腾讯云开发者社区-腾讯云<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 </blockquote>
+<p>jar包封装方式可参考<a class="link"   target="_blank" rel="noopener" href="https://runwu2204.github.io/2024/11/23/%E5%BC%80%E5%8F%91/JAVA/%E5%B0%81%E8%A3%85jar%E5%8C%85/" >封装jar包 | Runwu2204<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <h3 id="premain"><a href="#premain" class="headerlink" title="premain"></a>premain</h3><blockquote>
 <p>先于main执行</p>
 <p>在MANIFEST中插入</p>
@@ -491,6 +492,9 @@
 
 <p>Main</p>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.example;</span><br><span class="line"><span class="keyword">import</span> javassist.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.instrument.Instrumentation;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,</span></span><br><span class="line"><span class="comment">// then press Enter. You can now see whitespace characters in your code.</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> NoSuchMethodException, InvocationTargetException, IllegalAccessException &#123;</span><br><span class="line">        Date dt=<span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        Method nmethod=Date.class.getDeclaredMethod(<span class="string">&quot;test&quot;</span>,<span class="keyword">new</span> <span class="title class_">Class</span>[]&#123;<span class="type">int</span>.class&#125;);</span><br><span class="line"></span><br><span class="line">        System.out.println(String.valueOf(dt));</span><br><span class="line">        System.out.println(nmethod.invoke(dt,<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Press Shift+F10 or click the green arrow button in the gutter to run the code.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>MANIFEST.MF</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Manifest-Version: 1.0</span><br><span class="line">Can-Redefine-Classes: true</span><br><span class="line">Premain-Class: org.example.AgentMainTest</span><br><span class="line">Can-Retransform-Classes: true</span><br><span class="line">Can-Redefine-Classes: true</span><br><span class="line">Main-Class: org.example.Main</span><br><span class="line">Class-Path: javassist-3.25.0-GA.jar</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>jar包结构</p>
 <p><img  
@@ -564,7 +568,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-11-23 14:56:59
+                    :</strong> 2024-11-23 15:05:39
             </li>
         
         <li>
